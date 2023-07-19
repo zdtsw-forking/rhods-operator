@@ -58,7 +58,6 @@ func (d *DataSciencePipelines) ReconcileComponent(owner metav1.Object, client cl
 		namespace,
 		scheme, enabled)
 	return err
-
 }
 
 func (in *DataSciencePipelines) DeepCopyInto(out *DataSciencePipelines) {

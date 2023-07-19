@@ -73,7 +73,6 @@ func (w *Workbenches) ReconcileComponent(owner metav1.Object, cli client.Client,
 		namespace,
 		scheme, enabled)
 	return err
-
 }
 
 func (in *Workbenches) DeepCopyInto(out *Workbenches) {
