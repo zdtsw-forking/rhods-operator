@@ -32,13 +32,13 @@ const (
 
 // DSCInitializationSpec defines the desired state of DSCInitialization
 type DSCInitializationSpec struct {
-	// +kubebuilder:default:=opendatahub
-	// Namespace for applications to be installed, non-configurable, default to "opendatahub"
+	// +kubebuilder:default:=redhat-ods-applications
+	// Namespace for applications to be installed, non-configurable, default to "redhat-ods-applications"
 	// +operator-sdk:csv:customresourcedefinitions:type=spec
-	ApplicationsNamespace string     `json:"applicationsNamespace"`
+	ApplicationsNamespace string `json:"applicationsNamespace"`
 	// Enable monitoring on specified namespace
 	// +operator-sdk:csv:customresourcedefinitions:type=spec
-	Monitoring            Monitoring `json:"monitoring,omitempty"`
+	Monitoring Monitoring `json:"monitoring,omitempty"`
 	// Internal development useful field
 	// +operator-sdk:csv:customresourcedefinitions:type=spec
 	ManifestsUri string `json:"manifestsUri,omitempty"`
@@ -48,8 +48,8 @@ type Monitoring struct {
 	// +kubebuilder:default=false
 	// If enabled monitoring, default 'false'
 	Enabled bool `json:"enabled,omitempty"`
-	// +kubebuilder:default=opendatahub
-	// Namespace for monitoring if it is enabled
+	// +kubebuilder:default=redhat-ods-monitoring
+	// Namespace for monitoring if it is enabled, default 'redhat-ods-monitoring'
 	Namespace string `json:"namespace,omitempty"`
 }
 
