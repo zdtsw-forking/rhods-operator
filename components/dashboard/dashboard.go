@@ -15,7 +15,7 @@ const (
 	ComponentName = "odh-dashboard"
 	Path          = deploy.DefaultManifestPath + "/" + ComponentName + "/base"
 	PathISVCommon = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps"
-	PathISVSM     = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-onpre"
+	PathISVSM     = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-onprem"
 	PathISVAddOn  = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-addon"
 )
 
