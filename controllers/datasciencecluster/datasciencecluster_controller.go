@@ -29,7 +29,6 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/components"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/dashboard"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/datasciencepipelines"
-	"github.com/opendatahub-io/opendatahub-operator/v2/components/distributedworkloads"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/kserve"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/modelmeshserving"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/workbenches"
@@ -153,12 +152,6 @@ func (r *DataScienceClusterReconciler) Reconcile(ctx context.Context, req ctrl.R
 	// reconcile ModelMesh component
 	if instance, val, err = r.reconcileSubComponent(instance, modelmeshserving.ComponentName, instance.Spec.Components.ModelMeshServing.Enabled,
 		&(instance.Spec.Components.ModelMeshServing), ctx); err != nil {
-		// no need to log any errors as this is done in the reconcileSubComponent method
-		return val, err
-	}
-
-	// reconcile DistributedWorkloads component
-	if instance, val, err = r.reconcileSubComponent(instance, distributedworkloads.ComponentName, instance.Spec.Components.DistributeWorkloads.Enabled, &(instance.Spec.Components.DistributeWorkloads), ctx); err != nil {
 		// no need to log any errors as this is done in the reconcileSubComponent method
 		return val, err
 	}
