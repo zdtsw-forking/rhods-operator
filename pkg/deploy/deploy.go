@@ -14,17 +14,20 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	ctrl "sigs.k8s.io/controller-runtime"
 	"strings"
 
+	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/yaml"
+	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/kustomize/api/filesys"
 	"sigs.k8s.io/kustomize/api/krusty"
 	"sigs.k8s.io/kustomize/api/resmap"
+
+	operators "github.com/operator-framework/api/pkg/operators/v1alpha1"
 
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/plugins"
 )
@@ -336,6 +339,20 @@ func ApplyImageParams(componentPath string, imageParamsMap map[string]string) er
 		return err
 	}
 	return nil
+}
+
+// Checks if a Subscription for the an operator exists in the given namespace
+func SubscriptionExists(cli client.Client, namespace string, name string) (bool, error) {
+	sub := &operators.Subscription{}
+	err := cli.Get(context.TODO(), client.ObjectKey{Namespace: namespace, Name: name}, sub)
+	if err != nil {
+		if apierrs.IsNotFound(err) {
+			return false, nil
+		} else {
+			return false, err
+		}
+	}
+	return true, nil
 }
 
 // TODO : Add function to cleanup code created as part of pre install and post intall task of a component
