@@ -14,7 +14,7 @@ import (
 const (
 	ComponentName = "odh-dashboard"
 	Path          = deploy.DefaultManifestPath + "/" + ComponentName + "/base"
-	PathISVSM     = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-onpre"
+	PathISVSM     = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-onprem"
 	PathISVAddOn  = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/apps-addon"
 )
 
