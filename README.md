@@ -107,8 +107,6 @@ components. At a given time, ODH supports only **one** instance of the CR, which
             enabled: true
           datasciencepipelines:
             enabled: true
-          distributedworkloads:
-            enabled: true
           kserve:
             enabled: true
           modelmeshserving:
