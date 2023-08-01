@@ -16,7 +16,6 @@ namePrefix: redhat-ods-
 #  someName: someValue
 
 resources:
-- ../additional
 - ../crd
 - ../rbac
 - ../manager
