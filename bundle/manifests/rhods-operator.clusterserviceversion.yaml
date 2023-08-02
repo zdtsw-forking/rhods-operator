@@ -209,9 +209,6 @@ spec:
         displayName: Conditions
         path: conditions
       version: v1alpha1
-    - kind: KfDef
-      name: kfdefs.kfdef.apps.kubeflow.org
-      version: v1
     - kind: OdhApplication
       name: odhapplications.dashboard.opendatahub.io
       version: v1
@@ -223,10 +220,6 @@ spec:
       version: v1
     - kind: OdhQuickStart
       name: odhquickstarts.console.openshift.io
-      version: v1
-    required:
-    - kind: KfDef
-      name: kfdefs.kfdef.apps.kubeflow.org
       version: v1
   description: |-
     Red Hat OpenShift Data Science (RHODS) is a machine-learning-as-a-service
