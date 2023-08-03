@@ -159,15 +159,15 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 		consoleRoute := &routev1.Route{}
 		err = cli.Get(context.TODO(), client.ObjectKey{Name: NameConsoleLink, Namespace: NamespaceConsoleLink}, consoleRoute)
 		if err != nil {
-			return fmt.Errorf("Error getting console route URL : %v", err)
+			return fmt.Errorf("error getting console route URL : %v", err)
 		}
 		domainIndex := strings.Index(consoleRoute.Spec.Host, ".")
 		consolelinkDomain := consoleRoute.Spec.Host[domainIndex+1:]
-		err = common.ReplaceStringsInFile(PathConsoleLink, map[string]string{
+		err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
 			"<rhods-dashboard-url>": "https://rhods-dashboard-" + namespace + consolelinkDomain,
 		})
 		if err != nil {
-			return fmt.Errorf("Error replacing with correct dashboard url for ConsoleLink: %v", err)
+			return fmt.Errorf("error replacing with correct dashboard url for ConsoleLink: %v", err)
 		}
 		err = deploy.DeployManifestsFromPath(owner, cli, ComponentNameSupported,
 			PathConsoleLink,
@@ -189,11 +189,11 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 		consoleRoute := &routev1.Route{}
 		err = cli.Get(context.TODO(), client.ObjectKey{Name: NameConsoleLink, Namespace: NamespaceConsoleLink}, consoleRoute)
 		if err != nil {
-			return fmt.Errorf("Error getting console route URL : %v", err)
+			return fmt.Errorf("error getting console route URL : %v", err)
 		}
 		domainIndex := strings.Index(consoleRoute.Spec.Host, ".")
 		consolelinkDomain := consoleRoute.Spec.Host[domainIndex+1:]
-		err = common.ReplaceStringsInFile(PathConsoleLink, map[string]string{
+		err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
 			"<rhods-dashboard-url>": "https://rhods-dashboard-" + namespace + consolelinkDomain,
 		})
 		if err != nil {
