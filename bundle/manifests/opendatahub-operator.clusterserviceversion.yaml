@@ -130,7 +130,7 @@ metadata:
           "spec": {
             "applicationsNamespace": "opendatahub",
             "monitoring": {
-              "enabled": false,
+              "enabled": true,
               "namespace": "opendatahub"
             }
           }

@@ -10,6 +10,6 @@ metadata:
   name: default
 spec:
   monitoring:
-    enabled: false
+    enabled: true
     namespace: 'opendatahub'
   applicationsNamespace: 'opendatahub'
