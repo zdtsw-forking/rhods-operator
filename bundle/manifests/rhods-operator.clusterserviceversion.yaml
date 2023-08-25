@@ -130,7 +130,7 @@ metadata:
           "spec": {
             "applicationsNamespace": "redhat-ods-applications",
             "monitoring": {
-              "enabled": false,
+              "enabled": true,
               "namespace": "redhat-ods-monitoring"
             }
           }

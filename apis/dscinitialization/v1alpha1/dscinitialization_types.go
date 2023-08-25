@@ -38,8 +38,8 @@ type DSCInitializationSpec struct {
 }
 
 type Monitoring struct {
-	// +kubebuilder:default=false
-	// If enabled monitoring, default 'false'
+	// +kubebuilder:default=true
+	// If enabled monitoring, default 'true'
 	Enabled bool `json:"enabled,omitempty"`
 	// +kubebuilder:default=redhat-ods-monitoring
 	// Namespace for monitoring if it is enabled, default 'redhat-ods-monitoring'

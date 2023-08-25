@@ -10,6 +10,6 @@ metadata:
   name: default
 spec:
   monitoring:
-    enabled: false
+    enabled: true
     namespace: 'redhat-ods-monitoring'
   applicationsNamespace: 'redhat-ods-applications'
