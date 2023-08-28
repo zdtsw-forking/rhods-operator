@@ -1,4 +1,4 @@
-apiVersion: datasciencecluster.opendatahub.io/v1alpha1
+apiVersion: datasciencecluster.opendatahub.io/v1
 kind: DataScienceCluster
 metadata:
   name: default
@@ -11,16 +11,16 @@ metadata:
 spec:
   components:
     codeflare:
-      enabled: false
+      managementState: "Removed"
     dashboard:
-      enabled: false
+      managementState: "Managed"
     datasciencepipelines:
-      enabled: false
+      managementState: "Managed"
     kserve:
-      enabled: false
+      managementState: "Removed"
     modelmeshserving:
-      enabled: false
+      managementState: "Managed"
     ray:
-      enabled: false
+      managementState: "Removed"
     workbenches:
-      enabled: false
+      managementState: "Managed"

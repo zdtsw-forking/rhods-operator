@@ -76,7 +76,7 @@ metadata:
           }
         },
         {
-          "apiVersion": "datasciencecluster.opendatahub.io/v1alpha1",
+          "apiVersion": "datasciencecluster.opendatahub.io/v1",
           "kind": "DataScienceCluster",
           "metadata": {
             "labels": {
@@ -91,31 +91,31 @@ metadata:
           "spec": {
             "components": {
               "codeflare": {
-                "enabled": false
+                "managementState": "Removed"
               },
               "dashboard": {
-                "enabled": false
+                "managementState": "Managed"
               },
               "datasciencepipelines": {
-                "enabled": false
+                "managementState": "Managed"
               },
               "kserve": {
-                "enabled": false
+                "managementState": "Removed"
               },
               "modelmeshserving": {
-                "enabled": false
+                "managementState": "Managed"
               },
               "ray": {
-                "enabled": false
+                "managementState": "Removed"
               },
               "workbenches": {
-                "enabled": false
+                "managementState": "Managed"
               }
             }
           }
         },
         {
-          "apiVersion": "dscinitialization.opendatahub.io/v1alpha1",
+          "apiVersion": "dscinitialization.opendatahub.io/v1",
           "kind": "DSCInitialization",
           "metadata": {
             "labels": {
@@ -130,7 +130,7 @@ metadata:
           "spec": {
             "applicationsNamespace": "redhat-ods-applications",
             "monitoring": {
-              "enabled": false,
+              "managementState": "Managed",
               "namespace": "redhat-ods-monitoring"
             }
           }
@@ -166,9 +166,46 @@ metadata:
       ]
     capabilities: Basic Install
     olm.skipRange: '>=1.0.0 <2.0.0'
-    operatorframework.io/initialization-resource: "{ \n  \"apiVersion\": \"datasciencecluster.opendatahub.io/v1alpha1\",\n
-      \ \"kind\": \"DataScienceCluster\", \n  \"metadata\":{ \n    \"name\": \"default\"\n
-      \ },\n  \"spec\": {}\n}"
+    operatorframework.io/initialization-resource: |-
+      {
+        "apiVersion": "datasciencecluster.opendatahub.io/v1",
+        "kind": "DataScienceCluster",
+        "metadata": {
+          "name": "default",
+          "labels": {
+            "app.kubernetes.io/name": "datasciencecluster",
+            "app.kubernetes.io/instance": "default",
+            "app.kubernetes.io/part-of": "opendatahub-operator",
+            "app.kubernetes.io/managed-by": "kustomize",
+            "app.kubernetes.io/created-by": "opendatahub-operator"
+          }
+        },
+        "spec": {
+          "components": {
+            "codeflare": {
+              "managementState": "Removed"
+            },
+            "dashboard": {
+              "managementState": "Managed"
+            },
+            "datasciencepipelines": {
+              "managementState": "Managed"
+            },
+            "kserve": {
+              "managementState": "Removed"
+            },
+            "modelmeshserving": {
+              "managementState": "Managed"
+            },
+            "ray": {
+              "managementState": "Removed"
+            },
+            "workbenches": {
+              "managementState": "Managed"
+            }
+          }
+        }
+      }
     operators.operatorframework.io/builder: operator-sdk-v1.24.1
     operators.operatorframework.io/internal-objects: '[dscinitialization.opendatahub.io]'
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
@@ -187,19 +224,20 @@ spec:
       - description: Override and fine tune specific component configurations.
         displayName: Components
         path: components
-      version: v1alpha1
+      version: v1
     - description: DSCInitialization is the Schema for the dscinitializations API
       displayName: DSC Initialization
       kind: DSCInitialization
       name: dscinitializations.dscinitialization.opendatahub.io
       specDescriptors:
+      - description: Internal development useful field to test customizations. This
+          is not recommended to be used in production environment.
+        displayName: Dev Flags
+        path: devFlags
       - description: Namespace for applications to be installed, non-configurable,
           default to "redhat-ods-applications"
         displayName: Applications Namespace
         path: applicationsNamespace
-      - description: Internal development useful field
-        displayName: Manifests Uri
-        path: manifestsUri
       - description: Enable monitoring on specified namespace
         displayName: Monitoring
         path: monitoring
@@ -208,7 +246,7 @@ spec:
           resource.
         displayName: Conditions
         path: conditions
-      version: v1alpha1
+      version: v1
     - kind: OdhApplication
       name: odhapplications.dashboard.opendatahub.io
       version: v1
@@ -488,7 +526,6 @@ spec:
           resources:
           - builds
           verbs:
-          - catch
           - create
           - delete
           - list
@@ -578,6 +615,7 @@ spec:
           - create
           - delete
           - get
+          - list
           - patch
           - watch
         - apiGroups:
@@ -622,6 +660,7 @@ spec:
           - create
           - delete
           - get
+          - list
           - patch
           - update
           - watch
@@ -818,8 +857,9 @@ spec:
           resources:
           - dscinitializations/finalizers
           verbs:
+          - delete
           - get
-          - patchdelete
+          - patch
           - update
         - apiGroups:
           - dscinitialization.opendatahub.io

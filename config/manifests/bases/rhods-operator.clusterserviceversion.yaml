@@ -5,9 +5,46 @@ metadata:
     alm-examples: '[]'
     capabilities: Basic Install
     olm.skipRange: '>=1.0.0 <2.0.0'
-    operatorframework.io/initialization-resource: "{ \n  \"apiVersion\": \"datasciencecluster.opendatahub.io/v1alpha1\",\n
-      \ \"kind\": \"DataScienceCluster\", \n  \"metadata\":{ \n    \"name\": \"default\"\n
-      \ },\n  \"spec\": {}\n}"
+    operatorframework.io/initialization-resource: |-
+      {
+        "apiVersion": "datasciencecluster.opendatahub.io/v1",
+        "kind": "DataScienceCluster",
+        "metadata": {
+          "name": "default",
+          "labels": {
+            "app.kubernetes.io/name": "datasciencecluster",
+            "app.kubernetes.io/instance": "default",
+            "app.kubernetes.io/part-of": "opendatahub-operator",
+            "app.kubernetes.io/managed-by": "kustomize",
+            "app.kubernetes.io/created-by": "opendatahub-operator"
+          }
+        },
+        "spec": {
+          "components": {
+            "codeflare": {
+              "managementState": "Removed"
+            },
+            "dashboard": {
+              "managementState": "Managed"
+            },
+            "datasciencepipelines": {
+              "managementState": "Managed"
+            },
+            "kserve": {
+              "managementState": "Removed"
+            },
+            "modelmeshserving": {
+              "managementState": "Managed"
+            },
+            "ray": {
+              "managementState": "Removed"
+            },
+            "workbenches": {
+              "managementState": "Managed"
+            }
+          }
+        }
+      }
     operators.operatorframework.io/internal-objects: '[dscinitialization.opendatahub.io]'
     repository: https://github.com/red-hat-data-services/rhods-operator
   name: rhods-operator.v2.0.0
@@ -24,19 +61,20 @@ spec:
       - description: Override and fine tune specific component configurations.
         displayName: Components
         path: components
-      version: v1alpha1
+      version: v1
     - description: DSCInitialization is the Schema for the dscinitializations API
       displayName: DSC Initialization
       kind: DSCInitialization
       name: dscinitializations.dscinitialization.opendatahub.io
       specDescriptors:
+      - description: Internal development useful field to test customizations. This
+          is not recommended to be used in production environment.
+        displayName: Dev Flags
+        path: devFlags
       - description: Namespace for applications to be installed, non-configurable,
           default to "redhat-ods-applications"
         displayName: Applications Namespace
         path: applicationsNamespace
-      - description: Internal development useful field
-        displayName: Manifests Uri
-        path: manifestsUri
       - description: Enable monitoring on specified namespace
         displayName: Monitoring
         path: monitoring
@@ -45,7 +83,7 @@ spec:
           resource.
         displayName: Conditions
         path: conditions
-      version: v1alpha1
+      version: v1
   description: This will be replaced by Kustomize
   displayName: Red Hat OpenShift Data Science
   icon:
