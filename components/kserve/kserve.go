@@ -49,6 +49,7 @@ func (d *Kserve) ReconcileComponent(owner metav1.Object, cli client.Client, sche
 	enabled := managementState == operatorv1.Managed
 
 	// Update image parameters
+	// TODO: we will need to cleanup this logic since kserve images are from quay.io only
 	if err := deploy.ApplyImageParams(Path, imageParamMap); err != nil {
 		return err
 	}
@@ -67,8 +68,8 @@ func (d *Kserve) ReconcileComponent(owner metav1.Object, cli client.Client, sche
 		}
 	}
 
-	// Update image parameters
-	if err := deploy.ApplyImageParams(Path, dependentImageParamMap); err != nil {
+	// Update image parameters for odh-model-controller
+	if err := deploy.ApplyImageParams(DependentPath, dependentImageParamMap); err != nil {
 		return err
 	}
 
