@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-opendatahub-operator
+  namespace: redhat-ods-monitoring
+data:
+  recording.rules: |
+    groups:
+      - name: SLOs - RHODS Operator v2
+        interval: 15m
+        rules:
+        - expr: |
+            rate(controller_runtime_reconcile_total{controller="manager", job="RHODS Metrics", result!="success"}[15m])
+          labels:
+            instance: rhods-controller
+          record: controller_runtime_reconcile_total:rate15m

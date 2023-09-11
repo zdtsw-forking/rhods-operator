@@ -1,0 +1,266 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-service-ca
+  namespace: redhat-ods-monitoring
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-general-metrics
+  namespace: redhat-ods-monitoring
+data:
+  recording.rules: |
+    groups:
+      - name: Usage Metrics
+        rules:
+        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
+          record: rhods_total_users
+          labels:
+            instance: jupyter-notebooks
+        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
+          record: rhods_active_users
+          labels:
+            instance: jupyter-notebooks
+
+      - name: Availability Metrics
+        rules:
+        - expr: ((min(probe_success{name=~"rhods-dashboard|notebook-spawner"}) by (name) or on() vector(0)) or label_replace(min(probe_success{name=~"rhods-dashboard|notebook-spawner"}), "name", "combined", "name", ".*"))
+          record: rhods_aggregate_availability
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-general-alerting
+  namespace: redhat-ods-monitoring
+data:
+  alerting.rules: |
+    groups:
+      - name: DeadManSnitch
+        interval: 1m
+        rules:
+          - alert: DeadManSnitch
+            expr: vector(1)
+            labels:
+              severity: critical
+            annotations:
+              description: This is a DeadManSnitch to ensure RHODS monitoring and alerting pipeline is online.
+              summary: Alerting DeadManSnitch
+           
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus
+  namespace: redhat-ods-monitoring
+data:
+  prometheus.yml: |
+    rule_files:
+      - '*.rules'
+    global:
+      scrape_interval:     10s
+      evaluation_interval: 10s
+
+    scrape_configs:
+    - job_name: 'Federate Prometheus'
+      scrape_interval: 30s
+      scheme: https
+      tls_config:
+        server_name: prometheus-k8s.openshift-monitoring.svc
+        ca_file: /etc/prometheus/ca/service-ca.crt
+      bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+      honor_labels: true
+      metrics_path: '/federate'
+
+      params:
+        'match[]':
+          - '{__name__= "haproxy_backend_http_responses_total"}'
+          - '{__name__= "controller_runtime_reconcile_total"}'
+          - '{__name__= "container_cpu_usage_seconds_total"}'
+          - '{__name__= "container_memory_rss"}'
+          - '{__name__= "kubelet_volume_stats_used_bytes"}'
+          - '{__name__= "kubelet_volume_stats_capacity_bytes"}'
+          - '{__name__= "kube_pod_container_status_waiting_reason"}'
+          - '{__name__= "kube_pod_container_status_restarts_total"}'
+          - '{__name__= "kube_pod_container_status_terminated_reason"}'
+          - '{__name__= "openshift_build_status_phase_total"}'
+          - '{__name__= "kube_statefulset_replicas"}'
+
+
+      static_configs:
+        - targets:
+          - "prometheus-k8s.openshift-monitoring.svc.cluster.local:9091"
+
+    - job_name: 'user_facing_endpoints_status'
+      scrape_interval: 10s
+      metrics_path: /probe
+      scheme: https
+      tls_config:
+        insecure_skip_verify: true
+      params:
+        module: [http_2xx]
+      authorization:
+        credentials_file: /run/secrets/kubernetes.io/serviceaccount/token
+      static_configs:
+      - targets: [<rhods_dashboard_host>]
+        labels:
+          name: rhods-dashboard
+      - targets: [<notebook_spawner_host>]
+        labels:
+          name: notebook-spawner
+      - targets: [<data_science_pipelines_operator_host>]
+        labels:
+          name: data-science-pipelines-operator
+      relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox-exporter.redhat-ods-monitoring.svc.cluster.local:9114
+
+    - job_name: 'Kubeflow Notebook Controller Service Metrics'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(notebook-controller-service)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
+
+    - job_name: 'ODH Notebook Controller Service Metrics'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(odh-notebook-controller-service)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
+    
+    - job_name: 'ODH Model Controller'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(odh-model-controller-metrics-service)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
+
+    - job_name: 'Modelmesh Controller'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(modelmesh-controller)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
+
+    - job_name: 'Data Science Pipelines Operator'
+      honor_labels: true
+      metrics_path: /metrics
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(data-science-pipelines-operator-service)$
+          target_label: kubernetes_name
+          action: keep
+      metric_relabel_configs:
+        - target_label: namespace
+          replacement: redhat-ods-applications
+
+    - job_name: 'Data Science Pipelines Application'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(ds-pipeline-.*)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):8888
+          target_label: __address__
+          action: keep
+        - source_labels: [__meta_kubernetes_service_name]
+          target_label: dspa_service
+        - source_labels: [__meta_kubernetes_namespace]
+          target_label: namespace
+
+    - job_name: 'RHODS Metrics'
+      honor_labels: true
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-operator
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(rhods-operator-metrics)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8383
+
+    alerting:
+      alertmanagers:
+      - scheme: http
+        static_configs:
+        - targets:
+          - "localhost:9093"
