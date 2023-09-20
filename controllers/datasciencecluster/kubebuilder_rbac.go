@@ -90,6 +90,11 @@ package datasciencecluster
 
 // +kubebuilder:rbac:groups="mcad.ibm.com",resources=appwrappers,verbs=create;delete;list;patch;get
 
+// +kubebuilder:rbac:groups="workload.codeflare.dev",resources=appwrappers,verbs=create;delete;list;patch;get;deletecollection;update;watch
+// +kubebuilder:rbac:groups="workload.codeflare.dev",resources=appwrappers/finalizers,verbs=create;delete;list;patch;get;deletecollection;update;watch
+// +kubebuilder:rbac:groups="workload.codeflare.dev",resources=appwrappers/status,verbs=create;delete;list;patch;get;deletecollection;update;watch
+// +kubebuilder:rbac:groups="workload.codeflare.dev",resources=queuejobs,verbs=create;delete;list;patch;get;deletecollection;update;watch
+
 // +kubebuilder:rbac:groups="machinelearning.seldon.io",resources=seldondeployments,verbs=*
 
 // +kubebuilder:rbac:groups="machine.openshift.io",resources=machinesets,verbs=list;patch;delete

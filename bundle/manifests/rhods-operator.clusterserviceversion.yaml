@@ -424,6 +424,18 @@ spec:
           verbs:
           - '*'
         - apiGroups:
+          - authentication.k8s.io
+          resources:
+          - tokenreviews
+          verbs:
+          - create
+        - apiGroups:
+          - authorization.k8s.io
+          resources:
+          - subjectaccessreviews
+          verbs:
+          - create
+        - apiGroups:
           - authorization.openshift.io
           resources:
           - clusterrolebindings
@@ -836,6 +848,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -852,6 +865,7 @@ spec:
           resources:
           - datasciencepipelinesapplications/status
           verbs:
+          - get
           - patch
           - update
         - apiGroups:
@@ -926,6 +940,12 @@ spec:
           - patch
           - update
           - watch
+        - apiGroups:
+          - image.openshift.io
+          resources:
+          - imagestreamtags
+          verbs:
+          - get
         - apiGroups:
           - integreatly.org
           resources:
@@ -1028,6 +1048,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -1192,6 +1213,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -1201,6 +1223,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1212,6 +1235,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1462,6 +1486,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - patch
         - apiGroups:
           - tekton.dev
@@ -1494,6 +1519,58 @@ spec:
           - delete
           - list
           - patch
+          - watch
+        - apiGroups:
+          - workload.codeflare.dev
+          resources:
+          - appwrappers
+          verbs:
+          - create
+          - delete
+          - deletecollection
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - workload.codeflare.dev
+          resources:
+          - appwrappers/finalizers
+          verbs:
+          - create
+          - delete
+          - deletecollection
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - workload.codeflare.dev
+          resources:
+          - appwrappers/status
+          verbs:
+          - create
+          - delete
+          - deletecollection
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - workload.codeflare.dev
+          resources:
+          - queuejobs
+          verbs:
+          - create
+          - delete
+          - deletecollection
+          - get
+          - list
+          - patch
+          - update
           - watch
         - apiGroups:
           - authentication.k8s.io
