@@ -4,11 +4,12 @@ set -e
 # component: dsp, kserve, dashbaord, cf/ray. in the format of "repo-name:branch-name:source-folder:target-folder"
 # TODO: workbench, modelmesh, monitoring, etc
 REPO_LIST=(
-    "distributed-workloads:main:codeflare-stack:codeflare-stack"
+    "distributed-workloads:main:codeflare-stack:codeflare"
     "distributed-workloads:main:ray:ray"
     "data-science-pipelines-operator:main:config:data-science-pipelines-operator"
-    "kserve:release-v0.11:config:kserve"
     "odh-dashboard:main:manifests:odh-dashboard"
+    "kubeflow:master:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
+    "kubeflow:master:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
 )
 
 # pre-cleanup local env
@@ -23,12 +24,14 @@ MANIFEST_RELEASE="master"
 MANIFESTS_TARBALL_URL="${GITHUB_URL}/${MANIFEST_ORG}/odh-manifests/tarball/${MANIFEST_RELEASE}"
 mkdir ./.odh-manifests-tmp/ ./odh-manifests/
 wget -q -c ${MANIFESTS_TARBALL_URL} -O - | tar -zxv -C ./.odh-manifests-tmp/ --strip-components 1 > /dev/null
+# modelmesh
 cp -r ./.odh-manifests-tmp/model-mesh/ ./odh-manifests
 cp -r ./.odh-manifests-tmp/odh-model-controller/ ./odh-manifests
 cp -r ./.odh-manifests-tmp/modelmesh-monitoring/ ./odh-manifests
-cp -r ./.odh-manifests-tmp//jupyterhub/notebook-images/ ./odh-manifests
-cp -r ./.odh-manifests-tmp/odh-notebook-controller/ ./odh-manifests
-ls -lat ./odh-manifests/
+# Kserve
+cp -r ./.odh-manifests-tmp/kserve/ ./odh-manifests
+# workbench image
+cp -r ./.odh-manifests-tmp/jupyterhub/notebook-images/ ./odh-manifests
 
 for repo_info in ${REPO_LIST[@]}; do
     echo "Git clone below repo ${repo_info}"
