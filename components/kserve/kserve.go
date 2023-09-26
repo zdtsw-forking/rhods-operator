@@ -95,7 +95,7 @@ func (k *Kserve) ReconcileComponent(owner metav1.Object, cli client.Client, sche
 		}
 		// Update image parameters for keserve
 		if dscispec.DevFlags.ManifestsUri == "" {
-			if err := deploy.ApplyImageParams(Path, dependentImageParamMap); err != nil {
+			if err := deploy.ApplyImageParams(DependentPath, dependentImageParamMap); err != nil {
 				return err
 			}
 		}
