@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-recording-dsp
+  name: prometheus-datasciencepipelines
   namespace: redhat-ods-monitoring
 data:
   recording.rules: |
@@ -97,13 +97,6 @@ data:
             component: dsp
           record: haproxy_backend_http_responses_total:burnrate6h
 
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-backend-dsp
-  namespace: redhat-ods-monitoring
-data:
   alerting.rules: |
     groups:
       - name: SLOs-haproxy_backend_http_responses_dsp

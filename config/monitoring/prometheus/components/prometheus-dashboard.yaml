@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-recording-dashboard
+  name: prometheus-dashboard
   namespace: redhat-ods-monitoring
 data:
   recording.rules: |
@@ -94,14 +94,6 @@ data:
           labels:
             instance: rhods-dashboard
           record: probe_success:burnrate6h
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-backend-dashboard
-  namespace: redhat-ods-monitoring
-data:
   alerting.rules: |
     groups:
       - name: SLOs-haproxy_backend_http_responses_dashboard

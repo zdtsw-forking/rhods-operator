@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-recording-workbenches
+  name: prometheus-workbenches
   namespace: redhat-ods-monitoring
 data:
   recording.rules: |
@@ -45,14 +45,6 @@ data:
             instance: notebook-spawner
           record: probe_success:burnrate6h
 
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-pvc-workbenches
-  namespace: redhat-ods-monitoring
-data:
   alerting.rules: |
     groups:
       - name: RHODS-PVC-Usage
@@ -78,15 +70,6 @@ data:
             severity: warning
             route: user-notifications
 
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-probe-workbenches
-  namespace: redhat-ods-monitoring
-data:
-  alerting.rules: |
-    groups:
       - name: SLOs-probe_success
         rules:
         - alert: RHODS Jupyter Probe Success Burn Rate
@@ -150,16 +133,6 @@ data:
           labels:
             severity: critical
 
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-nbc
-  namespace: redhat-ods-monitoring
-data:
-  alerting.rules: |
-    groups:
       - name: RHODS Notebook controllers
         rules:
         - alert: Kubeflow notebook controller pod is not running
