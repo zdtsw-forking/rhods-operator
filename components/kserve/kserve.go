@@ -3,6 +3,7 @@ package kserve
 
 import (
 	"fmt"
+
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -49,6 +50,11 @@ var _ components.ComponentInterface = (*Kserve)(nil)
 
 func (k *Kserve) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
+	platform, err := deploy.GetPlatform(cli)
+	if err != nil {
+		return err
+	}
 
 	if enabled {
 		// check on dependent operators
@@ -107,7 +113,23 @@ func (k *Kserve) ReconcileComponent(owner metav1.Object, cli client.Client, sche
 		return err
 	}
 
-	return nil
+	// Monitoring handling
+	if platform == deploy.ManagedRhods && monitoringEnabled {
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
+			dscispec.Monitoring.Namespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+DependentComponentName,
+			dscispec.Monitoring.Namespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+	}
+
+	return err
 }
 
 func (in *Kserve) DeepCopyInto(out *Kserve) {

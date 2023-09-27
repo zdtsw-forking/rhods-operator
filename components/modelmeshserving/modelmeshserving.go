@@ -46,7 +46,11 @@ var _ components.ComponentInterface = (*ModelMeshServing)(nil)
 
 func (m *ModelMeshServing) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
-
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
+	platform, err := deploy.GetPlatform(cli)
+	if err != nil {
+		return err
+	}
 	// Update Default rolebinding
 	if enabled {
 		err := common.UpdatePodSecurityRolebinding(cli, []string{"modelmesh", "modelmesh-controller", "odh-model-controller", "odh-prometheus-operator", "prometheus-custom"}, dscispec.ApplicationsNamespace)
@@ -61,12 +65,10 @@ func (m *ModelMeshServing) ReconcileComponent(owner metav1.Object, cli client.Cl
 		}
 	}
 
-	err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+	if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 		Path,
 		dscispec.ApplicationsNamespace,
-		scheme, enabled)
-
-	if err != nil {
+		scheme, enabled); err != nil {
 		return err
 	}
 
@@ -91,6 +93,15 @@ func (m *ModelMeshServing) ReconcileComponent(owner metav1.Object, cli client.Cl
 		monitoringNamespace,
 		scheme, enabled)
 
+	// CloudService Monitoring handling
+	if platform == deploy.ManagedRhods && monitoringEnabled {
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
+			monitoringNamespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+	}
 	return err
 }
 

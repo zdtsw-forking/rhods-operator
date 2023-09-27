@@ -42,6 +42,7 @@ var _ components.ComponentInterface = (*Workbenches)(nil)
 
 func (w *Workbenches) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
 
 	// Set default notebooks namespace
 	// Create rhods-notebooks namespace in managed platforms
@@ -94,19 +95,29 @@ func (w *Workbenches) ReconcileComponent(owner metav1.Object, cli client.Client,
 		}
 	}
 
+	manifestsPath := ""
 	if platform == deploy.OpenDataHub || platform == "" {
-		err = deploy.DeployManifestsFromPath(owner, cli, ComponentName,
-			notebookImagesPath,
-			dscispec.ApplicationsNamespace,
-			scheme, enabled)
-		return err
+		manifestsPath = notebookImagesPath
 	} else {
-		err = deploy.DeployManifestsFromPath(owner, cli, ComponentName,
-			notebookImagesPathSupported,
-			dscispec.ApplicationsNamespace,
-			scheme, enabled)
+		manifestsPath = notebookImagesPathSupported
+	}
+	if err = deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+		manifestsPath,
+		dscispec.ApplicationsNamespace,
+		scheme, enabled); err != nil {
 		return err
 	}
+
+	// Monitoring handling
+	if platform == deploy.ManagedRhods {
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
+			dscispec.Monitoring.Namespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+	}
+	return err
 
 }
 

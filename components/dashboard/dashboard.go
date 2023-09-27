@@ -55,6 +55,7 @@ var _ components.ComponentInterface = (*Dashboard)(nil)
 
 func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
 
 	// TODO: Add any additional tasks if required when reconciling component
 
@@ -219,13 +220,15 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 		if err != nil {
 			return fmt.Errorf("failed to set dashboard consolelink from %s", PathConsoleLink)
 		}
-		return err
+		// Monitoring handling
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentNameSupported,
+			dscispec.Monitoring.Namespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
 	default:
 		return nil
 	}
-}
-
-func (in *Dashboard) DeepCopyInto(out *Dashboard) {
-	*out = *in
-	out.Component = in.Component
+	return err
 }

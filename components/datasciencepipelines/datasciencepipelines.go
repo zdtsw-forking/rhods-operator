@@ -43,6 +43,11 @@ var _ components.ComponentInterface = (*DataSciencePipelines)(nil)
 
 func (d *DataSciencePipelines) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
+	platform, err := deploy.GetPlatform(cli)
+	if err != nil {
+		return err
+	}
 
 	if enabled {
 		// check if the dependent operator installed is done in dashboard
@@ -54,11 +59,23 @@ func (d *DataSciencePipelines) ReconcileComponent(owner metav1.Object, cli clien
 			}
 		}
 	}
-	err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+	if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 		Path,
 		dscispec.ApplicationsNamespace,
-		scheme, enabled)
-	return err
+		scheme, enabled); err != nil {
+		return err
+	}
+
+	// Monitoring handling
+	if platform == deploy.ManagedRhods && monitoringEnabled {
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
+			dscispec.Monitoring.Namespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 func (in *DataSciencePipelines) DeepCopyInto(out *DataSciencePipelines) {

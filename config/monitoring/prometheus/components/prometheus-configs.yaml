@@ -109,7 +109,7 @@ data:
       - targets: [<rhods_dashboard_host>]
         labels:
           name: rhods-dashboard
-      - targets: [<notebook_spawner_host>]
+      - targets: [<notebook-spawner-url>]
         labels:
           name: notebook-spawner
       - targets: [<data_science_pipelines_operator_host>]

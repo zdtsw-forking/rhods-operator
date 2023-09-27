@@ -38,7 +38,11 @@ var _ components.ComponentInterface = (*Ray)(nil)
 
 func (d *Ray) ReconcileComponent(owner metav1.Object, cli client.Client, scheme *runtime.Scheme, managementState operatorv1.ManagementState, dscispec *dsci.DSCInitializationSpec) error {
 	enabled := managementState == operatorv1.Managed
-
+	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
+	platform, err := deploy.GetPlatform(cli)
+	if err != nil {
+		return err
+	}
 	if enabled {
 		if dscispec.DevFlags.ManifestsUri == "" {
 			if err := deploy.ApplyImageParams(RayPath, imageParamMap); err != nil {
@@ -47,10 +51,22 @@ func (d *Ray) ReconcileComponent(owner metav1.Object, cli client.Client, scheme 
 		}
 	}
 	// Deploy Ray Operator
-	err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+	if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 		RayPath,
 		dscispec.ApplicationsNamespace,
-		scheme, enabled)
+		scheme, enabled); err != nil {
+		return err
+	}
+
+	// Monitoring handling
+	if platform == deploy.ManagedRhods && monitoringEnabled {
+		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
+			dscispec.Monitoring.Namespace,
+			scheme, enabled); err != nil {
+			return err
+		}
+	}
 	return err
 
 }

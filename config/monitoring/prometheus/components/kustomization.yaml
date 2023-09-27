@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
 # can split to component based file
   - prometheus-configs.yaml
+  - prometheus-operator.yaml
+  -
