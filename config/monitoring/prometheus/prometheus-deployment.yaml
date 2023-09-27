@@ -257,10 +257,14 @@ spec:
         configMap:
           defaultMode: 420
           name: alertmanager
+
+
       - name: prometheus-config
         configMap:
           defaultMode: 420
           name: prometheus
+
+
       - name: prometheus-secret
         secret:
           secretName: prometheus-secret

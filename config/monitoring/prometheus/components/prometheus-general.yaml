@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-service-ca
+  namespace: redhat-ods-monitoring
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/name: rhods-metrics
+    role: recording-rules
+  name: rhods-prometheus-recording-metrics
+  namespace: redhat-ods-monitoring
+spec:
+  groups:
+  - name: Usage Metrics
+    rules:
+    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
+      record: rhods_total_users
+      labels:
+        instance: jupyter-notebooks
+    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
+      record: rhods_active_users
+      labels:
+        instance: jupyter-notebooks
+
+  - name: Availability Metrics
+    rules:
+    - expr: ((min(probe_success{name=~"rhods-dashboard|notebook-spawner"}) by (name) or on() vector(0)) or label_replace(min(probe_success{name=~"rhods-dashboard|notebook-spawner"}), "name", "combined", "name", ".*"))
+      record: rhods_aggregate_availability
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/name: rhods-general
+    role: alerting-rules
+  name: rhods-prometheus-alerting-general
+  namespace: redhat-ods-monitoring
+spec:
+  groups:
+  - name: DeadManSnitch
+    interval: 1m
+    rules:
+      - alert: DeadManSnitch
+        expr: vector(1)
+        labels:
+          severity: critical
+        annotations:
+          description: This is a DeadManSnitch to ensure RHODS monitoring and alerting pipeline is online.
+          summary: Alerting DeadManSnitch
+  

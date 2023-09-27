@@ -1,17 +1,20 @@
 ---
-apiVersion: v1
-kind: ConfigMap
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
 metadata:
-  name: prometheus-opendatahub-operator
+  labels:
+    app.kubernetes.io/instance: prometheus
+    app.kubernetes.io/name: rhods-operator
+    role: recording-rules
+  name: rhods-prometheus-alerting-operator
   namespace: redhat-ods-monitoring
-data:
-  recording.rules: |
-    groups:
-      - name: SLOs - RHODS Operator v2
-        interval: 15m
-        rules:
-        - expr: |
-            rate(controller_runtime_reconcile_total{controller="rhods-controller", job="RHODS Metrics", result!="success"}[15m])
-          labels:
-            instance: rhods-controller
-          record: controller_runtime_reconcile_total:rate15m
+spec:
+  groups:
+  - name: SLOs - RHODS Operator v2
+    interval: 15m  # overwrite global.evaluation_interval 10s
+    rules:
+    - expr: |
+        rate(controller_runtime_reconcile_total{controller="rhods-controller", job="RHODS Metrics", result!="success"}[15m])
+      labels:
+        instance: rhods-controller
+      record: controller_runtime_reconcile_total:rate15m
