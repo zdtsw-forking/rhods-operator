@@ -115,6 +115,12 @@ data:
       - targets: [<data_science_pipelines_operator_host>]
         labels:
           name: data-science-pipelines-operator
+      - targets: [mcad-mcad-metrics.redhat-ods-applications.svc:8083/metrics]
+        labels:
+          name: mcad-controller
+      - targets: [codeflare-operator-manager-metrics.openshift-operators.svc:8080/metrics]
+        labels:
+          name: codeflare-operator
       relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -239,6 +245,43 @@ data:
           target_label: dspa_service
         - source_labels: [__meta_kubernetes_namespace]
           target_label: namespace
+    - job_name: 'MCAD Controller'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - redhat-ods-applications
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(mcad-mcad-metrics)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8083
+
+    - job_name: 'CodeFlare Operator'
+      honor_labels: true
+      metrics_path: /metrics
+      scheme: http
+      kubernetes_sd_configs:
+        - role: endpoints
+          namespaces:
+            names:
+              - openshift-operators
+      relabel_configs:
+        - source_labels: [__meta_kubernetes_service_name]
+          regex: ^(codeflare-operator-manager-metrics)$
+          target_label: kubernetes_name
+          action: keep
+        - source_labels: [__address__]
+          regex: (.+):(\d+)
+          target_label: __address__
+          replacement: ${1}:8080
 
     - job_name: 'RHODS Metrics'
       honor_labels: true

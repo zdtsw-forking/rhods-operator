@@ -11,7 +11,7 @@ data:
         interval: 15m
         rules:
         - expr: |
-            rate(controller_runtime_reconcile_total{controller="manager", job="RHODS Metrics", result!="success"}[15m])
+            rate(controller_runtime_reconcile_total{controller="rhods-controller", job="RHODS Metrics", result!="success"}[15m])
           labels:
             instance: rhods-controller
           record: controller_runtime_reconcile_total:rate15m
