@@ -2,7 +2,7 @@
 set -e
 
 # component: dsp, kserve, dashbaord, cf/ray. in the format of "repo-name:branch-name:source-folder:target-folder"
-# TODO: workbench, modelmesh, monitoring, etc
+# TODO: dashboard, modelmesh, kserve, trustyai etc
 REPO_LIST=(
     "distributed-workloads:main:codeflare-stack:codeflare"
     "distributed-workloads:main:ray:ray"
