@@ -103,6 +103,17 @@ func configurePrometheus(ctx context.Context, dsciInit *dsci.DSCInitialization, 
 		return err
 	}
 
+	// config dashboard, workbenches and dspa jobs
+
+	err = common.ReplaceStringsInFile(filepath.Join(deploy.DefaultManifestPath, "monitoring", "prometheus", "prometheus-configs.yaml"),
+		map[string]string{
+			"<odh_application_namespace>": dsciInit.Spec.ApplicationsNamespace,
+		})
+	if err != nil {
+		r.Log.Error(err, "error to inject data to prometheus-configs.yaml")
+		return err
+	}
+
 	// Deploy manifests
 	err = deploy.DeployManifestsFromPath(dsciInit, r.Client, "prometheus", prometheusManifestsPath, dsciInit.Spec.Monitoring.Namespace, r.Scheme, dsciInit.Spec.Monitoring.ManagementState == operatorv1.Managed)
 	if err != nil {
@@ -176,7 +187,7 @@ func configureAlertManager(ctx context.Context, dsciInit *dsci.DSCInitialization
 	}
 	r.Log.Info("Success: deploy alertmanager manifests")
 
-	// Create proxy secret
+	// Create alertmanager proxy secret
 	if err := createMonitoringProxySecret(r.Client, "alertmanager-proxy", dsciInit); err != nil {
 		r.Log.Error(err, "error to create secret alertmanager-proxy")
 		return err

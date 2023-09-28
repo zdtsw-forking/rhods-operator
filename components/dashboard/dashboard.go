@@ -15,6 +15,7 @@ import (
 	routev1 "github.com/openshift/api/route/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
+	"path/filepath"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
@@ -219,6 +220,14 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 			scheme, enabled)
 		if err != nil {
 			return fmt.Errorf("failed to set dashboard consolelink from %s", PathConsoleLink)
+		}
+		// inject dashboard-url to prometheus config
+		err = common.ReplaceStringsInFile(filepath.Join(deploy.DefaultManifestPath, "monitoring", "prometheus", "prometheus-configs.yaml"),
+			map[string]string{
+				"<rhods-dashboard-url>": dscispec.ApplicationsNamespace,
+			})
+		if err != nil {
+			return fmt.Errorf("error to inject dashboard URL to prometheus-configs.yaml")
 		}
 		// Monitoring handling
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,

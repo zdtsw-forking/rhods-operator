@@ -106,13 +106,13 @@ data:
       authorization:
         credentials_file: /run/secrets/kubernetes.io/serviceaccount/token
       static_configs:
-      - targets: [<rhods_dashboard_host>]
+      - targets: [<rhods-dashboard-url>]
         labels:
           name: rhods-dashboard
-      - targets: [<notebook-spawner-url>]
+      - targets: [notebook-controller-service.<odh_application_namespace>.svc:8080/metrics,odh-notebook-controller-service.<odh_application_namespace>.svc:8080/metrics]
         labels:
           name: notebook-spawner
-      - targets: [<data_science_pipelines_operator_host>]
+      - targets: [data-science-pipelines-operator-service.<odh_application_namespace>.svc:8080/metrics]
         labels:
           name: data-science-pipelines-operator
       - targets: [mcad-mcad-metrics.redhat-ods-applications.svc:8083/metrics]
