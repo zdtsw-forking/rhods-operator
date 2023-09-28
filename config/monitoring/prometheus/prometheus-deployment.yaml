@@ -40,7 +40,7 @@ spec:
         - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
         - -client-id=system:serviceaccount:redhat-ods-monitoring:prometheus
         - -skip-auth-regex=^/metrics
-        image: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:4bef31eb993feb6f1096b51b4876c65a6fb1f4401fee97fa4f4542b6b7c9bc46
+        image: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:ab112105ac37352a2a4916a39d6736f5db6ab4c29bad4467de8d613e80e9bb33
         ports:
         - containerPort: 9091
           name: https
@@ -78,8 +78,8 @@ spec:
         - mountPath: /etc/proxy/secrets
           name: prometheus-proxy
           readOnly: false
-
-      - name: prometheus
+      
+      - name: prometheus # version 2.36.2 (branch: rhaos-4.11-rhel-8, revision: e55e7c7c655214174c97ebb97fbc9bba47ff9adc)
         image: registry.redhat.io/openshift4/ose-prometheus@sha256:62c89e82fdf9639eace286d11c91e6d1c3fdd3437e081ed9dce6f5ea783c660f
         args:
           - --storage.tsdb.retention.time=6h
