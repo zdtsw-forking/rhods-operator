@@ -7,7 +7,6 @@ REPO_LIST=(
     "distributed-workloads:main:codeflare-stack:codeflare"
     "distributed-workloads:main:ray:ray"
     "data-science-pipelines-operator:main:config:data-science-pipelines-operator"
-    "odh-dashboard:main:manifests:odh-dashboard"
     "notebooks:main:manifests:notebook"
     "kubeflow:master:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
     "kubeflow:master:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
@@ -34,7 +33,9 @@ cp -r ./.odh-manifests-tmp/kserve/ ./odh-manifests
 # workbench image
 cp -r ./.odh-manifests-tmp/jupyterhub/notebook-images/ ./odh-manifests
 # Trustyai
-cp -r ./.odh-manifests-tmp/trustyai-service-operator ./odh-manifests
+cp -r ./.odh-manifests-tmp/trustyai-service-operator/ ./odh-manifests
+# Dashboard
+cp -r ./.odh-manifests-tmp/odh-dashboard/ ./odh-manifests
 
 for repo_info in ${REPO_LIST[@]}; do
     echo "Git clone below repo ${repo_info}"
