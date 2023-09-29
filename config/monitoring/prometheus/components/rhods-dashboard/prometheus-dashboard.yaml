@@ -146,16 +146,6 @@ data:
           for: 3h
           labels:
             severity: warning
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-alerting-probe-dashboard
-  namespace: redhat-ods-monitoring
-data:
-  alerting.rules: |
-    groups:
       - name: SLOs-probe_success
         rules:
         - alert: RHODS Dashboard Probe Success Burn Rate
