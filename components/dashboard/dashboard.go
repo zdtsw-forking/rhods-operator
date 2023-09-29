@@ -217,7 +217,7 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 
 		// CloudService Monitoring handling
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
-			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentNameSupported,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/rhods/components/"+ComponentNameSupported,
 			dscispec.Monitoring.Namespace,
 			scheme, monitoringEnabled); err != nil {
 			return err
