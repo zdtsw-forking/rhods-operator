@@ -34,7 +34,6 @@ data:
           - '{__name__= "kube_pod_container_status_waiting_reason"}'
           - '{__name__= "kube_pod_container_status_restarts_total"}'
           - '{__name__= "kube_pod_container_status_terminated_reason"}'
-          - '{__name__= "openshift_build_status_phase_total"}'
           - '{__name__= "kube_statefulset_replicas"}'
 
 

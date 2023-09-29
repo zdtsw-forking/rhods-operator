@@ -1,0 +1,20 @@
+---
+# for prometheus container codeflare rules
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+spec:
+  template:
+    spec:
+      containers:
+        - name: prometheus
+          volumeMounts:
+            - mountPath: /etc/prometheus
+              name: prometheus-dsp-config
+      volumes:
+        - name: prometheus-dsp-config
+          configMap:
+            name: prometheus-datasciencepipelines
+
+
