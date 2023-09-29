@@ -5,8 +5,10 @@ import (
 	"crypto/rand"
 	operatorv1 "github.com/openshift/api/operator/v1"
 	"reflect"
+	"strings"
 	"time"
 
+	routev1 "github.com/openshift/api/route/v1"
 	corev1 "k8s.io/api/core/v1"
 	netv1 "k8s.io/api/networking/v1"
 	authv1 "k8s.io/api/rbac/v1"
@@ -329,4 +331,14 @@ func (r *DSCInitializationReconciler) createOdhCommonConfigMap(dscInit *dsci.DSC
 		}
 	}
 	return nil
+}
+
+// Use openshift-console namespace to get host domain
+func GetDomain(cli client.Client) (string, error) {
+	consoleRoute := &routev1.Route{}
+	if err := cli.Get(context.TODO(), client.ObjectKey{Name: "console", Namespace: "openshift-console"}, consoleRoute); err != nil {
+		return "", err
+	}
+	domainIndex := strings.Index(consoleRoute.Spec.Host, ".")
+	return consoleRoute.Spec.Host[domainIndex+1:], nil
 }

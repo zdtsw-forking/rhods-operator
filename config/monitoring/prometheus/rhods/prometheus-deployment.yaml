@@ -86,7 +86,7 @@ spec:
           - --storage.tsdb.min-block-duration=2h
           - --storage.tsdb.max-block-duration=2h
           - --storage.tsdb.path=/prometheus/data
-          - --config.file=/etc/prometheus/prometheus.yml
+          - --config.file=/etc/prometheus/prometheus.yml  # use prometheus-configs.yaml data
           - --web.listen-address=0.0.0.0:9090
           - --web.enable-lifecycle
           - --web.enable-admin-api
@@ -126,10 +126,13 @@ spec:
         volumeMounts:
         - mountPath: /prometheus
           name: prometheus-data
+
         - mountPath: /etc/prometheus
           name: prometheus-config
+
         - mountPath: /var/run/secrets/kubernetes.io/scraper
           name: prometheus-secret
+
         - mountPath: /etc/prometheus/ca
           name: prometheus-service-ca
 
@@ -246,10 +249,25 @@ spec:
         runAsNonRoot: true
         runAsUser: 1000
       terminationGracePeriodSeconds: 90
+
       volumes:
+      # for prometheus container
       - name: prometheus-data
         persistentVolumeClaim:
           claimName: prometheus-data
+      - name: prometheus-config
+        configMap:
+          defaultMode: 420
+          name: prometheus
+      - name: prometheus-service-ca
+        configMap:
+          name: prometheus-service-ca
+      - name: prometheus-secret
+        secret:
+          secretName: prometheus-secret
+          defaultMode: 420
+
+      # for alertmanager container
       - name: alertmanager-data
         persistentVolumeClaim:
           claimName: "alertmanager-data"
@@ -257,32 +275,25 @@ spec:
         configMap:
           defaultMode: 420
           name: alertmanager
-      - name: prometheus-config
-        configMap:
-          defaultMode: 420
-          name: prometheus
-      - name: prometheus-secret
-        secret:
-          secretName: prometheus-secret
+
+      # for oauth-proxy container
       - name: prometheus-tls
         secret:
           defaultMode: 420
           secretName: prometheus-tls
-      - name: alertmanager-tls
-        secret:
-          defaultMode: 420
-          secretName: alertmanager-tls
       - name: prometheus-proxy
         secret:
           defaultMode: 420
           secretName: prometheus-proxy
+
+      # for alertmanager-proxy container
+      - name: alertmanager-tls
+        secret:
+          defaultMode: 420
+          secretName: alertmanager-tls
       - name: alertmanager-proxy
         secret:
           defaultMode: 420
-          secretName: alertmanager-proxy
-      - name: prometheus-service-ca
-        configMap:
-          name: prometheus-service-ca
-          defaultMode: 420
+          secretName: alertmanager-proxy  
   strategy:
     type: Recreate

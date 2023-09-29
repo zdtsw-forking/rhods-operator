@@ -4,18 +4,14 @@ package dashboard
 import (
 	"fmt"
 
-	"context"
-	"strings"
-
 	dsci "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components"
+	dscictrl "github.com/opendatahub-io/opendatahub-operator/v2/controllers/dscinitialization"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/common"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/deploy"
 	operatorv1 "github.com/openshift/api/operator/v1"
-	routev1 "github.com/openshift/api/route/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
-	"path/filepath"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
@@ -169,20 +165,19 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 			return fmt.Errorf("failed to set dashboard ISV from %s: %v", PathISVSM, err)
 		}
 		// ConsoleLink handling
-		consoleRoute := &routev1.Route{}
-		err = cli.Get(context.TODO(), client.ObjectKey{Name: NameConsoleLink, Namespace: NamespaceConsoleLink}, consoleRoute)
+		consolelinkDomain, err := dscictrl.GetDomain(cli)
 		if err != nil {
 			return fmt.Errorf("error getting console route URL : %v", err)
+		} else {
+			err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
+				"<rhods-dashboard-url>": "https://rhods-dashboard-" + dscispec.ApplicationsNamespace + "." + consolelinkDomain,
+				"<section-title>":       "OpenShift Self Managed Services",
+			})
+			if err != nil {
+				return fmt.Errorf("error replacing with correct dashboard url for ConsoleLink: %v", err)
+			}
 		}
-		domainIndex := strings.Index(consoleRoute.Spec.Host, ".")
-		consolelinkDomain := consoleRoute.Spec.Host[domainIndex+1:]
-		err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
-			"<rhods-dashboard-url>": "https://rhods-dashboard-" + dscispec.ApplicationsNamespace + "." + consolelinkDomain,
-			"<section-title>":       "OpenShift Self Managed Services",
-		})
-		if err != nil {
-			return fmt.Errorf("error replacing with correct dashboard url for ConsoleLink: %v", err)
-		}
+
 		err = deploy.DeployManifestsFromPath(owner, cli, ComponentNameSupported,
 			PathConsoleLink,
 			dscispec.ApplicationsNamespace,
@@ -200,35 +195,26 @@ func (d *Dashboard) ReconcileComponent(owner metav1.Object, cli client.Client, s
 			return fmt.Errorf("failed to set dashboard ISV from %s: %v", PathISVAddOn, err)
 		}
 		// ConsoleLink handling
-		consoleRoute := &routev1.Route{}
-		err = cli.Get(context.TODO(), client.ObjectKey{Name: NameConsoleLink, Namespace: NamespaceConsoleLink}, consoleRoute)
+		consolelinkDomain, err := dscictrl.GetDomain(cli)
 		if err != nil {
 			return fmt.Errorf("error getting console route URL : %v", err)
-		}
-		domainIndex := strings.Index(consoleRoute.Spec.Host, ".")
-		consolelinkDomain := consoleRoute.Spec.Host[domainIndex+1:]
-		err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
-			"<rhods-dashboard-url>": "https://rhods-dashboard-" + dscispec.ApplicationsNamespace + "." + consolelinkDomain,
-			"<section-title>":       "OpenShift Managed Services",
-		})
-		if err != nil {
-			return fmt.Errorf("Error replacing with correct dashboard url for ConsoleLink: %v", err)
-		}
-		err = deploy.DeployManifestsFromPath(owner, cli, ComponentNameSupported,
-			PathConsoleLink,
-			dscispec.ApplicationsNamespace,
-			scheme, enabled)
-		if err != nil {
-			return fmt.Errorf("failed to set dashboard consolelink from %s", PathConsoleLink)
-		}
-		// inject dashboard-url to prometheus config
-		err = common.ReplaceStringsInFile(filepath.Join(deploy.DefaultManifestPath, "monitoring", "prometheus", "prometheus-configs.yaml"),
-			map[string]string{
-				"<rhods-dashboard-url>": dscispec.ApplicationsNamespace,
+		} else {
+			err = common.ReplaceStringsInFile(PathConsoleLink+"/consolelink.yaml", map[string]string{
+				"<rhods-dashboard-url>": "https://rhods-dashboard-" + dscispec.ApplicationsNamespace + "." + consolelinkDomain,
+				"<section-title>":       "OpenShift Managed Services",
 			})
-		if err != nil {
-			return fmt.Errorf("error to inject dashboard URL to prometheus-configs.yaml")
+			if err != nil {
+				return fmt.Errorf("Error replacing with correct dashboard url for ConsoleLink: %v", err)
+			}
+			err = deploy.DeployManifestsFromPath(owner, cli, ComponentNameSupported,
+				PathConsoleLink,
+				dscispec.ApplicationsNamespace,
+				scheme, enabled)
+			if err != nil {
+				return fmt.Errorf("failed to set dashboard consolelink from %s", PathConsoleLink)
+			}
 		}
+
 		// Monitoring handling
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentNameSupported,

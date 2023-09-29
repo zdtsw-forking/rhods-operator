@@ -1,56 +1,3 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-service-ca
-  namespace: redhat-ods-monitoring
-  annotations:
-    service.beta.openshift.io/inject-cabundle: "true"
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-general-metrics
-  namespace: redhat-ods-monitoring
-data:
-  recording.rules: |
-    groups:
-      - name: Usage Metrics
-        rules:
-        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
-          record: rhods_total_users
-          labels:
-            instance: jupyter-notebooks
-        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
-          record: rhods_active_users
-          labels:
-            instance: jupyter-notebooks
-
-      - name: Availability Metrics
-        rules:
-        - expr: ((min(probe_success{name=~"rhods-dashboard|notebook-spawner"}) by (name) or on() vector(0)) or label_replace(min(probe_success{name=~"rhods-dashboard|notebook-spawner"}), "name", "combined", "name", ".*"))
-          record: rhods_aggregate_availability
-
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prometheus-general-alerting
-  namespace: redhat-ods-monitoring
-data:
-  alerting.rules: |
-    groups:
-      - name: DeadManSnitch
-        interval: 1m
-        rules:
-          - alert: DeadManSnitch
-            expr: vector(1)
-            labels:
-              severity: critical
-            annotations:
-              description: This is a DeadManSnitch to ensure RHODS monitoring and alerting pipeline is online.
-              summary: Alerting DeadManSnitch
-           
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -106,7 +53,7 @@ data:
       authorization:
         credentials_file: /run/secrets/kubernetes.io/serviceaccount/token
       static_configs:
-      - targets: [<rhods-dashboard-url>]
+      - targets: [https://rhods-dashboard-<odh_application_namespace>.<console_domain>]
         labels:
           name: rhods-dashboard
       - targets: [notebook-controller-service.<odh_application_namespace>.svc:8080/metrics,odh-notebook-controller-service.<odh_application_namespace>.svc:8080/metrics]

@@ -69,6 +69,22 @@ data:
           labels:
             severity: warning
             route: user-notifications
+      
+      - name: Usage Metrics
+        rules:
+        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
+          record: rhods_total_users
+          labels:
+            instance: jupyter-notebooks
+        - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
+          record: rhods_active_users
+          labels:
+            instance: jupyter-notebooks
+
+      - name: Availability Metrics
+        rules:
+        - expr: ((min(probe_success{name=~"rhods-dashboard|notebook-spawner"}) by (name) or on() vector(0)) or label_replace(min(probe_success{name=~"rhods-dashboard|notebook-spawner"}), "name", "combined", "name", ".*"))
+          record: rhods_aggregate_availability
 
       - name: SLOs-probe_success
         rules:

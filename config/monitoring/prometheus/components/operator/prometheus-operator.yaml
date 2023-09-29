@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-opendatahub-operator
+  name: prometheus-rhods-operator
   namespace: redhat-ods-monitoring
 data:
   recording.rules: |
