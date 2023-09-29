@@ -85,17 +85,16 @@ func (c *CodeFlare) ReconcileComponent(owner metav1.Object, cli client.Client, s
 		scheme, enabled); err != nil {
 		return err
 	}
-	// Monitoring handling
+	// CloudServiceMonitoring handling
 	if platform == deploy.ManagedRhods && monitoringEnabled {
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
 			dscispec.Monitoring.Namespace,
-			scheme, enabled); err != nil {
+			scheme, monitoringEnabled); err != nil {
 			return err
 		}
 	}
 	return err
-
 }
 
 func (in *CodeFlare) DeepCopyInto(out *CodeFlare) {

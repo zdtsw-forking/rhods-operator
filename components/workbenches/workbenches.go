@@ -108,7 +108,7 @@ func (w *Workbenches) ReconcileComponent(owner metav1.Object, cli client.Client,
 		return err
 	}
 
-	// Monitoring handling
+	// CloudService Monitoring handling
 	if platform == deploy.ManagedRhods {
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,

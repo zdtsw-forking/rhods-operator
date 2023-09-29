@@ -18,6 +18,8 @@ const (
 	ComponentName  = "model-mesh"
 	Path           = deploy.DefaultManifestPath + "/" + ComponentName + "/base"
 	monitoringPath = deploy.DefaultManifestPath + "/" + "modelmesh-monitoring/base"
+
+	DependentComponentName = "odh-model-controller"
 )
 
 var imageParamMap = map[string]string{
@@ -101,6 +103,13 @@ func (m *ModelMeshServing) ReconcileComponent(owner metav1.Object, cli client.Cl
 			scheme, monitoringEnabled); err != nil {
 			return err
 		}
+		if err := deploy.DeployManifestsFromPath(owner, cli, DependentComponentName,
+			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+DependentComponentName,
+			monitoringNamespace,
+			scheme, monitoringEnabled); err != nil {
+			return err
+		}
+		
 	}
 	return err
 }

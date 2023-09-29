@@ -66,7 +66,7 @@ func (d *DataSciencePipelines) ReconcileComponent(owner metav1.Object, cli clien
 		return err
 	}
 
-	// Monitoring handling
+	// CloudService Monitoring handling
 	if platform == deploy.ManagedRhods && monitoringEnabled {
 		if err := deploy.DeployManifestsFromPath(owner, cli, ComponentName,
 			deploy.DefaultManifestPath+"/monitoring/prometheus/components/"+ComponentName,
