@@ -18,7 +18,7 @@ declare -A COMPONENT_MANIFESTS=(
 #    ["kf-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
 #    ["odh-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
     ["notebooks"]="red-hat-data-services:notebooks:main:manifests:/jupyterhub/notebooks"
-#    ["trustyai"]="red-hat-data-services:trustyai-service-operator:main:config:trustyai-service-operator"
+    ["trustyai"]="red-hat-data-services:trustyai-service-operator:main:config:trustyai-service-operator"
 #    ["model-mesh"]="red-hat-data-services:modelmesh-serving:release-0.11.0:config:model-mesh"
 #    ["odh-model-controller"]="red-hat-data-services:odh-model-controller:release-0.11.0:config:odh-model-controller"
 #    ["kserve"]="red-hat-data-services:kserve:release-v0.11.0:config:kserve"
@@ -63,8 +63,6 @@ cp -r ./.odh-manifests-tmp/modelmesh-monitoring/ ./odh-manifests
 cp -r ./.odh-manifests-tmp/kserve/ ./odh-manifests
 # workbench nbc
 cp -r ./.odh-manifests-tmp/odh-notebook-controller/ ./odh-manifests
-# Trustyai
-cp -r ./.odh-manifests-tmp/trustyai-service-operator ./odh-manifests
 # Dashboard
 cp -r ./.odh-manifests-tmp/odh-dashboard/ ./odh-manifests
 
