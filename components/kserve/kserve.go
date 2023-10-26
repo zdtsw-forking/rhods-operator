@@ -18,7 +18,7 @@ import (
 
 var (
 	ComponentName          = "kserve"
-	Path                   = deploy.DefaultManifestPath + "/" + ComponentName + "/base"
+	Path                   = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/odh"
 	DependentComponentName = "odh-model-controller"
 	DependentPath          = deploy.DefaultManifestPath + "/" + DependentComponentName + "/base"
 	ServiceMeshOperator    = "servicemeshoperator"
