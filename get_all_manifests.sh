@@ -15,13 +15,13 @@ declare -A COMPONENT_MANIFESTS=(
     ["ray"]="red-hat-data-services:kuberay:rhods-2.4:ray-operator/config:ray"
     ["data-science-pipelines-operator"]="red-hat-data-services:data-science-pipelines-operator:rhods-2.4:config:data-science-pipelines-operator"
 #    ["odh-dashboard"]="opendatahub-io:odh-dashboard:main:manifests:dashboard"
-#    ["kf-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
-#    ["odh-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
+    ["kf-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
+    ["odh-notebook-controller"]="red-hat-data-services:kubeflow:rhods-2.4:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
     ["notebooks"]="red-hat-data-services:notebooks:rhods-2.4:manifests:/jupyterhub/notebooks"
     ["trustyai"]="red-hat-data-services:trustyai-service-operator:rhods-2.4:config:trustyai-service-operator"
-#    ["model-mesh"]="red-hat-data-services:modelmesh-serving:release-0.11.0:config:model-mesh"
-#    ["odh-model-controller"]="red-hat-data-services:odh-model-controller:release-0.11.0:config:odh-model-controller"
-#    ["kserve"]="red-hat-data-services:kserve:release-v0.11.0:config:kserve"
+    ["model-mesh"]="red-hat-data-services:modelmesh-serving:rhods-2.4:config:model-mesh"
+    ["odh-model-controller"]="red-hat-data-services:odh-model-controller:rhods-2.4:config:odh-model-controller"
+    ["kserve"]="red-hat-data-services:kserve:rhods-2.4:config:kserve"
 )
 
 # Allow overwriting repo using flags component=repo
@@ -53,16 +53,10 @@ rm -fr ./odh-manifests/* ./.odh-manifests-tmp/
 
 mkdir -p ./.odh-manifests-tmp/ ./odh-manifests/
 wget -q -c ${MANIFESTS_TARBALL_URL} -O - | tar -zxv -C ./.odh-manifests-tmp/ --strip-components 1 > /dev/null
+
 # mm-monitroing
 cp -r ./.odh-manifests-tmp/modelmesh-monitoring/ ./odh-manifests
-# modelmesh
-cp -r ./.odh-manifests-tmp/model-mesh/ ./odh-manifests
-cp -r ./.odh-manifests-tmp/odh-model-controller/ ./odh-manifests
-cp -r ./.odh-manifests-tmp/modelmesh-monitoring/ ./odh-manifests
-# Kserve
-cp -r ./.odh-manifests-tmp/kserve/ ./odh-manifests
-# workbench nbc
-cp -r ./.odh-manifests-tmp/odh-notebook-controller/ ./odh-manifests
+
 # Dashboard
 cp -r ./.odh-manifests-tmp/odh-dashboard/ ./odh-manifests/dashboard
 
