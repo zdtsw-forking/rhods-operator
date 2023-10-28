@@ -8,6 +8,7 @@ data:
   prometheus.yml: |
     rule_files:
       - 'operator-recording.rules'
+      - 'operator-alerting.rules'
       - 'deadmanssnitch-alerting.rules'
 
     global:
@@ -294,7 +295,7 @@ data:
               - redhat-ods-operator
       relabel_configs:
         - source_labels: [__meta_kubernetes_service_name]
-          regex: ^(redhat-ods-operator-controller-manager-metrics)$ 
+          regex: ^(redhat-ods-operator-controller-manager-metrics-service)$ 
           target_label: kubernetes_name
           action: keep
         - source_labels: [__address__]
@@ -338,6 +339,16 @@ data:
               description: This is a DeadManSnitch to ensure RHODS monitoring and alerting pipeline is online.
               summary: Alerting DeadManSnitch
 
+  operator-alerting.rules: |
+    groups:
+      - name: RHODS operator
+        interval: 1m
+        rules:
+          - alert: RHODS Operator Aggreate Availability
+            expr: rhods_aggregate_availability <= 0
+            for: 2m
+            labels:
+              severity: critical
 
   codeflare-recording.rules: |
     groups:

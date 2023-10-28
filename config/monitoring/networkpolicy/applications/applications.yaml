@@ -25,10 +25,22 @@ spec:
     - from:
         - namespaceSelector:
             matchLabels:
+              opendatahub.io/generated-namespace: "true"
+    - from:
+        - namespaceSelector:
+            matchLabels:
               kubernetes.io/metadata.name: redhat-ods-monitoring
     - from:
         - namespaceSelector:
             matchLabels:
               kubernetes.io/metadata.name: openshift-monitoring
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: openshift-ingress
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: redhat-ods-operator
   policyTypes:
     - Ingress
