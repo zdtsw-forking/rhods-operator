@@ -15,6 +15,9 @@ spec:
   - name: https
     port: 9091
     targetPort: https
+  - name: http
+    port: 9090
+    targetPort: http
   selector:
     deployment: prometheus
   sessionAffinity: None

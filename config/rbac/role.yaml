@@ -378,6 +378,7 @@ rules:
   resources:
   - endpoints
   verbs:
+  - get
   - list
   - watch
 - apiGroups:

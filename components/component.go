@@ -91,7 +91,8 @@ func (c *Component) UpdatePrometheusConfig(cli client.Client, enable bool, compo
 		} `yaml:"metadata"`
 		Data struct {
 			PrometheusYML      string `yaml:"prometheus.yml"`
-			OperatorRules      string `yaml:"operator-recording.rules"`
+			OperatorRRules     string `yaml:"operator-recording.rules"`
+			OperatorARules     string `yaml:"operator-alerting.rules"`
 			DeadManSnitchRules string `yaml:"deadmanssnitch-alerting.rules"`
 			CFRRules           string `yaml:"codeflare-recording.rules"`
 			CRARules           string `yaml:"codeflare-alerting.rules"`

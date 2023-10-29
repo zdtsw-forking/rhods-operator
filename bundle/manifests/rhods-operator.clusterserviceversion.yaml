@@ -559,6 +559,7 @@ spec:
           resources:
           - endpoints
           verbs:
+          - get
           - list
           - watch
         - apiGroups:
@@ -1579,6 +1580,10 @@ spec:
                   initialDelaySeconds: 15
                   periodSeconds: 20
                 name: manager
+                ports:
+                - containerPort: 8080
+                  name: http
+                  protocol: TCP
                 readinessProbe:
                   httpGet:
                     path: /readyz
