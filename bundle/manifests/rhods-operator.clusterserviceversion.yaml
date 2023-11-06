@@ -20,7 +20,7 @@ metadata:
           "spec": {
             "components": {
               "codeflare": {
-                "managementState": "Removed"
+                "managementState": "Managed"
               },
               "dashboard": {
                 "managementState": "Managed"
@@ -35,10 +35,10 @@ metadata:
                 "managementState": "Managed"
               },
               "ray": {
-                "managementState": "Removed"
+                "managementState": "Managed"
               },
               "trustyai": {
-                "managementState": "Removed"
+                "managementState": "Managed"
               },
               "workbenches": {
                 "managementState": "Managed"
@@ -91,7 +91,7 @@ metadata:
         "spec": {
           "components": {
             "codeflare": {
-              "managementState": "Removed"
+              "managementState": "Managed"
             },
             "dashboard": {
               "managementState": "Managed"
@@ -106,7 +106,7 @@ metadata:
               "managementState": "Managed"
             },
             "ray": {
-              "managementState": "Removed"
+              "managementState": "Managed"
             },
             "workbenches": {
               "managementState": "Managed"
