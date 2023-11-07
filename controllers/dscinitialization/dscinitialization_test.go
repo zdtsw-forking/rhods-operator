@@ -26,7 +26,7 @@ var _ = Describe("DataScienceCluster initialization", func() {
 	Context("Creation of related resources", func() {
 		// must be default as instance name, or it will break
 		const monitoringNamespace = "test-monitoring-ns"
-		const applicationName = "rhods-setup"
+		const applicationName = "default-dsci"
 		BeforeEach(func() {
 			// when
 			desiredDsci := createDSCI(applicationName, operatorv1.Managed, monitoringNamespace)
