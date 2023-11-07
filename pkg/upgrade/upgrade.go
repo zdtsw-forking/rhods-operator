@@ -147,7 +147,7 @@ func CreateDefaultDSC(cli client.Client, platform deploy.Platform) error {
 			APIVersion: "datasciencecluster.opendatahub.io/v1",
 		},
 		ObjectMeta: metav1.ObjectMeta{
-			Name: "rhods",
+			Name: "default-dsc",
 		},
 		Spec: dsc.DataScienceClusterSpec{
 			Components: dsc.Components{
