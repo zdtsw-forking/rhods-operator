@@ -79,9 +79,9 @@ func NewTestContext() (*testContext, error) {
 
 	// Get Applications namespace from DSCInitialization instance
 	dscInit := &dsci.DSCInitialization{}
-	err = custClient.Get(context.TODO(), types.NamespacedName{Name: "default-dsci"}, dscInit)
+	err = custClient.Get(context.TODO(), types.NamespacedName{Name: "default"}, dscInit)
 	if err != nil {
-		return nil, errors.Wrap(err, "error getting DSCInitialization instance 'default-dsci'")
+		return nil, errors.Wrap(err, "error getting DSCInitialization instance 'default'")
 	}
 
 	return &testContext{

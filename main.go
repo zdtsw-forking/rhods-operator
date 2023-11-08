@@ -177,7 +177,7 @@ func main() {
 				APIVersion: "dscinitialization.opendatahub.io/v1",
 			},
 			ObjectMeta: metav1.ObjectMeta{
-				Name: "default-dsci",
+				Name: "default",
 			},
 			Spec: dsci.DSCInitializationSpec{
 				ApplicationsNamespace: dscApplicationsNamespace,

@@ -135,7 +135,7 @@ func (m *ModelMeshServing) ReconcileComponent(cli client.Client, owner metav1.Ob
 	// Get monitoring namespace
 	dscInit := &dsciv1.DSCInitialization{}
 	err = cli.Get(context.TODO(), client.ObjectKey{
-		Name: "default-dsci",
+		Name: "default",
 	}, dscInit)
 	if err != nil {
 		return err

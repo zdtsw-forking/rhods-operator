@@ -79,14 +79,14 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 	}
 	// Second check if default instance not exists, return error
 	// TODO: update logic if we support multiple DSCI CR or different name
-	defaultDSCI := types.NamespacedName{Name: "default-dsci"}
+	defaultDSCI := types.NamespacedName{Name: "default"}
 	err := r.Client.Get(ctx, defaultDSCI, instance)
 	if err != nil {
 		if apierrs.IsNotFound(err) {
 			// DSCInitialization instance not found
 			return ctrl.Result{}, nil
 		}
-		r.Log.Error(err, "Failed to retrieve DSCInitialization resource.", "DSCInitialization", req.Namespace, "Request.Name", "default-dsci")
+		r.Log.Error(err, "Failed to retrieve DSCInitialization resource.", "DSCInitialization", req.Namespace, "Request.Name", "default")
 		r.Recorder.Eventf(instance, corev1.EventTypeWarning, "DSCInitializationReconcileError", "Failed to retrieve DSCInitialization instance default")
 		return ctrl.Result{}, err
 	}

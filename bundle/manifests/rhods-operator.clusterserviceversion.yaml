@@ -52,12 +52,12 @@ metadata:
           "metadata": {
             "labels": {
               "app.kubernetes.io/created-by": "rhods-operator",
-              "app.kubernetes.io/instance": "default-dsci",
+              "app.kubernetes.io/instance": "default",
               "app.kubernetes.io/managed-by": "kustomize",
               "app.kubernetes.io/name": "dscinitialization",
               "app.kubernetes.io/part-of": "rhods-operator"
             },
-            "name": "default-dsci"
+            "name": "default"
           },
           "spec": {
             "applicationsNamespace": "redhat-ods-applications",
