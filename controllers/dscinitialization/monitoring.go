@@ -138,6 +138,7 @@ func configureAlertManager(ctx context.Context, dsciInit *dsci.DSCInitialization
 		}
 	}
 	if strings.Contains(consolelinkDomain, "aisrhods") {
+		r.Log.Info("inject alertmanage-configs.yaml for dev mode")
 		err = common.ReplaceStringsInFile(filepath.Join(alertManagerPath, "alertmanager-configs.yaml"),
 			map[string]string{
 				"receiver: PagerDuty": "receiver: alerts-sink",

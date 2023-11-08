@@ -114,6 +114,22 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 		}
 	}
 
+	// Patch Operator Namespace if it is monitoring enabled
+	if dscInit.Spec.Monitoring.ManagementState == operatorv1.Managed {
+		operatorNS := "redhat-ods-operator"
+		r.Log.Info("Patching operator namespace for Managed cluster", "name", operatorNS)
+		lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline"}}}`
+		operatorNamespace := &corev1.Namespace{}
+		if err := r.Get(ctx, client.ObjectKey{Name: operatorNS}, operatorNamespace); err != nil {
+			return err
+		} else {
+			err = r.Patch(ctx, operatorNamespace, client.RawPatch(types.MergePatchType, []byte(lablePatch)))
+			if err != nil {
+				return err
+			}
+		}
+	}
+
 	// Create default NetworkPolicy for the namespace
 	err = r.reconcileDefaultNetworkPolicy(ctx, name, dscInit)
 	if err != nil {

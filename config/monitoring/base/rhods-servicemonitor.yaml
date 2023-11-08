@@ -13,7 +13,9 @@ spec:
       honorLabels: true
       params:
         'match[]':
-          - '{__name__= "redhat-ods-operator-controller-manager-metrics-service"}'
+          - '{__name__= "rhods_total_users"}'
+          - '{__name__= "rhods_aggregate_availability"}'
+          - '{__name__= "rhods_active_users"}'
           - ALERTS{alertname!="DeadManSnitch", alertstate="firing"}
       path: /federate
       port: http
@@ -46,6 +48,9 @@ spec:
       bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
       tlsConfig:
         insecureSkipVerify: true
+      params:
+        'match[]':
+          - '{__name__= "redhat-ods-operator-controller-manager-metrics-service"}'
   namespaceSelector:
     matchNames:
       - redhat-ods-operator
