@@ -34,7 +34,6 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	netv1 "k8s.io/api/networking/v1"
 	authv1 "k8s.io/api/rbac/v1"
-	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/record"
 	"k8s.io/client-go/util/retry"
@@ -72,34 +71,52 @@ type DSCInitializationReconciler struct {
 func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) { //nolint
 	r.Log.Info("Reconciling DSCInitialization.", "DSCInitialization", req.Namespace, "Request.Name", req.Name)
 
-	instance := &dsciv1.DSCInitialization{}
-	// First check if instance is being deleted, return
-	if instance.GetDeletionTimestamp() != nil {
-		return ctrl.Result{}, nil
-	}
-	// Second check if default instance not exists, return error
-	// TODO: update logic if we support multiple DSCI CR or different name
-	defaultDSCI := types.NamespacedName{Name: "default-dsci"}
-	err := r.Client.Get(ctx, defaultDSCI, instance)
-	if err != nil {
-		if apierrs.IsNotFound(err) {
-			// DSCInitialization instance not found
-			return ctrl.Result{}, nil
-		}
-		r.Log.Error(err, "Failed to retrieve DSCInitialization resource.", "DSCInitialization", req.Namespace, "Request.Name", "default-dsci")
-		r.Recorder.Eventf(instance, corev1.EventTypeWarning, "DSCInitializationReconcileError", "Failed to retrieve DSCInitialization instance default")
+	instances := &dsciv1.DSCInitializationList{}
+	if err := r.Client.List(ctx, instances); err != nil {
+		r.Log.Error(err, "Failed to retrieve DSCInitialization resource.", "DSCInitialization Request.Name", req.Name)
+		r.Recorder.Eventf(instances, corev1.EventTypeWarning, "DSCInitializationReconcileError", "Failed to retrieve DSCInitialization instance")
+
 		return ctrl.Result{}, err
 	}
 
-	// Last check if multiple instances of DSCInitialization, exit with error
-	instanceList := &dsciv1.DSCInitializationList{}
-	err = r.Client.List(ctx, instanceList)
+	var instance *dsciv1.DSCInitialization
+	switch {
+	case len(instances.Items) == 0:
+		return ctrl.Result{}, nil
+	case len(instances.Items) == 1:
+		instance = &instances.Items[0]
+	case len(instances.Items) > 1:
+		message := fmt.Sprintf("only one instance of DSCInitialization object is allowed. Update existing instance name %s", req.Name)
+		_, _ = r.updateStatus(ctx, instance, func(saved *dsciv1.DSCInitialization) {
+			status.SetErrorCondition(&saved.Status.Conditions, status.DuplicateDSCInitialization, message)
+			saved.Status.Phase = status.PhaseError
+		})
+		return ctrl.Result{}, errors.New(message)
+	}
+
+	var err error
+	// Start reconciling
+	if instance.Status.Conditions == nil {
+		reason := status.ReconcileInit
+		message := "Initializing DSCInitialization resource"
+		instance, err = r.updateStatus(ctx, instance, func(saved *dsciv1.DSCInitialization) {
+			status.SetProgressingCondition(&saved.Status.Conditions, reason, message)
+			saved.Status.Phase = status.PhaseProgressing
+		})
+		if err != nil {
+			r.Log.Error(err, "Failed to add conditions to status of DSCInitialization resource.", "DSCInitialization Request.Name", req.Name)
+			r.Recorder.Eventf(instance, corev1.EventTypeWarning, "DSCInitializationReconcileError",
+				"%s for instance %s", message, instance.Name)
+
+			return reconcile.Result{}, err
+		}
+	}
+
+	// Check namespace
+	namespace := instance.Spec.ApplicationsNamespace
+	err = r.createOdhNamespace(ctx, instance, namespace)
 	if err != nil {
 		return ctrl.Result{}, err
-	}
-	if len(instanceList.Items) > 1 {
-		message := fmt.Sprintf("only one instance of DSCInitialization object is allowed. Update existing instance on namespace %s and name %s", req.Namespace, req.Name)
-		return ctrl.Result{}, errors.New(message)
 	}
 
 	// Get platform

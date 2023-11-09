@@ -17,8 +17,6 @@ limitations under the License.
 package main
 
 import (
-	"context"
-	"encoding/json"
 	"flag"
 
 	kfdefv1 "github.com/opendatahub-io/opendatahub-operator/apis/kfdef.apps.kubeflow.org/v1"
@@ -30,7 +28,6 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/upgrade"
 	addonv1alpha1 "github.com/openshift/addon-operator/apis/addons/v1alpha1"
 	ocv1 "github.com/openshift/api/oauth/v1"
-	operatorv1 "github.com/openshift/api/operator/v1"
 	routev1 "github.com/openshift/api/route/v1"
 	ocuserv1 "github.com/openshift/api/user/v1"
 	ofapiv1alpha1 "github.com/operator-framework/api/pkg/operators/v1alpha1"
@@ -40,10 +37,7 @@ import (
 	netv1 "k8s.io/api/networking/v1"
 	authv1 "k8s.io/api/rbac/v1"
 	apiextv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
-	"k8s.io/apimachinery/pkg/api/errors"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apimachinery/pkg/types"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	"os"
@@ -165,50 +159,6 @@ func main() {
 		setupLog.Error(err, "unable to create controller", "controller", "SecretGenerator")
 		os.Exit(1)
 	}
-
-	// Check if user opted for disabling DSC configuration
-	_, disableDSCConfig := os.LookupEnv("DISABLE_DSC_CONFIG")
-	if !disableDSCConfig {
-		// Create DSCInitialization CR if it's not present
-		client := mgr.GetClient()
-		releaseDscInitialization := &dsci.DSCInitialization{
-			TypeMeta: metav1.TypeMeta{
-				Kind:       "DSCInitialization",
-				APIVersion: "dscinitialization.opendatahub.io/v1",
-			},
-			ObjectMeta: metav1.ObjectMeta{
-				Name: "default-dsci",
-			},
-			Spec: dsci.DSCInitializationSpec{
-				ApplicationsNamespace: dscApplicationsNamespace,
-				Monitoring: dsci.Monitoring{
-					ManagementState: operatorv1.Managed,
-					Namespace:       dscMonitoringNamespace,
-				},
-			},
-		}
-		err = client.Create(context.TODO(), releaseDscInitialization)
-		switch {
-		case err == nil:
-			setupLog.Info("created DscInitialization resource")
-		case errors.IsAlreadyExists(err):
-			// Update if already exists
-			setupLog.Info("DscInitialization resource already exists. Updating it.")
-			data, err := json.Marshal(releaseDscInitialization)
-			if err != nil {
-				setupLog.Error(err, "failed to get DscInitialization custom resource data")
-			}
-			err = client.Patch(context.TODO(), releaseDscInitialization, client2.RawPatch(types.ApplyPatchType, data),
-				client2.ForceOwnership, client2.FieldOwner("opendatahub-operator"))
-			if err != nil {
-				setupLog.Error(err, "failed to update DscInitialization custom resource")
-			}
-		default:
-			setupLog.Error(err, "failed to create DscInitialization custom resource")
-			os.Exit(1)
-		}
-	}
-
 	// Create new uncached client to run initial setup
 	setupCfg, err := config.GetConfig()
 	if err != nil {
@@ -226,6 +176,15 @@ func main() {
 	if err != nil {
 		setupLog.Error(err, "error getting platform")
 		os.Exit(1)
+	}
+
+	// Check if user opted for disabling DSC configuration
+	_, disableDSCConfig := os.LookupEnv("DISABLE_DSC_CONFIG")
+	if !disableDSCConfig {
+		if err = upgrade.CreateDefaultDSCI(setupClient, platform, dscApplicationsNamespace, dscMonitoringNamespace); err != nil {
+			setupLog.Error(err, "unable to create initial setup for the operator")
+			os.Exit(1)
+		}
 	}
 
 	// Apply update from legacy operator
