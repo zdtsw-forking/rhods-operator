@@ -18,7 +18,7 @@ spec:
           - '{__name__= "rhods_active_users"}'
           - ALERTS{alertname!="DeadManSnitch", alertstate="firing"}
       path: /federate
-      port: http
+      port: https
       scheme: https
       tlsConfig:
         caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
@@ -91,7 +91,7 @@ spec:
       bearerTokenSecret:
         key: ""
       path: /federate
-      port: metrics
+      port: web
       scheme: https
       tlsConfig:
         ca: {}
