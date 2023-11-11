@@ -1,3 +1,6 @@
+# rhods_aggregate_availability, rhods_total_users, rhods_actvie_users should not be needed
+# they should be from traditional prometheus pod but from prometheus operator
+---
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
@@ -10,14 +13,6 @@ spec:
   groups:
   - name: rhods-usage.rules
     rules:
-    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
-      record: rhods_total_users
-      labels:
-        instance: jupyter-notebooks
-    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
-      record: rhods_active_users
-      labels:
-        instance: jupyter-notebooks
     - record: cluster:usage:consumption:rhods:cpu:seconds:rate1h
       expr: sum(rate(container_cpu_usage_seconds_total{container="",pod=~"jupyter-nb.*",namespace="rhods-notebooks"}[1h]))
       labels:
@@ -40,5 +35,13 @@ spec:
         instance: jupyter-notebooks
     - record: rhods_aggregate_availability
       expr: ((min(probe_success{name=~"rhods-dashboard|notebook-spawner"}) by (name) or on() vector(0)) or label_replace(min(probe_success{name=~"rhods-dashboard|notebook-spawner"}), "name", "combined", "name", ".*"))
+      labels:
+        instance: jupyter-notebooks
+    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"})
+      record: rhods_total_users
+      labels:
+        instance: jupyter-notebooks
+    - expr: count(kube_statefulset_replicas{namespace=~"rhods-notebooks", statefulset=~"jupyter-nb-.*"} ==1)
+      record: rhods_active_users
       labels:
         instance: jupyter-notebooks
