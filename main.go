@@ -183,7 +183,6 @@ func main() {
 	if !disableDSCConfig {
 		if err = upgrade.CreateDefaultDSCI(setupClient, platform, dscApplicationsNamespace, dscMonitoringNamespace); err != nil {
 			setupLog.Error(err, "unable to create initial setup for the operator")
-			os.Exit(1)
 		}
 	}
 
