@@ -399,6 +399,15 @@ func (r *DSCInitializationReconciler) configureCommonMonitoring(dsciInit *dsci.D
 	}
 	// configure monitoring base
 	monitoringBasePath := filepath.Join(deploy.DefaultManifestPath, "monitoring", "base")
+	err := common.ReplaceStringsInFile(filepath.Join(monitoringBasePath, "rhods-servicemonitor.yaml"),
+		map[string]string{
+			"<odh_monitoring_project>": dsciInit.Spec.Monitoring.Namespace,
+		})
+	if err != nil {
+		r.Log.Error(err, "error to inject namespace to common monitoring")
+
+		return err
+	}
 	if err := deploy.DeployManifestsFromPath(
 		r.Client,
 		dsciInit,
