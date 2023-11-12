@@ -69,7 +69,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 		}
 	} else if dscInit.Spec.Monitoring.ManagementState == operatorv1.Managed {
 		r.Log.Info("Patching application namespace for Managed cluster", "name", name)
-		lablePatch := `{"metadata":{"labels":{"openshift.io/user-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` //nolint
+		lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` //nolint
 		err = r.Patch(ctx, foundNamespace, client.RawPatch(types.MergePatchType,
 			[]byte(lablePatch)))
 		if err != nil {
