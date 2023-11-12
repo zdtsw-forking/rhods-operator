@@ -69,7 +69,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 		}
 	} else if dscInit.Spec.Monitoring.ManagementState == operatorv1.Managed {
 		r.Log.Info("Patching application namespace for Managed cluster", "name", name)
-		lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` //nolint
+		lablePatch := `{"metadata":{"labels":{"openshift.io/user-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` //nolint
 		err = r.Patch(ctx, foundNamespace, client.RawPatch(types.MergePatchType,
 			[]byte(lablePatch)))
 		if err != nil {
@@ -90,7 +90,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 						Labels: map[string]string{
 							"opendatahub.io/generated-namespace": "true",
 							"pod-security.kubernetes.io/enforce": "baseline",
-							"openshift.io/cluster-monitoring":    "true",
+							"openshift.io/user-monitoring": "true",
 						},
 					},
 				}
@@ -105,7 +105,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 			}
 		} else { // force to patch monitoring namespace with label for cluster-monitoring
 			r.Log.Info("Patching monitoring namespace for Managed cluster", "name", monitoringName)
-			lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` //nolint
+			lablePatch := `{"metadata":{"labels":{"openshift.io/user-monitoring":"true", "pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` 
 
 			err = r.Patch(ctx, foundMonitoringNamespace, client.RawPatch(types.MergePatchType, []byte(lablePatch)))
 			if err != nil {
@@ -118,7 +118,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 	if dscInit.Spec.Monitoring.ManagementState == operatorv1.Managed {
 		operatorNS := "redhat-ods-operator"
 		r.Log.Info("Patching operator namespace for Managed cluster", "name", operatorNS)
-		lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true","pod-security.kubernetes.io/enforce":"baseline"}}}`
+		lablePatch := `{"metadata":{"labels":{"pod-security.kubernetes.io/enforce":"baseline"}}}`
 		operatorNamespace := &corev1.Namespace{}
 		if err := r.Get(ctx, client.ObjectKey{Name: operatorNS}, operatorNamespace); err != nil {
 			return err
