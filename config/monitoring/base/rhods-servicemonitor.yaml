@@ -13,10 +13,12 @@ spec:
       honorLabels: true
       params:
         'match[]':
-          - '{__name__= "redhat-ods-operator-controller-manager-metrics-service"}'
+          - '{__name__= "rhods_total_users"}'
+          - '{__name__= "rhods_aggregate_availability"}'
+          - '{__name__= "rhods_active_users"}'
           - ALERTS{alertname!="DeadManSnitch", alertstate="firing"}
       path: /federate
-      port: http
+      port: https
       scheme: https
       tlsConfig:
         caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
@@ -31,31 +33,37 @@ spec:
       app: prometheus
 ---
 # servicemonitoring for rhods operator
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  labels:
-    control-plane: controller-manager
-  name: rhods-controller-manager-metrics-monitor
-  namespace: redhat-ods-operator
-spec:
-  endpoints:
-    - path: /metrics
-      port: https
-      scheme: https
-      bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
-      tlsConfig:
-        insecureSkipVerify: true
-  namespaceSelector:
-    matchNames:
-      - redhat-ods-operator
-  selector:
-    matchLabels:
-      control-plane: controller-manager
+# this is not in use, we need to implement operator metrics in logic first
+# apiVersion: monitoring.coreos.com/v1
+# kind: ServiceMonitor
+# metadata:
+#   labels:
+#     control-plane: controller-manager
+#   name: rhods-controller-manager-metrics-monitor
+#   namespace: redhat-ods-operator
+# spec:
+#   endpoints:
+#     - path: /metrics
+#       port: metrics
+#       scheme: https
+#       bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+#       tlsConfig:
+#         insecureSkipVerify: true
+#       params:
+#         'match[]':
+#           - '{__name__= "redhat-ods-operator-controller-manager-metrics-service"}'
+#   namespaceSelector:
+#     matchNames:
+#       - redhat-ods-operator
+#   selector:
+#     matchLabels:
+#       control-plane: controller-manager
 
 ---
 # servicemonitoring for openshift-monitoring scrap
 # move from modelmesh-monitoring
+# this one is duplicated as the old modelmesh-federated-metrics
+# in order to keep metrics there if user set modelmesh to Removed
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
@@ -86,7 +94,7 @@ spec:
       bearerTokenSecret:
         key: ""
       path: /federate
-      port: metrics
+      port: web
       scheme: https
       tlsConfig:
         ca: {}
