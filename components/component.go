@@ -68,7 +68,7 @@ type ManifestsConfig struct {
 }
 
 type ComponentInterface interface {
-	ReconcileComponent(cli client.Client, owner metav1.Object, DSCISpec *dsciv1.DSCInitializationSpec) error
+	ReconcileComponent(cli client.Client, owner metav1.Object, DSCISpec *dsciv1.DSCInitializationSpec, currentComponentStatus bool) error
 	GetComponentName() string
 	GetManagementState() operatorv1.ManagementState
 	SetImageParamsMap(imageMap map[string]string) map[string]string
