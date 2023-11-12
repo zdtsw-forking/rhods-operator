@@ -74,6 +74,7 @@ func (d *Dashboard) GetComponentName() string {
 // Verifies that Dashboard implements ComponentInterface.
 var _ components.ComponentInterface = (*Dashboard)(nil)
 
+//nolint:gocyclo
 func (d *Dashboard) ReconcileComponent(cli client.Client, owner metav1.Object, dscispec *dsciv1.DSCInitializationSpec, currentComponentStatus bool) error {
 	var imageParamMap = map[string]string{
 		"odh-dashboard-image": "RELATED_IMAGE_ODH_DASHBOARD_IMAGE",
@@ -88,7 +89,6 @@ func (d *Dashboard) ReconcileComponent(cli client.Client, owner metav1.Object, d
 
 	// Update Default rolebinding
 	if enabled {
-
 		if err := d.cleanOauthClientSecrets(cli, dscispec, currentComponentStatus); err != nil {
 			return err
 		}

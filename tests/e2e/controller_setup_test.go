@@ -82,7 +82,6 @@ func NewTestContext() (*testContext, error) {
 	err = custClient.Get(context.TODO(), types.NamespacedName{Name: "default-dsci"}, dscInit)
 	if err != nil {
 		return nil, errors.Wrap(err, "error getting DSCInitialization instance")
-
 	}
 
 	return &testContext{
