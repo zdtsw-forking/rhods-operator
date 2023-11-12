@@ -90,7 +90,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 						Labels: map[string]string{
 							"opendatahub.io/generated-namespace": "true",
 							"pod-security.kubernetes.io/enforce": "baseline",
-							"openshift.io/cluster-monitoring": "true",
+							"openshift.io/cluster-monitoring":    "true",
 						},
 					},
 				}
@@ -105,7 +105,7 @@ func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, ds
 			}
 		} else { // force to patch monitoring namespace with label for cluster-monitoring
 			r.Log.Info("Patching monitoring namespace for Managed cluster", "name", monitoringName)
-			lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true", "pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}` 
+			lablePatch := `{"metadata":{"labels":{"openshift.io/cluster-monitoring":"true", "pod-security.kubernetes.io/enforce":"baseline","opendatahub.io/generated-namespace": "true"}}}`
 
 			err = r.Patch(ctx, foundMonitoringNamespace, client.RawPatch(types.MergePatchType, []byte(lablePatch)))
 			if err != nil {
