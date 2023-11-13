@@ -346,6 +346,25 @@ func configureBlackboxExporter(ctx context.Context, dsciInit *dsci.DSCInitializa
 		}
 	}
 
+	// Check if Blackbox exporter deployment from legacy version exists(check for initContainer)
+	// Need to delete wait-for-deployment initContainer
+	existingBlackboxExp := &appsv1.Deployment{}
+	err = r.Client.Get(context.TODO(), client.ObjectKey{
+		Namespace: dsciInit.Spec.Monitoring.Namespace,
+		Name:      "blackbox-exporter",
+	}, existingBlackboxExp)
+	if err != nil {
+		if !apierrs.IsNotFound(err) {
+			return err
+		}
+	}
+	if len(existingBlackboxExp.Spec.Template.Spec.InitContainers) > 0 {
+		err = r.Client.Delete(context.TODO(), existingBlackboxExp)
+		if err != nil {
+			return fmt.Errorf("error deleting legacy blackbox deployment %v", err)
+		}
+	}
+
 	blackBoxPath := filepath.Join(deploy.DefaultManifestPath, "monitoring", "blackbox-exporter")
 	if apierrs.IsNotFound(err) || strings.Contains(consoleRoute.Spec.Host, "redhat.com") {
 		if err := deploy.DeployManifestsFromPath(r.Client,
