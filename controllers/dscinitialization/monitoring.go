@@ -4,11 +4,12 @@ import (
 	"context"
 	b64 "encoding/base64"
 	"fmt"
-	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/upgrade"
-
 	dsci "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/common"
+	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/upgrade"
 	operatorv1 "github.com/openshift/api/operator/v1"
+	appsv1 "k8s.io/api/apps/v1"
+
 	routev1 "github.com/openshift/api/route/v1"
 	corev1 "k8s.io/api/core/v1"
 	apierrs "k8s.io/apimachinery/pkg/api/errors"
@@ -302,7 +303,27 @@ func configurePrometheus(ctx context.Context, dsciInit *dsci.DSCInitialization, 
 	// r.Log.Info("Success: update annotations in prometheus-deployment.yaml")
 
 	// final apply prometheus manifests including prometheus deployment
-	err = deploy.DeployManifestsFromPath(r.Client, dsciInit, prometheusManifestsPath, dsciInit.Spec.Monitoring.Namespace, "prometheus", true)
+	// Check if Prometheus deployment from legacy version exists(check for initContainer)
+	// Need to delete wait-for-deployment initContainer
+	existingPromDep := &appsv1.Deployment{}
+	err = r.Client.Get(context.TODO(), client.ObjectKey{
+		Namespace: dsciInit.Spec.Monitoring.Namespace,
+		Name:      "prometheus",
+	}, existingPromDep)
+	if err != nil {
+		if !apierrs.IsNotFound(err) {
+			return err
+		}
+	}
+	if len(existingPromDep.Spec.Template.Spec.InitContainers) > 0 {
+		err = r.Client.Delete(context.TODO(), existingPromDep)
+		if err != nil {
+			return fmt.Errorf("error deleting legacy prometheus deployment %v", err)
+		}
+	}
+
+	err = deploy.DeployManifestsFromPath(r.Client, dsciInit, prometheusManifestsPath,
+		dsciInit.Spec.Monitoring.Namespace, "prometheus", true)
 	if err != nil {
 		r.Log.Error(err, "error to deploy manifests for prometheus", "path", prometheusManifestsPath)
 		return err
