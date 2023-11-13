@@ -2,7 +2,6 @@
 package modelmeshserving
 
 import (
-	"context"
 	"path/filepath"
 	"strings"
 
@@ -133,16 +132,9 @@ func (m *ModelMeshServing) ReconcileComponent(cli client.Client, owner metav1.Ob
 	}
 
 	// Get monitoring namespace
-	dscInit := &dsciv1.DSCInitialization{}
-	err = cli.Get(context.TODO(), client.ObjectKey{
-		Name: "default-dsci",
-	}, dscInit)
-	if err != nil {
-		return err
-	}
 	var monitoringNamespace string
-	if dscInit.Spec.Monitoring.Namespace != "" {
-		monitoringNamespace = dscInit.Spec.Monitoring.Namespace
+	if dscispec.Monitoring.Namespace != "" {
+		monitoringNamespace = dscispec.Monitoring.Namespace
 	} else {
 		monitoringNamespace = dscispec.ApplicationsNamespace
 	}
