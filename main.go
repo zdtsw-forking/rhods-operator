@@ -189,7 +189,6 @@ func main() {
 	// Apply update from legacy operator
 	if err = upgrade.UpdateFromLegacyVersion(setupClient, platform); err != nil {
 		setupLog.Error(err, "unable to update from legacy operator version")
-		os.Exit(1)
 	}
 
 	if err := mgr.AddHealthzCheck("healthz", healthz.Ping); err != nil {
