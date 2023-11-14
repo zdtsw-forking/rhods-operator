@@ -454,7 +454,7 @@ func (r *DSCInitializationReconciler) configureCommonMonitoring(dsciInit *dsci.D
 		r.Client,
 		dsciInit,
 		monitoringBasePath,
-		dsciInit.Spec.Monitoring.Namespace,
+		"",
 		"monitoring-base",
 		dsciInit.Spec.Monitoring.ManagementState == operatorv1.Managed); err != nil {
 		r.Log.Error(err, "error to deploy manifests under "+monitoringBasePath)
