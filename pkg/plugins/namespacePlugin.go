@@ -30,6 +30,14 @@ func ApplyNamespacePlugin(manifestNamespace string, resMap resmap.ResMap) error 
 			},
 			{
 				Gvk: resid.Gvk{
+					Group: "rbac.authorization.k8s.io",
+					Kind:  "RoleBinding",
+				},
+				Path:               "subjects/namespace",
+				CreateIfNotPresent: true,
+			},
+			{
+				Gvk: resid.Gvk{
 					Group: "admissionregistration.k8s.io",
 					Kind:  "ValidatingWebhookConfiguration",
 				},
