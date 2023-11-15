@@ -26,6 +26,11 @@ var (
 	notebookImagesPathSupported = deploy.DefaultManifestPath + "/jupyterhub/notebooks/base"
 )
 
+// Verifies that Workbench implements ComponentInterface.
+var _ components.ComponentInterface = (*Workbenches)(nil)
+
+// Workbenches struct holds the configuration for the Workbenches component.
+// +kubebuilder:object:generate=true
 type Workbenches struct {
 	components.Component `json:""`
 }
@@ -87,9 +92,6 @@ func (w *Workbenches) OverrideManifests(platform string) error {
 func (w *Workbenches) GetComponentName() string {
 	return ComponentName
 }
-
-// Verifies that Workbench implements ComponentInterface.
-var _ components.ComponentInterface = (*Workbenches)(nil)
 
 func (w *Workbenches) ReconcileComponent(cli client.Client, owner metav1.Object, dscispec *dsci.DSCInitializationSpec, _ bool) error {
 	var imageParamMap = map[string]string{
@@ -177,9 +179,4 @@ func (w *Workbenches) ReconcileComponent(cli client.Client, owner metav1.Object,
 		}
 	}
 	return nil
-}
-
-func (w *Workbenches) DeepCopyInto(target *Workbenches) {
-	*target = *w
-	target.Component = w.Component
 }
