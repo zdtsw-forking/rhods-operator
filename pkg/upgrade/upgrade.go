@@ -4,7 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/hashicorp/go-multierror"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/trustyai"
+	appsv1 "k8s.io/api/apps/v1"
+	"k8s.io/apimachinery/pkg/util/wait"
 	"os"
 	"strings"
 	"time"
@@ -257,28 +260,32 @@ func CreateDefaultDSCI(cli client.Client, platform deploy.Platform, appNamespace
 	return nil
 }
 
-func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform) error {
+func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform, appNS string) error {
 	// If platform is Managed, remove Kfdefs and create default dsc
 	if platform == deploy.ManagedRhods {
-		err := CreateDefaultDSC(cli, platform)
-		if err != nil {
+		fmt.Println("starting deletion of Deloyments in managed cluster")
+		if err := deleteDeployments(cli, appNS); err != nil {
+			return err
+		}
+		if err := CreateDefaultDSC(cli, platform); err != nil {
 			return err
 		}
 
-		err = RemoveKfDefInstances(cli, platform)
-		if err != nil {
+		if err := RemoveKfDefInstances(cli, platform); err != nil {
 			return err
 		}
+
 		return nil
 	}
 
 	if platform == deploy.SelfManagedRhods {
+		fmt.Println("starting deletion of Deloyments in selfmanaged cluster")
 		// If KfDef CRD is not found, we see it as a cluster not pre-installed v1 operator	// Check if kfdef are deployed
 		kfdefCrd := &apiextv1.CustomResourceDefinition{}
-		err := cli.Get(context.TODO(), client.ObjectKey{Name: "kfdefs.kfdef.apps.kubeflow.org"}, kfdefCrd)
-		if err != nil {
+		if err := cli.Get(context.TODO(), client.ObjectKey{Name: "kfdefs.kfdef.apps.kubeflow.org"}, kfdefCrd); err != nil {
 			if apierrs.IsNotFound(err) {
 				// If no Crd found, return, since its a new Installation
+				// return empty list
 				return nil
 			} else {
 				return fmt.Errorf("error retrieving kfdef CRD : %v", err)
@@ -288,18 +295,20 @@ func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform) error 
 		// If KfDef Instances found, and no DSC instances are found in Self-managed, that means this is an upgrade path from
 		// legacy version. Create a default DSC instance
 		kfDefList := &kfdefv1.KfDefList{}
-		err = cli.List(context.TODO(), kfDefList)
+		err := cli.List(context.TODO(), kfDefList)
 		if err != nil {
 			if apierrs.IsNotFound(err) {
 				// If no KfDefs, do nothing and return
 				return nil
 			} else {
-				return fmt.Errorf("error getting list of kfdefs: %v", err)
+				return fmt.Errorf("error getting kfdef instances: : %w", err)
 			}
 		}
 		if len(kfDefList.Items) > 0 {
-			err := CreateDefaultDSC(cli, platform)
-			if err != nil {
+			if err = deleteDeployments(cli, appNS); err != nil {
+				return fmt.Errorf("error deleting deployment: %w", err)
+			}
+			if err = CreateDefaultDSC(cli, platform); err != nil {
 				return err
 			}
 		}
@@ -408,4 +417,77 @@ func getClusterServiceVersion(cfg *rest.Config, watchNameSpace string) (*ofapi.C
 		}
 	}
 	return nil, nil
+}
+
+func deleteDeployments(cli client.Client, applicationNamespace string) error {
+	// In v2, Deployment selectors use a label "app.opendatahub.io/<componentName>" which is
+	// not present in v1. Since label selectors are immutable, we need to delete the existing
+	// deployments and recreated them.
+	// because we can't proceed if a deployment is not deleted, we use exponential backoff
+	// to retry the deletion until it succeeds
+	err := wait.ExponentialBackoffWithContext(context.TODO(), wait.Backoff{
+		// 10, 20, 40 then timeout
+		Duration: 10 * time.Second,
+		Factor:   2.0,
+		Jitter:   0.1,
+		Steps:	  4,
+		Cap:      1 * time.Minute,
+	}, func(ctx context.Context) (bool, error) {
+		done, err := deleteDeploymentsAndCheck(ctx, cli, applicationNamespace)
+		return done, err
+	})
+
+	return err
+}
+
+func deleteDeploymentsAndCheck(ctx context.Context, cli client.Client, applicationNamespace string) (bool, error) {
+	// Delete Deployment objects
+	var multiErr *multierror.Error
+	deployments := &appsv1.DeploymentList{}
+	listOpts := &client.ListOptions{
+		Namespace: applicationNamespace,
+	}
+
+	if err := cli.List(ctx, deployments, listOpts); err != nil {
+		return false, nil
+	}
+	// filter deployment which has the new label to limit that we do not over kill other deployment
+	// this logic can be used even when upgrade from v2.4 to v2.5 without remove it
+	markedForDeletion := []appsv1.Deployment{}
+	for _, deployment := range deployments.Items {
+		v2 := false
+		selectorLabels := deployment.Spec.Selector.MatchLabels
+		for label := range selectorLabels {
+			if strings.Contains(label, "app.opendatahub.io/") {
+				// this deployment has the new label, this is a v2 to v2 upgrade
+				// there is no need to recreate it, as labels are matching
+				v2 = true
+				continue
+			}
+		}
+		if !v2 {
+			markedForDeletion = append(markedForDeletion, deployment)
+			multiErr = multierror.Append(multiErr, cli.Delete(ctx, &deployment))
+		}
+	}
+
+	for _, deployment := range markedForDeletion {
+		if e := cli.Get(ctx, client.ObjectKey{
+			Namespace: deployment.Namespace,
+			Name:      deployment.Name,
+		}, &deployment); e != nil {
+			if apierrs.IsNotFound(e) {
+				// resource has been successfully deleted
+				continue
+			} else {
+				// unexpected error, report it
+				multiErr = multierror.Append(multiErr, e)
+			}
+		} else {
+			// resource still exists, wait for it to be deleted
+			return false, nil
+		}
+	}
+
+	return true, multiErr.ErrorOrNil()
 }
