@@ -392,7 +392,7 @@ func getKfDefInstances(c client.Client) (*kfdefv1.KfDefList, error) {
 	// If KfDef Instances found, and no DSC instances are found in Self-managed, that means this is an upgrade path from
 	// legacy version. Create a default DSC instance
 	kfDefList := &kfdefv1.KfDefList{}
-	err = c.List(context.TODO(), kfDefList)
+	err := c.List(context.TODO(), kfDefList)
 	if err != nil {
 		if apierrs.IsNotFound(err) {
 			// If no KfDefs, do nothing and return
