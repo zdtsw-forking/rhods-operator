@@ -470,7 +470,7 @@ func deleteResource(cli client.Client, namespace string, resourceType string) er
 	return err
 }
 
-func deleteDeploymentsAndCheck(ctx context.Context, cli client.Client, namespace string) (bool, error) {
+func deleteDeploymentsAndCheck(ctx context.Context, cli client.Client, namespace string) (bool, error) { //nolint
 	// Delete Deployment objects
 	var multiErr *multierror.Error
 	deployments := &appsv1.DeploymentList{}
@@ -522,7 +522,7 @@ func deleteDeploymentsAndCheck(ctx context.Context, cli client.Client, namespace
 	return true, multiErr.ErrorOrNil()
 }
 
-func deleteStatefulsetsAndCheck(ctx context.Context, cli client.Client, namespace string) (bool, error) {
+func deleteStatefulsetsAndCheck(ctx context.Context, cli client.Client, namespace string) (bool, error) { //nolint
 	// Delete statefulset objects
 	var multiErr *multierror.Error
 	statefulsets := &appsv1.StatefulSetList{}
