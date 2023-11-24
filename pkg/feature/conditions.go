@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	interval = 2 * time.Second
+	interval = 10 * time.Second
 	duration = 5 * time.Minute
 )
 
