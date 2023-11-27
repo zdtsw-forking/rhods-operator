@@ -18,6 +18,12 @@ spec:
       managementState: "Managed"
     kserve:
       managementState: "Managed"
+      serving:
+        ingressGateway:
+          certificate:
+            type: SelfSigned
+        managementState: "Managed"
+        name: knative-serving
     modelmeshserving:
       managementState: "Removed"
     ray:

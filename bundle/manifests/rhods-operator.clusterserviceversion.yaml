@@ -29,7 +29,16 @@ metadata:
                 "managementState": "Managed"
               },
               "kserve": {
-                "managementState": "Managed"
+                "managementState": "Managed",
+                "serving": {
+                  "ingressGateway": {
+                    "certificate": {
+                      "type": "SelfSigned"
+                    }
+                  },
+                  "managementState": "Managed",
+                  "name": "knative-serving"
+                }
               },
               "modelmeshserving": {
                 "managementState": "Removed"
@@ -114,7 +123,16 @@ metadata:
               "managementState": "Managed"
             },
             "kserve": {
-              "managementState": "Managed"
+              "managementState": "Managed",
+              "serving": {
+                "ingressGateway": {
+                  "certificate":
+                    "type": "SelfSigned"
+                  }
+                },
+                "managementState": "Managed",
+                "name": "knative-serving"
+              }
             },
             "modelmeshserving": {
               "managementState": "Removed"
