@@ -2,7 +2,6 @@ package upgrade
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"os"
 	// "reflect"
@@ -18,7 +17,6 @@ import (
 	apiextv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -229,14 +227,6 @@ func CreateDefaultDSCI(cli client.Client, platform deploy.Platform, appNamespace
 		Spec: *defaultDsciSpec,
 	}
 
-	patchedDSCI := &dsci.DSCInitialization{
-		TypeMeta: metav1.TypeMeta{
-			Kind:       "DSCInitialization",
-			APIVersion: "dscinitialization.opendatahub.io/v1",
-		},
-		Spec: *defaultDsciSpec,
-	}
-
 	instances := &dsci.DSCInitializationList{}
 	if err := cli.List(context.TODO(), instances); err != nil {
 		return err
@@ -247,20 +237,9 @@ func CreateDefaultDSCI(cli client.Client, platform deploy.Platform, appNamespace
 		fmt.Printf("only one instance of DSCInitialization object is allowed. Please delete other instances ")
 		return nil
 	case len(instances.Items) == 1:
-		if platform == deploy.ManagedRhods || platform == deploy.SelfManagedRhods {
-			data, err := json.Marshal(patchedDSCI)
-			if err != nil {
-				return err
-			}
-			existingDSCI := &instances.Items[0]
-			err = cli.Patch(context.TODO(), existingDSCI, client.RawPatch(types.ApplyPatchType, data),
-				client.ForceOwnership, client.FieldOwner("rhods-operator"))
-			if err != nil {
-				return err
-			}
-		} else {
-			return nil
-		}
+		// Do not patch/update if DSCI already exists.
+		fmt.Printf("DSCInitialization resource already exists. It will not be updated with default DSCI.")
+		return nil
 	case len(instances.Items) == 0:
 		err := cli.Create(context.TODO(), defaultDsci)
 		if err != nil {
