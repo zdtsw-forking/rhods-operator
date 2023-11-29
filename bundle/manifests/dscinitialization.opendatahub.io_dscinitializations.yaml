@@ -115,7 +115,7 @@ spec:
                         type: string
                     type: object
                   managementState:
-                    default: Managed
+                    default: Removed
                     enum:
                     - Managed
                     - Removed
