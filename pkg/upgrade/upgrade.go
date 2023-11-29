@@ -35,6 +35,7 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/ray"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/trustyai"
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/workbenches"
+	infrav1 "github.com/opendatahub-io/opendatahub-operator/v2/infrastructure/v1"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/deploy"
 )
@@ -206,6 +207,14 @@ func CreateDefaultDSCI(cli client.Client, platform deploy.Platform, appNamespace
 		Monitoring: dsci.Monitoring{
 			ManagementState: operatorv1.Managed,
 			Namespace:       monNamespace,
+		},
+		ServiceMesh: infrav1.ServiceMeshSpec{
+			ManagementState: "Managed",
+			ControlPlane: infrav1.ControlPlaneSpec{
+				Name:              "data-science-smcp",
+				Namespace:         "istio-system",
+				MetricsCollection: "Istio",
+			},
 		},
 	}
 
