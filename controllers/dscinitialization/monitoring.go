@@ -59,6 +59,7 @@ func (r *DSCInitializationReconciler) configureManagedMonitoring(ctx context.Con
 				"(.*)-(.*)model-mesh(.*).rules":                      "",
 				"(.*)-(.*)odh-model-controller(.*).rules":            "",
 				"(.*)-(.*)ray(.*).rules":                             "",
+				"(.*)-(.*)kserve(.*).rules":                          "",
 			})
 		if err != nil {
 			r.Log.Error(err, "error to remove previous enabled component rules")
