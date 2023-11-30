@@ -22,6 +22,7 @@ import (
 	"errors"
 	"fmt"
 	"reflect"
+	"strings"
 	"time"
 
 	"github.com/go-logr/logr"
@@ -331,6 +332,13 @@ var modelMeshPredicates = predicate.Funcs{
 	},
 }
 
+// a workaround for 2.5 due to inferenceservices.serving.kserve.io and servingruntimes.serving.kserve.io
+var crdPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		return !strings.Contains(e.ObjectNew.GetName(), ".serving.kserve.io")
+	},
+}
+
 // SetupWithManager sets up the controller with the Manager.
 func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
@@ -353,7 +361,7 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Owns(&ocappsv1.DeploymentConfig{}).
 		Owns(&ocimgv1.ImageStream{}).
 		Owns(&ocbuildv1.BuildConfig{}).
-		Owns(&apiextensionsv1.CustomResourceDefinition{}).
+		Owns(&apiextensionsv1.CustomResourceDefinition{}, builder.WithPredicates(crdPredicates)).
 		Owns(&apiregistrationv1.APIService{}).
 		Owns(&netv1.Ingress{}).
 		Owns(&admv1.MutatingWebhookConfiguration{}).
