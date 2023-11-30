@@ -324,6 +324,13 @@ var configMapPredicates = predicate.Funcs{
 	},
 }
 
+// a workaround for 2.5 due to modelmesh-servingruntime.serving.kserve.io keeps updates
+var modelMeshPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		return e.ObjectNew.GetName() != "modelmesh-servingruntime.serving.kserve.io"
+	},
+}
+
 // SetupWithManager sets up the controller with the Manager.
 func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
@@ -350,7 +357,7 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Owns(&apiregistrationv1.APIService{}).
 		Owns(&netv1.Ingress{}).
 		Owns(&admv1.MutatingWebhookConfiguration{}).
-		Owns(&admv1.ValidatingWebhookConfiguration{}).
+		Owns(&admv1.ValidatingWebhookConfiguration{}, builder.WithPredicates(modelMeshPredicates)).
 		Owns(&corev1.ServiceAccount{}).
 		Watches(&source.Kind{Type: &dsci.DSCInitialization{}}, handler.EnqueueRequestsFromMapFunc(r.watchDataScienceClusterResources)).
 		Watches(&source.Kind{Type: &corev1.ConfigMap{}}, handler.EnqueueRequestsFromMapFunc(r.watchDataScienceClusterResources), builder.WithPredicates(configMapPredicates)).
