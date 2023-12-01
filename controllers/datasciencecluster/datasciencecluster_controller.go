@@ -36,7 +36,6 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	netv1 "k8s.io/api/networking/v1"
 	authv1 "k8s.io/api/rbac/v1"
-	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/rest"
@@ -331,7 +330,6 @@ var saPredicates = predicate.Funcs{
 		if e.ObjectNew.GetName() == "odh-model-controller" && e.ObjectNew.GetNamespace() == "redhat-ods-applications" {
 			return false
 		}
-		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 		return true
 	},
 }
@@ -343,13 +341,6 @@ var modelMeshwebhookPredicates = predicate.Funcs{
 	},
 }
 
-// a workaround for 2.5 due to inferenceservices.serving.kserve.io and servingruntimes.serving.kserve.io
-var modelMeshcrdPredicates = predicate.Funcs{
-	UpdateFunc: func(e event.UpdateEvent) bool {
-		return !strings.Contains(e.ObjectNew.GetName(), ".serving.kserve.io")
-	},
-}
-
 var modelMeshRolePredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
 		notAllowedNames := []string{"leader-election-role", "proxy-role", "metrics-reader", "kserve-prometheus-k8s", "odh-model-controller-role"}
@@ -358,17 +349,18 @@ var modelMeshRolePredicates = predicate.Funcs{
 				return false
 			}
 		}
-		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 		return true
 	},
 }
 
 var modelMeshRBPredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
-		if e.ObjectNew.GetName() == "leader-election-rolebinding" || e.ObjectNew.GetName() == "proxy-rolebinding" || e.ObjectNew.GetName() == "odh-model-controller-rolebinding-opendatahub" {
-			return false
+		notAllowedNames := []string{"leader-election-rolebinding", "proxy-rolebinding", "odh-model-controller-rolebinding-opendatahub"}
+		for _, notallowedName := range notAllowedNames {
+			if e.ObjectNew.GetName() == notallowedName {
+				return false
+			}
 		}
-		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 		return true
 	},
 }
@@ -377,10 +369,8 @@ var modelMeshRBPredicates = predicate.Funcs{
 var modelMeshGeneralPredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
 		if strings.Contains(e.ObjectNew.GetName(), "odh-model-controller") || strings.Contains(e.ObjectNew.GetName(), "kserve") {
-			//fmt.Printf("ignore: Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 			return false
 		} else {
-			fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 			return true
 		}
 	},
@@ -394,21 +384,20 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Owns(&corev1.Secret{}).
 		Owns(&corev1.ConfigMap{}, builder.WithPredicates(configMapPredicates)).
 		Owns(&netv1.NetworkPolicy{}).
-		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRolePredicates))).
-		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRBPredicates))).
-		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRolePredicates))).
-		Owns(&authv1.ClusterRoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRBPredicates))).
+		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRolePredicates))).
+		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRBPredicates))).
+		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRolePredicates))).
+		Owns(&authv1.ClusterRoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRBPredicates))).
 		Owns(&appsv1.Deployment{}).
 		Owns(&appsv1.ReplicaSet{}).
 		Owns(&corev1.Pod{}).
 		Owns(&corev1.PersistentVolumeClaim{}).
-		Owns(&corev1.Service{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshGeneralPredicates))).
+		Owns(&corev1.Service{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshGeneralPredicates))).
 		Owns(&appsv1.DaemonSet{}).
 		Owns(&appsv1.StatefulSet{}).
 		Owns(&ocappsv1.DeploymentConfig{}).
 		Owns(&ocimgv1.ImageStream{}).
 		Owns(&ocbuildv1.BuildConfig{}).
-		Owns(&apiextensionsv1.CustomResourceDefinition{}, builder.WithPredicates(modelMeshcrdPredicates)).
 		Owns(&apiregistrationv1.APIService{}).
 		Owns(&netv1.Ingress{}).
 		Owns(&admv1.MutatingWebhookConfiguration{}).
