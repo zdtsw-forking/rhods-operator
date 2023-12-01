@@ -325,15 +325,25 @@ var configMapPredicates = predicate.Funcs{
 	},
 }
 
+// a workaround for 2.5 due to odh-model-controller serivceaccount keeps updates with label
+var saPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		if e.ObjectNew.GetName() == "odh-model-controller" && e.ObjectNew.GetNamespace() == "redhat-ods-applications" {
+			return false
+		}
+		return true
+	},
+}
+
 // a workaround for 2.5 due to modelmesh-servingruntime.serving.kserve.io keeps updates
-var modelMeshPredicates = predicate.Funcs{
+var modelMeshwebhookPredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
 		return e.ObjectNew.GetName() != "modelmesh-servingruntime.serving.kserve.io"
 	},
 }
 
 // a workaround for 2.5 due to inferenceservices.serving.kserve.io and servingruntimes.serving.kserve.io
-var crdPredicates = predicate.Funcs{
+var modelMeshcrdPredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
 		return !strings.Contains(e.ObjectNew.GetName(), ".serving.kserve.io")
 	},
@@ -345,28 +355,28 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		For(&dsc.DataScienceCluster{}).
 		Owns(&corev1.Namespace{}).
 		Owns(&corev1.Secret{}).
-		Owns(&corev1.ConfigMap{}, builder.WithPredicates(configMapPredicates)).
+		Owns(&corev1.ConfigMap{}).
 		Owns(&netv1.NetworkPolicy{}).
-		Owns(&authv1.Role{}).
-		Owns(&authv1.RoleBinding{}).
-		Owns(&authv1.ClusterRole{}).
-		Owns(&authv1.ClusterRoleBinding{}).
+		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
+		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
+		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
+		Owns(&authv1.ClusterRoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
 		Owns(&appsv1.Deployment{}).
 		Owns(&appsv1.ReplicaSet{}).
 		Owns(&corev1.Pod{}).
 		Owns(&corev1.PersistentVolumeClaim{}).
-		Owns(&corev1.Service{}).
+		Owns(&corev1.Service{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
 		Owns(&appsv1.DaemonSet{}).
 		Owns(&appsv1.StatefulSet{}).
 		Owns(&ocappsv1.DeploymentConfig{}).
 		Owns(&ocimgv1.ImageStream{}).
 		Owns(&ocbuildv1.BuildConfig{}).
-		Owns(&apiextensionsv1.CustomResourceDefinition{}, builder.WithPredicates(crdPredicates)).
+		Owns(&apiextensionsv1.CustomResourceDefinition{}, builder.WithPredicates(modelMeshcrdPredicates)).
 		Owns(&apiregistrationv1.APIService{}).
 		Owns(&netv1.Ingress{}).
 		Owns(&admv1.MutatingWebhookConfiguration{}).
-		Owns(&admv1.ValidatingWebhookConfiguration{}, builder.WithPredicates(modelMeshPredicates)).
-		Owns(&corev1.ServiceAccount{}).
+		Owns(&admv1.ValidatingWebhookConfiguration{}, builder.WithPredicates(modelMeshwebhookPredicates)).
+		Owns(&corev1.ServiceAccount{}, builder.WithPredicates(saPredicates)).
 		Watches(&source.Kind{Type: &dsci.DSCInitialization{}}, handler.EnqueueRequestsFromMapFunc(r.watchDataScienceClusterResources)).
 		Watches(&source.Kind{Type: &corev1.ConfigMap{}}, handler.EnqueueRequestsFromMapFunc(r.watchDataScienceClusterResources), builder.WithPredicates(configMapPredicates)).
 		// this predicates prevents meaningless reconciliations from being triggered
