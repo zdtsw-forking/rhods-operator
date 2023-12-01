@@ -331,6 +331,7 @@ var saPredicates = predicate.Funcs{
 		if e.ObjectNew.GetName() == "odh-model-controller" && e.ObjectNew.GetNamespace() == "redhat-ods-applications" {
 			return false
 		}
+		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
 		return true
 	},
 }
@@ -349,6 +350,42 @@ var modelMeshcrdPredicates = predicate.Funcs{
 	},
 }
 
+var modelMeshRolePredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		notAllowedNames := []string{"leader-election-role", "proxy-role", "metrics-reader", "kserve-prometheus-k8s", "odh-model-controller-role"}
+		for _, notallowedName := range notAllowedNames {
+			if e.ObjectNew.GetName() == notallowedName {
+				return false
+			}
+		}
+		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
+		return true
+	},
+}
+
+var modelMeshRBPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		if e.ObjectNew.GetName() == "leader-election-rolebinding" || e.ObjectNew.GetName() == "proxy-rolebinding" || e.ObjectNew.GetName() == "odh-model-controller-rolebinding-opendatahub" {
+			return false
+		}
+		//fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
+		return true
+	},
+}
+
+// ignore label updates if it is from application namespace
+var modelMeshGeneralPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		if strings.Contains(e.ObjectNew.GetName(), "odh-model-controller") || strings.Contains(e.ObjectNew.GetName(), "kserve") {
+			//fmt.Printf("ignore: Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
+			return false
+		} else {
+			fmt.Printf("Got update event for resource %v: %v in %v\n", e.ObjectNew.GetObjectKind(), e.ObjectNew.GetName(), e.ObjectNew.GetNamespace())
+			return true
+		}
+	},
+}
+
 // SetupWithManager sets up the controller with the Manager.
 func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
@@ -357,15 +394,15 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Owns(&corev1.Secret{}).
 		Owns(&corev1.ConfigMap{}, builder.WithPredicates(configMapPredicates)).
 		Owns(&netv1.NetworkPolicy{}).
-		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
-		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
-		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
-		Owns(&authv1.ClusterRoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
+		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRolePredicates))).
+		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRBPredicates))).
+		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRolePredicates))).
+		Owns(&authv1.ClusterRoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshRBPredicates))).
 		Owns(&appsv1.Deployment{}).
 		Owns(&appsv1.ReplicaSet{}).
 		Owns(&corev1.Pod{}).
 		Owns(&corev1.PersistentVolumeClaim{}).
-		Owns(&corev1.Service{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}))).
+		Owns(&corev1.Service{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{},modelMeshGeneralPredicates))).
 		Owns(&appsv1.DaemonSet{}).
 		Owns(&appsv1.StatefulSet{}).
 		Owns(&ocappsv1.DeploymentConfig{}).
