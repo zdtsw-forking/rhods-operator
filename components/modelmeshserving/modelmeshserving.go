@@ -22,6 +22,7 @@ import (
 var (
 	ComponentName          = "model-mesh"
 	Path                   = deploy.DefaultManifestPath + "/" + ComponentName + "/overlays/odh"
+	monitoringPath         = deploy.DefaultManifestPath + "/" + "modelmesh-monitoring/base"
 	DependentComponentName = "odh-model-controller"
 	DependentPath          = deploy.DefaultManifestPath + "/" + DependentComponentName + "/base"
 )
@@ -144,6 +145,19 @@ func (m *ModelMeshServing) ReconcileComponent(ctx context.Context,
 		} else {
 			return err
 		}
+	}
+
+	// Get monitoring namespace
+	var monitoringNamespace string
+	if dscispec.Monitoring.Namespace != "" {
+		monitoringNamespace = dscispec.Monitoring.Namespace
+	} else {
+		monitoringNamespace = dscispec.ApplicationsNamespace
+	}
+
+	// Ensure we do not deploy modelmesh-monitoring if it has been there from previous releases
+	if err = deploy.DeployManifestsFromPath(cli, owner, monitoringPath, monitoringNamespace, ComponentName, false); err != nil {
+		return err
 	}
 
 	// CloudService Monitoring handling
