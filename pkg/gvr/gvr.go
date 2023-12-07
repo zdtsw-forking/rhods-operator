@@ -26,4 +26,76 @@ var (
 		Version:  "v2",
 		Resource: "servicemeshcontrolplanes",
 	}
+
+	// general core API
+	Secret = schema.GroupVersionResource{
+		Resource: "Secret",
+	}
+
+	ConfigMap = schema.GroupVersionResource{
+		Resource: "ConfigMap",
+	}
+
+	Service = schema.GroupVersionResource{
+		Resource: "Service",
+	}
+
+	ServiceAccount = schema.GroupVersionResource{
+		Resource: "ServiceAccount",
+	}
+
+	Deployment = schema.GroupVersionResource{
+		Group:    "apps",
+		Version:  "v1",
+		Resource: "Deployment",
+	}
+
+	NetworkPolicy = schema.GroupVersionResource{
+		Group:    "networking.k8s.io",
+		Version:  "v1",
+		Resource: "NetworkPolicy",
+	}
+
+	Role = schema.GroupVersionResource{
+		Group:    "rbac.authorization.k8s.io",
+		Version:  "v1",
+		Resource: "featuretrackers",
+	}
+
+	RoleBinding = schema.GroupVersionResource{
+		Group:    "rbac.authorization.k8s.io",
+		Version:  "v1",
+		Resource: "RoleBinding",
+	}
+
+	ClusterRole = schema.GroupVersionResource{
+		Group:    "rbac.authorization.k8s.io",
+		Version:  "v1",
+		Resource: "ClusterRole",
+	}
+
+	ClusterRoleBinding = schema.GroupVersionResource{
+		Group:    "rbac.authorization.k8s.io",
+		Version:  "v1",
+		Resource: "ClusterRoleBinding",
+	}
+
+	ImageStream = schema.GroupVersionResource{
+		Group:    "image.openshift.io",
+		Version:  "v1",
+		Resource: "ImageStream",
+	}
+
+	MutatingWebhookConfiguration = schema.GroupVersionResource{
+		Group:    "admissionregistration.k8s.io",
+		Version:  "v1",
+		Resource: "MutatingWebhookConfiguration",
+	}
+
+	ValidatingWebhookConfiguration = schema.GroupVersionResource{
+		Group:    "admissionregistration.k8s.io",
+		Version:  "v1",
+		Resource: "ValidatingWebhookConfiguration",
+	}
 )
+
