@@ -15,7 +15,8 @@ import (
 const templatesDir = "templates/servicemesh"
 
 func (r *DSCInitializationReconciler) configureServiceMesh(instance *dsciv1.DSCInitialization) error {
-	if instance.Spec.ServiceMesh.ManagementState == operatorv1.Managed {
+	switch instance.Spec.ServiceMesh.ManagementState {
+	case operatorv1.Managed:
 		serviceMeshInitializer := feature.NewFeaturesInitializer(&instance.Spec, configureServiceMeshFeatures)
 
 		if err := serviceMeshInitializer.Prepare(); err != nil {
@@ -31,13 +32,21 @@ func (r *DSCInitializationReconciler) configureServiceMesh(instance *dsciv1.DSCI
 
 			return err
 		}
+	case operatorv1.Unmanaged:
+		r.Log.Info("ServiceMesh CR is not configured by the operator, we won't do anything")
+	case operatorv1.Removed:
+		r.Log.Info("existing ServiceMesh CR (owned by operator) will be removed")
+		if err := r.removeServiceMesh(instance); err != nil {
+			return err
+		}
 	}
 
 	return nil
 }
 
 func (r *DSCInitializationReconciler) removeServiceMesh(instance *dsciv1.DSCInitialization) error {
-	if instance.Spec.ServiceMesh.ManagementState == operatorv1.Managed {
+	// on condition of Managed or Removed
+	if instance.Spec.ServiceMesh.ManagementState != operatorv1.Unmanaged {
 		serviceMeshInitializer := feature.NewFeaturesInitializer(&instance.Spec, configureServiceMeshFeatures)
 
 		if err := serviceMeshInitializer.Prepare(); err != nil {
