@@ -26,4 +26,10 @@ var (
 		Version:  "v2",
 		Resource: "servicemeshcontrolplanes",
 	}
+
+	JupyterhubApp = schema.GroupVersionResource{
+		Group:    "dashboard.opendatahub.io",
+		Version:  "v1",
+		Resource: "odhapplication",
+	}
 )

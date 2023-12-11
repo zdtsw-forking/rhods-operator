@@ -16,7 +16,9 @@ import (
 	apiextv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
+	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/rest"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
@@ -34,6 +36,7 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/components/workbenches"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/deploy"
+	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/gvr"
 )
 
 const (
@@ -283,7 +286,14 @@ func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform) error 
 
 		return err
 	}
+	return nil
+}
 
+func CleanupExistingCR(config *rest.Config) error {
+	err := RemoveUICR(config, gvr.JupyterhubApp, "jupyterhub")
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -296,6 +306,19 @@ func GetOperatorNamespace() (string, error) {
 	}
 
 	return "", err
+}
+
+func RemoveUICR(cfg *rest.Config, reousrce schema.GroupVersionResource, instanceName string) error {
+	dynamicClient, err := dynamic.NewForConfig(cfg)
+	if err != nil {
+		return err
+	}
+	err = dynamicClient.Resource(reousrce).Delete(context.TODO(), instanceName, metav1.DeleteOptions{})
+	if err != nil && !apierrs.IsNotFound(err) {
+		return fmt.Errorf("error deleting %v : %v", instanceName, err)
+	}
+
+	return nil
 }
 
 func RemoveKfDefInstances(cli client.Client, platform deploy.Platform) error {

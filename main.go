@@ -199,6 +199,12 @@ func main() { //nolint:funlen
 		setupLog.Error(err, "unable to update from legacy operator version")
 	}
 
+	// Special handling for cleanup dashboard jupyterhub CR
+	// TODO: remove this once we have a generic function for cleanup
+	if err = upgrade.CleanupExistingCR(mgr.GetConfig()); err != nil {
+		setupLog.Error(err, "unable to perform cleanup from legacy operator version")
+	}
+
 	if err := mgr.AddHealthzCheck("healthz", healthz.Ping); err != nil {
 		setupLog.Error(err, "unable to set up health check")
 		os.Exit(1)
