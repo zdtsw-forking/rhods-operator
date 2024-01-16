@@ -101,9 +101,11 @@ func (m *ModelMeshServing) ReconcileComponent(ctx context.Context,
 
 	// Update Default rolebinding
 	if enabled {
-		// Download manifests and update paths
-		if err = m.OverrideManifests(string(platform)); err != nil {
-			return err
+		if m.DevFlags != nil {
+			// Download manifests and update paths
+			if err = m.OverrideManifests(string(platform)); err != nil {
+				return err
+			}
 		}
 
 		if err := cluster.UpdatePodSecurityRolebinding(cli, dscispec.ApplicationsNamespace,
@@ -114,7 +116,7 @@ func (m *ModelMeshServing) ReconcileComponent(ctx context.Context,
 			return err
 		}
 		// Update image parameters
-		if dscispec.DevFlags.ManifestsUri == "" && len(m.DevFlags.Manifests) == 0 {
+		if (dscispec.DevFlags == nil || dscispec.DevFlags.ManifestsUri == "") && (m.DevFlags == nil || len(m.DevFlags.Manifests) == 0) {
 			if err := deploy.ApplyParams(Path, m.SetImageParamsMap(imageParamMap), false); err != nil {
 				return err
 			}
@@ -133,16 +135,15 @@ func (m *ModelMeshServing) ReconcileComponent(ctx context.Context,
 			return err
 		}
 		// Update image parameters for odh-model-controller
-		if dscispec.DevFlags.ManifestsUri == "" {
+		if dscispec.DevFlags == nil || dscispec.DevFlags.ManifestsUri == "" {
 			if err := deploy.ApplyParams(DependentPath, m.SetImageParamsMap(dependentImageParamMap), false); err != nil {
 				return err
 			}
 		}
 	}
 	if err := deploy.DeployManifestsFromPath(cli, owner, DependentPath, dscispec.ApplicationsNamespace, m.GetComponentName(), enabled); err != nil {
-		if strings.Contains(err.Error(), "spec.selector") && strings.Contains(err.Error(), "field is immutable") {
-			// ignore this error
-		} else {
+		// explicitly ignore error if error contains keywords "spec.selector" and "field is immutable" and return all other error.
+		if !strings.Contains(err.Error(), "spec.selector") || !strings.Contains(err.Error(), "field is immutable") {
 			return err
 		}
 	}
