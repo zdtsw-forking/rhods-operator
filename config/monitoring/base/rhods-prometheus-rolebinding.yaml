@@ -12,3 +12,34 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
   name: rhods-prometheus-cluster-monitoring-viewer
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: cluster-monitor-rhods-reader
+  namespace: redhat-ods-monitoring
+subjects:
+- kind: ServiceAccount
+  name: prometheus-k8s
+  namespace: openshift-monitoring
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-reader
+
+---
+# to get rhods-monitor-federation2 working
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rhods-prometheus-cluster-monitoring-viewer-binding
+  namespace: redhat-ods-applications
+subjects:
+  - kind: ServiceAccount
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-reader
