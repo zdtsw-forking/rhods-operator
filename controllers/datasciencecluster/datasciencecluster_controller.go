@@ -315,7 +315,13 @@ func (r *DataScienceClusterReconciler) reconcileSubComponent(ctx context.Context
 		if saved.Status.InstalledComponents == nil {
 			saved.Status.InstalledComponents = make(map[string]bool)
 		}
-		saved.Status.InstalledComponents[componentName] = enabled
+		// Set TrustyAI status to false always
+		if componentName == trustyai.ComponentName {
+			saved.Status.InstalledComponents[componentName] = false
+		} else {
+			saved.Status.InstalledComponents[componentName] = enabled
+		}
+
 		if enabled {
 			status.SetComponentCondition(&saved.Status.Conditions, componentName, status.ReconcileCompleted, "Component reconciled successfully", corev1.ConditionTrue)
 		} else {
