@@ -367,7 +367,10 @@ spec:
                         type: string
                     type: object
                   trustyai:
-                    description: TrustyAI component configuration.
+                    description: '## DEPRECATED ## : Installation of TrustyAI operator
+                      is deprecated in downstream(RHOAI). If TrustyAI operator is
+                      installed, it will be removed Changes in managemenstState are
+                      not supported.'
                     properties:
                       devFlags:
                         description: Add developer fields
