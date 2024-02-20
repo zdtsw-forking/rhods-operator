@@ -65,7 +65,9 @@ type Components struct {
 	// Ray component configuration.
 	Ray ray.Ray `json:"ray,omitempty"`
 
-	// TrustyAI component configuration.
+	// ## DEPRECATED ## : Installation of TrustyAI operator is deprecated in downstream(RHOAI).
+	// If TrustyAI operator is installed, it will be removed
+	// Changes in managemenstState are not supported.
 	TrustyAI trustyai.TrustyAI `json:"trustyai,omitempty"`
 }
 
