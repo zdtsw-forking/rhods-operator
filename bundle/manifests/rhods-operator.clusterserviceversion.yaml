@@ -136,15 +136,15 @@ metadata:
             },
             "kserve": {
               "managementState": "Managed",
-                "serving": {
-                  "ingressGateway": {
-                    "certificate": {
-                      "type": "SelfSigned"
-                    }
-                  },
-                  "managementState": "Managed",
-                  "name": "knative-serving"
-                }
+              "serving": {
+                "ingressGateway": {
+                  "certificate": {
+                    "type": "SelfSigned"
+                  }
+                },
+                "managementState": "Managed",
+                "name": "knative-serving"
+              }
             },
             "kueue": {
               "managementState": "Removed"
@@ -1781,6 +1781,9 @@ spec:
                 - containerPort: 9443
                   name: webhook-server
                   protocol: TCP
+                - containerPort: 8080
+                  name: http
+                  protocol: TCP
                 readinessProbe:
                   httpGet:
                     path: /readyz
@@ -1807,6 +1810,11 @@ spec:
                 runAsNonRoot: true
               serviceAccountName: redhat-ods-operator-controller-manager
               terminationGracePeriodSeconds: 10
+              volumes:
+              - name: cert
+                secret:
+                  defaultMode: 420
+                  secretName: redhat-ods-operator-controller-webhook-cert
       permissions:
       - rules:
         - apiGroups:
