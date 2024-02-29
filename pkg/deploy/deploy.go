@@ -318,6 +318,62 @@ priority of image values (from high to low):
 - image values set in manifests params.env if manifestsURI is not set
 parameter isUpdateNamespace is used to set if should update namespace  with dsci applicationnamespace.
 */
+func ApplyParamsNew(componentPath string, imageParamsMap map[string]string, isUpdateNamespace bool) error {
+	envFilePath := filepath.Join(componentPath, "params.env")
+	// Require params.env at the root folder
+	file, err := os.ReadFile(envFilePath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			// params.env doesn't exist, do not apply any changes
+			return nil
+		}
+		return err
+	}
+	envMap := make(map[string]string)
+	scanner := bufio.NewScanner(strings.NewReader(string(file)))
+	for scanner.Scan() {
+		line := scanner.Text()
+		parts := strings.SplitN(line, "=", 2)
+		if len(parts) == 2 {
+			envMap[parts[0]] = parts[1]
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		return err
+	}
+	// Update images with env variables
+	// e.g "odh-kuberay-operator-controller-image": "RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE",
+	for i := range envMap {
+		relatedImageValue := os.Getenv(imageParamsMap[i])
+		if relatedImageValue != "" {
+			envMap[i] = relatedImageValue
+		}
+	}
+	// Update namespace variable with applicationNamepsace
+	if isUpdateNamespace {
+		envMap["namespace"] = imageParamsMap["namespace"]
+	}
+
+	// write back to the same file
+	writeBack, err := os.OpenFile(envFilePath, os.O_RDWR|os.O_TRUNC, 0664)
+	if err != nil {
+		return fmt.Errorf("failed to open file: %w", err)
+	}
+	defer writeBack.Close()
+
+	writer := bufio.NewWriter(writeBack)
+	for key, value := range envMap {
+		if _, fErr := fmt.Fprintf(writer, "%s=%s\n", key, value); fErr != nil {
+			return fErr
+		}
+	}
+	if err := writer.Flush(); err != nil {
+		return fmt.Errorf("failed to write to file: %w", err)
+	}
+	return nil
+}
+
+
 func ApplyParams(componentPath string, imageParamsMap map[string]string, isUpdateNamespace bool) error {
 	envFilePath := filepath.Join(componentPath, "params.env")
 	// Require params.env at the root folder
