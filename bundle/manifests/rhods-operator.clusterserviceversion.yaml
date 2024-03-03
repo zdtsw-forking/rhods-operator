@@ -106,7 +106,7 @@ metadata:
     capabilities: Full Lifecycle
     categories: AI/Machine Learning, Big Data
     certified: "False"
-    containerImage: quay.io/opendatahub/opendatahub-operator:v2.8.0
+    containerImage: quay.io/opendatahub/opendatahub-operator:v2.0.0
     createdAt: "2023-8-23T00:00:00Z"
     olm.skipRange: '>=1.0.0 <2.0.0'
     operatorframework.io/initialization-resource: |-
@@ -165,7 +165,7 @@ metadata:
     operators.operatorframework.io/internal-objects: '[dscinitialization.opendatahub.io]'
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
     repository: https://github.com/red-hat-data-services/rhods-operator
-  name: rhods-operator.v2.8.0
+  name: rhods-operator.v2.8.3788-20
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -1768,7 +1768,10 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: REPLACE_IMAGE:latest
+                env:
+                - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
+                  value: quay.io/opendatahub/odh-dashboard:nightly
+                image: quay.io/wenzhou/rhods-operator:2.8.3788-20
                 imagePullPolicy: Always
                 livenessProbe:
                   httpGet:
@@ -1807,40 +1810,11 @@ spec:
                 runAsNonRoot: true
               serviceAccountName: redhat-ods-operator-controller-manager
               terminationGracePeriodSeconds: 10
-      permissions:
-      - rules:
-        - apiGroups:
-          - ""
-          resources:
-          - configmaps
-          verbs:
-          - get
-          - list
-          - watch
-          - create
-          - update
-          - patch
-          - delete
-        - apiGroups:
-          - coordination.k8s.io
-          resources:
-          - leases
-          verbs:
-          - get
-          - list
-          - watch
-          - create
-          - update
-          - patch
-          - delete
-        - apiGroups:
-          - ""
-          resources:
-          - events
-          verbs:
-          - create
-          - patch
-        serviceAccountName: redhat-ods-operator-controller-manager
+              volumes:
+              - name: cert
+                secret:
+                  defaultMode: 420
+                  secretName: redhat-ods-operator-controller-webhook-cert
     strategy: deployment
   installModes:
   - supported: false
@@ -1867,7 +1841,10 @@ spec:
   minKubeVersion: 1.22.0
   provider:
     name: Red Hat
-  version: 2.8.0
+  relatedImages:
+  - image: quay.io/opendatahub/odh-dashboard:nightly
+    name: odh-dashboard-image
+  version: 2.8.3788-20
   webhookdefinitions:
   - admissionReviewVersions:
     - v1

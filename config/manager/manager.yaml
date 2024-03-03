@@ -36,6 +36,9 @@ spec:
       containers:
       - command:
         - /manager
+        env:
+          - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
+            value: quay.io/opendatahub/odh-dashboard:nightly
         args:
         - --leader-elect
         image: controller:latest
