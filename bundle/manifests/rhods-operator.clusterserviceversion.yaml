@@ -1667,20 +1667,20 @@ spec:
         serviceAccountName: redhat-ods-operator-controller-manager
       deployments:
       - label:
-          control-plane: controller-manager
-        name: redhat-ods-operator-controller-manager
+          name: rhods-operator
+        name: redhat-ods-operator-rhods-operator
         spec:
           replicas: 1
           selector:
             matchLabels:
-              control-plane: controller-manager
+              name: rhods-operator
           strategy: {}
           template:
             metadata:
               annotations:
                 kubectl.kubernetes.io/default-container: manager
               labels:
-                control-plane: controller-manager
+                name: rhods-operator
             spec:
               containers:
               - args:
@@ -1689,7 +1689,7 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: REPLACE_IMAGE:latest
+                image: quay.io/wenzhou/rhods-operator:2.9.3884
                 imagePullPolicy: Always
                 livenessProbe:
                   httpGet:
@@ -1701,6 +1701,9 @@ spec:
                 ports:
                 - containerPort: 9443
                   name: webhook-server
+                  protocol: TCP
+                - containerPort: 8080
+                  name: http
                   protocol: TCP
                 readinessProbe:
                   httpGet:
@@ -1761,12 +1764,12 @@ spec:
   minKubeVersion: 1.22.0
   provider:
     name: Red Hat, Inc.
-  version: 2.8.0
+  version: 2.9.3884
   webhookdefinitions:
   - admissionReviewVersions:
     - v1
     containerPort: 443
-    deploymentName: redhat-ods-operator-controller-manager
+    deploymentName: redhat-ods-operator-rhods-operator
     failurePolicy: Fail
     generateName: operator.opendatahub.io
     rules:
