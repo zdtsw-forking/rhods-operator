@@ -132,6 +132,7 @@ spec:
   - supported: true
     type: AllNamespaces
   keywords:
+  - Operator
   - OpenShift
   - Open Data Hub
   - opendatahub
@@ -144,7 +145,8 @@ spec:
   links:
   - name: Red Hat OpenShift AI
     url: https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai
+  maturity: stable
   minKubeVersion: 1.22.0
   provider:
-    name: Red Hat
+    name: Red Hat, Inc.
   version: 2.0.0
