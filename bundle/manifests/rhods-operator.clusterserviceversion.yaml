@@ -231,7 +231,7 @@ spec:
 
     ### Components
     * Dashboard
-    * Curated Workbench Images (incl CUDA, PyTorch, Tensorflow, VScode)
+    * Curated Workbench Images (incl CUDA, PyTorch, Tensorflow, code-server)
     * Ability to add Custom Images
     * Ability to leverage accelerators (such as NVIDIA GPU)
     * Data Science Pipelines. (including Elyra notebook interface, and based on standard OpenShift Pipelines)
@@ -1688,7 +1688,7 @@ spec:
                     port: 8081
                   initialDelaySeconds: 15
                   periodSeconds: 20
-                name: manager
+                name: rhods-operator
                 ports:
                 - containerPort: 9443
                   name: webhook-server
@@ -1754,7 +1754,7 @@ spec:
   maturity: stable
   minKubeVersion: 1.22.0
   provider:
-    name: Red Hat, Inc.
+    name: 'Red Hat, Inc.'
   version: 2.9.0
   webhookdefinitions:
   - admissionReviewVersions:

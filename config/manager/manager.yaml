@@ -40,7 +40,7 @@ spec:
         - --leader-elect
         image: controller:latest
         imagePullPolicy: Always
-        name: manager
+        name: rhods-operator
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
