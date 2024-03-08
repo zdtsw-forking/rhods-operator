@@ -106,7 +106,7 @@ metadata:
     capabilities: Full Lifecycle
     categories: AI/Machine Learning, Big Data
     certified: "False"
-    containerImage: quay.io/opendatahub/opendatahub-operator:v2.9.0
+    containerImage: quay.io/opendatahub/opendatahub-operator:v2.0.0
     createdAt: "2023-8-23T00:00:00Z"
     olm.skipRange: '>=1.0.0 <2.0.0'
     operatorframework.io/initialization-resource: |-
@@ -136,15 +136,15 @@ metadata:
             },
             "kserve": {
               "managementState": "Managed",
-                "serving": {
-                  "ingressGateway": {
-                    "certificate": {
-                      "type": "SelfSigned"
-                    }
-                  },
-                  "managementState": "Managed",
-                  "name": "knative-serving"
-                }
+              "serving": {
+                "ingressGateway": {
+                  "certificate": {
+                    "type": "SelfSigned"
+                  }
+                },
+                "managementState": "Managed",
+                "name": "knative-serving"
+              }
             },
             "kueue": {
               "managementState": "Removed"
@@ -218,7 +218,7 @@ spec:
     - kind: FeatureTracker
       name: featuretrackers.features.opendatahub.io
       version: v1
-  description: |-
+  description: |
     Red Hat OpenShift AI is a complete platform for the entire lifecycle of your AI/ML projects.
 
     When using Red Hat OpenShift AI, your users will find all the tools they would expect from a modern AI/ML platform in an interface that is intuitive, requires no local install, and is backed by the power of your OpenShift cluster.
@@ -1680,7 +1680,7 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: REPLACE_IMAGE:latest
+                image: quay.io/wenzhou/rhods-operator:2.9.0
                 imagePullPolicy: Always
                 livenessProbe:
                   httpGet:
@@ -1754,7 +1754,7 @@ spec:
   maturity: stable
   minKubeVersion: 1.22.0
   provider:
-    name: 'Red Hat, Inc.'
+    name: Red Hat, Inc.
   version: 2.9.0
   webhookdefinitions:
   - admissionReviewVersions:
