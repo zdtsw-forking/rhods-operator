@@ -315,15 +315,6 @@ rules:
   - list
   - patch
 - apiGroups:
-  - controller-runtime.sigs.k8s.io
-  resources:
-  - controllermanagerconfigs
-  verbs:
-  - create
-  - delete
-  - get
-  - patch
-- apiGroups:
   - coordination.k8s.io
   resources:
   - leases

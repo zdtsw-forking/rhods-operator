@@ -173,8 +173,6 @@ package datasciencecluster
 
 // +kubebuilder:rbac:groups="coordination.k8s.io",resources=leases,verbs=get;list;watch;create;update;patch;delete
 
-// +kubebuilder:rbac:groups="controller-runtime.sigs.k8s.io",resources=controllermanagerconfigs,verbs=get;create;patch;delete
-
 // +kubebuilder:rbac:groups="codeflare.codeflare.dev",resources=mcads,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups="codeflare.codeflare.dev",resources=instascales,verbs=get;list;watch;create;update;patch;delete
 
