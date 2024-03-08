@@ -248,6 +248,11 @@ golangci-lint: $(GOLANGCI_LINT) ## Download golangci-lint locally if necessary.
 $(GOLANGCI_LINT): $(LOCALBIN)
 	test -s $(LOCALBIN)/golangci-lint || { curl -sSfL $(GOLANGCI_LINT_INSTALL_SCRIPT) | bash -s $(GOLANGCI_LINT_VERSION); }
 
+# 2 special handling for bundle target
+## remove config_v1_configmap.yaml from bundle/manifests
+## - this is deprecated and we do not need it after 0.15.x kubebuilder
+## remove service_v1_service.yaml from bundle/manifests, because midstream already use the deployment which we cannot change(or upgrade problem) so to CSV deploymentName creates service for us
+## - no need to add webhook service again, which create one extra which is not needed
 BUNDLE_DIR ?= "bundle"
 .PHONY: bundle
 bundle: prepare operator-sdk ## Generate bundle manifests and metadata, then validate generated files.
@@ -256,6 +261,7 @@ bundle: prepare operator-sdk ## Generate bundle manifests and metadata, then val
 	$(OPERATOR_SDK) bundle validate ./$(BUNDLE_DIR)
 	mv bundle.Dockerfile Dockerfiles/
 	rm bundle/manifests/redhat-ods-operator-manager-config_v1_configmap.yaml
+	rm bundle/manifests/redhat-ods-operator-webhook-service_v1_service.yaml
 
 
 .PHONY: bundle-build
