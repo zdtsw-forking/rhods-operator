@@ -255,6 +255,8 @@ bundle: prepare operator-sdk ## Generate bundle manifests and metadata, then val
 	$(KUSTOMIZE) build config/manifests | $(OPERATOR_SDK) generate bundle $(BUNDLE_GEN_FLAGS)
 	$(OPERATOR_SDK) bundle validate ./$(BUNDLE_DIR)
 	mv bundle.Dockerfile Dockerfiles/
+	rm bundle/manifests/redhat-ods-operator-manager-config_v1_configmap.yaml
+
 
 .PHONY: bundle-build
 bundle-build: bundle
