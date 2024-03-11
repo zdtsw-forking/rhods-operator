@@ -61,9 +61,8 @@ func (r *CertConfigmapGeneratorReconciler) Reconcile(ctx context.Context, req ct
 
 	// Get DSCI instance
 	dsciInstances := &dsci.DSCInitializationList{}
-	err := r.Client.List(ctx, dsciInstances)
-	if err != nil {
-		r.Log.Error(err, "Failed to retrieve DSCInitialization resource for certconfigmapgenerator ", "CertConfigmapGenerator Request.Name", req.Name)
+	if err := r.Client.List(ctx, dsciInstances); err != nil {
+		r.Log.Error(err, "Failed to retrieve DSCInitialization resource for CertConfigMapGenerator ", "CertConfigmapGenerator Request.Name", req.Name)
 		return ctrl.Result{}, err
 	}
 
@@ -82,32 +81,30 @@ func (r *CertConfigmapGeneratorReconciler) Reconcile(ctx context.Context, req ct
 		return ctrl.Result{}, nil
 	}
 
-	// Verify if namespace did not opt out of trustedCABundle injection
+	// Delete odh-trusted-ca-bundle Configmap if namespace has annoation set to opt-out CA bundle injection
 	if trustedcabundle.HasCABundleAnnotationDisabled(userNamespace) {
 		r.Log.Info("Namespace has opted-out of CA bundle injection using annotation ", "namespace", userNamespace.Name,
 			"annotation", trustedcabundle.InjectionOfCABundleAnnotatoion)
-		err := trustedcabundle.DeleteOdhTrustedCABundleConfigMap(ctx, r.Client, req.Namespace)
-		if err != nil {
+		if err := trustedcabundle.DeleteOdhTrustedCABundleConfigMap(ctx, r.Client, req.Namespace); err != nil {
 			if !apierrors.IsNotFound(err) {
-				r.Log.Error(err, "error deleting existing configmap from namespace", "name", trustedcabundle.CAConfigMapName, "namespace", req.Namespace)
+				r.Log.Error(err, "error deleting existing configmap from namespace", "name", trustedcabundle.CAConfigMapName, "namespace", userNamespace.Name)
 				return reconcile.Result{}, err
 			}
 		}
 		return reconcile.Result{}, nil
 	}
 
-	// Verify odh-trusted-ca-bundle Configmap is created for the given namespace
+	// Add odh-trusted-ca-bundle Configmap
 	if trustedcabundle.ShouldInjectTrustedBundle(userNamespace) {
 		r.Log.Info("Adding trusted CA bundle configmap to the new or existing namespace ", "namespace", userNamespace.Name,
 			"configmap", trustedcabundle.CAConfigMapName)
 		trustCAData := dsciInstance.Spec.TrustedCABundle.CustomCABundle
-		err = trustedcabundle.CreateOdhTrustedCABundleConfigMap(ctx, r.Client, req.Namespace, trustCAData)
-		if err != nil {
-			r.Log.Error(err, "error adding configmap to namespace", "name", trustedcabundle.CAConfigMapName, "namespace", req.Namespace)
+		if err := trustedcabundle.CreateOdhTrustedCABundleConfigMap(ctx, r.Client, req.Namespace, trustCAData); err != nil {
+			r.Log.Error(err, "error adding configmap to namespace", "name", trustedcabundle.CAConfigMapName, "namespace", userNamespace.Name)
 			return reconcile.Result{}, err
 		}
 	}
-	return ctrl.Result{}, err
+	return ctrl.Result{}, nil
 }
 
 func (r *CertConfigmapGeneratorReconciler) watchNamespaceResource(a client.Object) []reconcile.Request {
