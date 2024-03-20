@@ -60,6 +60,9 @@ func isManagedRHODS(cli client.Client) (Platform, error) {
 	expectedCatlogSource := &ofapi.CatalogSourceList{}
 	err = cli.List(context.TODO(), expectedCatlogSource)
 	if err != nil {
+		if apierrs.IsNotFound(err) {
+			return Unknown, nil
+		}
 		return Unknown, err
 	}
 	if len(expectedCatlogSource.Items) > 0 {

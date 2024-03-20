@@ -90,7 +90,7 @@ func (in *DSCInitializationList) DeepCopyObject() runtime.Object {
 func (in *DSCInitializationSpec) DeepCopyInto(out *DSCInitializationSpec) {
 	*out = *in
 	out.Monitoring = in.Monitoring
-	in.ServiceMesh.DeepCopyInto(&out.ServiceMesh)
+	out.ServiceMesh = in.ServiceMesh
 	out.TrustedCABundle = in.TrustedCABundle
 	if in.DevFlags != nil {
 		in, out := &in.DevFlags, &out.DevFlags

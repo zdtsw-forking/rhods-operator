@@ -108,11 +108,18 @@ func OperatorUninstall(cli client.Client, cfg *rest.Config) error {
 	} else if platform == deploy.ManagedRhods {
 		subsName = "addon-managed-odh"
 	}
-	if err := deploy.DeleteExistingSubscription(cli, operatorNs, subsName); err != nil {
-		return err
+	sub, _ := deploy.SubscriptionExists(cli, operatorNs, subsName)
+	if sub == nil {
+		fmt.Printf("Could not find subscription %s in namespace %s. Maybe you have a different one", subsName, operatorNs)
+	} else {
+		if err := cli.Delete(context.TODO(), sub); err != nil {
+			return fmt.Errorf("error deleting subscription %s: %w", sub.Name, err)
+		}
 	}
 
 	fmt.Printf("Removing the operator CSV in turn remove operator deployment\n")
+	time.Sleep(5 * time.Second)
+
 	err = removeCSV(cli, cfg)
 
 	fmt.Printf("All resources deleted as part of uninstall.")
@@ -310,6 +317,10 @@ func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform, appNS 
 		kfDefList := &kfdefv1.KfDefList{}
 		err := cli.List(context.TODO(), kfDefList)
 		if err != nil {
+			if apierrs.IsNotFound(err) {
+				// If no KfDefs, do nothing and return
+				return nil
+			}
 			return fmt.Errorf("error getting kfdef instances: : %w", err)
 		}
 		if len(kfDefList.Items) > 0 {
@@ -404,6 +415,10 @@ func RemoveKfDefInstances(cli client.Client, _ deploy.Platform) error {
 	expectedKfDefList := &kfdefv1.KfDefList{}
 	err = cli.List(context.TODO(), expectedKfDefList)
 	if err != nil {
+		if apierrs.IsNotFound(err) {
+			// If no KfDefs, do nothing and return
+			return nil
+		}
 		return fmt.Errorf("error getting list of kfdefs: %w", err)
 	}
 	// Delete kfdefs
