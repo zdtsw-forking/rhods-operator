@@ -7,6 +7,7 @@ import (
 
 	v1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
 	featurev1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/features/v1"
+	"github.com/opendatahub-io/opendatahub-operator/v2/components"
 )
 
 // FeaturesHandler coordinates feature creations and removal from within controllers.
@@ -29,10 +30,10 @@ func ClusterFeaturesHandler(dsci *v1.DSCInitialization, def FeaturesProvider) *F
 	}
 }
 
-func ComponentFeaturesHandler(componentName string, spec *v1.DSCInitializationSpec, def FeaturesProvider) *FeaturesHandler {
+func ComponentFeaturesHandler(component components.ComponentInterface, spec *v1.DSCInitializationSpec, def FeaturesProvider) *FeaturesHandler {
 	return &FeaturesHandler{
 		DSCInitializationSpec: spec,
-		source:                featurev1.Source{Type: featurev1.ComponentType, Name: componentName},
+		source:                featurev1.Source{Type: featurev1.ComponentType, Name: component.GetComponentName()},
 		featuresProvider:      def,
 	}
 }
