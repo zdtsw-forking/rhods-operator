@@ -34,11 +34,8 @@ and configure these applications.
 
 ### Prerequisites
 If `single model serving configuration` is used or if `Kserve` component is used then please make sure to install the following operators before proceeding to create a DSCI and DSC instances.
- - [Authorino operator](https://github.com/Kuadrant/authorino)
  - [Service Mesh operator](https://github.com/Maistra/istio-operator)
  - [Serverless operator](https://github.com/openshift-knative/serverless-operator)
-
-Additionally installing `Authorino operator` & `Service Mesh operator` enhances user-experience by providing a single sign on experience.
 
 ### Installation
 

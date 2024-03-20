@@ -20,8 +20,8 @@ package datasciencecluster
 // +kubebuilder:rbac:groups="networking.istio.io",resources=gateways,verbs=*
 // +kubebuilder:rbac:groups="networking.istio.io",resources=envoyfilters,verbs=*
 // +kubebuilder:rbac:groups="security.istio.io",resources=authorizationpolicies,verbs=*
-// +kubebuilder:rbac:groups="authorino.kuadrant.io",resources=authconfigs,verbs=*
-// +kubebuilder:rbac:groups="operator.authorino.kuadrant.io",resources=authorinos,verbs=*
+// // +kubebuilder:rbac:groups="authorino.kuadrant.io",resources=authconfigs,verbs=*
+// // +kubebuilder:rbac:groups="operator.authorino.kuadrant.io",resources=authorinos,verbs=*
 
 /* This is for DSP */
 //+kubebuilder:rbac:groups="datasciencepipelinesapplications.opendatahub.io",resources=datasciencepipelinesapplications/status,verbs=update;patch;get

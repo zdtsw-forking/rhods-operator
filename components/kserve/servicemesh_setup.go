@@ -29,20 +29,20 @@ func (k *Kserve) removeServiceMeshConfigurations(dscispec *dsciv1.DSCInitializat
 
 func (k *Kserve) defineServiceMeshFeatures() feature.FeaturesProvider {
 	return func(handler *feature.FeaturesHandler) error {
-		kserveExtAuthzErr := feature.CreateFeature("kserve-external-authz").
-			For(handler).
-			Manifests(
-				path.Join(feature.KServeDir, "activator-envoyfilter.tmpl"),
-				path.Join(feature.KServeDir, "envoy-oauth-temp-fix.tmpl"),
-				path.Join(feature.KServeDir, "kserve-predictor-authorizationpolicy.tmpl"),
-				path.Join(feature.KServeDir, "z-migrations"),
-			).
-			WithData(servicemesh.ClusterDetails).
-			Load()
+		// kserveExtAuthzErr := feature.CreateFeature("kserve-external-authz").
+		// 	For(handler).
+		// 	Manifests(
+		// 		path.Join(feature.KServeDir, "activator-envoyfilter.tmpl"),
+		// 		path.Join(feature.KServeDir, "envoy-oauth-temp-fix.tmpl"),
+		// 		path.Join(feature.KServeDir, "kserve-predictor-authorizationpolicy.tmpl"),
+		// 		path.Join(feature.KServeDir, "z-migrations"),
+		// 	).
+		// 	WithData(servicemesh.ClusterDetails).
+		// 	Load()
 
-		if kserveExtAuthzErr != nil {
-			return kserveExtAuthzErr
-		}
+		// if kserveExtAuthzErr != nil {
+		// 	return kserveExtAuthzErr
+		// }
 
 		temporaryFixesErr := feature.CreateFeature("kserve-temporary-fixes").
 			For(handler).

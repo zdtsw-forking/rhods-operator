@@ -11,6 +11,7 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/feature"
 )
 
+// function Not in use in 2.9.0.
 func RemoveExtensionProvider(f *feature.Feature) error {
 	ossmAuthzProvider := fmt.Sprintf("%s-auth-provider", f.Spec.AppNamespace)
 

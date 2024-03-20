@@ -1,8 +1,6 @@
 package servicemesh
 
 import (
-	"strings"
-
 	"github.com/pkg/errors"
 
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
@@ -21,12 +19,12 @@ func ClusterDetails(f *feature.Feature) error {
 	return nil
 }
 
-func ResolveAuthNamespace(f *feature.Feature) error {
-	dsciAuthNamespace := strings.TrimSpace(f.Spec.Auth.Namespace)
+// func ResolveAuthNamespace(f *feature.Feature) error {
+// 	dsciAuthNamespace := strings.TrimSpace(f.Spec.Auth.Namespace)
 
-	if len(dsciAuthNamespace) == 0 {
-		f.Spec.Auth.Namespace = f.Spec.AppNamespace + "-auth-provider"
-	}
+// 	if len(dsciAuthNamespace) == 0 {
+// 		f.Spec.Auth.Namespace = f.Spec.AppNamespace + "-auth-provider"
+// 	}
 
-	return nil
-}
+// 	return nil
+// }

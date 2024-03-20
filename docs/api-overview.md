@@ -279,22 +279,6 @@ _Appears in:_
 - [DataScienceCluster](#datasciencecluster)
 
 
-
-#### AuthSpec
-
-
-
-
-
-_Appears in:_
-- [ServiceMeshSpec](#servicemeshspec)
-
-| Field | Description |
-| --- | --- |
-| `namespace` _string_ | Namespace where it is deployed. If not provided, the default is to use '-auth-provider' suffix on the ApplicationsNamespace of the DSCI. |
-| `audiences` _string_ | Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver (kubernetes.default.svc). |
-
-
 #### CertType
 
 _Underlying type:_ _string_
@@ -439,7 +423,6 @@ _Appears in:_
 | --- | --- |
 | `managementState` _[ManagementState](#managementstate)_ |  |
 | `controlPlane` _[ControlPlaneSpec](#controlplanespec)_ | ControlPlane holds configuration of Service Mesh used by Opendatahub. |
-| `auth` _[AuthSpec](#authspec)_ | Auth holds configuration of authentication and authorization services used by Service Mesh in Opendatahub. |
 
 
 #### ServingSpec

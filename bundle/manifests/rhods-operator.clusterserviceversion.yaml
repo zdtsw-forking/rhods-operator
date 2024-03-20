@@ -375,12 +375,6 @@ spec:
           verbs:
           - create
         - apiGroups:
-          - authorino.kuadrant.io
-          resources:
-          - authconfigs
-          verbs:
-          - '*'
-        - apiGroups:
           - authorization.k8s.io
           resources:
           - subjectaccessreviews
@@ -1293,12 +1287,6 @@ spec:
           - patch
           - update
           - watch
-        - apiGroups:
-          - operator.authorino.kuadrant.io
-          resources:
-          - authorinos
-          verbs:
-          - '*'
         - apiGroups:
           - operator.knative.dev
           resources:

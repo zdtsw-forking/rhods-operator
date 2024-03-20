@@ -33,9 +33,10 @@ var (
 	BaseDir        = "templates"
 	ServiceMeshDir = path.Join(BaseDir, "servicemesh")
 	ServerlessDir  = path.Join(BaseDir, "serverless")
-	AuthDir        = path.Join(ServiceMeshDir, "authorino")
 	KServeDir      = path.Join(ServiceMeshDir, "kserve")
 )
+
+// AuthDir        = path.Join(ServiceMeshDir, "authorino")
 
 type Manifest interface {
 	// Process allows any arbitrary struct to be passed and used while processing the content of the manifest.
