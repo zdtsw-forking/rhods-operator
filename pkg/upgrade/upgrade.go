@@ -344,6 +344,7 @@ func UpdateFromLegacyVersion(cli client.Client, platform deploy.Platform, appNS 
 			if err := deleteResource(cli, montNamespace, "statefulset"); err != nil {
 				return err
 			}
+			// only for downstream since ODH has a different way to create this CR by dashboard
 			if err := unsetOwnerReference(cli, "odh-dashboard-config", appNS); err != nil {
 				return err
 			}
