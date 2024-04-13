@@ -480,7 +480,7 @@ func (r *DataScienceClusterReconciler) watchDataScienceClusterResources(a client
 		return nil
 	}
 
-	if a.GetObjectKind().GroupVersionKind().Kind == "CustomResourceDefinition" {
+	if a.GetObjectKind().GroupVersionKind().Kind == "CustomResourceDefinition" || a.GetName() == datasciencepipelines.ArgoWorkflowCRD {
 		return []reconcile.Request{{
 			NamespacedName: types.NamespacedName{Name: requestName},
 		}}
