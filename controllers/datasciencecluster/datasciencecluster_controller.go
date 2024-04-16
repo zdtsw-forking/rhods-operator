@@ -214,7 +214,7 @@ func (r *DataScienceClusterReconciler) Reconcile(ctx context.Context, req ctrl.R
 		return ctrl.Result{}, nil
 	}
 	// Check preconditions if this is an upgrade
-	if instance.Status.Phase == status.PhaseReady {
+	if instance.Status.Phase == status.PhaseReady || instance.Status.Phase == status.PhaseError {
 		// Check for existence of Argo Workflows if DSP is
 		if instance.Spec.Components.DataSciencePipelines.ManagementState == v1.Managed {
 			if err := datasciencepipelines.UnmanagedArgoWorkFlowExists(ctx, r.Client); err != nil {
