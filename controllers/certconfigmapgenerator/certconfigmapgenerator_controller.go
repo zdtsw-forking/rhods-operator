@@ -52,14 +52,16 @@ func (r *CertConfigmapGeneratorReconciler) Reconcile(ctx context.Context, req ct
 	r.Log.Info("Reconciling certConfigMapGenerator.", " CertConfigMapGenerator Request.Namespace", req.NamespacedName)
 	// Get namespace instance
 	userNamespace := &corev1.Namespace{}
-	err := r.Client.Get(ctx, client.ObjectKey{Name: req.Namespace}, userNamespace)
-	if err != nil {
-		return ctrl.Result{}, errors.WithMessage(err, "error getting user namespace to inject trustedCA bundle ")
+	if err := r.Client.Get(ctx, client.ObjectKey{Name: req.Namespace}, userNamespace); err != nil {
+		if apierrors.IsNotFound(err) {
+			return reconcile.Result{}, nil
+		}
+		return ctrl.Result{}, errors.WithMessage(err, "error getting namespace to inject trustedCA bundle ")
 	}
 
 	// Get DSCI instance
 	dsciInstances := &dsci.DSCInitializationList{}
-	err = r.Client.List(ctx, dsciInstances)
+	err := r.Client.List(ctx, dsciInstances)
 	if err != nil {
 		r.Log.Error(err, "Failed to retrieve DSCInitialization resource for certconfigmapgenerator ", "CertConfigmapGenerator Request.Name", req.Name)
 		return ctrl.Result{}, err
@@ -142,6 +144,10 @@ var NamespaceCreatedPredicate = predicate.Funcs{
 			return true
 		}
 		return false
+	},
+
+	DeleteFunc: func(e event.DeleteEvent) bool {
+		return trustedcabundle.ShouldInjectTrustedBundle(e.Object)
 	},
 }
 
