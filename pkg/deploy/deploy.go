@@ -305,6 +305,13 @@ func manageResource(ctx context.Context, cli client.Client, obj *unstructured.Un
 		}
 	}
 
+	// JIRA 6889.  odh-model-controller will be covered by either kserve or model-mesh case
+	if componentName == "model-mesh" {
+		if err := removeResourcesFromDeployment(obj); err != nil {
+			return err
+		}
+	}
+
 	// Preserve app.opendatahub.io/<component> labels of previous versions of existing objects
 	foundLabels := make(map[string]string)
 	for k, v := range found.GetLabels() {
