@@ -147,7 +147,6 @@ func (k *Kserve) ReconcileComponent(ctx context.Context, cli client.Client,
 	l.WithValues("Path", Path).Info("apply manifests done for kserve")
 	// For odh-model-controller
 	if enabled {
-
 		// For odh-model-controller
 		if err := cluster.UpdatePodSecurityRolebinding(ctx, cli, dscispec.ApplicationsNamespace, "odh-model-controller"); err != nil {
 			return err
