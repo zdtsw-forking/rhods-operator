@@ -26,7 +26,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -35,6 +34,7 @@ import (
 	ofapiv1alpha1 "github.com/operator-framework/api/pkg/operators/v1alpha1"
 	ofapiv2 "github.com/operator-framework/api/pkg/operators/v2"
 	"golang.org/x/exp/maps"
+	apierrs "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/types"
@@ -227,7 +227,7 @@ func manageResource(ctx context.Context, cli client.Client, obj *unstructured.Un
 	}
 
 	// If resource already exists, update it.
-	return updateResource(ctx, cli, obj, found, owner, componentName)
+	return updateResource(ctx, cli, obj, found, owner)
 }
 
 /*
@@ -445,7 +445,7 @@ func performPatch(ctx context.Context, cli client.Client, obj, found *unstructur
 	return cli.Patch(ctx, found, client.RawPatch(types.ApplyPatchType, data), client.ForceOwnership, client.FieldOwner(owner.GetName()))
 }
 
-func updateResource(ctx context.Context, cli client.Client, obj, found *unstructured.Unstructured, owner metav1.Object, componentName string) error {
+func updateResource(ctx context.Context, cli client.Client, obj, found *unstructured.Unstructured, owner metav1.Object) error {
 	// Skip ODHDashboardConfig Update
 	if found.GetKind() == "OdhDashboardConfig" {
 		return nil
