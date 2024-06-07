@@ -381,12 +381,14 @@ spec:
           - tokenreviews
           verbs:
           - create
+          - get
         - apiGroups:
           - authorization.k8s.io
           resources:
           - subjectaccessreviews
           verbs:
           - create
+          - get
         - apiGroups:
           - authorization.openshift.io
           resources:
@@ -418,6 +420,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -428,6 +431,7 @@ spec:
           - machineautoscalers
           verbs:
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -436,6 +440,7 @@ spec:
           - machinesets
           verbs:
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -475,6 +480,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - watch
@@ -496,6 +502,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - watch
@@ -536,6 +543,7 @@ spec:
           resources:
           - clusterversions
           verbs:
+          - get
           - list
           - watch
         - apiGroups:
@@ -589,6 +597,7 @@ spec:
           resources:
           - clusterversions
           verbs:
+          - get
           - list
           - watch
         - apiGroups:
@@ -659,6 +668,7 @@ spec:
           - namespaces/finalizers
           verbs:
           - delete
+          - get
           - list
           - patch
           - update
@@ -698,6 +708,7 @@ spec:
           resources:
           - rhmis
           verbs:
+          - get
           - list
           - watch
         - apiGroups:
@@ -756,6 +767,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -840,6 +852,7 @@ spec:
           resources:
           - datasciencepipelinesapplications/finalizers
           verbs:
+          - get
           - patch
           - update
         - apiGroups:
@@ -886,6 +899,7 @@ spec:
           - events
           verbs:
           - delete
+          - get
           - list
           - patch
           - watch
@@ -962,6 +976,7 @@ spec:
           - rhmis
           verbs:
           - delete
+          - get
           - list
           - patch
           - watch
@@ -989,6 +1004,7 @@ spec:
           - machineautoscalers
           verbs:
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -997,6 +1013,7 @@ spec:
           - machinesets
           verbs:
           - delete
+          - get
           - list
           - patch
         - apiGroups:
@@ -1238,6 +1255,7 @@ spec:
           - virtualservices/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1300,6 +1318,7 @@ spec:
           - consoles
           verbs:
           - delete
+          - get
           - list
           - patch
           - watch
@@ -1458,6 +1477,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1469,6 +1489,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1479,6 +1500,7 @@ spec:
           - services/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1488,6 +1510,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1499,6 +1522,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1509,6 +1533,7 @@ spec:
           - clusterservingruntimes/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1518,6 +1543,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1528,6 +1554,7 @@ spec:
           - inferencegraphs/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1560,6 +1587,7 @@ spec:
           - inferenceservices/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1569,6 +1597,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1578,6 +1607,7 @@ spec:
           resources:
           - predictors/finalizers
           verbs:
+          - get
           - patch
           - update
         - apiGroups:
@@ -1586,6 +1616,7 @@ spec:
           - predictors/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1611,6 +1642,7 @@ spec:
           resources:
           - servingruntimes/status
           verbs:
+          - get
           - patch
           - update
         - apiGroups:
@@ -1620,6 +1652,7 @@ spec:
           verbs:
           - create
           - delete
+          - get
           - list
           - patch
           - update
@@ -1630,6 +1663,7 @@ spec:
           - trainedmodels/status
           verbs:
           - delete
+          - get
           - patch
           - update
         - apiGroups:
@@ -1696,6 +1730,7 @@ spec:
           - users
           verbs:
           - delete
+          - get
           - list
           - patch
           - watch
