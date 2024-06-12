@@ -227,6 +227,22 @@ func main() {
 		}
 	}
 
+	// Create default DSC CR for managed RHODS
+	if platform == cluster.ManagedRhods {
+		var createDefaultDSCFunc manager.RunnableFunc = func(ctx context.Context) error {
+			err := upgrade.CreateDefaultDSC(context.TODO(), setupClient)
+			if err != nil {
+				setupLog.Error(err, "unable to create default DSC CR by the operator")
+			}
+			return err
+		}
+		err := mgr.Add(createDefaultDSCFunc)
+		if err != nil {
+			setupLog.Error(err, "error scheduling DSC creation")
+			os.Exit(1)
+		}
+	}
+	// Cleanup resources from previous v2 releases
 	var cleanExistingResourceFunc manager.RunnableFunc = func(ctx context.Context) error {
 		if err = upgrade.CleanupExistingResource(ctx, setupClient, platform, dscApplicationsNamespace, dscMonitoringNamespace); err != nil {
 			setupLog.Error(err, "unable to perform cleanup")
