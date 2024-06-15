@@ -1,9 +1,7 @@
 #!/bin/bash
 set -e
 
-GITHUB_URL="https://github.com/"
-# update to use different git repo for legacy manifests
-MANIFEST_ORG="red-hat-data-services"
+GITHUB_URL="https://github.com"
 
 # component: notebook, dsp, kserve, dashbaord, cf/ray, trustyai, modelmesh.
 # in the format of "repo-org:repo-name:branch-name:source-folder:target-folder".
