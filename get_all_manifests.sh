@@ -6,19 +6,19 @@ GITHUB_URL="https://github.com"
 # component: notebook, dsp, kserve, dashbaord, cf/ray, trustyai, modelmesh.
 # in the format of "repo-org:repo-name:branch-name:source-folder:target-folder".
 declare -A COMPONENT_MANIFESTS=(
-    ["codeflare"]="red-hat-data-services:codeflare-operator:rhoai-2.10:config:codeflare"
-    ["ray"]="red-hat-data-services:kuberay:rhoai-2.10:ray-operator/config:ray"
-    ["kueue"]="red-hat-data-services:kueue:rhoai-2.10:config:kueue"
-    ["data-science-pipelines-operator"]="red-hat-data-services:data-science-pipelines-operator:rhoai-2.10:config:data-science-pipelines-operator"
-    ["kf-notebook-controller"]="red-hat-data-services:kubeflow:rhoai-2.10:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
-    ["odh-notebook-controller"]="red-hat-data-services:kubeflow:rhoai-2.10:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
-    ["notebooks"]="red-hat-data-services:notebooks:rhoai-2.10:manifests:/jupyterhub/notebooks"
-    ["trustyai"]="red-hat-data-services:trustyai-service-operator:rhoai-2.10:config:trustyai-service-operator"
-    ["model-mesh"]="red-hat-data-services:modelmesh-serving:rhoai-2.10:config:model-mesh"
-    ["odh-model-controller"]="red-hat-data-services:odh-model-controller:rhoai-2.10:config:odh-model-controller"
-    ["kserve"]="red-hat-data-services:kserve:rhoai-2.10:config:kserve"
-    ["odh-dashboard"]="red-hat-data-services:odh-dashboard:rhoai-2.10:manifests:dashboard"
-    ["trainingoperator"]="red-hat-data-services:training-operator:rhoai-2.10:manifests:trainingoperator"
+    ["codeflare"]="red-hat-data-services:codeflare-operator:rhoai-2.11:config:codeflare"
+    ["ray"]="red-hat-data-services:kuberay:rhoai-2.11:ray-operator/config:ray"
+    ["kueue"]="red-hat-data-services:kueue:rhoai-2.11:config:kueue"
+    ["data-science-pipelines-operator"]="red-hat-data-services:data-science-pipelines-operator:rhoai-2.11:config:data-science-pipelines-operator"
+    ["kf-notebook-controller"]="red-hat-data-services:kubeflow:rhoai-2.11:components/notebook-controller/config:odh-notebook-controller/kf-notebook-controller"
+    ["odh-notebook-controller"]="red-hat-data-services:kubeflow:rhoai-2.11:components/odh-notebook-controller/config:odh-notebook-controller/odh-notebook-controller"
+    ["notebooks"]="red-hat-data-services:notebooks:rhoai-2.11:manifests:/jupyterhub/notebooks"
+    ["trustyai"]="red-hat-data-services:trustyai-service-operator:rhoai-2.11:config:trustyai-service-operator"
+    ["model-mesh"]="red-hat-data-services:modelmesh-serving:rhoai-2.11:config:model-mesh"
+    ["odh-model-controller"]="red-hat-data-services:odh-model-controller:rhoai-2.11:config:odh-model-controller"
+    ["kserve"]="red-hat-data-services:kserve:rhoai-2.11:config:kserve"
+    ["odh-dashboard"]="red-hat-data-services:odh-dashboard:rhoai-2.11:manifests:dashboard"
+    ["trainingoperator"]="red-hat-data-services:training-operator:rhoai-2.11:manifests:trainingoperator"
 )
 
 # Allow overwriting repo using flags component=repo
