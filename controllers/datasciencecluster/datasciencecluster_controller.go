@@ -417,6 +417,13 @@ var modelMeshRolePredicates = predicate.Funcs{
 	},
 }
 
+// a workaround for modelmesh and kserve both create same odh-model-controller NWP.
+var networkpolicyPredicates = predicate.Funcs{
+	UpdateFunc: func(e event.UpdateEvent) bool {
+		return e.ObjectNew.GetName() != "odh-model-controller"
+	},
+}
+
 var modelMeshRBPredicates = predicate.Funcs{
 	UpdateFunc: func(e event.UpdateEvent) bool {
 		notAllowedNames := []string{"leader-election-rolebinding", "proxy-rolebinding", "odh-model-controller-rolebinding-opendatahub"}
@@ -446,7 +453,7 @@ func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error 
 		Owns(&corev1.Namespace{}).
 		Owns(&corev1.Secret{}).
 		Owns(&corev1.ConfigMap{}, builder.WithPredicates(configMapPredicates)).
-		Owns(&netv1.NetworkPolicy{}).
+		Owns(&netv1.NetworkPolicy{}, builder.WithPredicates(networkpolicyPredicates)).
 		Owns(&authv1.Role{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRolePredicates))).
 		Owns(&authv1.RoleBinding{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRBPredicates))).
 		Owns(&authv1.ClusterRole{}, builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, modelMeshRolePredicates))).
