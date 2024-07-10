@@ -37,7 +37,7 @@ var (
 // - Network Policies 'opendatahub' that allow traffic between the ODH namespaces
 // - RoleBinding 'opendatahub'.
 func (r *DSCInitializationReconciler) createOdhNamespace(ctx context.Context, dscInit *dsci.DSCInitialization, name string) error {
-	platform, err := deploy.GetPlatform(r.Client)
+	platform, err := deploy.GetPlatform(ctx, r.Client)
 	if err != nil {
 		return err
 	}
@@ -215,7 +215,7 @@ func (r *DSCInitializationReconciler) createDefaultRoleBinding(ctx context.Conte
 }
 
 func (r *DSCInitializationReconciler) reconcileDefaultNetworkPolicy(ctx context.Context, name string, dscInit *dsci.DSCInitialization) error {
-	platform, err := deploy.GetPlatform(r.Client)
+	platform, err := deploy.GetPlatform(ctx, r.Client)
 	if err != nil {
 		return err
 	}

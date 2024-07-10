@@ -174,7 +174,7 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 	managementStateChangeTrustedCA = false
 
 	// Get platform
-	platform, err := deploy.GetPlatform(r.Client)
+	platform, err := deploy.GetPlatform(ctx, r.Client)
 	if err != nil {
 		r.Log.Error(err, "Failed to determine platform (odh vs managed vs self-managed)")
 		return reconcile.Result{}, err
@@ -295,7 +295,7 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 }
 
 // SetupWithManager sets up the controller with the Manager.
-func (r *DSCInitializationReconciler) SetupWithManager(mgr ctrl.Manager) error {
+func (r *DSCInitializationReconciler) SetupWithManager(_ context.Context, mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		// add predicates prevents meaningless reconciliations from being triggered
 		// not use WithEventFilter() because it conflict with secret and configmap predicate

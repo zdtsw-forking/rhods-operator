@@ -95,7 +95,7 @@ func (d *Dashboard) ReconcileComponent(ctx context.Context,
 	enabled := d.GetManagementState() == operatorv1.Managed
 	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
 
-	platform, err := deploy.GetPlatform(cli)
+	platform, err := deploy.GetPlatform(ctx, cli)
 	if err != nil {
 		return err
 	}

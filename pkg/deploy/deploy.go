@@ -342,18 +342,15 @@ func SubscriptionExists(cli client.Client, namespace string, name string) (*ofap
 
 // OperatorExists checks if an Operator with 'operatorPrefix' is installed.
 // Return true if found it, false if not.
-// TODO: if we need to check exact version of the operator installed, can append vX.Y.Z later.
+// if we need to check exact version of the operator installed, can append vX.Y.Z later.
 func OperatorExists(cli client.Client, operatorPrefix string) (bool, error) {
 	opConditionList := &ofapiv2.OperatorConditionList{}
 	if err := cli.List(context.TODO(), opConditionList); err != nil {
-		if !apierrs.IsNotFound(err) { // real error to run List()
-			return false, err
-		}
-	} else {
-		for _, opCondition := range opConditionList.Items {
-			if strings.HasPrefix(opCondition.Name, operatorPrefix) {
-				return true, nil
-			}
+		return false, err
+	}
+	for _, opCondition := range opConditionList.Items {
+		if strings.HasPrefix(opCondition.Name, operatorPrefix) {
+			return true, nil
 		}
 	}
 

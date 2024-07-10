@@ -25,6 +25,7 @@ import (
 	routev1 "github.com/openshift/api/route/v1"
 	userv1 "github.com/openshift/api/user/v1"
 	ofapi "github.com/operator-framework/api/pkg/operators/v1alpha1"
+	ofapiv2 "github.com/operator-framework/api/pkg/operators/v2"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	netv1 "k8s.io/api/networking/v1"
@@ -108,6 +109,7 @@ var _ = BeforeSuite(func() {
 	utilruntime.Must(routev1.Install(testScheme))
 	utilruntime.Must(userv1.Install(testScheme))
 	utilruntime.Must(kfdefv1.AddToScheme(testScheme))
+	utilruntime.Must(ofapiv2.AddToScheme(testScheme))
 	//+kubebuilder:scaffold:scheme
 
 	k8sClient, err = client.New(cfg, client.Options{Scheme: testScheme})
@@ -127,7 +129,7 @@ var _ = BeforeSuite(func() {
 		Scheme:   testScheme,
 		Log:      ctrl.Log.WithName("controllers").WithName("DSCInitialization"),
 		Recorder: mgr.GetEventRecorderFor("dscinitialization-controller"),
-	}).SetupWithManager(mgr)
+	}).SetupWithManager(ctx, mgr)
 
 	Expect(err).ToNot(HaveOccurred())
 

@@ -39,6 +39,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
+	"k8s.io/client-go/rest"
 	apiregistrationv1 "k8s.io/kube-aggregator/pkg/apis/apiregistration/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -57,6 +58,8 @@ import (
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/deploy"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/upgrade"
 )
+
+const controllerNum = 4 // we should keep this updated if we have new controllers to add
 
 var (
 	scheme   = runtime.NewScheme()
@@ -113,6 +116,9 @@ func main() {
 
 	ctrl.SetLogger(zap.New(zap.UseFlagOptions(&opts)))
 
+	// root context
+	ctx := ctrl.SetupSignalHandler()
+
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{
 		Scheme:                 scheme,
 		MetricsBindAddress:     metricsAddr,
@@ -143,7 +149,7 @@ func main() {
 		Log:                   ctrl.Log.WithName("controllers").WithName("DSCInitialization"),
 		Recorder:              mgr.GetEventRecorderFor("dscinitialization-controller"),
 		ApplicationsNamespace: dscApplicationsNamespace,
-	}).SetupWithManager(mgr); err != nil {
+	}).SetupWithManager(ctx, mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "DSCInitiatlization")
 		os.Exit(1)
 	}
@@ -159,7 +165,7 @@ func main() {
 			},
 		},
 		Recorder: mgr.GetEventRecorderFor("datasciencecluster-controller"),
-	}).SetupWithManager(mgr); err != nil {
+	}).SetupWithManager(ctx, mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "DataScienceCluster")
 		os.Exit(1)
 	}
@@ -167,7 +173,7 @@ func main() {
 	if err = (&secretgenerator.SecretGeneratorReconciler{
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
-	}).SetupWithManager(mgr); err != nil {
+	}).SetupWithManager(ctx, mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "SecretGenerator")
 		os.Exit(1)
 	}
@@ -176,7 +182,7 @@ func main() {
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
 		Log:    ctrl.Log.WithName("controllers").WithName("CertConfigmapGenerator"),
-	}).SetupWithManager(mgr); err != nil {
+	}).SetupWithManager(ctx, mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "CertConfigmapGenerator")
 		os.Exit(1)
 	}
@@ -188,13 +194,17 @@ func main() {
 		os.Exit(1)
 	}
 
+	// uplift default limiataions
+	setupCfg.QPS = rest.DefaultQPS * controllerNum     // 5 * 4 controllers
+	setupCfg.Burst = rest.DefaultBurst * controllerNum // 10 * 4 controllers
+
 	setupClient, err := client.New(setupCfg, client.Options{Scheme: scheme})
 	if err != nil {
 		setupLog.Error(err, "error getting client for setup")
 		os.Exit(1)
 	}
 	// Get operator platform
-	platform, err := deploy.GetPlatform(setupClient)
+	platform, err := deploy.GetPlatform(ctx, setupClient)
 	if err != nil {
 		setupLog.Error(err, "error getting platform")
 		os.Exit(1)
@@ -233,7 +243,7 @@ func main() {
 	}
 
 	setupLog.Info("starting manager")
-	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
+	if err := mgr.Start(ctx); err != nil {
 		setupLog.Error(err, "problem running manager")
 		os.Exit(1)
 	}

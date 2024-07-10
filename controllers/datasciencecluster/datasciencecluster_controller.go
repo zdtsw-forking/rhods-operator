@@ -97,7 +97,7 @@ func (r *DataScienceClusterReconciler) Reconcile(ctx context.Context, req ctrl.R
 		// For additional cleanup logic use operatorUninstall function.
 		// Return and don't requeue
 		if upgrade.HasDeleteConfigMap(r.Client) {
-			if uninstallErr := upgrade.OperatorUninstall(r.Client, r.RestConfig); uninstallErr != nil {
+			if uninstallErr := upgrade.OperatorUninstall(ctx, r.Client, r.RestConfig); uninstallErr != nil {
 				return ctrl.Result{}, fmt.Errorf("error while operator uninstall: %w", uninstallErr)
 			}
 		}
@@ -412,7 +412,7 @@ var modelMeshGeneralPredicates = predicate.Funcs{
 }
 
 // SetupWithManager sets up the controller with the Manager.
-func (r *DataScienceClusterReconciler) SetupWithManager(mgr ctrl.Manager) error {
+func (r *DataScienceClusterReconciler) SetupWithManager(_ context.Context, mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
 		For(&dsc.DataScienceCluster{}).
 		Owns(&corev1.Namespace{}).

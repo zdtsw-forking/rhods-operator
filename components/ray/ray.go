@@ -61,7 +61,7 @@ func (r *Ray) ReconcileComponent(ctx context.Context, cli client.Client, resConf
 
 	enabled := r.GetManagementState() == operatorv1.Managed
 	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
-	platform, err := deploy.GetPlatform(cli)
+	platform, err := deploy.GetPlatform(ctx, cli)
 	if err != nil {
 		return err
 	}
