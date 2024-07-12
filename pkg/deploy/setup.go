@@ -41,19 +41,19 @@ func isSelfManaged(cli client.Client) (Platform, error) {
 }
 
 // isManagedRHODS checks if catsrc CR add-on exists ManagedRhods.
-func isManagedRHODS(ctx context.Context, cli client.Client) (Platform, error) {
+func isManagedRHODS(cli client.Client) (Platform, error) {
 	catalogSource := &ofapi.CatalogSource{}
 
-	err := cli.Get(ctx, client.ObjectKey{Name: "addon-managed-odh-catalog", Namespace: "openshift-marketplace"}, catalogSource)
+	err := cli.Get(context.TODO(), client.ObjectKey{Name: "addon-managed-odh-catalog", Namespace: "openshift-marketplace"}, catalogSource)
 	if err != nil {
 		return Unknown, client.IgnoreNotFound(err)
 	}
 	return ManagedRhods, nil
 }
 
-func GetPlatform(ctx context.Context, cli client.Client) (Platform, error) {
+func GetPlatform(cli client.Client) (Platform, error) {
 	// First check if its addon installation to return 'ManagedRhods, nil'
-	if platform, err := isManagedRHODS(ctx, cli); err != nil {
+	if platform, err := isManagedRHODS(cli); err != nil {
 		return Unknown, err
 	} else if platform == ManagedRhods {
 		return ManagedRhods, nil

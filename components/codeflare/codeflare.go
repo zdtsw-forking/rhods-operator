@@ -64,7 +64,7 @@ func (c *CodeFlare) ReconcileComponent(ctx context.Context, cli client.Client, r
 	}
 	enabled := c.GetManagementState() == operatorv1.Managed
 	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
-	platform, err := deploy.GetPlatform(ctx, cli)
+	platform, err := deploy.GetPlatform(cli)
 	if err != nil {
 		return err
 	}

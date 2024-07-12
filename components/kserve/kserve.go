@@ -104,7 +104,7 @@ func (k *Kserve) ReconcileComponent(ctx context.Context, cli client.Client, resC
 
 	enabled := k.GetManagementState() == operatorv1.Managed
 	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
-	platform, err := deploy.GetPlatform(ctx, cli)
+	platform, err := deploy.GetPlatform(cli)
 	if err != nil {
 		return err
 	}

@@ -36,7 +36,7 @@ type CertConfigmapGeneratorReconciler struct { //nolint:golint,revive // Readabi
 }
 
 // SetupWithManager sets up the controller with the Manager.
-func (r *CertConfigmapGeneratorReconciler) SetupWithManager(_ context.Context, mgr ctrl.Manager) error {
+func (r *CertConfigmapGeneratorReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	configmapGenLog.Info("Adding controller for Configmap Generation.")
 	return ctrl.NewControllerManagedBy(mgr).
 		Named("cert-configmap-generator-controller").

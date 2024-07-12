@@ -129,7 +129,7 @@ var _ = BeforeSuite(func() {
 		Scheme:   testScheme,
 		Log:      ctrl.Log.WithName("controllers").WithName("DSCInitialization"),
 		Recorder: mgr.GetEventRecorderFor("dscinitialization-controller"),
-	}).SetupWithManager(ctx, mgr)
+	}).SetupWithManager(mgr)
 
 	Expect(err).ToNot(HaveOccurred())
 

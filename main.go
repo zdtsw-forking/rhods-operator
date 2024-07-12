@@ -116,9 +116,6 @@ func main() {
 
 	ctrl.SetLogger(zap.New(zap.UseFlagOptions(&opts)))
 
-	// root context
-	ctx := ctrl.SetupSignalHandler()
-
 	mgr, err := ctrl.NewManager(ctrl.GetConfigOrDie(), ctrl.Options{
 		Scheme:                 scheme,
 		MetricsBindAddress:     metricsAddr,
@@ -149,7 +146,7 @@ func main() {
 		Log:                   ctrl.Log.WithName("controllers").WithName("DSCInitialization"),
 		Recorder:              mgr.GetEventRecorderFor("dscinitialization-controller"),
 		ApplicationsNamespace: dscApplicationsNamespace,
-	}).SetupWithManager(ctx, mgr); err != nil {
+	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "DSCInitiatlization")
 		os.Exit(1)
 	}
@@ -165,7 +162,7 @@ func main() {
 			},
 		},
 		Recorder: mgr.GetEventRecorderFor("datasciencecluster-controller"),
-	}).SetupWithManager(ctx, mgr); err != nil {
+	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "DataScienceCluster")
 		os.Exit(1)
 	}
@@ -173,7 +170,7 @@ func main() {
 	if err = (&secretgenerator.SecretGeneratorReconciler{
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
-	}).SetupWithManager(ctx, mgr); err != nil {
+	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "SecretGenerator")
 		os.Exit(1)
 	}
@@ -182,7 +179,7 @@ func main() {
 		Client: mgr.GetClient(),
 		Scheme: mgr.GetScheme(),
 		Log:    ctrl.Log.WithName("controllers").WithName("CertConfigmapGenerator"),
-	}).SetupWithManager(ctx, mgr); err != nil {
+	}).SetupWithManager(mgr); err != nil {
 		setupLog.Error(err, "unable to create controller", "controller", "CertConfigmapGenerator")
 		os.Exit(1)
 	}
@@ -204,7 +201,7 @@ func main() {
 		os.Exit(1)
 	}
 	// Get operator platform
-	platform, err := deploy.GetPlatform(ctx, setupClient)
+	platform, err := deploy.GetPlatform(setupClient)
 	if err != nil {
 		setupLog.Error(err, "error getting platform")
 		os.Exit(1)
@@ -243,7 +240,7 @@ func main() {
 	}
 
 	setupLog.Info("starting manager")
-	if err := mgr.Start(ctx); err != nil {
+	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
 		setupLog.Error(err, "problem running manager")
 		os.Exit(1)
 	}

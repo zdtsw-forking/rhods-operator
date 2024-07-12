@@ -49,8 +49,8 @@ const (
 
 // OperatorUninstall deletes all the externally generated resources. This includes monitoring resources and applications
 // installed by KfDef.
-func OperatorUninstall(ctx context.Context, cli client.Client, cfg *rest.Config) error {
-	platform, err := deploy.GetPlatform(ctx, cli)
+func OperatorUninstall(cli client.Client, cfg *rest.Config) error {
+	platform, err := deploy.GetPlatform(cli)
 	if err != nil {
 		return err
 	}

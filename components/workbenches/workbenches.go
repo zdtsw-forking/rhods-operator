@@ -105,7 +105,7 @@ func (w *Workbenches) ReconcileComponent(ctx context.Context, cli client.Client,
 	// Create rhods-notebooks namespace in managed platforms
 	enabled := w.GetManagementState() == operatorv1.Managed
 	monitoringEnabled := dscispec.Monitoring.ManagementState == operatorv1.Managed
-	platform, err := deploy.GetPlatform(ctx, cli)
+	platform, err := deploy.GetPlatform(cli)
 	if err != nil {
 		return err
 	}

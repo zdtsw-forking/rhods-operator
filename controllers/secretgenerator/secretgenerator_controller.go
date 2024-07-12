@@ -56,7 +56,7 @@ type SecretGeneratorReconciler struct { //nolint:golint,revive // Readability
 }
 
 // SetupWithManager sets up the controller with the Manager.
-func (r *SecretGeneratorReconciler) SetupWithManager(_ context.Context, mgr ctrl.Manager) error {
+func (r *SecretGeneratorReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	secGenLog.Info("Adding controller for Secret Generation.")
 
 	// Watch only new secrets with the corresponding annotation
