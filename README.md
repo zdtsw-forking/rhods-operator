@@ -48,8 +48,7 @@ Additionally installing `Authorino operator` & `Service Mesh operator` enhances 
 
   Please note that the latest releases are made in the `Fast` channel.
 
-- It can also be build
-and installed from source manually, see the Developer guide for further instructions.
+- It can also be build and installed from source manually, see the Developer guide for further instructions.
 
   1. Subscribe to operator by creating following subscription
 
@@ -162,6 +161,12 @@ e.g `make image-build -e IMAGE_BUILD_FLAGS="--build-arg USE_LOCAL=true"`
   ```
 
 #### Deployment
+
+**Run main.go locally**
+
+  ```commandline
+  make run -e OPERATOR_NAMESPACE=redhat-ods-operator -e DISABLE_DSC_CONFIG=true -e CI=true
+  ```
 
 **Deploying operator locally**
 

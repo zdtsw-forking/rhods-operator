@@ -38,24 +38,25 @@ COPY controllers/ controllers/
 COPY main.go main.go
 COPY pkg/ pkg/
 
-# Copy monitoring config
-COPY config/monitoring/ /opt/odh-manifests/monitoring/
-# Copy partners config
-COPY config/partners/ /opt/odh-manifests/partners/
-# Copy ods-configs
-COPY config/osd-configs/ /opt/odh-manifests/osd-configs/
-
 # Build
-RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -a -o manager main.go
+RUN CGO_ENABLED=0 go install github.com/go-delve/delve/cmd/dlv@latest
+RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -gcflags="all=-N -l" -a -o manager main.go
 
 ################################################################################
 FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
 WORKDIR /
+COPY --from=builder /usr/bin/dlv .
 COPY --from=builder /workspace/manager .
 COPY --chown=1001:0 --from=builder /opt/manifests /opt/manifests
 # Recursive change all files
 RUN chown -R 1001:0 /opt/manifests &&\
-    chmod -R a+r /opt/manifests
+   chmod -R a+r /opt/manifests
 USER 1001
 
-ENTRYPOINT ["/manager"]
+ENTRYPOINT ["/dlv", "--listen=:40000", "--headless=true", "--api-version=2", "--accept-multiclient", "--log=true", "exec", "/manager", "--"]
+
+#1 kubectl port-forward -n redhat-ods-operator po/<pod_name> 40000:40000
+#then
+#1 docker run --name <pod_name> -p 40000:40000 <image_name>
+#2 dvl connect localhost:40000
+

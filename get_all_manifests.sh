@@ -48,9 +48,9 @@ if [ "$#" -ge 1 ]; then
 fi
 
 # pre-cleanup local env
-rm -fr ./odh-manifests/* ./.odh-manifests-tmp/
+rm -fr ./opt/manifests/* ./.odh-manifests-tmp/
 
-mkdir -p ./.odh-manifests-tmp/ ./odh-manifests/
+mkdir -p ./.odh-manifests-tmp/ ./opt/manifests/
 
 for key in "${!COMPONENT_MANIFESTS[@]}"; do
     echo "Cloning repo ${key}: ${COMPONENT_MANIFESTS[$key]}"
@@ -65,7 +65,7 @@ for key in "${!COMPONENT_MANIFESTS[@]}"; do
     repo_url="${GITHUB_URL}/${repo_org}/${repo_name}.git"
     rm -rf ./.${repo_name}
     git clone --depth 1 --branch ${repo_branch} ${repo_url} ./.${repo_name}
-    mkdir -p ./odh-manifests/${target_path}
-    cp -rf ./.${repo_name}/${source_path}/* ./odh-manifests/${target_path}
+    mkdir -p ./opt/manifests/${target_path}
+    cp -rf ./.${repo_name}/${source_path}/* ./opt/manifests/${target_path}
     rm -rf ./.${repo_name}
 done
