@@ -131,10 +131,6 @@ func (w *Workbenches) ReconcileComponent(ctx context.Context, cli client.Client,
 			return err
 		}
 	}
-	if err := deploy.DeployManifestsFromPath(ctx, cli, owner, notebookControllerPath, dscispec.ApplicationsNamespace, ComponentName, enabled); err != nil {
-		return fmt.Errorf("failed to apply manifetss %s: %w", notebookControllerPath, err)
-	}
-	l.WithValues("Path", notebookControllerPath).Info("apply manifests done NBC")
 
 	// Update image parameters for nbc
 	if enabled {
@@ -149,6 +145,11 @@ func (w *Workbenches) ReconcileComponent(ctx context.Context, cli client.Client,
 			}
 		}
 	}
+	if err := deploy.DeployManifestsFromPath(ctx, cli, owner, notebookControllerPath, dscispec.ApplicationsNamespace, ComponentName, enabled); err != nil {
+		return fmt.Errorf("failed to apply manifetss %s: %w", notebookControllerPath, err)
+	}
+	l.WithValues("Path", notebookControllerPath).Info("apply manifests done NBC")
+
 	if err := deploy.DeployManifestsFromPath(ctx, cli, owner,
 		kfnotebookControllerPath,
 		dscispec.ApplicationsNamespace,
