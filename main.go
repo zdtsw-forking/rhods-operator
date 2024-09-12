@@ -223,6 +223,9 @@ func main() {
 		setupLog.Error(err, "error getting platform")
 		os.Exit(1)
 	}
+	// get old release version before we create default DSCI CR
+	oldReleaseVersion, _ := upgrade.GetReleaseFromCR(ctx, setupClient)
+
 	// Check if user opted for disabling DSC configuration
 	disableDSCConfig, existDSCConfig := os.LookupEnv("DISABLE_DSC_CONFIG")
 	if existDSCConfig && disableDSCConfig != "false" {
@@ -259,7 +262,7 @@ func main() {
 	}
 	// Cleanup resources from previous v2 releases
 	var cleanExistingResourceFunc manager.RunnableFunc = func(ctx context.Context) error {
-		if err = upgrade.CleanupExistingResource(ctx, setupClient, platform, dscApplicationsNamespace, dscMonitoringNamespace); err != nil {
+		if err = upgrade.CleanupExistingResource(ctx, setupClient, platform, dscApplicationsNamespace, dscMonitoringNamespace, oldReleaseVersion); err != nil {
 			setupLog.Error(err, "unable to perform cleanup")
 		}
 		return err
