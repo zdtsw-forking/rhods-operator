@@ -224,7 +224,7 @@ func main() {
 		os.Exit(1)
 	}
 	// get old release version before we create default DSCI CR
-	oldReleaseVersion, _ := upgrade.GetReleaseFromCR(ctx, setupClient)
+	oldReleaseVersion, _ := upgrade.GetDeployedRelease(ctx, setupClient)
 
 	// Check if user opted for disabling DSC configuration
 	disableDSCConfig, existDSCConfig := os.LookupEnv("DISABLE_DSC_CONFIG")
