@@ -56,6 +56,8 @@ spec:
                 default: redhat-ods-applications
                 description: Namespace for applications to be installed, non-configurable,
                   default to "redhat-ods-applications"
+                maxLength: 63
+                pattern: ^([a-z0-9]([-a-z0-9]*[a-z0-9])?)?$
                 type: string
                 x-kubernetes-validations:
                 - message: ApplicationsNamespace is immutable
@@ -95,6 +97,8 @@ spec:
                   namespace:
                     default: redhat-ods-monitoring
                     description: Namespace for monitoring if it is enabled
+                    maxLength: 63
+                    pattern: ^([a-z0-9]([-a-z0-9]*[a-z0-9])?)?$
                     type: string
                 type: object
               serviceMesh:
