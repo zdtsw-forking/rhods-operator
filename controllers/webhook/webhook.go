@@ -1,3 +1,5 @@
+//go:build !nowebhook
+
 /*
 Copyright 2023.
 
@@ -44,6 +46,15 @@ var log = ctrl.Log.WithName("rhoai-controller-webhook")
 type OpenDataHubValidatingWebhook struct {
 	Client  client.Client
 	Decoder *admission.Decoder
+}
+
+func Init(mgr ctrl.Manager) {
+	(&OpenDataHubValidatingWebhook{
+		Client:  mgr.GetClient(),
+		Decoder: admission.NewDecoder(mgr.GetScheme()),
+	}).SetupWithManager(mgr)
+
+	(&DSCDefaulter{}).SetupWithManager(mgr)
 }
 
 func (w *OpenDataHubValidatingWebhook) SetupWithManager(mgr ctrl.Manager) {
