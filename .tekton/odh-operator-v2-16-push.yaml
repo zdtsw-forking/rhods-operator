@@ -12,7 +12,7 @@ metadata:
       && (!"build/**".pathChanged() || "build/operands-map.yaml".pathChanged() ||
       ".tekton/odh-operator-v2-13-push.yaml".pathChanged() ) && !".github/workflows/**".pathChanged()
       && "non-existent-file.non-existent-ext".pathChanged()
-  creationTimestamp: null
+  creationTimestamp:
   labels:
     appstudio.openshift.io/application: rhoai-v2-16
     appstudio.openshift.io/component: odh-operator-v2-16
@@ -190,10 +190,10 @@ spec:
 
             component_name=${pipelinerun_name/-on-*/}
             echo "component-name = $component_name"
-            
+
             KONFLUX_SERVER="https://konflux.apps.stone-prod-p02.hjvn.p1.openshiftapps.com"
             build_url="${KONFLUX_SERVER}/application-pipeline/workspaces/rhoai/applications/${application_name}/pipelineruns/${pipelinerun_name}/logs"
-            
+
             alertEmoji=":alert:"
             statusText="Failed"
             statusEmoji=":failed:"
@@ -569,7 +569,7 @@ spec:
   - name: workspace
     volumeClaimTemplate:
       metadata:
-        creationTimestamp: null
+        creationTimestamp:
       spec:
         accessModes:
         - ReadWriteOnce
