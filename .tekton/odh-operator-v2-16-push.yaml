@@ -11,7 +11,6 @@ metadata:
       == "rhoai-2.16" && !"bundle/**".pathChanged() && !"Dockerfiles/bundle.Dockerfile".pathChanged()
       && (!"build/**".pathChanged() || "build/operands-map.yaml".pathChanged() ||
       ".tekton/odh-operator-v2-13-push.yaml".pathChanged() ) && !".github/workflows/**".pathChanged()
-      && "non-existent-file.non-existent-ext".pathChanged()
   creationTimestamp:
   labels:
     appstudio.openshift.io/application: rhoai-v2-16
