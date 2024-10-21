@@ -52,7 +52,6 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 	ctrlmetrics "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	ctrlwebhook "sigs.k8s.io/controller-runtime/pkg/webhook"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
 
 	dscv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/datasciencecluster/v1"
 	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
@@ -210,12 +209,7 @@ func main() { //nolint:funlen,maintidx
 		os.Exit(1)
 	}
 
-	(&webhook.OpenDataHubValidatingWebhook{
-		Client:  mgr.GetClient(),
-		Decoder: admission.NewDecoder(mgr.GetScheme()),
-	}).SetupWithManager(mgr)
-
-	(&webhook.DSCDefaulter{}).SetupWithManager(mgr)
+	webhook.Init(mgr)
 
 	if err = (&dscictrl.DSCInitializationReconciler{
 		Client:                mgr.GetClient(),
@@ -336,7 +330,11 @@ func createSecretCacheConfig(platform cluster.Platform) map[string]cache.Config 
 	case cluster.ManagedRhods:
 		namespaceConfigs["redhat-ods-monitoring"] = cache.Config{}
 		namespaceConfigs["redhat-ods-applications"] = cache.Config{}
-		namespaceConfigs["redhat-ods-operator"] = cache.Config{}
+		operatorNs, err := cluster.GetOperatorNamespace()
+		if err != nil {
+			operatorNs = "redhat-ods-operator" // fall back case
+		}
+		namespaceConfigs[operatorNs] = cache.Config{}
 	case cluster.SelfManagedRhods:
 		namespaceConfigs["redhat-ods-applications"] = cache.Config{}
 	default:
