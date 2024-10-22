@@ -2,6 +2,7 @@
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
+  creationTimestamp: null
   name: mutating-webhook-configuration
 webhooks:
 - admissionReviewVersions:
@@ -10,24 +11,43 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /mutate-modelregistry-opendatahub-io-v1alpha1-modelregistry
+      path: /mutate-workload-codeflare-dev-v1beta2-appwrapper
   failurePolicy: Fail
-  name: mmodelregistry.opendatahub.io
+  name: mappwrapper.kb.io
   rules:
   - apiGroups:
-    - modelregistry.opendatahub.io
+    - workload.codeflare.dev
     apiVersions:
-    - v1alpha1
+    - v1beta2
     operations:
     - CREATE
-    - UPDATE
     resources:
-    - modelregistries
+    - appwrappers
+  sideEffects: None
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /mutate-ray-io-v1-raycluster
+  failurePolicy: Fail
+  name: mraycluster.ray.openshift.ai
+  rules:
+  - apiGroups:
+    - ray.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    resources:
+    - rayclusters
   sideEffects: None
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
+  creationTimestamp: null
   name: validating-webhook-configuration
 webhooks:
 - admissionReviewVersions:
@@ -36,17 +56,37 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /validate-modelregistry-opendatahub-io-v1alpha1-modelregistry
+      path: /validate-workload-codeflare-dev-v1beta2-appwrapper
   failurePolicy: Fail
-  name: vmodelregistry.opendatahub.io
+  name: vappwrapper.kb.io
   rules:
   - apiGroups:
-    - modelregistry.opendatahub.io
+    - workload.codeflare.dev
     apiVersions:
-    - v1alpha1
+    - v1beta2
     operations:
     - CREATE
     - UPDATE
     resources:
-    - modelregistries
+    - appwrappers
+  sideEffects: None
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: webhook-service
+      namespace: system
+      path: /validate-ray-io-v1-raycluster
+  failurePolicy: Fail
+  name: vraycluster.ray.openshift.ai
+  rules:
+  - apiGroups:
+    - ray.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - rayclusters
   sideEffects: None

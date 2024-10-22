@@ -2,12 +2,31 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
+  creationTimestamp: null
   name: manager-role
 rules:
 - apiGroups:
-  - apps
+  - ""
   resources:
-  - deployments
+  - events
+  verbs:
+  - create
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - services
   verbs:
   - create
   - delete
@@ -17,9 +36,69 @@ rules:
   - update
   - watch
 - apiGroups:
-  - authorino.kuadrant.io
+  - ""
   resources:
-  - authconfigs
+  - secrets
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - admissionregistration.k8s.io
+  resources:
+  - mutatingwebhookconfigurations
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - admissionregistration.k8s.io
+  resources:
+  - validatingwebhookconfigurations
+  verbs:
+  - get
+  - list
+  - update
+  - watch
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - authentication.k8s.io
+  resources:
+  - tokenreviews
+  verbs:
+  - create
+- apiGroups:
+  - authorization.k8s.io
+  resources:
+  - subjectaccessreviews
+  verbs:
+  - create
+- apiGroups:
+  - batch
+  resources:
+  - jobs
   verbs:
   - create
   - delete
@@ -34,27 +113,32 @@ rules:
   - ingresses
   verbs:
   - get
-  - list
-  - watch
 - apiGroups:
   - ""
   resources:
-  - events
+  - secrets
   verbs:
   - create
-  - patch
-- apiGroups:
-  - ""
-  resources:
-  - pods
-  verbs:
+  - delete
   - get
   - list
+  - patch
   - watch
 - apiGroups:
   - ""
   resources:
   - serviceaccounts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ""
+  resources:
   - services
   verbs:
   - create
@@ -65,9 +149,17 @@ rules:
   - update
   - watch
 - apiGroups:
-  - modelregistry.opendatahub.io
+  - dscinitialization.opendatahub.io
   resources:
-  - modelregistries
+  - dscinitializations
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - kubeflow.org
+  resources:
+  - pytorchjobs
   verbs:
   - create
   - delete
@@ -77,23 +169,35 @@ rules:
   - update
   - watch
 - apiGroups:
-  - modelregistry.opendatahub.io
+  - kueue.x-k8s.io
   resources:
-  - modelregistries/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - modelregistry.opendatahub.io
-  resources:
-  - modelregistries/status
+  - clusterqueues
   verbs:
   - get
+  - list
   - patch
   - update
+  - watch
 - apiGroups:
-  - networking.istio.io
+  - kueue.x-k8s.io
   resources:
-  - destinationrules
+  - resourceflavors
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - kueue.x-k8s.io
+  resources:
+  - workloadpriorityclasses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - kueue.x-k8s.io
+  resources:
+  - workloads
   verbs:
   - create
   - delete
@@ -103,9 +207,23 @@ rules:
   - update
   - watch
 - apiGroups:
-  - networking.istio.io
+  - kueue.x-k8s.io
   resources:
-  - gateways
+  - workloads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kueue.x-k8s.io
+  resources:
+  - workloads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
   verbs:
   - create
   - delete
@@ -115,9 +233,47 @@ rules:
   - update
   - watch
 - apiGroups:
-  - networking.istio.io
+  - networking.k8s.io
   resources:
-  - virtualservices
+  - networkpolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ray.io
+  resources:
+  - rayclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ray.io
+  resources:
+  - rayclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ray.io
+  resources:
+  - rayclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ray.io
+  resources:
+  - rayjobs
   verbs:
   - create
   - delete
@@ -129,19 +285,7 @@ rules:
 - apiGroups:
   - rbac.authorization.k8s.io
   resources:
-  - rolebindings
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - roles
+  - clusterrolebindings
   verbs:
   - create
   - delete
@@ -154,17 +298,6 @@ rules:
   - route.openshift.io
   resources:
   - routes
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - route.openshift.io
-  resources:
   - routes/custom-host
   verbs:
   - create
@@ -175,9 +308,17 @@ rules:
   - update
   - watch
 - apiGroups:
-  - security.istio.io
+  - scheduling.k8s.io
   resources:
-  - authorizationpolicies
+  - priorityclasses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - scheduling.sigs.k8s.io
+  resources:
+  - podgroups
   verbs:
   - create
   - delete
@@ -187,9 +328,9 @@ rules:
   - update
   - watch
 - apiGroups:
-  - user.openshift.io
+  - scheduling.x-k8s.io
   resources:
-  - groups
+  - podgroups
   verbs:
   - create
   - delete
@@ -198,3 +339,29 @@ rules:
   - patch
   - update
   - watch
+- apiGroups:
+  - workload.codeflare.dev
+  resources:
+  - appwrappers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - workload.codeflare.dev
+  resources:
+  - appwrappers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - workload.codeflare.dev
+  resources:
+  - appwrappers/status
+  verbs:
+  - get
+  - patch
+  - update
