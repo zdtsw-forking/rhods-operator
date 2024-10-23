@@ -3,7 +3,7 @@ map:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: github.ref_name
     src: manifests
-    dest: jupyterhub/notebooks
+    dest: notebooks
     ref_type: branch
   kserve:
     git.url: https://github.com/red-hat-data-services/kserve
@@ -51,11 +51,16 @@ map:
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
     git.commit: 4d9df2cee90969e300376d5aff7c99fa4a6318a5
-  odh-modelmesh:
+  odh-model-registry-operator:
+    src: config
+    dest: model-registry-operator
+    git.url: https://github.com/red-hat-data-services/model-registry-operator
+    git.commit: 5fdcc1bc60883d5182981dfb65f63f76025cd632
+  odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
-    git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: 3b2c967dca9b383b0842a0e4dde00456dd8920a7
+    git.url: https://github.com/red-hat-data-services/modelmesh-serving
+    git.commit: 4daafdd618c187bf3e1b890a168753159af839fd
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -67,9 +72,9 @@ map:
     git.url: https://github.com/red-hat-data-services/training-operator
     git.commit: 2176172fce46b8d1d6eed0d3ff488fbd8a72c232
 additional_meta:
-  odh-modelmesh-serving-controller:
-    git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 4daafdd618c187bf3e1b890a168753159af839fd
+  odh-modelmesh:
+    git.url: https://github.com/red-hat-data-services/modelmesh
+    git.commit: 3b2c967dca9b383b0842a0e4dde00456dd8920a7
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: ed0e1d00031a386128281177a7f3b59cd624da4c
@@ -106,6 +111,3 @@ additional_meta:
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: e1e3ae7df17fc7e5e222b2346af30ffba629f808
-  odh-model-registry-operator:
-    git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 5fdcc1bc60883d5182981dfb65f63f76025cd632
