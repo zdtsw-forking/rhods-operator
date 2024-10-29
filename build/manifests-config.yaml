@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 2bc63fa35a16563663c28fcefe4668c57b2a9c30
+    git.commit: 8ae7aa7f5e78ebf55f151941eb83aacfdc8cccea
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -98,10 +98,10 @@ additional_meta:
     git.commit: c2649a943144c71fa39b7a95d181dbde7657985c
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c2649a943144c71fa39b7a95d181dbde7657985c
+    git.commit: e16f26acf068942198d5fd178295d2268eab2618
   odh-ml-pipelines-launcher:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c2649a943144c71fa39b7a95d181dbde7657985c
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: e16f26acf068942198d5fd178295d2268eab2618
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 56b20cf08775bac4a342972ee37ef732e16bb8ef
