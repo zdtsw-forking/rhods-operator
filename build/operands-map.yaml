@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:04fa5fbe141f78b178800ebcf390ab830180d5fa2ca19857a9c0cc838e81bc97"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:f894414857c9a9b6b4ceab8c16bcb94cf03ac53251f33b05784efafc65b4fa20"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:cc74035a383a3bd87e42b3fcfdb59b81f83085438a6b509db2d055e8bce660ca"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:64d1b4e840749ff68cc5e75dbeff3f8204785060176e07ebad6eb8ff8b193e70"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -16,7 +16,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:0315c4ea4113cd445e8ebc0400d5f6efb2b40836f29980b8557a33da55a73659"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:dbe550d6b847d7058a352ffa39a474947f456dff822d059eadcf6c51e32f02ba"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:25287bec01d910e75202061b9f364003fe2bcc0067b664ccb9b013facd0f39a5"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:a10370131ad9e2edad3911a3a632f30611aa29aa14d00b15ee8a164819f04529"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
