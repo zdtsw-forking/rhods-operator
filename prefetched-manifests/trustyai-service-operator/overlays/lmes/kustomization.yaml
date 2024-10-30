@@ -5,9 +5,4 @@ resources:
   - ../../base
 
 patchesStrategicMerge:
-  - tas-only-patch.yaml
-
-configMapGenerator:
-  - env: params.env
-    behavior: merge
-    name: config
+  - lmes-only-patch.yaml
