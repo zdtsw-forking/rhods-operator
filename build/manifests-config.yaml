@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 2222ce2bf3ed9a99ea09e3ad9c1ea0d65b0dc1b8
+    git.commit: 882d220c340a0fc7dd87022ee69a5abe7bbb9434
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: df69d3a331d6046d458ea78953c95806bc2e98ff
+    git.commit: df63975f1d76af5b24f3733cf9458aa7d3ccbde9
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: d7c40b4a55aca8ae794895919585d4b9a853362c
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 743d78a34c3922f44f3c966ee48925b578a713b6
+    git.commit: 596b57cb599b6c62d01383152d2fee8355407db1
