@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 2d77f03964741e8c216a468c9ca2262e2ca8e575
+    git.commit: d6058d975e4c0ad5ba2f1147678310abb23d37f2
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -100,8 +100,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 3adf495398405b3f25a3e0dda52ab67e59829d6b
   odh-ml-pipelines-launcher:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 9f18622d34ca52a591f02f3c5dcba8a40b9b9486
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: 3adf495398405b3f25a3e0dda52ab67e59829d6b
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: e7d6c26fba800a787c40beea0a4386e7a0511c7f
