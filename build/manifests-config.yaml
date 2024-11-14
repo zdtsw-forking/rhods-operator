@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 4bfa3f0936193f62f3c7a66cee93a0d01fb6bdb9
+    git.commit: 8bf0e27a6e9c45096c665d1a50e6290d3c004bb6
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
