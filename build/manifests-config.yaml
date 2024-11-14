@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 76be4eed9a4600248d9bcfb84da4d9a602deab03
+    git.commit: 2fa726fe25aecc50ccac6b287197c7d351f0bb55
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
