@@ -22,9 +22,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:087b9f17f139f8c9b7e86faa0cfe5e07159f98baad7cd01f6527f8991db5c0db"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:0ccb2e04a051305dbef0125db4679733cc3575d70d744cfa05bd0ea6de974458"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:4ef302bfd32dab75a9d1034768fdea0c05d7ecc5f7ed8128165a4b87efb13839"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:08900a63b60cd7c972b074fe707317718162c4ea521fb8b5ae73bb5e72d8bced"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:ccba472eb6c192760aef00f569c0843734b7d7c477697587a4c1ff569db416ed"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:926b82e995aa9b85b5bd002558e5eaca3496d14821545d90478abf8f8a482359"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
