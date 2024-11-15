@@ -15,17 +15,17 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 901bc8046347e67e17b6f5d4a62196c5e9ec1da3
+    git.commit: f6f6943edc295eacc7188ea250d416c0e1843c9b
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 901bc8046347e67e17b6f5d4a62196c5e9ec1da3
+    git.commit: f6f6943edc295eacc7188ea250d416c0e1843c9b
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: b047c391e0f5bb17231997c098c4a6e14f603b42
+    git.commit: 96c923bc41a20ac761bdcc19d68f1046473ee6e1
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -83,7 +83,7 @@ additional_meta:
     git.commit: 1e9c318d6e5ea1e7a5a776d2cd3c9457f72cc878
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 5c832869ad79a774742d40268a59c940c8a400e3
+    git.commit: abe02611023c4e3897f0f447ba26d6981187cecd
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: f277c39d21b1709ace0302b6e032a0c91b130ab5
