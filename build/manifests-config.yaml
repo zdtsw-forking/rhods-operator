@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 8459d1dd65592a1d3e3139cfa427d909c6430a63
+    git.commit: 99f08417a3fe0da1b4fa003d79b59fb7f431ad36
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -45,12 +45,12 @@ map:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: d3564734f0baee39e003c53f54266b456a1153df
+    git.commit: 70912b18ab6d006b6e70d33ec2dc1c66e0cf3a81
   odh-model-controller:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 5f84f0e5ef01aeebb960a364bd3c6c666568e0f4
+    git.commit: e07f2d401259eb642d1ca4668b15435216eb6220
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -83,7 +83,7 @@ additional_meta:
     git.commit: c569ae24d6c929f1fdfcbbb64b11d6f37521958e
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 0bc64c0d4865ddd14867dc5816bf9c0a32934b76
+    git.commit: 6fc19a4c723eb5feed6d4ec97739173a44d352f8
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: f277c39d21b1709ace0302b6e032a0c91b130ab5
