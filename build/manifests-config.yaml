@@ -20,7 +20,7 @@ map:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 7ffafa5083efc2e2bb8c4ce5d4653ae291ca3ca7
+    git.commit: 35b1cc0b305f26a4b70187f73d7fc5c9d4036682
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
@@ -77,10 +77,10 @@ additional_meta:
     git.commit: 8caa9b248ad1ef78197a3bca827c16cb30cc6a9b
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: a45a4abb70cca53326360170a3c79396aab385f7
+    git.commit: ea550c54621548b5cf063caffec1d85aba251f80
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 98021c696508f5a6aa6ab99f1737e5c1f63784dc
+    git.commit: 122a6ff78147c254b99418ae877f02933fa9ceaf
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 3f6cd838d5d39aeec665328da17093944a341ad4
@@ -101,13 +101,13 @@ additional_meta:
     git.commit: 30c5d65279d5bca54e76cfb9079b7d1b1db035c5
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 30c5d65279d5bca54e76cfb9079b7d1b1db035c5
+    git.commit: a39f0c493dae9c6deb52b0e016b3671c55a8cd33
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: ca4b64166ad080c5f1065253a186f22945c4b4e5
+    git.commit: be8258a3c988b815f71dc225f50b9b1054c668dd
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: ca4b64166ad080c5f1065253a186f22945c4b4e5
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: b4606fbd0d38154547b59997a5cca51dab1d297f
+    git.commit: 95d8b630a03f029d9e262112e2a1137210a231a0
