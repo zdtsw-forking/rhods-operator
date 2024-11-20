@@ -14,8 +14,8 @@ map:
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
-    git.url: https://github.com/red-hat-data-services/kubeflow.git
-    git.commit: 7bf917583997f3c9b51867a858e0f9db2ee023a3
+    git.url: https://github.com/red-hat-data-services/kubeflow
+    git.commit: e7b421fc21ec771a63a83794a18e0c3a33afc3c2
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: e4512f8d4ec0055a15b98c38b64141b529df485b
+    git.commit: 3eeac0b904e87833021c9946eb313c10f05e81eb
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -40,12 +40,12 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: be9e2b547d8a8c905edccfb3a411212687b592c7
+    git.commit: 03407ad26762dbbaec523bb1aad01b0ce3baf97c
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 80259c29a56622ec4b16b1207be9eebb6cb44cd3
+    git.commit: 031a48639cc4d34a9a6e707766c4fda03a4c0c8f
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -69,8 +69,8 @@ map:
   odh-training-operator:
     src: manifests
     dest: trainingoperator
-    git.url: https://github.com/red-hat-data-services/training-operator.git
-    git.commit: eac154f82f53e92ffcc725a87a4fdf95a1a16aa2
+    git.url: https://github.com/red-hat-data-services/training-operator
+    git.commit: b19d4d1e05c1ad9c5dbcfddcf5553e544a137b23
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 25a96db0fbf7885ebe2f1069b56f367db0601fcc
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 9d30e2c205df02525a9ad59148d0d579e4996d68
+    git.commit: e27a67c19a2cf1c0bd1290ee7be47f579371cc9f
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: c085b250aaa66aa57c351776c2981253b198d8bc
@@ -89,19 +89,19 @@ additional_meta:
     git.commit: e2ab40c753da7d7f8221ea4828744af9b7b11cee
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 9da3def0b24640ed9653a914bddfdbf8a392507b
+    git.commit: 791811eceaa02f3f71846e08823526fb4a6a0068
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 9da3def0b24640ed9653a914bddfdbf8a392507b
   odh-ml-pipelines-scheduledworkflow-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
-    git.commit: 9da3def0b24640ed9653a914bddfdbf8a392507b
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.commit: 791811eceaa02f3f71846e08823526fb4a6a0068
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 9da3def0b24640ed9653a914bddfdbf8a392507b
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 9da3def0b24640ed9653a914bddfdbf8a392507b
+    git.commit: 791811eceaa02f3f71846e08823526fb4a6a0068
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: b4e934dda3322f92b0a343c39104cd75c374a636
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: b4e934dda3322f92b0a343c39104cd75c374a636
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: b2447fe2229f5bd38fa31709f46b6095c2a0ebd7
+    git.commit: bbb5b761c8e6fdc812bca01dcb945602c3b0f462
