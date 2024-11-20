@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 031a48639cc4d34a9a6e707766c4fda03a4c0c8f
+    git.commit: d5a05e906c0351b96800d80d5d57a086354068f3
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: d874c6adf3052b5d03e12dc839fd6650edf4ad1c
+    git.commit: 4f8d9879f294f3c6d97f58a4de356a2f04b927f2
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -109,5 +109,5 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: e828b69309b942499cd379542ecd8d8ef7895738
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: bbb5b761c8e6fdc812bca01dcb945602c3b0f462
+    git.url: https://github.com/rhoai-rhtap/model-registry-explore
+    git.commit: 783e3ec1d216545eadf43b98953af320cc30763e
