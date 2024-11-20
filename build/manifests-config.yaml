@@ -39,8 +39,8 @@ map:
   odh-kueue-controller:
     src: config
     dest: kueue
-    git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: d14b1b739a96f64626d3358b1d8db26b5e00fc36
+    git.url: https://github.com/red-hat-data-services/kueue.git
+    git.commit: fb430afa81f948657c6fad9a31c00b53d0dc461c
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -49,8 +49,8 @@ map:
   odh-model-controller:
     src: config
     dest: odh-model-controller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 644bfb71cf5684579db9cd986e7a9a8e8555808f
+    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
+    git.commit: b3537601bc227ddf99116cf2f6953512c4b66c1f
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -69,8 +69,8 @@ map:
   odh-training-operator:
     src: manifests
     dest: trainingoperator
-    git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 281c42ab0b778b719689cd767f3c46456779b0d3
+    git.url: https://github.com/red-hat-data-services/training-operator.git
+    git.commit: df828e1e6167639949b6853466ebd75cc267ded4
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
