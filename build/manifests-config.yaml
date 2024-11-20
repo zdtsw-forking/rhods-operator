@@ -109,5 +109,5 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: ca4b64166ad080c5f1065253a186f22945c4b4e5
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 95d8b630a03f029d9e262112e2a1137210a231a0
+    git.url: https://github.com/rhoai-rhtap/model-registry-explore
+    git.commit: 4bf5478a17e6bec1cecb25c1f7c05ce912cb88d9
