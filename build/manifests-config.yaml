@@ -24,8 +24,8 @@ map:
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator.git
-    git.commit: 07edefd4c99da75057c8e4f7c0f59be514933c52
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
+    git.commit: 3e86ef2533693116f9528e272a256a805bf4344a
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -39,13 +39,13 @@ map:
   odh-kueue-controller:
     src: config
     dest: kueue
-    git.url: https://github.com/red-hat-data-services/kueue.git
-    git.commit: fb430afa81f948657c6fad9a31c00b53d0dc461c
+    git.url: https://github.com/red-hat-data-services/kueue
+    git.commit: be9e2b547d8a8c905edccfb3a411212687b592c7
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 6db2132f1a7edec9180819ecabe42add63183fcf
+    git.commit: 5ccb3d53e3ba8d8ae532cb20ea401bf7d74a4363
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: b6c0277f7f35b23bd77ea869e5a82cdc37aa6782
+    git.commit: d874c6adf3052b5d03e12dc839fd6650edf4ad1c
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -74,10 +74,10 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 5b961fbdd3561d9bf19a2481c188586b64484851
+    git.commit: 5679ae36f78247ed87697be94db2e18a563ac98b
   odh-modelmesh:
-    git.url: https://github.com/red-hat-data-services/modelmesh.git
-    git.commit: ea550c54621548b5cf063caffec1d85aba251f80
+    git.url: https://github.com/red-hat-data-services/modelmesh
+    git.commit: 25a96db0fbf7885ebe2f1069b56f367db0601fcc
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 122a6ff78147c254b99418ae877f02933fa9ceaf
