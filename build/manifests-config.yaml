@@ -76,8 +76,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: 7bd98343aaab1b5aa1a157c8a7b7725f20200a93
   odh-modelmesh:
-    git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: 25a96db0fbf7885ebe2f1069b56f367db0601fcc
+    git.url: https://github.com/red-hat-data-services/modelmesh.git
+    git.commit: 1940a5e81e9df2faf2cadcb8f1ff51efad977575
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 319c1718c1e791f058863207c84f8554b8ff4826
