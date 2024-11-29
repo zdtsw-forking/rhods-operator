@@ -286,8 +286,8 @@ spec:
         - url=$(params.git-url)
         - git.url=$(params.git-url)
         - git.commit=$(params.revision)
-        - release='$(tasks.clone-repository.results.commit-timestamp)'
-        - io.openshift.tags="odh-operator"
+        - release=$(tasks.clone-repository.results.commit-timestamp)
+        - io.openshift.tags=odh-operator
       - name: SOURCE_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
