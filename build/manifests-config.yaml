@@ -79,8 +79,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 1c2a105eef79d22d2b25a283becc33cbf99e4c0e
   odh-modelmesh-runtime-adapter:
-    git.url: https://github.com/rhoai-rhtap/modelmesh-runtime-adapter-explore
-    git.commit: b35fd10d4620fc76744974bbf1ce6ec810f1dadf
+    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
+    git.commit: 1f497aedc7811eea6f34b65889f36bc8c19e3116
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: b1937bb77cc068b333051ae92f50ef66dc59d81b
@@ -109,5 +109,5 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows.git
     git.commit: 87edc8048f1935eec6b07e8aad5ec5100b240fd4
   odh-model-registry:
-    git.url: https://github.com/rhoai-rhtap/model-registry-explore
-    git.commit: 783e3ec1d216545eadf43b98953af320cc30763e
+    git.url: https://github.com/red-hat-data-services/model-registry
+    git.commit: edcf3c0f9016499a98b2469267e940e9f547a2b6
