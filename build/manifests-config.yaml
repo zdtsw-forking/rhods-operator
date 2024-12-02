@@ -14,17 +14,17 @@ map:
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
-    git.url: https://github.com/red-hat-data-services/kubeflow
+    git.url: https://github.com/red-hat-data-services/kubeflow.git
     git.commit: 095d4767fc52e254ebc37cef8a03fdae44f01e49
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
-    git.url: https://github.com/red-hat-data-services/kubeflow
+    git.url: https://github.com/red-hat-data-services/kubeflow.git
     git.commit: 095d4767fc52e254ebc37cef8a03fdae44f01e49
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator.git
     git.commit: 86d673ae2fda607be374de53f46b5ed477e808c6
   odh-codeflare-operator:
     src: config
@@ -49,17 +49,17 @@ map:
   odh-model-controller:
     src: config
     dest: odh-model-controller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 03efcc6c8b36366336188d90771ac40db5caea0b
+    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
+    git.commit: b25f1eee6049a4588e2fbc5f74288f05920abbd2
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator.git
-    git.commit: 1fd196926f1296c31be9032fc68be1a75f34f02f
+    git.commit: b3f1c564603279a498beb5c371eb12e787566e9f
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
-    git.url: https://github.com/red-hat-data-services/modelmesh-serving
+    git.url: https://github.com/red-hat-data-services/modelmesh-serving.git
     git.commit: 7396bb2350335e6bb9a9cc1282e296ee3d79be82
   odh-dashboard:
     src: manifests
@@ -69,8 +69,8 @@ map:
   odh-training-operator:
     src: manifests
     dest: trainingoperator
-    git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: fa7cfedbe40e4472000e4b719ad2e3e9800c5532
+    git.url: https://github.com/red-hat-data-services/training-operator.git
+    git.commit: 315f5c1095faf6061aa332f32b202c1b080a213a
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -79,8 +79,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: f5233dcf8cee0593afc6260dece97bcb932dc28b
   odh-modelmesh-runtime-adapter:
-    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 84e1f74fa1d8480a8150ca4abbf55027f2a9acc2
+    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter.git
+    git.commit: 93d29d295f2fbcd2aa6031981476e174ca8759dc
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: dc372a33125f24147d6b368671b744059f9b81d5
@@ -88,20 +88,20 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: f9f1e311a3466f6f3b29cfcb3e008d0a8d141547
   odh-ml-pipelines-api-server-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
     git.commit: 85a81034b56d86456ff92e5a04511e0b5b040041
   odh-ml-pipelines-persistenceagent-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 5f889a1929708896acf1d3e1c01ea0909c71d4b1
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: 85a81034b56d86456ff92e5a04511e0b5b040041
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 85a81034b56d86456ff92e5a04511e0b5b040041
   odh-ml-pipelines-driver:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7e9c4fb21cd86c60d9b594c336283d9a3ba8f94a
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: 85a81034b56d86456ff92e5a04511e0b5b040041
   odh-ml-pipelines-launcher:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: ef4b97bf7ed960a2f71d08077039806a6ebc5492
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: 85a81034b56d86456ff92e5a04511e0b5b040041
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: f6ea5996d9eb603b0fc36b3f8ad15ecda788d6ac
@@ -109,5 +109,5 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: f6ea5996d9eb603b0fc36b3f8ad15ecda788d6ac
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 1ffffc0eb05ce443d3e655174577a12b59ee3ba4
+    git.url: https://github.com/red-hat-data-services/model-registry.git
+    git.commit: df68c2fc931db3277d9158a7fe3b755f63ba56c2
