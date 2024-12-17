@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: fd5c86f509bad3bdc1df7cb306e985436623ffb6
+    git.commit: 831917e1cfd56777e1b4cdae509941e1bf2c2362
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -49,7 +49,7 @@ map:
   odh-model-controller:
     src: config
     dest: odh-model-controller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller
+    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
     git.commit: 283ab1b9757d01b35a666255274b8b53cf08a9f2
   odh-model-registry-operator:
     src: config
