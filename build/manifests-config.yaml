@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: bb4a81d268c8c64999886628ae20fee1de5b75d0
+    git.commit: 5f01cf8df556295fd3bbdc1c87237139b9ebbe0a
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -65,12 +65,12 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: edad8a670783973f91af30258d20782843ccdaef
+    git.commit: 1316cb0cb1c2303652d8a66d4cdc77c5c53b149b
   odh-training-operator:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 545824d85d7f0e0ebf6124e54253737b5ebe823d
+    git.commit: 43c564abed1dacb3d2c052ba0f1d66efac4a1c11
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
