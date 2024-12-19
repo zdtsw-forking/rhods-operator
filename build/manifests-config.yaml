@@ -88,8 +88,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: ffaf9f5e1d7cf53cdda43a367b3548f60f6054c9
   odh-ml-pipelines-api-server-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: d4fb3cb7ad6d9ab17dc603f45c3af284a140fc65
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: 29b7db272e13419a85a8c3d6b812779a7a9ca305
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 29b7db272e13419a85a8c3d6b812779a7a9ca305
