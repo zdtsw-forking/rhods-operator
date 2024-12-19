@@ -20,11 +20,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:d1a8d08bd3f5fb7484a8e2d96bab3f81571c894208760d25964e5d1ceae27978"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:9c734c86d5b889769e4447a047dc15d25922366f06034eb22cfffdec67bd345a"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:49bc3c27e0821f4c782b56863dbaf3c98b40226998b96c5ce4d6f1072c398d83"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:ccafd6e738799ecb8f6bdf3940dba934dc0eeff9ad87865a6e9a0fe6dc73ed7b"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:c1ede8fb18c24cf18cd959dfa8deab66465f7d205ec01ce5e46473ef74cd38f3"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:d24ff6ce84eae568174c12dba7342cad7dfb3057016c5ebd3c00c33e4931f1f2"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:a24d909bd755050acf33f62312b5456ffb1095b452212d71e967f6a3e9fc7ee0"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
@@ -32,7 +32,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:29902a9e40c10cac391740e95dcf36a7a83a07ba0b1ff0f661a905ccc13a90b1"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:b38bbdba3e0c9ba0580085a8bb6778a9961e0f06bb24768a60036954e17a1324"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:81d9721d24c2473a557e4d53beb5433e7e269f9c77e17a51248a286361393b28"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:bb4b868d4017d06898b56fdaa307514589dbabcc833ce6bb297965d181946b26"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
