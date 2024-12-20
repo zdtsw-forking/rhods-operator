@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 715d64d8f25ee21caa4e32caef5af5d06ae7b508
+    git.commit: cff5c4df679b149a1477aee46117a84493f3e011
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -79,8 +79,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: cbc1cba201081e5a8723b48cc48bf7922ec2e1ec
   odh-modelmesh-runtime-adapter:
-    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: e1635bb90dcf687d55f55b79cfe9488d7d672df8
+    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter.git
+    git.commit: 2ff297e54c7c63d6bda30ce86b141d349b9dce36
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
@@ -88,14 +88,14 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/ml-metadata.git
     git.commit: c14f667209f3d845c1b4ce938ed10f0d604a7005
   odh-ml-pipelines-api-server-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
-    git.commit: 29b7db272e13419a85a8c3d6b812779a7a9ca305
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
   odh-ml-pipelines-scheduledworkflow-v2:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
-    git.commit: 29b7db272e13419a85a8c3d6b812779a7a9ca305
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
