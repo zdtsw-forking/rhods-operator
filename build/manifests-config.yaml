@@ -80,7 +80,7 @@ additional_meta:
     git.commit: e72cfcb24598e2f2d3bfa26cb3b5fd53db103dcb
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: eb4090a049bfffa5471deec03a30a5d1ac44e1e7
+    git.commit: 98df0d637605a086d7502ce428116ed0e6a95daa
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 15a5cd2a07e145571c18f3346d3d353cc1258266
@@ -95,13 +95,13 @@ additional_meta:
     git.commit: 3e67a0b7a45a03df5d021a064754b0f7450d66b7
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c85e2fac95cec62925238bb3486220df971d63b1
+    git.commit: 3e67a0b7a45a03df5d021a064754b0f7450d66b7
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 3e67a0b7a45a03df5d021a064754b0f7450d66b7
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c85e2fac95cec62925238bb3486220df971d63b1
+    git.commit: 3e67a0b7a45a03df5d021a064754b0f7450d66b7
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: c7d78e5eb15836e4b9baa80d075002bfd2318184
