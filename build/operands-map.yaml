@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:71b705342c5ddafa8099fcc05bfb9d30f19110707f4a698fb5cc6342e5d7e21f"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:b6b4ce3dbbdb08232e8228de71f35d0a25f9a29e528141968b7aed30f2d5325a"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:2266d021985b7ca2e826d96871730c3e1723bc36192f3dcba18f58db2c469805"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:e38a2287487451d69111ce75289b650711e4fe5b3f2c2804bde4a25fb76b740e"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -12,7 +12,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:7eb70ae8927eab5bc0f00fe8a69a0e0df0e9dcf6c4fdd416b3528e476680c70c"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:be4b3b4b424b51e4956249e56470d8c96fad9aee5a193ad018be39ee724301ec"
+  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:01972592e401d18547317a32c7e19302226e88100376552e597796b80b7d3932"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:991b46d7f64a1bdcb218a82af0d2ed1df414e32503ea6e2a151497e3a34cf5fd"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
