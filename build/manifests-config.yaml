@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 43c564abed1dacb3d2c052ba0f1d66efac4a1c11
+    git.commit: b2a51fce39907785bcddee7077e9632138c0a567
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -92,7 +92,7 @@ additional_meta:
     git.commit: 93059d256336d839ae890c4515e73b4707b6d253
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
+    git.commit: 93059d256336d839ae890c4515e73b4707b6d253
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
