@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 90329d932bda982be302298b297fc12f8ef8d1c6
+    git.commit: d834f7c5add44b00b757f6fa128a3f97d7057019
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -60,7 +60,7 @@ map:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 79b0101dcbf7690a90794408b44f65003cd43318
+    git.commit: 7adaec3cbf1691271b6851511a81f2c9d54b0dfb
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -74,7 +74,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: cb701a563f4cf2f7719a3b71d4ca82cd06328231
+    git.commit: 931ae8d4513065611c3564542a14424626034a72
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: e72cfcb24598e2f2d3bfa26cb3b5fd53db103dcb
