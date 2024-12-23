@@ -97,8 +97,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 49db6b8553cbb71f9078027c6597c0863640e532
   odh-ml-pipelines-driver:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 93059d256336d839ae890c4515e73b4707b6d253
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
+    git.commit: ff2d7d61382a0d8df06ea96da32f44fd5bd70b08
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 93059d256336d839ae890c4515e73b4707b6d253
