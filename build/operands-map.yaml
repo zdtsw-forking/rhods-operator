@@ -6,11 +6,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:e38a2287487451d69111ce75289b650711e4fe5b3f2c2804bde4a25fb76b740e"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:e81cc896d6d1fec627b64c8f5f820f467dbfb8e2008a908a2937ed9879b3617c"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:db26ea2dec667a137c036c33cbca498047f0378c5b98ac41b446b1d99a18b68a"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:a9a4076a752102b874c796ddaad9415ee8b6cf49778ecaf6ce4ea051c21945d1"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:3d61985df9d9d5433a24995d8a2f8d38ff95b3db97c2bb9fed711707fb0b751e"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:fe2f63ab5e9cf456b5c3ab241282d70105c69274baf4292dcacd467042e5493c"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:3f40538e0e69cdf810652cb3aa08571f98a0ae1edbf1b37fdfb5adbc4468ac20"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
@@ -24,7 +24,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:a91112196965ce534a01b3a1e7cb1c21ee4929233bbca7c749787b2088e10ae6"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:ce906971ed5da50bb4f47ed6e89c0029c720ee2dd8f5193f6bb406a41e715928"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:2e22378aedde1330f1adb8deb41159fd5a908a21c63297caab5bbfb2309a1bdf"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:52b5d0602ec0ad989c432e55c8733a353b82de1c539fab3c1f83d5b7090122af"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
