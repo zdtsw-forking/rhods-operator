@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: d834f7c5add44b00b757f6fa128a3f97d7057019
+    git.commit: 48712e4a6244985f907d8908f6d2fe5c09052541
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -40,12 +40,12 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 1442dbfacb6a0e37aa964217bd5f565fdde508d2
+    git.commit: 2c7c714d5fc5e41a50633cc9ede3c76ca9463362
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: a5d839ce911b35fa25d32fcff528c1055435453e
+    git.commit: 83c3ba50270b5e2f82aa656d4eb913aba64c1029
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -98,7 +98,7 @@ additional_meta:
     git.commit: 56cb4653b89240255a4408fc08d8088f7f91bae3
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 3e67a0b7a45a03df5d021a064754b0f7450d66b7
+    git.commit: f6d8614247787b44ebd41e20224ce3f47adcc933
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 56cb4653b89240255a4408fc08d8088f7f91bae3
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: d913437b744b266e18b5c67b1dbe3c0eb315e2ac
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 8517ff4dd43b4dd6f977f2e59404ca1e92e9d866
+    git.commit: 2c8a66fee011a7d3d742f65d7aa14e02ef930db1
