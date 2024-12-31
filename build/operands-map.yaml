@@ -8,11 +8,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:d94ae981125cb3ab0ea818bd0e9b442b80e762c27eb3474eb2e87a831e4b28d8"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:0c43236f23943ba36a7ff598023a1c06e6dbece023c464b239c7688ee6d54542"
+  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:d82222d57aa51ccca195e902df28624a5d4e99b1c0abb1f7eb2e078775538276"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:4db673196ebd5f9757b118f29e0344f19a1466ab8597b3b9bd43752dce9636bf"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:16f00c91a3565b26958e54bdb10ef54f8927cc2df6738ce215caae26ebe0d9c0"
+  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:dacb14df41da01b6b855b7b26947164f747106a93e917c5b8380ce5859a65a6b"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:7a59a060bc54b9f96059304bcc7d58ba8966760806b7f5f9edf073c26d257e61"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
@@ -32,7 +32,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:e5cfb5284b596bef6de8b5308dea37beba7821a21bfc9dc0478c3dd3ba863e77"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:ece4c4db22424b0d4b0baa67f041c08eb40530aba3af8eb03e57447b42f8729f"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:d174bd5f91d242246dba36c657c197d82194df65579f266c866c34db5a39582d"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:66060631ff316bd7342c3116082e8518bdbca961df99cca5451cf4a6d38774a4"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
