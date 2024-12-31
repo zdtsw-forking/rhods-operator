@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: bfcd92f592a872fdce429a150c79acf0cafd4b4d
+    git.commit: 932a161ee265d563559a9bd313f6a2c8e57d4337
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: ef16496246e2fe58bb9ad1babec0195585ef449a
+    git.commit: 8c9c20c12a3ff7e887e0ee52985e1e5a000a2f53
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: e09ac0757fb2dc4181d31a03525c3d74c879f4b4
+    git.commit: f4966813f059cd0c3bc5dd0f3d48fe5c77a5c294
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: e72cfcb24598e2f2d3bfa26cb3b5fd53db103dcb
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: ec5690db79605ee901b7c37077b1a52f89854f4a
+    git.commit: 7191431c97606b9e3769f1f155aebfbe1ad027c8
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 15a5cd2a07e145571c18f3346d3d353cc1258266
