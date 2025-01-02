@@ -89,7 +89,7 @@ additional_meta:
     git.commit: c5883b52b8b881de19f583c68d29d0d52240dd50
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 56cb4653b89240255a4408fc08d8088f7f91bae3
+    git.commit: 133051dec1163aa9709282241e4e6767a61734dd
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: f6d8614247787b44ebd41e20224ce3f47adcc933
@@ -98,7 +98,7 @@ additional_meta:
     git.commit: 56cb4653b89240255a4408fc08d8088f7f91bae3
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: f6d8614247787b44ebd41e20224ce3f47adcc933
+    git.commit: 133051dec1163aa9709282241e4e6767a61734dd
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: f6d8614247787b44ebd41e20224ce3f47adcc933
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: d913437b744b266e18b5c67b1dbe3c0eb315e2ac
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 2c8a66fee011a7d3d742f65d7aa14e02ef930db1
+    git.commit: 053e9585b09099fd2fe8e2490a2c4fcbc4401ea7
