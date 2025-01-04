@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 6447aced3e7bc0ad9cb73c4b15f10b2970c73cc3
+    git.commit: 0fce04a879c3199cd1388dddbeb6182d2f2b4ba1
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -85,8 +85,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
   odh-mlmd-grpc-server:
-    git.url: https://github.com/red-hat-data-services/ml-metadata.git
-    git.commit: e2cc177aac6b7b2bf121bcc3aef882e252d2c52b
+    git.url: https://github.com/red-hat-data-services/ml-metadata
+    git.commit: b70760d1199313b00861dd807efb7499936bbcd7
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: f4143c9f6d22de6037ffb79ac51de25bebf9bce3
