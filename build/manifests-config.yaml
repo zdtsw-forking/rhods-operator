@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 33b64d16eb0cc9572dc87cf1b834d24bf793c034
+    git.commit: 73e57a963e9c3dec3b980ff041a075c6d550bff6
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -39,13 +39,13 @@ map:
   odh-kueue-controller:
     src: config
     dest: kueue
-    git.url: https://github.com/red-hat-data-services/kueue.git
-    git.commit: 0f1e93dd2ae25e34c5647a58eed965a176db46ad
+    git.url: https://github.com/red-hat-data-services/kueue
+    git.commit: 7874387d257b6b23926199b321c1f44d8f52664a
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: d3f2994b421764dcdd110157f3d35d86c6e18b28
+    git.commit: 83e134fba1f0bb5ba61c88ebed2674548656c4af
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -92,16 +92,16 @@ additional_meta:
     git.commit: f4143c9f6d22de6037ffb79ac51de25bebf9bce3
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: f4143c9f6d22de6037ffb79ac51de25bebf9bce3
+    git.commit: 041414ba83da0d17cf75d2a4bc3ba3d10c74b709
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: f4143c9f6d22de6037ffb79ac51de25bebf9bce3
+    git.commit: 041414ba83da0d17cf75d2a4bc3ba3d10c74b709
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 041414ba83da0d17cf75d2a4bc3ba3d10c74b709
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: f4143c9f6d22de6037ffb79ac51de25bebf9bce3
+    git.commit: 041414ba83da0d17cf75d2a4bc3ba3d10c74b709
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows.git
     git.commit: 9f6f9b11f297e719d1a05f4f6000f2b41e10135f
