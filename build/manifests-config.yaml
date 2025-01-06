@@ -85,7 +85,7 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
   odh-mlmd-grpc-server:
-    git.url: https://github.com/red-hat-data-services/ml-metadata
+    git.url: https://github.com/red-hat-data-services/ml-metadata.git
     git.commit: b70760d1199313b00861dd807efb7499936bbcd7
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
