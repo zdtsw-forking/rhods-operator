@@ -60,12 +60,12 @@ map:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 2c8f8a7061583d26b7bae616e3ecf83b6c62802a
+    git.commit: 50853965504f83cc12913bcceea09ea7bfb2d3bb
   odh-dashboard:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: ebe1f6cc63319a747f39f1018509a833b798a367
+    git.commit: 7185680842eca61703d49b23154def005a93aa81
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -74,7 +74,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 2dd7c424f4eec8232e3c00803ad9a45ed099866f
+    git.commit: 4adc8afae4b4418c7fc270ec1fb93a185583fdfe
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: cbc1cba201081e5a8723b48cc48bf7922ec2e1ec
