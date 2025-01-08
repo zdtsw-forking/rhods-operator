@@ -16,19 +16,19 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:7a59a060bc54b9f96059304bcc7d58ba8966760806b7f5f9edf073c26d257e61"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:0af51b3373368a72802234c7bc686f59d134e5d3ec8c5218f7687eaa7d2c4e46"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:6b54ea016e2196ad002dd6a8d28f9872776cca04f20cf744b8b5e0dbb4c153c6"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:d1a8d08bd3f5fb7484a8e2d96bab3f81571c894208760d25964e5d1ceae27978"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:d8fcb7253d9e9bb1bb6b3608a608d6b78edd3f8550f78368c2a292d209e98243"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:367f408fd6357acb45d78de8a5fd42be0611c5f00d89770bb9180c22fbeb912b"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:7168d7267cfe93d54ffb86efc294966aaeaa708136fc70ff46c29e968f1de23b"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:250b795a6ad0a78a6e1774bb15c37a393e21792685c69b2b7d254905397550d2"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:58750d81e4aab796fe942d562ff57403a2872ea7e5731b36b0169704255bd0eb"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:2ba5166945569ba81b55e367181f39c666761363762ec77c0182b12ba1c665c3"
+  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:45d030b886726b6a6c53287544b836a371ca91da2c1ae379ab29d607dbc8d044"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:c5d0d3bba50133797140717a94b0bf41f7a79e6fbd3c366e62fa35f042dc3c80"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
