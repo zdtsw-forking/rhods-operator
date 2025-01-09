@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 07c75677c27a7e3cad658224abd38cad43cbf2a9
+    git.commit: e5ec5b9ba7dcce4ec90a851aa6d48b8a1441debb
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -44,8 +44,8 @@ map:
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
-    git.url: https://github.com/red-hat-data-services/trustyai-service-operator.git
-    git.commit: 1484f16646625c63ee764a6081c20a662ffa73d0
+    git.url: https://github.com/red-hat-data-services/trustyai-service-operator
+    git.commit: 0c04de8fb581bc1c0d9d32891c728efada205a74
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -74,7 +74,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 4adc8afae4b4418c7fc270ec1fb93a185583fdfe
+    git.commit: 19c739f3ec024c43dd3d820a0319ee1f30d445a6
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: cbc1cba201081e5a8723b48cc48bf7922ec2e1ec
@@ -85,7 +85,7 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
   odh-mlmd-grpc-server:
-    git.url: https://github.com/red-hat-data-services/ml-metadata
+    git.url: https://github.com/red-hat-data-services/ml-metadata.git
     git.commit: 2709e3ce1159922a8165793d0782d17866fcf284
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: 4680f2b4198f9ae904f8eea34db0d1800c598ede
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
+    git.commit: 99febbf296fc7cb8c3e4b2837040ed979d9d2c33
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
