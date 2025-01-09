@@ -44,8 +44,8 @@ map:
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
-    git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: e79f0a86eb7b5622335eec0cb4a2277fc511b0cc
+    git.url: https://github.com/red-hat-data-services/trustyai-service-operator.git
+    git.commit: 1484f16646625c63ee764a6081c20a662ffa73d0
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 57b20b283fefe68493e643cc3e77a1674d73fdb9
+    git.commit: f856da60476d3d9848f56ac94d710119339ee539
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: cbc1cba201081e5a8723b48cc48bf7922ec2e1ec
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 693b6305cf5bc58ee1d5a7393af657bf46407bf2
+    git.commit: b453a25cf18ad6d663099598e5525febbbd3e352
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: d0aa1b79d8479b4113e065880fbdb04dcf2ebfe8
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 3dfee1f9515c7e5821ce18414baff1b71a8fffc9
+    git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
