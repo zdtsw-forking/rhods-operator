@@ -15,7 +15,7 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 714e8bd3ed4d82c6d77ae3d569fe4ea7443013e6
+    git.commit: 72493fd312ea640b697e3aa3e888f9207bd842ca
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: 99febbf296fc7cb8c3e4b2837040ed979d9d2c33
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
+    git.commit: 99febbf296fc7cb8c3e4b2837040ed979d9d2c33
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 167c641d2f001d0682ba7ce17fd443dc71b480ad
+    git.url: https://github.com/red-hat-data-services/model-registry.git
+    git.commit: bb9c22c051404f055bd69349b755fb93246dab98
