@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3b41456b071d8580a978800f82761a999579aa0d
+    git.commit: 714e8bd3ed4d82c6d77ae3d569fe4ea7443013e6
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3b41456b071d8580a978800f82761a999579aa0d
+    git.commit: 714e8bd3ed4d82c6d77ae3d569fe4ea7443013e6
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
@@ -30,12 +30,12 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: dc117c4a3de9004d9383790fc0b4a7ebcedfcc06
+    git.commit: 07c75677c27a7e3cad658224abd38cad43cbf2a9
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 7a1b73ad6b8f730f7a94c303cd5693dd1b1f4965
+    git.commit: fc65c22c7e45d2a786e14b9d0f4a1d823316cff6
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: 3dfee1f9515c7e5821ce18414baff1b71a8fffc9
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 3dfee1f9515c7e5821ce18414baff1b71a8fffc9
+    git.commit: 7ea8bb1dea36e68531ea193bfddb81ca72e3d56f
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 167c641d2f001d0682ba7ce17fd443dc71b480ad
