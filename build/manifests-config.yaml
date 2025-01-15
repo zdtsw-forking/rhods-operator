@@ -59,7 +59,7 @@ map:
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
-    git.url: https://github.com/red-hat-data-services/modelmesh-serving
+    git.url: https://github.com/red-hat-data-services/modelmesh-serving.git
     git.commit: 0220e862008bfcb63c6818b0354220d2f3f756b8
   odh-dashboard:
     src: manifests
@@ -79,8 +79,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 64faf3f6af35e6bb28ce8d3f219dd2369ad83039
   odh-modelmesh-runtime-adapter:
-    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 76bf5d54d07447dc858a4a749926ffdf528a7d36
+    git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter.git
+    git.commit: 76e5139e4b140aa732718724ba6f0d2f79ee3901
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: b3910126045b2c84650184d9d09c34ed084d7a91
