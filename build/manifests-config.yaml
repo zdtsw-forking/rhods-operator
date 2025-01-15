@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 4b406271fbb00c8f0b52915085bec44813377205
+    git.commit: d56e9089c44dbec07edfd5163b4a7d84deb079c0
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -80,10 +80,10 @@ additional_meta:
     git.commit: ddf87c991c879bc0d9b2b80f72384a6ecf3ac03d
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: e981ce77b26145bc4de386eba07a55439e2d6095
+    git.commit: 76bf5d54d07447dc858a4a749926ffdf528a7d36
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 8a830c19a0e4b15f405d614decb595604f4545cf
+    git.commit: b3910126045b2c84650184d9d09c34ed084d7a91
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata.git
     git.commit: 2830d2e94295434b81b3b9d015e039498238cf7a
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: 4680f2b4198f9ae904f8eea34db0d1800c598ede
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 4680f2b4198f9ae904f8eea34db0d1800c598ede
+    git.commit: 775066ffc5f1f7ce150f21d493a2798ecee1aca1
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 4680f2b4198f9ae904f8eea34db0d1800c598ede
