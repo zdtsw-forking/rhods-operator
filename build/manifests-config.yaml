@@ -49,7 +49,7 @@ map:
   odh-model-controller:
     src: config
     dest: odh-model-controller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller
+    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
     git.commit: 0468111e1bce900fcea35a8b7e74f436501b31ff
   odh-model-registry-operator:
     src: config
@@ -73,8 +73,8 @@ map:
     git.commit: d6695b083a7a23990d906bfc7d41bcd4d5016f85
 additional_meta:
   odh-mm-rest-proxy:
-    git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 5fb9089abf1933e9c35046dc660e87c0281e0ebf
+    git.url: https://github.com/red-hat-data-services/rest-proxy.git
+    git.commit: 257eae03dbbec2a48fb2cb054c934f9f24090d42
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 8f73b25e0e299d9f6a07e5e5ed79156d1a983f27
