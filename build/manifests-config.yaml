@@ -64,7 +64,7 @@ map:
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
     git.commit: 73659f207ffa04891ff412c13453f82981e5ff5b
   odh-training-operator:
     src: manifests
@@ -97,7 +97,7 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
   odh-ml-pipelines-driver:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
     git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
