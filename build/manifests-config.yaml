@@ -59,13 +59,13 @@ map:
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
-    git.url: https://github.com/red-hat-data-services/modelmesh-serving.git
-    git.commit: 0220e862008bfcb63c6818b0354220d2f3f756b8
+    git.url: https://github.com/red-hat-data-services/modelmesh-serving
+    git.commit: f3371a5175bb57e8a11f47bab238a226414f7b03
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
-    git.commit: 73659f207ffa04891ff412c13453f82981e5ff5b
+    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.commit: 69cce9d74c7e2a08cbd8591b7e1687b7f260e7a8
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
+    git.commit: cc097447fc6aa5096dc849fb7fc9bbbab8173423
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: cc097447fc6aa5096dc849fb7fc9bbbab8173423
