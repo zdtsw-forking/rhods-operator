@@ -24,8 +24,8 @@ map:
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator.git
-    git.commit: 9a462f4cf6bf5b454308640c22259276f610fb09
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
+    git.commit: 732ebb1d59e20742980c8cc48ac28d0dc7946e52
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 2405c2e6bcb44c98e96a053a05e4cc4304d94415
+    git.commit: 9f8f8e483e658e709dc36ad77bf572b86377ac0c
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: b1819132e777d057712455f9d146003f28065d2b
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
+    git.commit: cc097447fc6aa5096dc849fb7fc9bbbab8173423
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: cc097447fc6aa5096dc849fb7fc9bbbab8173423
