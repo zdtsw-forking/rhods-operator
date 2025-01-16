@@ -39,8 +39,8 @@ map:
   odh-kueue-controller:
     src: config
     dest: kueue
-    git.url: https://github.com/red-hat-data-services/kueue.git
-    git.commit: d6bc98e93dbc28031aa54f95e0e7788f74fdb2ee
+    git.url: https://github.com/red-hat-data-services/kueue
+    git.commit: cb395fe96c3aa9778b057e0bac8407c1128faea7
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: cc097447fc6aa5096dc849fb7fc9bbbab8173423
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 33305f988dfe656d6ae990b5f08aa9e52eb4f6a6
+    git.commit: 9ae68d9fd106f21931bef85cdb7468ccafa5f633
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 9ae68d9fd106f21931bef85cdb7468ccafa5f633
