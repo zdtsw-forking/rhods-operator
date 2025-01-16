@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 732ebb1d59e20742980c8cc48ac28d0dc7946e52
+    git.commit: 6a3211be2531fe9addcfdcc7d2d485edb1fae62b
   odh-codeflare-operator:
     src: config
     dest: codeflare
