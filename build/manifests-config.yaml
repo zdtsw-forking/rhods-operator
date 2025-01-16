@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 3da7dc33660b38805d059e72b8af959937a851a9
+    git.commit: c8385c74566b62eb7c08bc864fa4cf26200c1db0
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
