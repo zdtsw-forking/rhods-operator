@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: dbb535553e8c8ebbacbe18511ebc4dd9d64a8388
+    git.commit: ff550a6a627c939d5f21055933525493189a8edf
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: dbb535553e8c8ebbacbe18511ebc4dd9d64a8388
+    git.commit: ff550a6a627c939d5f21055933525493189a8edf
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 85406afdf4d8088b1c374f0db1c2ed41c76fdfa1
+    git.commit: c452a6801e0f2d9b2d56745a3abaf1e240669786
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 1d1f2051f92b52d861411ca1d734f0252e2575f6
+    git.commit: 03d1685ea1f6fb16f8c6d787b610be80ea323b2f
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 852d19f57491d259997465cec5d04bd82c950870
+    git.commit: 3cf2abc73c5119e4f88ad4d6468c5589ccef8db5
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: b31a73de58ca54e29916acf17db6bcd6f5f55a83
+    git.commit: 31fa3b89cc45dfff9d8216acdf8bedfece8e6c42
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: c7ca37393c0b826d19a0656daee4209c932ec080
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 8f309f3cc6c69be04dcda0c8761213288e9af776
+    git.commit: eb66420d6418fb587af957473b1d76830f598a5f
