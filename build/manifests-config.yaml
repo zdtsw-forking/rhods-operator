@@ -89,25 +89,25 @@ additional_meta:
     git.commit: b1819132e777d057712455f9d146003f28065d2b
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
+    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
+    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
+    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-ml-pipelines-driver:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
-    git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-ml-pipelines-launcher:
-    git.url: https://github.com/red-hat-data-services/data-science-pipelines.git
-    git.commit: b9b9e8f5637934a61263bf8ae92a59eac0f1d00f
+    git.url: https://github.com/red-hat-data-services/data-science-pipelines
+    git.commit: 6651a5ddf03bb878a7fa737b810fa7a939f8923a
   odh-data-science-pipelines-argo-argoexec:
-    git.url: https://github.com/red-hat-data-services/argo-workflows.git
-    git.commit: 25cdbfb3e5015fe4d53a38421e1cecfa99ef936b
+    git.url: https://github.com/red-hat-data-services/argo-workflows
+    git.commit: 33305f988dfe656d6ae990b5f08aa9e52eb4f6a6
   odh-data-science-pipelines-argo-workflowcontroller:
-    git.url: https://github.com/red-hat-data-services/argo-workflows.git
-    git.commit: 25cdbfb3e5015fe4d53a38421e1cecfa99ef936b
+    git.url: https://github.com/red-hat-data-services/argo-workflows
+    git.commit: 33305f988dfe656d6ae990b5f08aa9e52eb4f6a6
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 2d9779a1a242cb984e37637c4cc8f60ab842a5fc
