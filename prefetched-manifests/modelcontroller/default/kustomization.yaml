@@ -1,0 +1,7 @@
+resources:
+  - ../crd
+  - ../rbac
+  - ../manager
+  - ../webhook
+  - ../runtimes
+  - networkpolicy.yaml
