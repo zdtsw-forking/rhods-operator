@@ -13,17 +13,17 @@ map:
     ref_type: branch
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
-    dest: odh-notebook-controller/kf-notebook-controller
+    dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow.git
     git.commit: bff94f795fa6a8fe143655ad703794e47523e9e1
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
-    dest: odh-notebook-controller/odh-notebook-controller
+    dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
     git.commit: bff94f795fa6a8fe143655ad703794e47523e9e1
   odh-data-science-pipelines-operator-controller:
     src: config
-    dest: data-science-pipelines-operator
+    dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
     git.commit: 6a3211be2531fe9addcfdcc7d2d485edb1fae62b
   odh-codeflare-operator:
@@ -43,22 +43,22 @@ map:
     git.commit: 8e29255f16f2466fe82e758d62817e1c2d5870bb
   odh-trustyai-service-operator:
     src: config
-    dest: trustyai-service-operator
+    dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
     git.commit: 27b3cda303ce02e0bb5900dcfa7d0203a747fc12
   odh-model-controller:
     src: config
-    dest: odh-model-controller
+    dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
     git.commit: c92f592ef812d16ecb875af0757ffa463d43536d
   odh-model-registry-operator:
     src: config
-    dest: model-registry-operator
+    dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
     git.commit: 798ec17f8a5c73378a510d22f89a38526293888f
   odh-modelmesh-serving-controller:
     src: config
-    dest: model-mesh
+    dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
     git.commit: e54a9f99137eac1253486cd95f42f40d41f723f2
   odh-dashboard:
