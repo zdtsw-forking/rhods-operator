@@ -3,7 +3,7 @@ map:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: github.ref_name
     src: manifests
-    dest: notebooks
+    dest: workbenches/notebooks
     ref_type: branch
   kserve:
     git.url: https://github.com/red-hat-data-services/kserve
