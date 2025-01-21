@@ -14,12 +14,12 @@ map:
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
-    git.url: https://github.com/red-hat-data-services/kubeflow
+    git.url: https://github.com/red-hat-data-services/kubeflow.git
     git.commit: ef49fc1a29fd0ac2d9879e71a878a8142a29dd22
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
-    git.url: https://github.com/red-hat-data-services/kubeflow
+    git.url: https://github.com/red-hat-data-services/kubeflow.git
     git.commit: ef49fc1a29fd0ac2d9879e71a878a8142a29dd22
   odh-data-science-pipelines-operator-controller:
     src: config
@@ -49,7 +49,7 @@ map:
   odh-model-controller:
     src: config
     dest: modelcontroller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller
+    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
     git.commit: 24a8269c826533bb1cb001bfcd8844e94c473bd6
   odh-model-registry-operator:
     src: config
@@ -59,13 +59,13 @@ map:
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
-    git.url: https://github.com/red-hat-data-services/modelmesh-serving
+    git.url: https://github.com/red-hat-data-services/modelmesh-serving.git
     git.commit: 12150b445504dc88039c62216ef4927333a36fdd
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 700373e2a2031a56aacc5b31511b8a2f5a07334f
+    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
+    git.commit: fb7eef8f60c12c250092d8431bb6974528609e20
   odh-training-operator:
     src: manifests
     dest: trainingoperator
