@@ -1,30 +1,30 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:ea8df24d97eede8ed3c4c9d54b473dee8fa64db88093af87e7733d84d6167274"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:0acd3bfe6e88adb363f524f353919b1b22c0b529f701de8f692ee36da451f1f0"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:ad8acd998c6227d8f7c9799169146865d9a78204561541edd5990db571731c8a"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:e49ddec34e8d0071ac69f801d63af8fc3a89a5c037d25bf15380371b95a44f82"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:90f57145ffd390e0df8903bb6e0763c5f299ca82f46120041006929d0de0f13c"
+  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:a1231da570f3a2bf5bf05959fb48387856306695d967deb16bb9939aa15459af"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:a09a35877b5696586d3e292efaa9d7f4667dc56b841b8f14d92fd8ca69328247"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:f36d2b9d7b18a5829aaae29770dbbc366b6ba35d8b0d6e489037cb7f12c12324"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:18a5fbe8a0dcbc9cafbef80d8e73dda457537381aec1e4215507879fc960b85d"
+  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:8544c61a3dc5ab30b095580a2ab64f68f981c96a2874d8771276463b98b49a40"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:d34e57e38dac65edbddc72dc3af7bc6d315d3da3dc3b065a63f049a39b2f336d"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:eea94a57d04ab5fc3e80c21e35ec6a51731f59b24c995114bed6a52631e390aa"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:d8392ff1819b23d8621444fbcbb0b6219053471bdfbc5f48ce697fc93675324d"
+  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:344ec6d4597a1cdbf8c8a7faf86879d33c2cac268b95e6125a81abfe3db82e2c"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:bc55a9bbfd2435891ea8d758660e8290d3de984a0c2a3523abacb8e5ca73c2e0"
+  value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:8de2a12f79c98b89c3ffc6069c385c59178aaeebf1e741e35358436a0589d510"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:0d7714cc6a346ea6f5e260de6d649d7a2f08c556e42b0a11d6ba739c7eb5d864"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:507cc0413edbfa1994d3961b929e1bb8a3e2079c7c6d97d211f4651873578abd"
+  value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:690ff7f4a7919eace7b3f2db8dda4686f1bbc201aa879057686dc8796e887e6b"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:2d3c70da981e70e6acef4dbe9303d42b4971bc04f0e8d18c81b8f06b4b0b9617"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:c23264d3fd33c5c0d04b2b42b0d7fd15b7541dad7568fb5a2a226741898e5157"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:135b89a9a85ecdc6859853b174f947bbb0106f2f30cfd88dbfcab93773acc42f"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:8964e5bbb147dcae224851e8054d4bbf12f12a045234cbaaec31ed99a3769d0a"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:c8e4e6bfad3d3bb02b972b3cc1f4fc97803a9473e0f20b1e66f1fb1ae13350e1"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:44661383fd34ffa7c5ef9ddd8645ca8840375cc9b65631b252b562399bc80df6"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:166d530c62c535fcb77459fb550c811ef75ca6504b4f0cb2226904c31991b43d"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
