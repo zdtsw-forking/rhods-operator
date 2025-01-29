@@ -1,0 +1,19 @@
+Images:
+  ApiServer: $(IMAGES_APISERVER)
+  PersistenceAgent: $(IMAGES_PERSISTENCEAGENT)
+  ScheduledWorkflow: $(IMAGES_SCHEDULEDWORKFLOW)
+  MlmdEnvoy: $(IMAGES_MLMDENVOY)
+  MlmdGRPC: $(IMAGES_MLMDGRPC)
+  ArgoExecImage: $(IMAGES_ARGO_EXEC)
+  ArgoWorkflowController: $(IMAGES_ARGO_WORKFLOWCONTROLLER)
+  LauncherImage: $(IMAGES_LAUNCHER)
+  DriverImage: $(IMAGES_DRIVER)
+  OAuthProxy: $(IMAGES_OAUTHPROXY)
+  MariaDB: $(IMAGES_MARIADB)
+DSPO:
+  HealthCheck:
+    Database:
+      ConnectionTimeout: $(DSPO_HEALTHCHECK_DATABASE_CONNECTIONTIMEOUT)
+    ObjectStore:
+      ConnectionTimeout: $(DSPO_HEALTHCHECK_OBJECTSTORE_CONNECTIONTIMEOUT)
+  RequeueTime: $(DSPO_REQUEUE_TIME)
