@@ -51,3 +51,5 @@ relatedImages:
   name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:93ae9bf6f3caf87eff003116c7f37ca4456a267565e0a2130cd5ad9a2d0a707a"
 - *id001
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel8-operator@sha256:6f9cfeea627804504dc44cb01dd1452959646ea7fbc638c75ed14bfe78b83b10
