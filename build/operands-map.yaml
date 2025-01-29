@@ -20,33 +20,33 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:80f0036459d2dd02a59eedc8196392820179111ed279dc55a72684c9d7b9d3d7"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:2a4156fe7af7e1199192ff2174e5b5b083786c4563a7093156a08c671de0a3a4"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:94188ef190dae31d1e0c5791a81eef640b8251280fcf8bd56a832b18ee9e6482"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:082061594b64479c4b53a1b4def9c085f680067a48dd2757967ac9ed74402fd0"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:432e4d22504d9a592f1e0ce96ef07c07fb8e3504785e304165f0a7126c3da210"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:f57978ba7978134e740381d029999faf3952464839789ad83164b42af5e67536"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:f5038b115acfcb4fb81369a2c25fe0658aa1f105102eabfb8c41d5cf82f5cbbb"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:df2b39e116d1791898854fbdfdc4da423ecb8aa7cd75e7503091968d4678dc11"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:4dd992c04610abb92f2092ad714cd62c0adaa7efdace7b76de65d9b678f36442"
+  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:d41118ef916f0354b871253a9769590b91fb1642ef5b4734fa2b40f3977c43cc"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:028a2b2e7b146dc7208ffddb42eee75a216e00d6dc9ee99d98df6c03bd43d492"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:eed25d99af432f941a57f9f504e7642c4906108c6d02807faa41310983a3db69"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:db13539f00f80e796e403b74dc59f7527c7772d136e591db16403f1048f6d5b3"
+  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:a7a58d82851f8d3e4f657c68a8b6fd29f3def150fe54c169f7bc399664ff7687"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:a2862fcbe1325b5860b609cd748df8989add1e1cfe1162a16fad551f7086dcc8"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:a57cee2e8184ab035f98b3237b2fccab3a1697901af3988c98c8153865757e8b"
+  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:a0c2db3d6517ffb26c9f0c5defa5dd69bfad86238312766efddc1fcdc45c0737"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:e2533562f5dcc2aa65c6c8a15907839dea1ecc23cc9e4e29d319c18cf20eb2a2"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:5c95961eedc3a04f712281a9a7532146c6511928266f5a8e81ad443c17e53081"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:ec1ca5fef0c451f47dc8b0217219e6a0dab31f42d45ece229bf58109b8de56a9"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel8@sha256:5c51b21d95e75855f8095a55757ed887505bd0b838f69cd77cd70dec64393ef8"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-operator-rhel8@sha256:7ee613c019d63aa6b9383c5b9407ef87c7534197bff10957d4bc6281fd0df462"
+  value: "quay.io/rhoai/odh-model-registry-operator-rhel8@sha256:dfd9b3520246a2f4690fa9eacab69a070ab9938a5ce4ac228dab55d63721bcbb"
 - &id001
   name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:114fd1df71f8c25feac0f57d84b25e658295a37c797ac1eeb47fba8af9e2e19e"
