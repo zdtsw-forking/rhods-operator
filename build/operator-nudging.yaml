@@ -1,6 +1,6 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:d9c983e2f2fa30c390137e31a9dcea686494b9e5c093282e605a1123f54b7630"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:bea352078c893199d34026cbe15fc67d57d5efc286d1147b96d0f413c80d5fc1"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:5e3dd61b7fab663c59af7fa9eb94f98677d4e2a4fdc7f49d330c0ed058d9c49d"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
