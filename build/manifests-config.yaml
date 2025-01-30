@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 9dd83a3caf9f479115d02cddddbec470ddc17183
+    git.commit: 1d81645bf2a10b8d22bed83b1daea2588a28d70e
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -80,13 +80,13 @@ additional_meta:
     git.commit: b11aeca962a8dc213bccdc14a3b0d03d91053a8d
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 72af6268222edad01a289c8406cf520f54c00570
+    git.commit: 8f8aa984fb114605183965690d1c20533b58ecfe
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 4936a6b6e11ce6fbc33750f5d5fe6c251275dd9c
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 22c9c024009a2c42c2a3670e90eab714eafd6187
+    git.commit: 5dd5b227508995967e6c1bce606767f930d44fdd
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 8a6905028b6ec6d61507bd7929adb1d99bd2b130
