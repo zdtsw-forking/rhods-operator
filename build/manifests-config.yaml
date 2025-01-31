@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: d30c3be305d020dd195c7fe65101f97805ec6582
+    git.commit: d56fb2b1a86c97ae385f2bd1255aee421aa80a18
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: d30c3be305d020dd195c7fe65101f97805ec6582
+    git.commit: d56fb2b1a86c97ae385f2bd1255aee421aa80a18
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 6237628a168058b7ea0c24e06a7372732be9cce0
+    git.commit: f3fc73be438a328daf34d6d4cff1b933292f28f0
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 010880e94140921d710416569d2bc986c83cbd31
+    git.commit: daf1a4958364ea6cb7a5e86c829a88f3f72fbc1c
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -70,14 +70,14 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 28a9a8c9e3451fded6624d53bf60aa90e7831a4e
+    git.commit: f957124847c46219d53a65f79dd46026e1f19e0e
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: c9e6d1e14798e871d11bcb1d93432a4bea71bf26
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: 1a7717d5d306148497fb2a0f8b1115ab92b096b4
+    git.commit: f453c3a312386c80000f073be98fecedbfe4d577
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 669dec79733f549f1452b34213864d9ecd591701
