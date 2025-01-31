@@ -86,7 +86,7 @@ additional_meta:
     git.commit: 981cb721fda3aebd02d00bb985b40307c1465d88
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 0540d8d098699408e0b3c9d2d30bcad5c6b02eb0
+    git.commit: a933cda29c26a920be6552aa957cf0293ca08d00
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: f61c08b1f7f90337ef58be64d285b3cd372b85f3
