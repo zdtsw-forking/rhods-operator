@@ -16,7 +16,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:cd03c08484e59e38fe9852101ef61714603a69317df7bcc32767de45ae5cdfe9"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:e18d23f1bf2a7ddb029051785fbc5917e6955743e76dcd1bb655396048104af8"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:b42edb74b0d855a08db009b2d4d036541eace530febb9379f2d4321cc3582f81"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:e6d9d68a221eda9fb82ef12b32cda0b636271d5ac32faf509931b0ac8588ad12"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
