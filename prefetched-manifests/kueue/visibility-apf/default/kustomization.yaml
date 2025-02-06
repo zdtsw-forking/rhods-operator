@@ -1,16 +1,14 @@
-# This overlay builds the prometheus component to be used in combination
+# This overlay builds the APF components to be used in combination
 # with other overlays.
 
 namespace: kueue-system
 namePrefix: kueue-
-resources:
-- ../components/prometheus
 
 labels:
-  - pairs:    
+  - pairs:
       app.kubernetes.io/name: kueue
       app.kubernetes.io/component: controller
-    includeTemplates: true
-  - pairs:
       control-plane: controller-manager
-    includeSelectors: true
+
+resources:
+  - ../../components/visibility-apf/
