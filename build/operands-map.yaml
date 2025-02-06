@@ -16,7 +16,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:96a1158109be6189391d962503bb2125ff92cfeaca0c1a3da0754116de212fce"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:f870e4e4e9eae033d3956083cac3f5e930486a4bb4f76cdac9f0f8802254fa0f"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:df51c83b10bc1394067333ab66500325ab8e1f1b6b613f9079bdf9222c0db078"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:ad935f3abfe77ed18c06e332a40e53caf687c08de24675493c552f88292be1aa"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
@@ -32,11 +32,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:e533bcde65118209050741f70679b7f813ec0010cd40f6834d23d2e9c90c712b"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:c9631259138b959089ad104e020afc56f971f87bc5059ca45a3a212187037a51"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:a3790a17f6ee4e07ec03b02f9e12423610ae2cde230e95c21daf5094450e79d0"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:773874679a34f2e01f3ade70c72a444835db7f958151ed1edf1e9cd479f9625e"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:8da77ed7adecaa592cb7fe83b75ffe189e89353b93ed2a5c9baa3fb26ed98a61"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:78320b0c7bf8d8767089b02d28ece7e0b6e4f13e881ad71bca803a74163f1c33"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:28b7ec7488718e3f95ad64560db99762ad1ef59edb0b68f0096839ce8a160709"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
