@@ -612,6 +612,7 @@ spec:
       - name: ADDITIONAL_TAGS
         value:
         - '{{target_branch}}-{{revision}}'
+        - '{{target_branch}}-nightly'
       runAfter:
       - build-image-index
       taskRef:
