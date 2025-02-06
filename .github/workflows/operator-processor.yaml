@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ env.GITHUB_RKA_ORG }}/RHOAI-Konflux-Automation
-          ref: main
+          ref: multi-arch
           path: utils
           sparse-checkout: |
             utils/operator-processor
