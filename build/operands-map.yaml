@@ -12,7 +12,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:06a797ebde2220645e64764f0880c92e6ab0839f55b7b520bb5268c38726b8fa"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:40777e9f3bc8e2be4dacc751ecf8cfa48793cc86b8561b5606d41b18bf58d602"
+  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:3ca757d059a0dc2185f9317f15132800655a65c900c1c7e2a0180abc1aab659c"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:5caad4aa89e59dd7e2d81da7876a5d498669f1d703fff75f2d86cd228fcd57b8"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
@@ -53,7 +53,7 @@ relatedImages:
 - *id001
 - &id002
   name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:278d82d1ef138a3b41b4ef07587e7dd53823296c509ab4b623d8ddfccf0a0d75"
+  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:68a0f977212ca5132e0d20c0ac7905c0421e53fe865355f6ab82ab353e44ffff"
 - *id002
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel8-operator@sha256:d133d61b11dc19967f7bd3e8f31ea98c90ba80a8030eedbbdf89905334fc7761
