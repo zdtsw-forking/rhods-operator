@@ -36,13 +36,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:6863f9a7ba2ab7ffa9398ebd26e18fb7bdd341f7dd19ad5c750e78dc9b32853e"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:78320b0c7bf8d8767089b02d28ece7e0b6e4f13e881ad71bca803a74163f1c33"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:4ddfb9bdad8203bf71633cb0750f6e7bc32a28f519a86330fa90a170864d58e7"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:28b7ec7488718e3f95ad64560db99762ad1ef59edb0b68f0096839ce8a160709"
+  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:7efd527aa7f8bbc827bb3a7629ab03ae3de88aca22021c350784ecee1e8db159"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:60db2561325102001ca9e7aa0c78917a666b6954df81c59da72f53f97a89e715"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:ec50433979fc8fb3e30d58a6ce6cc0fcce9cff3adcebc35661a3d0644b405ad7"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:715f8f24467ccb533f324a0b303154eb944523fca57aad5af4392d18982c51f7"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel8@sha256:4cc27740caec8e5a1165fa6257c1697b6c77c799907b98feecb4d02fe93e538f"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
