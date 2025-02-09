@@ -20,7 +20,7 @@ map:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3cbae4d1e809af58c0ea388914c776d9df1d838d
+    git.commit: e86695fd23ce23a8d3398e703ff9bdf842432d30
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 9a27b5584c679011f729dbc746c52bae39235c95
+    git.commit: 0c90f9b28c1ac6e07b4f0f8265e8fd14168c6dcd
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -60,12 +60,12 @@ map:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: d8e1098b09f81cd53b8b47df62fcc19e62b1489a
+    git.commit: 5b6fefa0e5b3e18a37c676b81ebadcd3fb7d9eba
   odh-dashboard:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 1cf3deac86126f681148d74d9f5b938930928c5c
+    git.commit: 85842473e6217762be4605ab1052d83d1677deee
   odh-training-operator:
     src: manifests
     dest: trainingoperator
