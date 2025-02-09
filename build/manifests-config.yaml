@@ -83,13 +83,13 @@ additional_meta:
     git.commit: 733883c587057d167f75d867057eade545c42efb
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: a4d232b6a07f0697b65ab59c03b8fce51bec97a4
+    git.commit: 879d3a1b5a105bc5b9a72f16afcd4858724b6b48
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata.git
     git.commit: 53efb864afbbabc0ad95fefde5985ed33ea36b64
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 55f2af04aba125aee440a2048a5c74ea2d844f9f
+    git.commit: cd95592d98f6b5175020e7eb63ba781bc720c3b9
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 55f2af04aba125aee440a2048a5c74ea2d844f9f
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: 55f2af04aba125aee440a2048a5c74ea2d844f9f
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 3bff94a54b827b4f3067410e3c46da52b9a2f69a
+    git.commit: c63263513576d475462c84ba0fbcecd3819b6064
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: c63263513576d475462c84ba0fbcecd3819b6064
