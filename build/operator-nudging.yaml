@@ -48,7 +48,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel8@sha256:824bd52a1649243f2692cba38ef8b21f88ce41473e378ab9ade48c576e471cba"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-operator-rhel8@sha256:2066d0dac0ba4db72c3bece44f109ba7189b82dd961ba0d84b3f3a6d0657cd4d"
+  value: "quay.io/rhoai/odh-model-registry-operator-rhel8@sha256:b22fca28d75df22b0fe7b3ead7290c7ff9cbfdcdd598e4d6a29d343b97490a04"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:f3db555be3c8f736735c6793bc7ea4a1393f96572260b497bb292a459d5f6b12"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
