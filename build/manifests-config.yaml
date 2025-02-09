@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 92b42dafd00da39c3b739085b9355c432cf9bc18
+    git.commit: a377e547302e757835564774a76dcebecfce6ef8
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 903e779b7f68dacf7a71c943c5d5082169ecc4d2
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: dd63ee6fd1e411d3bf710773e1632eb110a13a95
+    git.commit: 0428d2f292a825ea42d219770f5672f296da7ee2
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: d0ec6fbee81e7a034db6cd1f725c689844dbd573
@@ -89,10 +89,10 @@ additional_meta:
     git.commit: db38210601d9c3e1ce54901e89431813982a56d0
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 0ea1b1ff5c8ac0884b3936c73bcd9d3dd5d9aa36
+    git.commit: 988ab8b935405e429c5c6dd3a317b1d95d78291f
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 0ea1b1ff5c8ac0884b3936c73bcd9d3dd5d9aa36
+    git.commit: 988ab8b935405e429c5c6dd3a317b1d95d78291f
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 988ab8b935405e429c5c6dd3a317b1d95d78291f
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: 988ab8b935405e429c5c6dd3a317b1d95d78291f
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 0aa68b3faf24de6bc49c5d0a2a9dc08c6735bea9
+    git.commit: eb4234c35a17b20ab49ea902784820574d6d88d6
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: eb4234c35a17b20ab49ea902784820574d6d88d6
