@@ -109,7 +109,7 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: c63263513576d475462c84ba0fbcecd3819b6064
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
+    git.url: https://github.com/red-hat-data-services/model-registry.git
     git.commit: 0518cf703799f2ccf5b43091c8286029492e7cad
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
