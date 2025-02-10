@@ -4,26 +4,27 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.16.5
-  name: mpijobs.kubeflow.org
+  name: jaxjobs.kubeflow.org
 spec:
   group: kubeflow.org
   names:
-    kind: MPIJob
-    listKind: MPIJobList
-    plural: mpijobs
-    singular: mpijob
+    kind: JAXJob
+    listKind: JAXJobList
+    plural: jaxjobs
+    singular: jaxjob
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
-    - jsonPath: .metadata.creationTimestamp
-      name: Age
-      type: date
     - jsonPath: .status.conditions[-1:].type
       name: State
       type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
     name: v1
     schema:
       openAPIV3Schema:
+        description: JAXJob Represents a JAXJob resource.
         properties:
           apiVersion:
             description: |-
@@ -43,18 +44,9 @@ spec:
           metadata:
             type: object
           spec:
+            description: Specification of the desired state of the JAXJob.
             properties:
-              cleanPodPolicy:
-                description: |-
-                  CleanPodPolicy defines the policy that whether to kill pods after the job completes.
-                  Defaults to None.
-                type: string
-              mainContainer:
-                description: |-
-                  MainContainer specifies name of the main container which
-                  executes the MPI code.
-                type: string
-              mpiReplicaSpecs:
+              jaxReplicaSpecs:
                 additionalProperties:
                   description: ReplicaSpec is a description of the replica
                   properties:
@@ -7678,12 +7670,15 @@ spec:
                       type: object
                   type: object
                 description: |-
-                  `MPIReplicaSpecs` contains maps from `MPIReplicaType` to `ReplicaSpec` that
-                  specify the MPI replicas to run.
+                  A map of JAXReplicaType (type) to ReplicaSpec (value). Specifies the JAX cluster configuration.
+                  For example,
+                    {
+                      "Worker": JAXReplicaSpec,
+                    }
                 type: object
               runPolicy:
                 description: |-
-                  `RunPolicy` encapsulates various runtime policies of the distributed training
+                  RunPolicy encapsulates various runtime policies of the distributed training
                   job, for example how to clean up resources and how long the job can stay
                   active.
                 properties:
@@ -7758,18 +7753,13 @@ spec:
                     format: int32
                     type: integer
                 type: object
-              slotsPerWorker:
-                description: |-
-                  Specifies the number of slots per worker used in hostfile.
-                  Defaults to 1.
-                format: int32
-                type: integer
             required:
-            - mpiReplicaSpecs
+            - jaxReplicaSpecs
             type: object
           status:
-            description: JobStatus represents the current observed state of the training
-              Job.
+            description: |-
+              Most recently observed status of the JAXJob.
+              Read-only (modified by the system).
             properties:
               completionTime:
                 description: |-
@@ -7904,4 +7894,8 @@ spec:
     served: true
     storage: true
     subresources:
+      scale:
+        labelSelectorPath: .status.replicaStatuses.Worker.selector
+        specReplicasPath: .spec.jaxReplicaSpecs.Worker.replicas
+        statusReplicasPath: .status.replicaStatuses.Worker.active
       status: {}

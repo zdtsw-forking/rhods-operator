@@ -51,7 +51,7 @@ relatedImages:
   value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:68a0f977212ca5132e0d20c0ac7905c0421e53fe865355f6ab82ab353e44ffff"
 - &id001
   name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:f3db555be3c8f736735c6793bc7ea4a1393f96572260b497bb292a459d5f6b12"
+  value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:76da789f161de610b2aa3be7f2847ee8f57f03690e047c6840db6c5f918685c9"
 - *id001
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel8-operator@sha256:fd29865d5f8ae4c9ef60274cdc741a2ea3bf058672fef5b33f0de82674c727c8
