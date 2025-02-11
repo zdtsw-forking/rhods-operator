@@ -10,11 +10,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:f01e72310d95a11f6376fd5adb49eba175d678ce140de9a8b1b686946cfa3f9a"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:c9187cb3fe5eb909189fd0af72eb1885fd7635b7ff978da102a0969169e47ca5"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:bc97797e7bd4311b074760a9751bf51d7494b5ab23b0982b5dcd97a1d9eaefa1"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:af0f3f184d865b60eb98ff3e76ac96979f463727de37e127ce006ec012bd0c6b"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:35a9614b2978dd23aa0146dba226b357c4ab336b6d994c0e69838bd6901487f2"
+  value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:b4c0deb0033f1494d16f84b19786b70778a71dbe4038a658d0226679c44738bd"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:eb0e0706de680fc2fba4b3f0736dba6fb819366a7b9ccc87799b116889b76e98"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
@@ -24,9 +24,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:6b998431034d93d1948d5837773eaf615b640fb98f6b5e9f94affc098cffffa2"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:59c08f4a7e60e83eb1a2d4384f75bcbd66edde7b410288eb5ba31720d0400f87"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:be2416485c6d801c45549cac6e5c2ecaec5a686459e6d1ad874f045bcce4091e"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:989d607366bd3c7531ef791ef773a01af0a917ab021729fa5778b79069708b21"
+  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:0d426e5b762a7f8261daffb747be5035c6c302eae23659cc3dba823055c76dd4"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:c27b2a5debcf93629372cedb766c2c0a01a5546fe6f1ca2d7f67a809dc96ed67"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
