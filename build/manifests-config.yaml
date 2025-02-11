@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 575dbc00059e39363131d52cad838bbaaa0811bf
+    git.commit: 4cf234da0c68bce0b86fe56708c8233d81ca384b
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
