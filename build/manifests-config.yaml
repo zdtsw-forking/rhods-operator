@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: bc5a2db10c3c2e9fa51034cab674081da543ec9e
+    git.commit: ee9286d0904f343991024873d25e9aa98d03f55d
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 6bbff8433230f633f4b77583f713f38a2adde43d
+    git.commit: 31236565822c411f4cfcf15f8d9f03bd625208d0
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -55,12 +55,12 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 5ab90483462cec45df4fd5e5bf9c6f262a793b16
+    git.commit: 1dbe808debdda3db88631a99aa82001cffa6f9e1
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 973b21065f7ecfc7271d45552d05d29e82317c9f
+    git.commit: f0e82a7d7f636de03e1c0eaf07ba17e19d352d39
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 9c9c46c515adbb95515b6aa9ebf05b736af96ce2
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8e5c3a04d8d7dc8d0dcec04799dc53c1021f2466
+    git.commit: 5930fe06f08474246011744dee4a771efe20307b
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 5930fe06f08474246011744dee4a771efe20307b
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: 9e98d53b68b7f1aef786c221b9ed67b63899f199
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: bedccaeee56d39b145218193c789bbffc7331625
+    git.commit: 41285b06d8a843235181ac366d996999966d7ed7
