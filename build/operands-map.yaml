@@ -24,7 +24,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:92edcad412dde4542114dc09565e220ab9ff738cbc493c45d350ab1d785ad361"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:08c0f1636c2d4504b1186bf8d8e263dd69f0b9adedcd1965f4224417cdd3b376"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:012bd686735a1b51c069668bcbf9db79cc148b2d7f8c375df156437f0d4c6ed4"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:a6898e64509f395fbcda503830a51d044f368ecebeacfd7418c656cebb613c39"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
