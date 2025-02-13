@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 251b0f1c252776d95664dd85575473820a0ce816
+    git.commit: 05f4d76788b29420e85c06af18843ec303ac2d8f
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -113,4 +113,4 @@ additional_meta:
     git.commit: bde323c679f9f1869231ea7c351cd13da4b2500f
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 4f6d22c7d74cfa84792ba43fad257cb3b9434b25
+    git.commit: c8c1f0b713451cf5de195125cde4b4499a0e0d0e
