@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 2586854bc053c0f9a2f2105aacfb887ceabf04a2
+    git.commit: e417e68f5e3b0df60fab03538b4d793d26330e99
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -110,7 +110,7 @@ additional_meta:
     git.commit: 12926d0868d7b3b99d7c4fe02f8dbe51da3f28f9
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: bde323c679f9f1869231ea7c351cd13da4b2500f
+    git.commit: 7e2d6481c165a54ba88481b62e657aeed885a9c5
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: c8c1f0b713451cf5de195125cde4b4499a0e0d0e
