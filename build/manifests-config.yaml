@@ -77,7 +77,7 @@ additional_meta:
     git.commit: d56934bd5eca54acae51085a6baf5b930557374b
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: df21f5fe8bd7c2bfcdcb305d883a9e6ee6bcfddb
+    git.commit: 7cdab3507b31d1bd1c02989ca562292b1f8dba63
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter.git
     git.commit: e3e55f70d10529470cdc4f8933f94ee37188f19d
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: ee5c1bf9b4ca5c137563af54c3af5e83e7b34c04
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: ee5c1bf9b4ca5c137563af54c3af5e83e7b34c04
+    git.commit: 12926d0868d7b3b99d7c4fe02f8dbe51da3f28f9
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: bde323c679f9f1869231ea7c351cd13da4b2500f
