@@ -52,4 +52,4 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:63d4b2e053481b84277f9644ee0eadfcf1073d98ceaf50a156f0b01e321dca54"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
-  value: quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:498f52094007881aa8034df279eee453e85b059964b283f195e908042b9af8f9
+  value: quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:7285056200fe2b4d6676c46caa00ed5a8899606ad7a920f3f2848c97a1ecdffc
