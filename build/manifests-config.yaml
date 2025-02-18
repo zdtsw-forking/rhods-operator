@@ -110,7 +110,7 @@ additional_meta:
     git.commit: 9e765a59ba97ab708c23675179a09b1f622aac56
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 7e2d6481c165a54ba88481b62e657aeed885a9c5
+    git.commit: 0148eaba8ab283bb7d1cad1803ab553d39e0a5da
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 54673c57f980c2b24f6bae92671c3a4517faf97e
