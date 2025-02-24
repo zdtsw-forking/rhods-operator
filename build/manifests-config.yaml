@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: bb3560cd2238d7920fceabd11888d9abad04f300
+    git.commit: 7daed09db2cb341a9cfb016f29aac0bddaff0798
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: bb3560cd2238d7920fceabd11888d9abad04f300
+    git.commit: 7daed09db2cb341a9cfb016f29aac0bddaff0798
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -45,12 +45,12 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 8d5abe33f25b19719db52f24019e86af4f236e16
+    git.commit: 6dc74cd2b701637599b81ffcc00b13b2a09ae647
   odh-model-controller:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 9e41ddf700025934cf06bfb17dea5b8fdd156ca8
+    git.commit: ee4a59a46fe79def2b9980e2dfdefbfe0dbb3dcb
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -70,11 +70,11 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: c0b02dcf2f5fe4b956903f1d4e5bf72ebde281cc
+    git.commit: e8b05738dd9c9a808b1ca185b40f6a7c5a9d71f8
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: acb5f014ab345dd9582e27a79206bf6e8dc29b79
+    git.commit: 85bfc14c68bd3a60e45f33cf2f71ae9506ff1663
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 2ee69c1c8c1bf28e22628a27a50aa4c5e9883e6f
@@ -83,25 +83,25 @@ additional_meta:
     git.commit: c5f23723fb5f000c44b1fc88507c39b78591f922
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: d34f0d0015e7b03344fddf78e64c21251b3193a0
+    git.commit: b12bf8d4b539cf23863abe3c0079c6c7fc0d168d
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 4ae8fd579c5b0fd1b5fcb49a396024e546408cf7
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c56d9e837236c3c51ffa849d14e1a27622728bf1
+    git.commit: 3ae4a7554e2b575c05baf92cb60145984f56fd26
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c56d9e837236c3c51ffa849d14e1a27622728bf1
+    git.commit: 3ae4a7554e2b575c05baf92cb60145984f56fd26
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c56d9e837236c3c51ffa849d14e1a27622728bf1
+    git.commit: 16e165360c00f6e3ac75f7dfb14930508cbc205f
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c56d9e837236c3c51ffa849d14e1a27622728bf1
+    git.commit: 3ae4a7554e2b575c05baf92cb60145984f56fd26
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: c56d9e837236c3c51ffa849d14e1a27622728bf1
+    git.commit: 16e165360c00f6e3ac75f7dfb14930508cbc205f
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 95539ccead9946d99a3447104c2ebe8be369f08e
@@ -110,7 +110,7 @@ additional_meta:
     git.commit: 95539ccead9946d99a3447104c2ebe8be369f08e
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: cede9d433cd1845c0153047415cb6a9120bcde51
+    git.commit: d4e42f1af4baaa388176872c588e8d3c65624f72
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 8d2a064b6b0c0ad2329e3d87b9078106d1275dc4
