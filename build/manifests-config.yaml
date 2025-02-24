@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: e4d9b42f9f37c060faa063e679bd4ed92511e8b4
+    git.commit: 72c3cb864bfa0a7256bd28a477b93f1148beec50
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 2356f81327d956b8a75f82249e1b079254b082aa
+    git.commit: fd71004e3261d763aaffbbb351e2e9e941d56887
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: 3284b43e840daa48e399a91da34cd0e08e51aa06
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 4a889bb6f5a1cae59764ad9c753ab88a8087834d
+    git.commit: 4f795bfc216843a23cc04cc7e6727c10a4f05a69
