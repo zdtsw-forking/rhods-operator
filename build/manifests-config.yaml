@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: baa3182f3a60b8a7257607aebae820b748553172
+    git.commit: fb990c27b43619ce018a003dd32ed808a537c3c0
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -64,8 +64,8 @@ map:
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
-    git.commit: 14d194cf1cb3992346360148654356f0ee72dcaf
+    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.commit: 946afbaf45f8007b6770b25e5f918c27f4715690
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: 16e165360c00f6e3ac75f7dfb14930508cbc205f
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 16e165360c00f6e3ac75f7dfb14930508cbc205f
+    git.commit: 3ae4a7554e2b575c05baf92cb60145984f56fd26
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 3ae4a7554e2b575c05baf92cb60145984f56fd26
