@@ -30,15 +30,15 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:25aa858a8daa573ed7650b9a494bdee378ccdb2e0be2928e76f50fa7697e7cab"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:3c1648b8bee89db8fbd5485745a9e2c075d4a002c8fb518c6801fbd9e6c79766"
+  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:2027b1c0302d888f708d466a292e4b9333f0e1f25f9aea2853fad96abd0489b8"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:8eb3a37de042c276f55f4feb517fc7ae01644237717a734f2ed2fd8530ae631d"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:d9bd448bb2accb4a20f2796c33dd27e32b69ed7ab2415400acb3279d0f721f23"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:b6a22240499c2d3e3f90ec9e4cc8f67297e4c50120f060d265ca768f85442e46"
+  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:476f10a99aeac8f9116d3633ff5ace0852cccaca179acc3120abe469bdd70de8"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:b6383da8b2f10cfd51450a4f6426a1e591d638bef70c8ef336d70d2937b36577"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:0251b90fea6eb6773bd460971d3047b391fab4d557b8d4f8a24bfcfbd76b7c73"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:db7b615ca71edb88d2ce11eabd5664fac8bd7131c3e935cae2d5c3c1d5234bdb"
+  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:79daffdb54cc9690cd92ad452cfc3309dc2f9b24a7bbc22131d33d9d53448439"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:be08ab15ff1975efd5bf38320785f1786c4ea38fb042dc3af5a10f1a92b6e07e"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
