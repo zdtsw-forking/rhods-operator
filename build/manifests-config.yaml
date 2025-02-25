@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 5befffb844b16a5a26f091f600d412753a9ec8e3
+    git.commit: 1a3c3bf1a3255c64e5d71be5dbfdf780b613773c
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 5befffb844b16a5a26f091f600d412753a9ec8e3
+    git.commit: 1a3c3bf1a3255c64e5d71be5dbfdf780b613773c
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: data-science-pipelines-operator
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: a6f12c8678d235c3727701ba6da460fb7877f615
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: df1d058208c606ef4b7887ac988a727831f08d09
+    git.commit: f8e2f7d9e565d3834f7cc89a9b388951c240818d
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: c9c1570b2a737c364caf93a4a74ef19e6a0b6476
