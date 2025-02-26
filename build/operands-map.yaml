@@ -22,11 +22,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:b2fac67580ef2aa28c056eefb89110e0e7a830eca8deb074f6c2a524c93f605c"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:c49714714597a641273e52fefacd7773b5585954e4d62242c8f7a1971799b0b4"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:1d09ef19de1250b8c7d7c137c826897055b9e7dbd5f328030ccbc78e86b0e3d2"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:a9310be1515d0edf21decd64ee73090a7ad4546c86a40e29895eb40916c8ae2e"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:917590174da7ba22698c3e5370509871cd1500ae1f0fbf3ad27ae9079ee69786"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:f78109f64208d38f0aae24364fb2201f0ba5d373a6aa596218580082174a02d3"
+  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:1323b61db4592bd9eb2dbc591a99034825abeb374d33eff93fe23beaca911656"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:b04ed16ec6145fa0d37df10f8f9019915f7754696360644e25c89a69f6a85249"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
