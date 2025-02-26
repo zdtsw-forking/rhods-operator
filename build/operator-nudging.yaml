@@ -28,7 +28,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:785735a110c5b344887105ee3f69c813b1566d84572656894f3b88ccb80ce0d7"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:b04ed16ec6145fa0d37df10f8f9019915f7754696360644e25c89a69f6a85249"
+  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:cee915f08a98bc2bc952cb4844cc621cebf7655f5eaa02383490f9f0b910b453"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:d5cdcc2da26950e17c239233411070ad9a39a77671b3ea333b33ac0c9b4c7e15"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
