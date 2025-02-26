@@ -80,7 +80,7 @@ additional_meta:
     git.commit: c7a6effb2ec89120e6ee1d50bdd73b5a35954647
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 200312fd0855e62ae6fd9ae3e2dad10b58e5b187
+    git.commit: f290a666fc89c7f871f36cdcec0aa836a1b24d91
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: be85539922ee2593cd9be2602f84e0001eb0c567
@@ -92,7 +92,7 @@ additional_meta:
     git.commit: b7301ac28a5eb83da8e1ad359efde66cfbf7c29c
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7b32e83729474f2b702c6f7a09197509287b3f00
+    git.commit: b7301ac28a5eb83da8e1ad359efde66cfbf7c29c
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: b7301ac28a5eb83da8e1ad359efde66cfbf7c29c
@@ -101,16 +101,16 @@ additional_meta:
     git.commit: b7301ac28a5eb83da8e1ad359efde66cfbf7c29c
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7b32e83729474f2b702c6f7a09197509287b3f00
+    git.commit: b7301ac28a5eb83da8e1ad359efde66cfbf7c29c
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: d4ee98accaccc48cea19110aac0e40a155eb5b2d
+    git.commit: a9a67dcca28b56fefd5a48449880ece6f1de49d7
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: a9a67dcca28b56fefd5a48449880ece6f1de49d7
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 43bc28969fe990ded5f508cad4206222f1d4a3a1
+    git.commit: 75b8a9d9446bd25fe491e2793b4617206e163483
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: cfd82fa565fc076bd65633cee3c6bd93865c7aa8
