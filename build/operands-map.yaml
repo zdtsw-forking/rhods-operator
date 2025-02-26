@@ -10,13 +10,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:1d41435842afd6742cbc69346e371318232987d8ac3fc9ea7d57923da800f690"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:735e629ab1ed858dec19a957debc340f47124620be3dcebdc80afc6a07bba5aa"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:4400832417f7a08eab83f6a1018434f359fb1af38d9afd8cb3a8f5bb6c5f2d68"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:ce2c54b9dbd37e6acc72ad4fc2d44f8faf5a3565bee8c69a48fca62eb2f58765"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:d73efc4c3c185662aa90b56709c43236e2fcdc0b5b50ec04eb5a4e14a57f4a27"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:6bc97a120778ccef7dd88400e51b200ec08dcfe4b1802429834ec112e7ec74f9"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:28939d46f69c883b1040f1f51f2e59a4813dbaf7df0f2b4824fcc7337b020ee7"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:5f169835d5ea1a8af207b1028644a45910bc7ad305dddd34b28476589c3edc24"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
