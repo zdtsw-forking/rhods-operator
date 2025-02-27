@@ -15,7 +15,7 @@ map:
     src: components/notebook-controller/config
     dest: odh-notebook-controller/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 925417eda6bf7a23a3194ef6ca5e7a758c9ed45a
+    git.commit: 3033ae7d437e4f7a1698692ef9e5f8b285fd0bf8
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: odh-notebook-controller/odh-notebook-controller
@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 7494fd3cd0b4398c2d65bf1dc04696de82c03aa0
+    git.commit: bec5ae42782e8fee4cd1bd972b9e65db565f0d88
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
