@@ -4,7 +4,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:f0b92fed9ce1ed6d946afc84130d2f8e30a65978b1f9d9adfeec60e3b89e9894"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:bd7e5cb736980964200c82f1ae5279c2b8bbe545216aa8ffadf1af8ddc1ea356"
+  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:da789fb48643922b771bba2b8992b2dc60885dd16ec4c4d2d053e0153e883f14"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:f84d207e81f9fa14cf275e4c38c1fb05d8f91a4aa39f2ee6438059de1981649c"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
