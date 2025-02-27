@@ -74,7 +74,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: f451da92b19ff9a8f91c87cfcd5551d98d047c12
+    git.commit: 9582f456f4378827eb5a533651ace2c9dfe4182b
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 2f1f85c629f553876c0d0c29ad3d5efd0e2cb595
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: ce11d82b485997e49b1fd9b71147ba855177dc75
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: ce11d82b485997e49b1fd9b71147ba855177dc75
+    git.commit: 5ba07a4635a21ede4ac59ca1a6ec65667172827a
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: a376d890e325db58f29e8b088219bf6882f2de33
