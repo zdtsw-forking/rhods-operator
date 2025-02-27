@@ -70,11 +70,11 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: d20f58ea9d7f662e28d03bf16726484ed0d154df
+    git.commit: 47ae6b87183c37b2bcd049f789c50a872197bf0b
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: e0a3447c99c23d3ac9125429f7c5914f8d3c9a33
+    git.commit: a2c1809d964e06041cce4303fc255a79c10e435a
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: c7a6effb2ec89120e6ee1d50bdd73b5a35954647
