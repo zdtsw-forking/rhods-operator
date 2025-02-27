@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 058d857c5163ea86ffb8296ea53cc57961e3320c
+    git.commit: 9ecfc8dd49aabe8a4ff499e925e9886b5a65f247
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: ce11d82b485997e49b1fd9b71147ba855177dc75
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: d5f3eca2babcb7607f0ab822306180e56c5c6370
+    git.commit: ce11d82b485997e49b1fd9b71147ba855177dc75
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 07e5bfae0b083286422e498d6e17a593ce46ee42
