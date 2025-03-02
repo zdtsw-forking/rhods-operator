@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: ae5af57ad31131eeb5775c0f9412c55e92a4484b
+    git.commit: 26414629c8dd3bab8eadfb92337807515350e010
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -101,7 +101,7 @@ additional_meta:
     git.commit: 8ed2a769ac470d8dec0ca2aa42793e9ae4924e79
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 49f9c76b8813e0040d2734fb843e4c4232e57694
+    git.commit: 8ed2a769ac470d8dec0ca2aa42793e9ae4924e79
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: fa8449393fd0c01dad83a583e20848ac3b0411ed
