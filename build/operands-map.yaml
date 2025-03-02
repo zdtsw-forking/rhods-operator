@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:24fb549d9efd950e0b732f361dbcbcaef7e2b16d977fe8b93f5e5555f3f4a4e0"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:077f6b665638ba9c98d2743380546e4c8e05907163d65b78d7cbfa180bad7863"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:7fa2faef4a30924a8eb85543338c2a0ad2a924acf5672a6481287c686f6a9d93"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:8622109bc4a0eb4b005122e3fb197b20a5b6cc7c7574c8cafcfdf849588350ef"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -40,9 +40,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:1debe40dc5082a6b8844c4af31f4303a277f12766099f4ab5b8c4c5a0fef5b06"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:d3fcf64d6e75453c522deb040703edfcabf913c174264faa944b86e7931e7ebe"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:9e0da736af4ee0ba6115f19a8872741a9e532229b906b460994f03a544e85d17"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:140764afa666674a0e0cb2d1a73113a457d7276058a644f3695890a244893275"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:3ca9bd34b46e825e24d270469eb693ab5ad4ee5f1d4ba37976c8ac2514d62d43"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel8@sha256:800287a5047cad217e936627c79f84db64f64292c638c79708595c28d9c1d822"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
