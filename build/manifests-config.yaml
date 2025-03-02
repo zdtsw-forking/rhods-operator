@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 50adb6b1ccde5c308ba4a7ea80ed42290e07b117
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: a436d287bef38eb7a9c3b391bfd632e3649df38a
+    git.commit: 46edcab039b3387bab4f314d57b8ffe6fbfaa4bf
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 99ecb053b1ac95d5329f51ea4ff4f8f12b27245d
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: d3ddce1744306528658e9194d1bbccb5a207acd1
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: cb4b47a9f6e2cc3c947c8a1baf21feb9468642c1
+    git.commit: d3ddce1744306528658e9194d1bbccb5a207acd1
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: a8977af941aaff936faf9fe2b37ec76cd26f0972
@@ -110,4 +110,4 @@ additional_meta:
     git.commit: 2a5a6e8fda2d2ec98d55c0c31e093540d28ec850
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 1fbfeef5416e31f2a2676c1fc19cfe3998e860aa
+    git.commit: 4503a6dc7cb79fd6b5cdbd4d5909974395a7c8d8
