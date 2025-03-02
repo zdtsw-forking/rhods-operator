@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 4a2c6e96fedac59a196802e324a76b4cf5598aaa
+    git.commit: 9033d561e8b4be0d9ae0f35eb791ea6a9bcedb3a
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 4ae15e6f3c036858c00c690f0f0e703d596b1143
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 84f9b4faf804d7bf1ae39ac964eab1d6e0906316
+    git.commit: 0e03fae29deb54bc162cfd6285b055f34e8c392b
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 19cc84487c3c2bab09f95add4313473a53d1480d
