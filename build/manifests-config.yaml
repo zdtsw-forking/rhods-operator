@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 84b41179b058f267bdf72d118b6939372fe9ab0d
+    git.commit: c8f3a779cd94211f0401ac73dd16446675c7c31c
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: 8ed2a769ac470d8dec0ca2aa42793e9ae4924e79
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: fa8449393fd0c01dad83a583e20848ac3b0411ed
+    git.commit: cfcf0d6c2d274cf2240f9884d62780cae5d3bb00
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: fa8449393fd0c01dad83a583e20848ac3b0411ed
