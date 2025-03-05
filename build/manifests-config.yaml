@@ -30,12 +30,12 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 5cb00996cf73e9b3a7b7c36b7a747978cc560337
+    git.commit: 9c3db318130d3691aa652967cbb26d97dac0fabd
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 42721f8e4b9cc3f818d705ae651f9e4f16cd2a02
+    git.commit: cfb6fb62aa216f86897804fedceeb1380bd7de2f
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -55,7 +55,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 4e66dc67b0d210966d70894659534e15dc7efc84
+    git.commit: 4e91194fbbc48b85f518f3846b4a1617c92b7b17
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -110,7 +110,7 @@ additional_meta:
     git.commit: 3c1b8e66c0e6c0e873a0292d5532dd5625aaf34a
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: d27d16c460d5e5d63d06747a4d5bc398b61bb954
+    git.commit: ff0068f4c058d5c0ba0a0f2f72ed9e879902d256
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: e8d409af7c639c83fdd121a71cef0eb748367d8b
