@@ -25,7 +25,7 @@ map:
     src: config
     dest: data-science-pipelines-operator
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: a3f9f0b320e4e64625f92dc40e2660e8417a1432
+    git.commit: e726a6f1d1744aaf060fa829dea66c2bc48e7508
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -35,17 +35,17 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 15ae9f2c05f09bd7ab2736dc1babe1ef37e354dc
+    git.commit: c578122526b24a4c1384e916ef43fec375268b41
   odh-kueue-controller:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: e0fe7b24ef445ebcc99d1ebf3b0e56d559a3ac71
+    git.commit: 87cbfe8eb88055062e7e2812e08dffa0a4e31053
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: f8b441b21827bd292abcc3abd8b03f7ec79fd505
+    git.commit: 95089bb98b0a92a5a35c51ba1111c43253e4a24d
   odh-model-controller:
     src: config
     dest: odh-model-controller
@@ -55,12 +55,12 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 0431c250a31c8f90738943a887d215ed7f969461
+    git.commit: ef3ebcf37b84d0f4e6b823ed6382f3613a6efe22
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 367ae56c6e31b19d3931bf7b2765551e1e55a443
+    git.commit: 61589569040109c788928b02df25d56940a0beb8
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -70,14 +70,14 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: ccf09ce94be3167b23684ed72f128d02cfd85ad7
+    git.commit: 6eeeed98cf803e10c7d570ad40a8c0d5550e9328
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: 3f88320bc4672ad901429d16e22512f1c3d03dc8
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: d22a66f5af94e72a08a01886d60ae2ae8fbe5443
+    git.commit: 5d724acb928a8e60a9f6c2e06a1937e1bef569c6
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 66f7ce26d548f8b1411f3690794aa0c661b123c3
