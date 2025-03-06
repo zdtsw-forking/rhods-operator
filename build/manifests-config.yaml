@@ -15,37 +15,37 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 09686fde5ba1d9da70f6d4607c9f924e24e5adf0
+    git.commit: b4134eefb5db4b97f2f47bddcf736cc1c25add4d
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 09686fde5ba1d9da70f6d4607c9f924e24e5adf0
+    git.commit: b4134eefb5db4b97f2f47bddcf736cc1c25add4d
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 40745392e927b0bfed97f883e5e400e04e5e3cef
+    git.commit: b474145cad3a4b40e4b0942f5b0009350e5582df
   odh-codeflare-operator:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: f28cde8bbcf9b38125898391cdf1225758da6e6b
+    git.commit: 9e0233d12aac32bbeae8dd572964df63cd685668
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: d2b5abdb1a8a1802bbb984111fe78b97b2a38b6e
+    git.commit: a6bbdc08149e0396c66fc36690bf0b15a4999ae4
   odh-kueue-controller:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 23d1045237f473ed0427e64b1fb3896d110bab47
+    git.commit: 2b2a0fe13a42a2ff20337ecccf40e3f120c02592
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 1f13fb4a249c42750952dbf490d5445f0a471d03
+    git.commit: 2ae131c5e78725c7ec8501287131f54512252713
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -60,7 +60,7 @@ map:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: c044156358da6b9c111f5a33fd817ca35ac5a09a
+    git.commit: d28f5683d216da33942aa9123b01d8de4f8b0ef5
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -70,11 +70,11 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: e2c337842a3a8ba626d6c7023780643cb280bca5
+    git.commit: 981f36b875f49875af1c7b1f648deaa1f2d9cfb1
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 6a2e1327cdf23fc2be248e416d4c1f6417a21ed5
+    git.commit: b730eb166cef750b4a3629064ded14952e3e4877
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh.git
     git.commit: 3905f19c9fcfb871233245fddfa426528200a905
@@ -92,16 +92,16 @@ additional_meta:
     git.commit: ea0515da3677b5c44f6f3d45cb4019bd91666b1b
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: e52ac1c0164d6fbece4e1ed231ad89a2919c260b
+    git.commit: 3d83ed038024b0111d8e7f2e3e23ae758ab370d1
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: e52ac1c0164d6fbece4e1ed231ad89a2919c260b
+    git.commit: 3d83ed038024b0111d8e7f2e3e23ae758ab370d1
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: e52ac1c0164d6fbece4e1ed231ad89a2919c260b
+    git.commit: 3d83ed038024b0111d8e7f2e3e23ae758ab370d1
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: e52ac1c0164d6fbece4e1ed231ad89a2919c260b
+    git.commit: 3d83ed038024b0111d8e7f2e3e23ae758ab370d1
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 26734e4b99c8e61dcfe67e5b5c693be0e4148f6f
