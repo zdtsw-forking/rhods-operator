@@ -36,7 +36,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:1702c4f7fd823627513f64f3cc7e17f04f3a3a788c183327320c715d5b2b3640"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:64e1f23e612a18333c8c873723e1041f1923f49b33b1968aac9f2e190ad1e0aa"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:751cbe158f7f1734bb82ff33231361e8bf1d535e4ee8755c01c86c423468b008"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:5aa10b1d772af542b1b9adfedc5e5905fbbee7d77ce16793c8f141084ceca2d5"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
