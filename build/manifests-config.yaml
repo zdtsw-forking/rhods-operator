@@ -20,7 +20,7 @@ map:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: b4134eefb5db4b97f2f47bddcf736cc1c25add4d
+    git.commit: 256e458cb0ebc1704c6266665ee93202e1dd7160
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -30,17 +30,17 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 9e0233d12aac32bbeae8dd572964df63cd685668
+    git.commit: b6133630a5b3372b7bf754e8d88ae293d46bf498
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: a6bbdc08149e0396c66fc36690bf0b15a4999ae4
+    git.commit: f11ccf125f1b0345cf177a7c1728b47fa9113831
   odh-kueue-controller:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 2b2a0fe13a42a2ff20337ecccf40e3f120c02592
+    git.commit: 4cb4fe246ade4409211ada3d2b599ced8a432d3d
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 981f36b875f49875af1c7b1f648deaa1f2d9cfb1
+    git.commit: 3175c9ad6d859d145337d65b0bfa3e96a91968d0
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -101,7 +101,7 @@ additional_meta:
     git.commit: 9dd3c1f33cb51e3bcaa58609c0108df9e5432db3
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: e622c17ca8c0c63b2ffc794818ad238c6cf9373d
+    git.commit: 7149c09ed98f05da848cc27e478027344aec6d81
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: a45259a07682cbe8ade1ba2a7c14d2d66bf86d3b
@@ -113,4 +113,4 @@ additional_meta:
     git.commit: 56f0504b0e4f08f7a0bd150666e8329e79df9478
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: c83fd344d817955ace5d547b9c8930b913152d27
+    git.commit: b1971cd04eac187d693e9e6bfa84fb3c0da15506
