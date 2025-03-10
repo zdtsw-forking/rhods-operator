@@ -50,7 +50,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 058e3a76703a96ad93cb3a61cc70d7e26f8040cf
+    git.commit: 432a90d8af61955d06d8e9c79ff35da2d7fe3171
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: 6c172a082255ebab7533df565eee7512b23146bb
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 40964613cafae41b74bcfe7cf18186a2f37b3032
+    git.commit: b1b6a45ac302d91324c4ea4d0142836843995040
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 6c172a082255ebab7533df565eee7512b23146bb
