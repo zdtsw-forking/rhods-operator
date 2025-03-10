@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 4cb4fe246ade4409211ada3d2b599ced8a432d3d
+    git.commit: af722ee65e4b3e6d17131abb973cba4f8b9dce67
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 7d9edcce859e75bf6f65e908e47c60fa89a0af5c
+    git.commit: 4b986e6ed563191f5ff2de1f0f673f1730b94b51
   odh-training-operator:
     src: manifests
     dest: trainingoperator

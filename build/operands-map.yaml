@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:33497667e409db036bac476f196c9c435c565a392bbd3da181378fabc8858363"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:cf42c19c02b01deb122ff850172537972d8c4a08aa43607d7a310037494de1d9"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:6bafc1a65581bf2656440bfc68c1781ced12dc4fa1b0abd29259d20ded551bc3"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:72f7e7e0dac1959b699c69d744276f8d5c652ba8a84e830c3c2eef738898d9c4"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -26,7 +26,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:cb84ba98dfb5f0a481f1f3a60778da22f4700197997389d926a26eee08b2b332"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:f47f4276edb7c787130f1a2a8ebb5cfac030044d09b4e9121898a4dd4c76cf12"
+  value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:f8805767387cd8d0db3706621393b962d73a4d2619cce412ae259dd4557a6616"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:f1ef2625fb7f04f6cd934baac24e2296cc1c3f937353c30a230c8398440e75df"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
