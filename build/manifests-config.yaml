@@ -60,7 +60,7 @@ map:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: ff356000de1f362c42b5e54e5f1140deefab9e6b
+    git.commit: 0a48e9f5fa65f1c156b7ffdb2db39de0be0f65b3
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: 40964613cafae41b74bcfe7cf18186a2f37b3032
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: a45259a07682cbe8ade1ba2a7c14d2d66bf86d3b
+    git.commit: 5ef6c7dd658f35fe67c59493638ebf4bf206446b
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 26734e4b99c8e61dcfe67e5b5c693be0e4148f6f
