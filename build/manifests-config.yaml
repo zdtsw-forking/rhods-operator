@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 256e458cb0ebc1704c6266665ee93202e1dd7160
+    git.commit: 7ab679033a997cc447cfcf4041df5becff9297d3
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 256e458cb0ebc1704c6266665ee93202e1dd7160
+    git.commit: 7ab679033a997cc447cfcf4041df5becff9297d3
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -92,13 +92,13 @@ additional_meta:
     git.commit: d80ed61b6c3d3245b43074bbb646216e9fb31995
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 6c172a082255ebab7533df565eee7512b23146bb
+    git.commit: b1b6a45ac302d91324c4ea4d0142836843995040
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: b1b6a45ac302d91324c4ea4d0142836843995040
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 6c172a082255ebab7533df565eee7512b23146bb
+    git.commit: b1b6a45ac302d91324c4ea4d0142836843995040
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: b1b6a45ac302d91324c4ea4d0142836843995040
