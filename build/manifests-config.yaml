@@ -15,7 +15,7 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: f650ea840ab5116ec40efa673362127e5914ce01
+    git.commit: ad5cb6476f2a6b25fe9319431cbd9635748c8330
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: af722ee65e4b3e6d17131abb973cba4f8b9dce67
+    git.commit: faddff5a3b1816b810a276f6ddf1b3c120a91081
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
