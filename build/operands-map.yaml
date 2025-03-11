@@ -32,15 +32,15 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:7ae11eecb46a82113d9980c105d2908ac5dd43c90f2a7dd2e5456f7bf68aaad3"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:1414b144c6f298d1086bfee10ea3b050316a365bdf5e051eb708b3b4a9b0146e"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:de48362597cc275973fdbca9b3f3ffce0aad9ccfc852f22144c04b1be0b09d57"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:566348495b6765f4427f67dfdad9948eb71f2d97f9cd9af5a57ea1d20161eaf8"
+  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:7695f4c3a6b0b66791b5435642b6bf721314bb54ad79dfadf4c349de865e6008"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:c9b342a835b57dce07dc2e1c45d24061482a2ac9970e21186e6cccf9e2f713be"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:12d7b1924558912f11c440e8895d083405e5ec9cd2cbaf7d621f6f2b3122a958"
+  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:b8439c746be49e73b9f330564921f9889a291df4abe6101f93833e4a0e9dad1f"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:a96ecb459c669e3a0a94608d59c7768d80d43725eaa4b06da318c205eaabd9fc"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:709230cda25a6c4232b2aec5fc4614884c5b11cee870c288b2f56425a6f9bef7"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:9348dd0eb0af9d8c1e67939d897beec5c7f5fbdd78ed6a46b97d692c230c6f29"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
