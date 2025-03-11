@@ -15,7 +15,7 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: ae172fcd303152fc8b52420ba14fd36cfeb76fa0
+    git.commit: 742976e0e082bd2b513d56f0bca86100c2299bb2
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 1b2c785b201d03cad03faed1bfdf03ad1d40125c
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 10a0a94e5665f5bb013fbde2b4580d9d00d99e56
+    git.commit: e340602317a3ff8e37ab5b50e85b0e0dc337ccc2
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: d6af8116ae55ea47336956ee088a9f98be20e982
