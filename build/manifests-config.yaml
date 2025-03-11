@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: e207678b80c12d81e186874f2c0f746f1a470eff
+    git.commit: 8778650cd167ac65f6923be79316dce6bb2c7964
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 28250539f788080721711b2d34f74f11fa4bc24e
+    git.commit: 160f173f688135626969bb64242ae44463896595
   odh-kueue-controller:
     src: config
     dest: kueue
