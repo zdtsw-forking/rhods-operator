@@ -10,7 +10,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:84faf3854ab3dbd87592ece1e3ffc1a9ae793335022c6d4182b4ff1a0fa60734"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:1a7451fc293fa9b3cc1761f1f8db866e5bca2e1de230509a4c3b2f0850c41963"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:ffedbf3e0030b75753178cfb172dadb132f06c887737aac4bee64e302311652a"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:a0d9b143aaf1fdb64b1f64d319b4d34f0847e06ed0abafaae6696169fd4adde6"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
@@ -18,7 +18,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:d7582c593cb8d5b97346f155a79a0b37b2e6e8a2bf9144b80d099a651333e42b"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:a01eaf7a2b9e8ea323d9f41a911818e0794720c5f06806b97ce600a2d77b5aeb"
+  value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:4473eba4f5d3f7a5864d5fb88bb93bf524d6b600b0918439c41763a2c740da01"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:fd24ea197e9567d1dbe304f4973f27e91730800f0f75aad6b16e7398d3305452"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
@@ -28,7 +28,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:b4cf60682df952d3bed659a08efdc60eb72254455522cf0b8001667ef9653508"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:cc1363b29d1b27dda35ce229cf419894baec6e11b0862b8a064aa84200d86f76"
+  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:8f4f1e832d4a8f3e1ddbae0d78095c789c6b5a39ba018969743bb0542fe8a4de"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:36059d6fbbf46892b506b93ada0d6f1c2ab444e96bdd29acd9fd2c852652beaa"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
