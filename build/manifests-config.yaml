@@ -101,7 +101,7 @@ additional_meta:
     git.commit: b4519ea8030a59d1219e727da54cbf0b818dbb9e
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: b4519ea8030a59d1219e727da54cbf0b818dbb9e
+    git.commit: 36baea9181dc2677eaee5b580f41cccb8e6bdfbd
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: e115ac84d29842ca4d188bbc56662c688e0102fb
