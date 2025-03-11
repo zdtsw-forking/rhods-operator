@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 2fe0a02866dee94aed3a80b09ed1d811e8eeff5a
+    git.commit: 0fcb3437d8e3c1f3fb3a2ac4ec3ee0cbcbbe7b05
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -86,7 +86,7 @@ additional_meta:
     git.commit: d6af8116ae55ea47336956ee088a9f98be20e982
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 7cd86767be352740cf25d68db08224a6253403c2
+    git.commit: b5488591fe7b310e23454f3d13ef4ec21e1fd8e0
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: d80ed61b6c3d3245b43074bbb646216e9fb31995
