@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: bf6e5537fab8750b25d2169656edcc5da5687699
+    git.commit: 4dbc8aa0bc94c4aa18b13cd7d6eaf220fa050f93
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -113,4 +113,4 @@ additional_meta:
     git.commit: 08937c6e054064ef7971ad56cb72a5a66a2438ca
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 4faeba31e26f8d0e280b00358f45e2e300e96310
+    git.commit: 3f098ea7cbb4b4fe8a3da151047d527ddfc68d0e
