@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 91b1a5de954b2d7de11fec79d7e6ed4239eafc8c
+    git.commit: ce41effbd5e31bf8d5a21ac68f5291f5f8b86c0d
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: f45c234159f4fce149b86f9175256fe44a3ef278
+    git.commit: 4be49bee3b0b6ab3c58a13671ba9815caf5d26a1
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -50,7 +50,7 @@ map:
     src: config
     dest: odh-model-controller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 3cda091976d08d199bc9ffdbaab4ca7da271e077
+    git.commit: 00c7152ee4dce85a5b4aef5a550af30e1f0ba13f
   odh-model-registry-operator:
     src: config
     dest: model-registry-operator
@@ -60,7 +60,7 @@ map:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: e3cc1556f2da58c2c39958bde020d8566930dae0
+    git.commit: 06a338d0789fa1ac5155780ed5a9f88bf0e26768
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: dfda400d3a8151654e1235a954a308d97b114dbe
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 52f9edecb8b1095fa8fc696c8163fa3540c50a71
+    git.commit: 93ae27b37e6a93f951c956683aecb9e3d1755b19
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 572e91c051dc45280f50f3683b5ea81ede893080
