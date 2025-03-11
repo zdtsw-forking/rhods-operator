@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: dfbf23c2271f7f4a0a1b131a49763733976fffea
+    git.commit: db14f69e505fabc1e834e9bbae1ff5d8f90221be
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -60,7 +60,7 @@ map:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 06a338d0789fa1ac5155780ed5a9f88bf0e26768
+    git.commit: 19a8aa928d2b6388b44eebad9c5c4d3225dfbbb6
   odh-dashboard:
     src: manifests
     dest: dashboard
