@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: db14f69e505fabc1e834e9bbae1ff5d8f90221be
+    git.commit: f633f5e88ac15824b44ca82d2dd6992dd8ef8dc9
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 3b62d1cda8e91c58f3b75615fd4e17235a287f11
+    git.commit: bb6504514f1570d71f78e871e3595425320b7ba2
   odh-trustyai-service-operator:
     src: config
     dest: trustyai-service-operator
@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 5539298217b661809bbd17fdd14a7ac76dabc7e3
+    git.commit: 27adc2b1ef16fa73e45a685446843a9884939be9
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -86,7 +86,7 @@ additional_meta:
     git.commit: f0fde94cd423476f4f3aea959e2f6492b8a3e9e5
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 9cc6f1d8522aa4d18e34a08f11bd3b01050bd780
+    git.commit: 995246f2e70ac53dd6dccda75df3aafcdb4585a9
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 787f6d131ce472daada61fc60c3d0486a834fadc
