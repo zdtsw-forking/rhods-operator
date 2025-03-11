@@ -20,7 +20,7 @@ map:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 742976e0e082bd2b513d56f0bca86100c2299bb2
+    git.commit: 522d2c864eb843a66dc85843ddb5bd6f8dfc6efe
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
