@@ -16,11 +16,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:fc06ed135cba84b1ed3e802eee754aa8391f3a4dee3398c5bc3c8a7494c41b28"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:714cbd83508d45c465ce867b579278c4338f3df9deb2f067e268b8f9d33f9b52"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:dafdae3878678e285cb0e65b025cb30d7f48e8160f76db122ba15633997a17c8"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:2fc3e2e7885dfb7c5754d4f13a38b99da3aeccf2943238014ca5bdbcaa78b616"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:06a5f0718cf75096e2f9eddbb56225a069b7161bfcb0e5fabdfc1365742eb5ce"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:d1357a24111ceef5bd2125de0f048e92207ea9dd9d4ce255f8a64744f8da1127"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:75b1c067d85511f0a7c3bea53f034a3ed8194a1bffc000cbfbb204d72a08aabe"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
@@ -40,7 +40,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:c9c70873ab423cde78eee1f3db1cc3a6722847229e8c6f5b3019e7c662b10723"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:6bf454fe1bc0ffdcad5fbdcfb506f8b398defb920b5d1c8b8e91d92a4ae69c43"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:554e23ae939e18c951fef3eb5e8656e381bc03d4e014f62f94eae16e3bef0a8e"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:e97ea09880e6843c7471e01c1daed58c32343cec23504753504307cdde7e4d97"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
