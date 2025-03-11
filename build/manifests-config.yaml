@@ -55,7 +55,7 @@ map:
     src: config
     dest: model-registry-operator
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: af3d1b4a22750ccecbd1dc643f16d0109d01212f
+    git.commit: 76c674a68be0d8653849bc4b0b2a560f7f01d721
   odh-modelmesh-serving-controller:
     src: config
     dest: model-mesh
@@ -104,7 +104,7 @@ additional_meta:
     git.commit: a9123167453ea870478716058fa97707b63a1628
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 988114facc5757b151f115274c47d122438b51e4
+    git.commit: e115ac84d29842ca4d188bbc56662c688e0102fb
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 988114facc5757b151f115274c47d122438b51e4
