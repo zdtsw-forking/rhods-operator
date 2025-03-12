@@ -8,7 +8,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:8d070f3e9d2f5bfe4889218796f064a57437b35bca4df80b330ab5113bf90cb2"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:f171122156d939b149deb3372e4a1afbc55a6cb902b827c87dc620a3d863931f"
+  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:5a7947a3ac78b26695d6c64ebc54085a7119eafbb4e3cac30531ee7246bf6c71"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:fab425e72b5d3bda7c930e25dc0cd6658ca7b9bb55d182ff8b3ce4bb43e62266"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
@@ -30,19 +30,19 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:99f728bd8b778affb7725dd4dd5246cda8400615a945dc432ea3411fe96ea6ab"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:1ed1fa1f7afd12d1fb1fee4c502d4b2106d027f731de5009e138889330f9e9ab"
+  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:feee81dacaf22e4c7c78dd288f7a143452eecc050d299eb6e81243f3b04942ad"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:42dddc1e62474dc0765a081138bcdcad73c2811a6363107d8f4df0c7d8a08456"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:f7de890400b2c5f0574aeafb03da7964c9f8c857d7d97b84dd3549d91fda372e"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:a12f85108f7d9923604af69bc89c02e250b82272ef4f0f2eabe6b26c86bbc68f"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:df088f919fccd69534497e405057b56bf79f9b19dfc66a3f5c8f26ca6436a11a"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:4aaa9a736cf9e86377d8bb5affe4cee91c48848115ccecec46d814e504395275"
+  value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:0470bbdb5ad87a54d335811d217f26b59ee7464ee5b144d9e813ef8ddfa7ac96"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8@sha256:554e23ae939e18c951fef3eb5e8656e381bc03d4e014f62f94eae16e3bef0a8e"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:ee31919fced13222f22d351a88ca643a4358c90da0cd131d5e729a1f3fba87de"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8@sha256:a68d52aed348996d9d27a77fbba7f236e806332cc8f7cc374cbf0b7e8fe69daa"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel8@sha256:0c4905ccc2e277729ad4f9699a98e5f033278f593a8f2e2b231a06285148515c"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
