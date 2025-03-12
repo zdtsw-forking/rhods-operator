@@ -6,13 +6,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:168aeff9d9e7dec093da7d9b3974af571a085c89d3768510e10d21e45cabd242"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:7c023d986a7e32d690014ef6bb751c6eeb173bc756ae40e2aecc7891d9fc704b"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:5bf438196ed0d850ad749f7581281daedddee895acf56746b01d35a5bb1764f9"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:d7b0ca37324e6c55fd55763d2aa2aa29656e88ea6e3b563ab7d96809a550b120"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:21191acb0bb129841f83d7862ad933f0a3b2f191a949f274903a7aa7e07b52ae"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:1d037f72d3969ad9f83ad23a5961b67893ca31a52a7faa4733106a4f242848ea"
+  value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:46efb699c9b2431d887408b1c45c49b888670e625054220d76dc17ad2f4270a4"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:b93e5e8e4d85ec2366d05e7cf4e250c6ef1eff3c3551d60ecdc4da825cb540b0"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
