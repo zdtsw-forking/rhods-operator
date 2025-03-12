@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 2758520e4fd95586cf69b6778117cf30a81cc258
+    git.commit: ec4a35344b20369e3483392832354ab29cb7f01a
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 2758520e4fd95586cf69b6778117cf30a81cc258
+    git.commit: ec4a35344b20369e3483392832354ab29cb7f01a
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -45,12 +45,12 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 0c3ffd2445b34812b51769bbdc2eea17498eb46d
+    git.commit: a753f44874a48f81b96630a049c91204c9d0ba9e
   odh-model-controller:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 9efe9082b20826b035d59c4383501b257d4e8c46
+    git.commit: 38f9e01830042c8f1cb17e711a380d980d63e2f0
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -65,7 +65,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: fec4ffb888f436d0e5ff237c17bf699d549358b5
+    git.commit: c3c4fc7b6423bae7f4a5d248761de954ca00444e
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -86,7 +86,7 @@ additional_meta:
     git.commit: e4fcd7d153c7ed3727a0a157949885c1a95f2b4d
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 6c60bbe4af71f2ace7891ffcda74179833914b92
+    git.commit: 2b5130e24a5aaafa85eaaa945723842bf6c2b490
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: ef47318cde37fdaa8217a813a2b5c1c2d9beaf39
