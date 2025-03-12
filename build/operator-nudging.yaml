@@ -8,7 +8,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:8d070f3e9d2f5bfe4889218796f064a57437b35bca4df80b330ab5113bf90cb2"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:f171122156d939b149deb3372e4a1afbc55a6cb902b827c87dc620a3d863931f"
+  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:5a7947a3ac78b26695d6c64ebc54085a7119eafbb4e3cac30531ee7246bf6c71"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:81d7ad9cd736cd7ed07cf1af2d2a0ab508808f500bbe0170883d5719c0cbc9bb"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
