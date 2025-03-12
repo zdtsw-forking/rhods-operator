@@ -1,12 +1,12 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:1b277d983dbe3da2389a254942ca6c15fe75f855cb00dfbe9a52c623499f80fb"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:39b4140c6c27377e8a77d7b9ea72a9b74d9954e32332ef2a7e738de614eb05cc"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:e6e758b595f5adc44852d80775043adcab87ff3e7980c4300a7cece2d1305da7"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:f0876f9927ec9e043588f67ed816be4776e17eb5189406f1ca3b8087d0ecd271"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:8d070f3e9d2f5bfe4889218796f064a57437b35bca4df80b330ab5113bf90cb2"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:6987cf58666a458fcf016c0dfbc40ecc2e5d8203912d80b114fd791a08714db9"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:80703f4a7c23b29060ec16ad5d8d5ac07c78d617e1d748eb95ab1c6603c79b57"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
@@ -48,7 +48,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel8@sha256:80a2cafb1898e5de6de47d32811763237832e208994a493ffcf5e79a2807bc71"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:5d8498b06e45d4edfc3e6a09c07f86239143d0679276462a80a6f17c4b18fd2f"
+  value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:61cc17356d2cc81d1c0205fe107ef90f1519e09e23452c03d1de61a0730a7a29"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:8824875a8ac7a54c0bb11c80548f9958d13a0fd931cdac7cefbf8edbdc22be97"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
