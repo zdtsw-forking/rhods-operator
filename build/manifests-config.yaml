@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: f51cc2e2d2675ce0076bbab9b5a0418b049552d0
+    git.commit: ed0a23eb6300c4afca3273bf2a04620545b1abe5
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -80,7 +80,7 @@ additional_meta:
     git.commit: 373fc48aea04c007f8ade5b36b89b50dce498381
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 5c001471258db35d2b6268c5cd37195b619f085f
+    git.commit: fbfd1624d7051bb2b42c19ca71832ac888c2788d
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 65515abf78b679ac701fbe22250a0572b150e7d4
