@@ -60,7 +60,7 @@ map:
     src: config
     dest: model-mesh
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 28e921c14647aa30a447a681a5621b58573f443a
+    git.commit: 41de88966aeee5fee2afd936b7842660d89edd65
   odh-dashboard:
     src: manifests
     dest: dashboard
