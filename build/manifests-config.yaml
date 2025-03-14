@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: fe4476fbaa995762a786ace4df4cd9724a49d471
+    git.commit: b6663021bc3b2c62d39505b84b5ac3587ed27465
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: fdd4495c39078fac3e1b82db3fa5b227168d1075
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: bb8c07c4bcc015c22882570fdfedd04350e43cac
+    git.commit: 05d5c2c51a955cf9449d2a4cbf468d337d2b2af9
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 05d5c2c51a955cf9449d2a4cbf468d337d2b2af9
@@ -107,7 +107,7 @@ additional_meta:
     git.commit: 8e07e0e33e0b9b9d2ab2da02e6dc5860e14517ef
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 788b510542b54acfbe8f56dcf6546f4a7ea903da
+    git.commit: 8e07e0e33e0b9b9d2ab2da02e6dc5860e14517ef
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 70d5eaf6968628a211162280d5de36f87ddf734b
