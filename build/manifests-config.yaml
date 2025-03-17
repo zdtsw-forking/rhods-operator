@@ -76,7 +76,7 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: 8d8bcac8df1e1629c2589ccee4d87afd0d99079f
   odh-modelmesh:
-    git.url: https://github.com/red-hat-data-services/modelmesh
+    git.url: https://github.com/red-hat-data-services/modelmesh.git
     git.commit: 7a2929da388c9efffbbd33b40791be79be1a3ef7
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
@@ -109,5 +109,5 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 3101721b08f8eb30f2471ebe46a2e93922dbe339
   odh-model-registry:
-    git.url: https://github.com/red-hat-data-services/model-registry
+    git.url: https://github.com/red-hat-data-services/model-registry.git
     git.commit: 8f6575a69a8f191c8ac66946eaa481d24b572e20
