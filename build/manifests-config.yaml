@@ -55,7 +55,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 0d2c6b5e186711a2854a18f76bd1888631761763
+    git.commit: 56adda576e81ee8664402d93b379aa2a972369e0
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -110,7 +110,7 @@ additional_meta:
     git.commit: 8e07e0e33e0b9b9d2ab2da02e6dc5860e14517ef
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 70d5eaf6968628a211162280d5de36f87ddf734b
+    git.commit: 78ea07e42d17d1219cdf77b5a094e2adfa21182f
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 1e6fba807b81fbb2a0330f8718b655269a14d3ad
