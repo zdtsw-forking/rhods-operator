@@ -97,7 +97,6 @@ require (
 )
 
 replace (
-	github.com/golang/glog => github.com/golang/glog v1.2.4
 	k8s.io/api => k8s.io/api v0.28.4
 	k8s.io/client-go => k8s.io/client-go v0.28.4
 
