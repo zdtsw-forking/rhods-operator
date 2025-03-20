@@ -1,0 +1,38 @@
+---
+namePrefix: trustyai-service-operator-
+
+resources:
+  - ../crd
+  - ../rbac
+  - ../manager
+
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: trustyai
+    includeSelectors: true
+    includeTemplates: true
+
+configMapGenerator:
+  - env: params.env
+    name: config
+
+configurations:
+  - params.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replacements:
+  # Operator image replacement
+  - source:
+      kind: ConfigMap
+      name: config
+      version: v1
+      fieldPath: data.trustyaiOperatorImage
+    targets:
+      - select:
+          group: apps
+          kind: Deployment
+          name: trustyai-service-operator-controller-manager
+        fieldPaths:
+          - spec.template.spec.containers.0.image
