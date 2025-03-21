@@ -50,7 +50,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: beed0a16162f780ad583361c0878cab4799cae52
+    git.commit: 528c6c0d77c6a48622035b851e6b3c10d19ca9b6
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -64,8 +64,8 @@ map:
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
-    git.commit: 782345403574f67c7731d370412a340745b35e96
+    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.commit: ae6d94537a693e0d61cbe7d59a1b327c584d2243
   odh-training-operator:
     src: manifests
     dest: trainingoperator
