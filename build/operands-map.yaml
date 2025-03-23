@@ -1,10 +1,10 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:b9f20289381c4ac1c7b3e3e6acaa81a2eaab66df2642473c874b9db0a2bce1b4"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel8@sha256:0c2f3e39f209c8af16d24add266b7c981f891e439fbd91b8af3b9d6a699ee8e8"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:f3203e089ccae6d6b6d16fbb5f0ec10b86e91cf08df22da28569fb0265968189"
+  value: "quay.io/rhoai/odh-dashboard-rhel8@sha256:1f5d104b9b3cdc91524026789967168bbb3ee1e7efbead50ae267542df59d358"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:3105269dff40e73d319c555b1c07a0b6d1210e73d3ff7a724f6fb150ef738f46"
+  value: "quay.io/rhoai/odh-notebook-controller-rhel8@sha256:857a1032a438b8ec9e16c3ec4178d48f63ad16d0692a82bd71fcb95f57547253"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:d454f1b873292f172af3fc13d65c0537b1eecf91c3d7113ed0061e86f46137c6"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
@@ -20,9 +20,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:d74ff9392d40ba4ecb20187c2aa66d88b945a4d7a8f6256462a9ef2a12c63615"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:d785c4d061d2f4e464bc3e0f65956cc938e130a617b2004e03247b9c24ae9c85"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel8@sha256:5dc1e3b298f8a1275b9fe790a8a323a85ab5ad7529f70320e16bbb5caee8b923"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:ad8ae0602b49f7aa2e358d2e1c6eba4f145e292610649177fcc91f615efecd4d"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:fb0b72008648731b733c958ab7a6148df43876358a361e78ef6a4f4be88443d7"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:4fc80f4bb2847d2c45d2af095cc5d1b8e41f0bd957764ca16276f773feb789ca"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
@@ -30,13 +30,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel8@sha256:921d0c61e9b96ae914e68cf1d0fd96f8cdecfd5f0e8dd1972aaf04dd6bc3024e"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:45f4dc3a0b9902774e1d3d0303f1be92277a721d01ade806c0a409c77e160b90"
+  value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel8@sha256:d083035e8505a7da8746cea48bfef5a593f950800ea42a9f48b97cc6a829cfbd"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:603cbadcf0120d856931200c6068d47896b48cdceea63f3dfe19c9c2dd180b45"
+  value: "quay.io/rhoai/odh-ml-pipelines-persistenceagent-v2-rhel8@sha256:f3fb3532cf203f1d34606673950fc7fcd54357fd0beb78d982b9468ba9e31eeb"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_SCHEDULEDWORKFLOW_V2_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:d7c9c525855b27e3795278a6110bbc9c22127665740c9c98f7608c30835e6661"
+  value: "quay.io/rhoai/odh-ml-pipelines-scheduledworkflow-v2-rhel8@sha256:9f90ad4ec23690f62f03b5f71cee9837d00edf1682094233e811fbb78ca95315"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:b9e15bb1677820e89086d5937903174258cdf73a2f4bfc670d9e05196e9a875d"
+  value: "quay.io/rhoai/odh-ml-pipelines-driver-rhel8@sha256:9387562fcb30ef962792c32e887928acac2adf7bd6a3d599ab7784d50c1d63b0"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel8@sha256:8f6803c40fadf61e3f0625177599ae7055d79ca31d3c040cb9e4aa3522f7246a"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
