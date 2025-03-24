@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: a2590a8eef7af669baac52679380b34d949c448a
+    git.commit: 0386fc76ed86d7171d0e30986dd959c339c1f7be
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -89,25 +89,25 @@ additional_meta:
     git.commit: 107ff8444028efc5ac3d6bbca83808dfa9241da5
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8846956829c8b5996abec83380378152e4f152de
+    git.commit: fb26540d963a386e53a40e65a748de50de572b3b
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8846956829c8b5996abec83380378152e4f152de
+    git.commit: fb26540d963a386e53a40e65a748de50de572b3b
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8846956829c8b5996abec83380378152e4f152de
+    git.commit: fb26540d963a386e53a40e65a748de50de572b3b
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8846956829c8b5996abec83380378152e4f152de
+    git.commit: fb26540d963a386e53a40e65a748de50de572b3b
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 8846956829c8b5996abec83380378152e4f152de
+    git.commit: fb26540d963a386e53a40e65a748de50de572b3b
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 293f4908fb2c2707fec53723ad6e436b8021fd45
+    git.commit: fd661aaa9a1b65ec8a3b39afa1678591f549878e
   odh-data-science-pipelines-argo-workflowcontroller:
     git.url: https://github.com/red-hat-data-services/argo-workflows
-    git.commit: 293f4908fb2c2707fec53723ad6e436b8021fd45
+    git.commit: fd661aaa9a1b65ec8a3b39afa1678591f549878e
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: b827d117cd171d96edef41b356ec032eb0e27367
