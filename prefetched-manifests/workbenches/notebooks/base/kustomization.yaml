@@ -14,12 +14,6 @@ resources:
   - jupyter-rocm-minimal-notebook-imagestream.yaml
   - jupyter-rocm-pytorch-notebook-imagestream.yaml
   - jupyter-rocm-tensorflow-notebook-imagestream.yaml
-  - runtime-datascience-imagestream.yaml
-  - runtime-minimal-imagestream.yaml
-  - runtime-pytorch-imagestream.yaml
-  - runtime-rocm-pytorch-imagestream.yaml
-  - runtime-rocm-tensorflow-imagestream.yaml
-  - runtime-tensorflow-imagestream.yaml
 
 commonLabels:
   opendatahub.io/component: "true"
@@ -68,6 +62,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-minimal-notebook-image-n-4
+  - name: odh-minimal-notebook-image-n-5
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-minimal-notebook-image-n-5
   - name: odh-minimal-gpu-notebook-image-n
     objref:
       kind: ConfigMap
@@ -103,6 +104,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-minimal-gpu-notebook-image-n-4
+  - name: odh-minimal-gpu-notebook-image-n-5
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-minimal-gpu-notebook-image-n-5
   - name: odh-pytorch-gpu-notebook-image-n
     objref:
       kind: ConfigMap
@@ -138,6 +146,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-pytorch-gpu-notebook-image-n-4
+  - name: odh-pytorch-gpu-notebook-image-n-5
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-pytorch-gpu-notebook-image-n-5
   - name: odh-generic-data-science-notebook-image-n
     objref:
       kind: ConfigMap
@@ -173,6 +188,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-generic-data-science-notebook-image-n-4
+  - name: odh-generic-data-science-notebook-image-n-5
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-generic-data-science-notebook-image-n-5
   - name: odh-tensorflow-gpu-notebook-image-n
     objref:
       kind: ConfigMap
@@ -208,6 +230,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-tensorflow-gpu-notebook-image-n-4
+  - name: odh-tensorflow-gpu-notebook-image-n-5
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-tensorflow-gpu-notebook-image-n-5
   - name: odh-trustyai-notebook-image-n
     objref:
       kind: ConfigMap
@@ -236,6 +265,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-trustyai-notebook-image-n-3
+  - name: odh-trustyai-notebook-image-n-4
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-trustyai-notebook-image-n-4
   - name: odh-codeserver-notebook-image-n
     objref:
       kind: ConfigMap
@@ -257,6 +293,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-codeserver-notebook-image-n-2
+  - name: odh-codeserver-notebook-image-n-3
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-codeserver-notebook-image-n-3
   - name: odh-rocm-minimal-notebook-image-n
     objref:
       kind: ConfigMap
@@ -264,6 +307,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-rocm-minimal-notebook-image-n
+  - name: odh-rocm-minimal-notebook-image-n-1
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-rocm-minimal-notebook-image-n-1
   - name: odh-rocm-pytorch-notebook-image-n
     objref:
       kind: ConfigMap
@@ -271,6 +321,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-rocm-pytorch-notebook-image-n
+  - name: odh-rocm-pytorch-notebook-image-n-1
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-rocm-pytorch-notebook-image-n-1
   - name: odh-rocm-tensorflow-notebook-image-n
     objref:
       kind: ConfigMap
@@ -278,6 +335,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-rocm-tensorflow-notebook-image-n
+  - name: odh-rocm-tensorflow-notebook-image-n-1
+    objref:
+      kind: ConfigMap
+      name: notebooks-parameters
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-rocm-tensorflow-notebook-image-n-1
   - name: odh-minimal-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -313,6 +377,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-minimal-notebook-image-commit-n-4
+  - name: odh-minimal-notebook-image-commit-n-5
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-minimal-notebook-image-commit-n-5
   - name: odh-minimal-gpu-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -348,6 +419,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-minimal-gpu-notebook-image-commit-n-4
+  - name: odh-minimal-gpu-notebook-image-commit-n-5
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-minimal-gpu-notebook-image-commit-n-5
   - name: odh-pytorch-gpu-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -383,6 +461,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-pytorch-gpu-notebook-image-commit-n-4
+  - name: odh-pytorch-gpu-notebook-image-commit-n-5
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-pytorch-gpu-notebook-image-commit-n-5
   - name: odh-generic-data-science-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -418,6 +503,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-generic-data-science-notebook-image-commit-n-4
+  - name: odh-generic-data-science-notebook-image-commit-n-5
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-generic-data-science-notebook-image-commit-n-5
   - name: odh-tensorflow-gpu-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -453,6 +545,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-tensorflow-gpu-notebook-image-commit-n-4
+  - name: odh-tensorflow-gpu-notebook-image-commit-n-5
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-tensorflow-gpu-notebook-image-commit-n-5
   - name: odh-trustyai-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -481,6 +580,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-trustyai-notebook-image-commit-n-3
+  - name: odh-trustyai-notebook-image-commit-n-4
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-trustyai-notebook-image-commit-n-4
   - name: odh-codeserver-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -502,6 +608,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-codeserver-notebook-image-commit-n-2
+  - name: odh-codeserver-notebook-image-commit-n-3
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-codeserver-notebook-image-commit-n-3
   - name: odh-rocm-minimal-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -509,6 +622,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-rocm-minimal-notebook-image-commit-n
+  - name: odh-rocm-minimal-notebook-image-commit-n-1
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-rocm-minimal-notebook-image-commit-n-1
   - name: odh-rocm-pytorch-notebook-image-commit-n
     objref:
       kind: ConfigMap
@@ -516,6 +636,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.odh-rocm-pytorch-notebook-image-commit-n
+  - name: odh-rocm-pytorch-notebook-image-commit-n-1
+    objref:
+      kind: ConfigMap
+      name: notebook
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.odh-rocm-pytorch-notebook-image-commit-n-1
   - name: odh-rocm-tensorflow-notebook-image-commit-n
     objref:
       kind: ConfigMap
