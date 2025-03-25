@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 96f7e540a7c8a292ec2f735e47b01f26e28b2e7e
+    git.commit: 414423de1da0a0bc5a4be50154f97f35723321d9
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -49,8 +49,8 @@ map:
   odh-model-controller:
     src: config
     dest: modelcontroller
-    git.url: https://github.com/red-hat-data-services/odh-model-controller.git
-    git.commit: 80efabb217cdb15b1fd56940cb0dff280203c9fa
+    git.url: https://github.com/red-hat-data-services/odh-model-controller
+    git.commit: 38d6e117e4e971c12dfa2c25ae21d87551ed4eab
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: f394484d18e4a730f7439fb881f63fab3d94133f
+    git.commit: 142f3591f47dda4eec5005db5f07c3c67a8ee96b
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -113,4 +113,4 @@ additional_meta:
     git.commit: 3dcc5988ca3f344d6f74047b3e6ed8aaf006f345
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: ef5879f6016b7edbd5f2c3972b702a706eec5e19
+    git.commit: 0b4c70016267ca334880919ec33aebfa2293e898
