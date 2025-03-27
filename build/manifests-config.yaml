@@ -64,8 +64,8 @@ map:
   odh-dashboard:
     src: manifests
     dest: dashboard
-    git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: ebb39697692877f495b671e38991449867fafcca
+    git.url: https://github.com/red-hat-data-services/odh-dashboard.git
+    git.commit: 410efe0c4f9dc1228c1e89cb7c09981a216ec48b
   odh-training-operator:
     src: manifests
     dest: trainingoperator
