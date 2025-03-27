@@ -11,6 +11,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	k8serr "k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
@@ -277,7 +278,11 @@ func cleanUpTemplatedResources(ctx context.Context, rr *odhtypes.ReconciliationR
 				err := rr.Client.Delete(ctx, &res, client.PropagationPolicy(metav1.DeletePropagationForeground))
 				if k8serr.IsNotFound(err) {
 					continue
-				} else if err != nil {
+				}
+				if errors.Is(err, &meta.NoKindMatchError{}) { // when CRD is missing,
+					continue
+				}
+				if err != nil {
 					return odherrors.NewStopErrorW(err)
 				}
 				logger.Info("Deleted", "kind", res.GetKind(), "name", res.GetName(), "namespace", res.GetNamespace())
