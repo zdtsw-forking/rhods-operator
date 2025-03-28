@@ -16,6 +16,8 @@ metadata:
   name: odh-operator-v2-19-on-schedule
   namespace: rhoai-tenant
 spec:
+  timeouts:
+    pipeline: 4h
   params:
   - name: git-url
     value: '{{source_url}}'
