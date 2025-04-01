@@ -8,9 +8,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel8@sha256:252fe6c7b2cd5cb6ce2f4abf2c6a9b8e3d79bf2f679723e87928e6b346ffc9c5"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:935d1ba409f53424748cd890c90261b59b32ed9bbe1fedee3a5f94faa890a0af"
+  value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:3176c5929ade7e2ed8bdb27dd6ae00098b0340bad0a48333f93150cc02e8d03d"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:edfa9753c6add8f9cfb9a36e3ae6eaa72b4c8513e8015c3defe3a8b9e11c1ee4"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:0d5b1633773f03a14f171f7861a894d3093a74ba9fed469c960a354dbb09e29f"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:5452ef54697e9083ac316927d2c723813c4d08d85bfb45c61d7fad2bd38c3d38"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
@@ -50,8 +50,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel8@sha256:1dee430051a576a5a244f17c417348e593e1d4dfa239893feb0b2da74372def9"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:e26cbeac1425c1a8b5acb2bbd31625950ef4821e9466700eda5763974caf7505"
+  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:0c4cac4e2e6d7aa2cc8f1e2fce7716c56dc75a5e21df665a3863e91ebe65307c"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:e26cbeac1425c1a8b5acb2bbd31625950ef4821e9466700eda5763974caf7505"
+  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel8@sha256:0c4cac4e2e6d7aa2cc8f1e2fce7716c56dc75a5e21df665a3863e91ebe65307c"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel8-operator@sha256:dd88d70a16fa07c6ae23e147bf7a443d4896c2a4730e633a6fe32666ce239f52
