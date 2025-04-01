@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 097932748ab6bad99dd2cc42804bd6a5f06db90d
+    git.commit: 2a3dc84364bd14503482cdbf1be90484b39e2c42
   odh-model-controller:
     src: config
     dest: modelcontroller
