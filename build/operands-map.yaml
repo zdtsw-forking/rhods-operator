@@ -10,13 +10,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel8@sha256:f3d8cc96fd3415efed5b5d69b7db622adc32cd9bd74ff14634d02218f1572815"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:10832162865931d15fe72accd058038ecf088b14e4190ce0cfcdbec679acc364"
+  value: "quay.io/rhoai/odh-model-controller-rhel8@sha256:8508cc2fe1ac73bc66126fc0ec52999bbc3a7262fec48c18eb27ef5e86c012be"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel8@sha256:c82aa61517257ea67c7024f2992e5b8230817e3580ee17624aa36b4c66ee49a7"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-rhel8@sha256:43d98c254ad76c2eefc48a56e84e4083281c72e8b9ae38e49dfb6d5751bdb895"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:4d660bbe98d123f43f028a7f1dda9e49033b654ca5191cc00109db87b2e56a47"
+  value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel8@sha256:47b55040cf1f17c3876e54724782368a84d4bfe903174b39f1dd87a225d58f53"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel8@sha256:bb66fb890b298de7c68276ab8d92a0a6eaea87692e2d251b48e3b42360c756d9"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
@@ -24,7 +24,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel8@sha256:d69e7d5468780d0508bad131c51f6c39dd34dabdba01870e25f23845e77fc182"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:e523efcb932e840c35debfe47c7e66d8712d1c94efff6cb3c098aa6a18a38c45"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel8@sha256:86e42e7959db56dd8372bffba3e8ed0f9d3cbb05e4a03f393fef153191041a30"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel8@sha256:12905608f49a7ff0705a95dda99e2f79a4d8fbc1570167e4dd754ae708210b7e"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
