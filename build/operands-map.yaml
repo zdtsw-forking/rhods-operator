@@ -54,8 +54,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-feast-operator-rhel8@sha256:73b9b0fb69e1064cec04b0b73d0c33ab9194a75432cd53bd88babb74f1b399e3"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel8@sha256:cb5272f4a9cfdc1f2b49c5c266deabb9f6b564faf5a06a6b27d4d4d5b375f1e5"
+  value: "quay.io/rhoai/odh-feature-server-rhel8@sha256:e9ba3ea5bbe04574d5ff2cd3a99ddef7024a04ca934bce5fe3c394e5c0360342"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel8@sha256:cb5272f4a9cfdc1f2b49c5c266deabb9f6b564faf5a06a6b27d4d4d5b375f1e5"
+  value: "quay.io/rhoai/odh-feature-server-rhel8@sha256:e9ba3ea5bbe04574d5ff2cd3a99ddef7024a04ca934bce5fe3c394e5c0360342"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel8-operator@sha256:38c8197e78f9575ec78d804897ec3b646dc0007962609c96bbc325285a89e914
