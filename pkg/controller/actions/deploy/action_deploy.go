@@ -16,7 +16,6 @@ import (
 
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster/gvk"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/actions"
-	odhClient "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/client"
 	odhTypes "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/types"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/metadata/annotations"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/metadata/labels"
@@ -28,8 +27,6 @@ type Mode string
 const (
 	ModePatch Mode = "patch"
 	ModeSSA   Mode = "ssa"
-
-	PlatformFieldOwner = "platform.opendatahub.io"
 )
 
 // Action deploys the resources that are included in the ReconciliationRequest using
@@ -199,7 +196,7 @@ func (a *Action) deployCRD(
 		client.ForceOwnership,
 		// Since CRDs are not bound to a component, set the field
 		// owner to the platform itself
-		client.FieldOwner(PlatformFieldOwner),
+		client.FieldOwner(resources.PlatformFieldOwner),
 	}
 
 	switch a.deployMode {
@@ -284,7 +281,7 @@ func (a *Action) deploy(
 		}
 
 	default:
-		owned := rr.Manager.Owns(obj.GroupVersionKind())
+		owned := rr.Controller.Owns(obj.GroupVersionKind())
 		if owned {
 			if err := ctrl.SetControllerReference(rr.Instance, &obj, rr.Client.Scheme()); err != nil {
 				return false, err
@@ -322,7 +319,7 @@ func (a *Action) deploy(
 
 func (a *Action) create(
 	ctx context.Context,
-	c *odhClient.Client,
+	cli client.Client,
 	obj *unstructured.Unstructured,
 ) (*unstructured.Unstructured, error) {
 	logf.FromContext(ctx).V(3).Info("create",
@@ -330,7 +327,7 @@ func (a *Action) create(
 		"name", client.ObjectKeyFromObject(obj),
 	)
 
-	err := c.Create(ctx, obj)
+	err := cli.Create(ctx, obj)
 	if err != nil {
 		return obj, err
 	}
@@ -340,7 +337,7 @@ func (a *Action) create(
 
 func (a *Action) patch(
 	ctx context.Context,
-	c *odhClient.Client,
+	cli client.Client,
 	obj *unstructured.Unstructured,
 	old *unstructured.Unstructured,
 	opts ...client.PatchOption,
@@ -375,7 +372,7 @@ func (a *Action) patch(
 	}
 
 	if old == nil {
-		err := c.Create(ctx, obj)
+		err := cli.Create(ctx, obj)
 		if err != nil {
 			return nil, fmt.Errorf("failed to create object %s/%s: %w", obj.GetNamespace(), obj.GetName(), err)
 		}
@@ -385,7 +382,7 @@ func (a *Action) patch(
 			return nil, err
 		}
 
-		err = c.Patch(
+		err = cli.Patch(
 			ctx,
 			old,
 			client.RawPatch(types.ApplyPatchType, data),
@@ -402,7 +399,7 @@ func (a *Action) patch(
 
 func (a *Action) apply(
 	ctx context.Context,
-	c *odhClient.Client,
+	cli client.Client,
 	obj *unstructured.Unstructured,
 	old *unstructured.Unstructured,
 	opts ...client.PatchOption,
@@ -450,7 +447,7 @@ func (a *Action) apply(
 		break
 	}
 
-	err := c.Apply(ctx, obj, opts...)
+	err := resources.Apply(ctx, cli, obj, opts...)
 	if err != nil {
 		return nil, fmt.Errorf("apply failed %s: %w", obj.GroupVersionKind(), err)
 	}

@@ -10,10 +10,9 @@ import (
 	"github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/rest"
-	ctrlcli "sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/client"
 	ctrlcfg "sigs.k8s.io/controller-runtime/pkg/client/config"
 
-	odhcli "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/client"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/utils/test/scheme"
 )
 
@@ -25,14 +24,14 @@ const (
 type testContextOpts struct {
 	ctx       context.Context
 	cfg       *rest.Config
-	client    *odhcli.Client
+	client    client.Client
 	scheme    *runtime.Scheme
 	withTOpts []WithTOpts
 }
 
 type TestContextOpt func(testContext *testContextOpts)
 
-func WithClient(value *odhcli.Client) TestContextOpt {
+func WithClient(value client.Client) TestContextOpt {
 	return func(tc *testContextOpts) {
 		tc.client = value
 	}
@@ -50,7 +49,6 @@ func WithScheme(value *runtime.Scheme) TestContextOpt {
 	}
 }
 
-//nolint:fatcontext
 func WitContext(value context.Context) TestContextOpt {
 	return func(tc *testContextOpts) {
 		tc.ctx = value
@@ -100,17 +98,12 @@ func NewTestContext(opts ...TestContextOpt) (*TestContext, error) {
 			clientCfg = cfg
 		}
 
-		ctrlCli, err := ctrlcli.New(clientCfg, ctrlcli.Options{Scheme: tc.scheme})
+		ctrlCli, err := client.New(clientCfg, client.Options{Scheme: tc.scheme})
 		if err != nil {
 			return nil, fmt.Errorf("failed to initialize custom client: %w", err)
 		}
 
-		odhCli, err := odhcli.NewFromConfig(clientCfg, ctrlCli)
-		if err != nil {
-			return nil, fmt.Errorf("failed to initialize odh client: %w", err)
-		}
-
-		tc.client = odhCli
+		tc.client = ctrlCli
 	}
 
 	return &tc, nil
@@ -118,7 +111,7 @@ func NewTestContext(opts ...TestContextOpt) (*TestContext, error) {
 
 type TestContext struct {
 	ctx    context.Context
-	client *odhcli.Client
+	client client.Client
 	scheme *runtime.Scheme
 
 	withTOpts []WithTOpts
@@ -128,7 +121,7 @@ func (tc *TestContext) Context() context.Context {
 	return tc.ctx
 }
 
-func (tc *TestContext) Client() *odhcli.Client {
+func (tc *TestContext) Client() client.Client {
 	return tc.client
 }
 

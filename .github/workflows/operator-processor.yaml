@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 'rhoai-2.1[6-9]+'
+      - 'rhoai-2.2[0-9]+'  # Trigger the workflow on pushes to any rhoai-2.20 branch and above
     paths:
       - build/operator-nudging.yaml
 
@@ -62,7 +63,7 @@ jobs:
           ln -s $yq_filename yq
           cp $yq_filename /usr/local/bin/yq
   
-          pip install -r utils/utils/operator-processor/requirements.txt
+          pip install --default-timeout=100 -r utils/utils/operator-processor/requirements.txt
 
       - name: Execute Operator Processor
         env:

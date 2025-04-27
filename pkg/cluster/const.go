@@ -1,6 +1,6 @@
 package cluster
 
-import "github.com/opendatahub-io/opendatahub-operator/v2/apis/common"
+import "github.com/opendatahub-io/opendatahub-operator/v2/api/common"
 
 const (
 	// ManagedRhoai defines expected addon catalogsource.
@@ -9,8 +9,6 @@ const (
 	SelfManagedRhoai common.Platform = "OpenShift AI Self-Managed"
 	// OpenDataHub defines display name in csv.
 	OpenDataHub common.Platform = "Open Data Hub"
-	// Unknown indicates that operator is not deployed using OLM.
-	Unknown common.Platform = ""
 
 	// DefaultNotebooksNamespace defines default namespace for notebooks.
 	DefaultNotebooksNamespace = "rhods-notebooks"

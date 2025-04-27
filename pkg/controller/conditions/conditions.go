@@ -11,7 +11,7 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/opendatahub-io/opendatahub-operator/v2/apis/common"
+	"github.com/opendatahub-io/opendatahub-operator/v2/api/common"
 )
 
 type Option func(*common.Condition)
@@ -310,6 +310,14 @@ func (r *Manager) findUnhappyDependent() *common.Condition {
 	}
 
 	return nil
+}
+
+// Reset clears all conditions managed by the Manager.
+//
+// It achieves this by setting an empty slice of common.Condition
+// in the underlying accessor.
+func (r *Manager) Reset() {
+	r.accessor.SetConditions([]common.Condition{})
 }
 
 // Sort arranges the conditions retrieved from the accessor based on the following rules:

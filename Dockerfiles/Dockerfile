@@ -1,5 +1,5 @@
 # Build the manager binary
-ARG GOLANG_VERSION=1.22
+ARG GOLANG_VERSION=1.23
 
 ARG BUILDPLATFORM
 ARG TARGETPLATFORM
@@ -26,6 +26,7 @@ COPY config/osd-configs/ /opt/manifests/osd-configs
 ################################################################################
 FROM --platform=$BUILDPLATFORM registry.access.redhat.com/ubi8/go-toolset:$GOLANG_VERSION as builder
 ARG CGO_ENABLED=1
+ARG TARGETARCH
 USER root
 WORKDIR /workspace
 # Copy the Go Modules manifests
@@ -36,13 +37,13 @@ COPY go.sum go.sum
 RUN go mod download
 
 # Copy the go source
-COPY apis/ apis/
-COPY controllers/ controllers/
-COPY main.go main.go
+COPY api/ api/
+COPY internal/ internal/
+COPY cmd/main.go cmd/main.go
 COPY pkg/ pkg/
 
 # Build
-RUN CGO_ENABLED=${CGO_ENABLED} GOOS=linux GOARCH=${TARGETARCH} go build -a -tags strictfipsruntime -o manager main.go
+RUN CGO_ENABLED=${CGO_ENABLED} GOOS=linux GOARCH=${TARGETARCH} go build -a -tags strictfipsruntime -o manager cmd/main.go
 
 ################################################################################
 FROM --platform=$TARGETPLATFORM registry.access.redhat.com/ubi8/ubi-minimal:latest

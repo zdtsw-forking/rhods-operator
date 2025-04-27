@@ -11,7 +11,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 
-	serviceApi "github.com/opendatahub-io/opendatahub-operator/v2/apis/services/v1alpha1"
+	serviceApi "github.com/opendatahub-io/opendatahub-operator/v2/api/services/v1alpha1"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 
 	. "github.com/onsi/gomega"
@@ -111,11 +111,10 @@ func (tc *AuthControllerTestCtx) validateAuthCRDefaultContent() error {
 			return nil
 		}
 		return fmt.Errorf("expected dedicated-admins, found %v", tc.testAuthInstance.Spec.AdminGroups[0])
-	case cluster.OpenDataHub, cluster.Unknown:
-		if tc.testAuthInstance.Spec.AdminGroups[0] == "odh-admins" {
-			return nil
+	case cluster.OpenDataHub:
+		if tc.testAuthInstance.Spec.AdminGroups[0] != "odh-admins" {
+			return fmt.Errorf("expected odh-admins, found %v", tc.testAuthInstance.Spec.AdminGroups[0])
 		}
-		return fmt.Errorf("expected odh-admins, found %v", tc.testAuthInstance.Spec.AdminGroups[0])
 	}
 
 	if tc.testAuthInstance.Spec.AllowedGroups[0] != "system:authenticated" {

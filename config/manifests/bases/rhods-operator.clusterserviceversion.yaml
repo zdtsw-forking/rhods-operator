@@ -45,6 +45,9 @@ metadata:
             "datasciencepipelines": {
               "managementState": "Managed"
             },
+            "feastoperator": {
+              "managementState": "Removed"
+            },
             "kserve": {
               "managementState": "Managed",
               "serving": {
@@ -119,10 +122,6 @@ spec:
       displayName: Data Science Cluster
       kind: DataScienceCluster
       name: datascienceclusters.datasciencecluster.opendatahub.io
-      specDescriptors:
-      - description: Override and fine tune specific component configurations.
-        displayName: Components
-        path: components
       version: v1
     - description: DataSciencePipelines is the Schema for the datasciencepipelines
         API
@@ -131,40 +130,15 @@ spec:
       name: datasciencepipelines.components.platform.opendatahub.io
       version: v1alpha1
     - description: DSCInitialization is the Schema for the dscinitializations API.
-      displayName: DSC Initialization
+      displayName: DSCInitialization
       kind: DSCInitialization
       name: dscinitializations.dscinitialization.opendatahub.io
-      specDescriptors:
-      - description: Namespace for applications to be installed, non-configurable,
-          default to "redhat-ods-applications"
-        displayName: Applications Namespace
-        path: applicationsNamespace
-      - description: Enable monitoring on specified namespace
-        displayName: Monitoring
-        path: monitoring
-      - description: Configures Service Mesh as networking layer for Data Science
-          Clusters components. The Service Mesh is a mandatory prerequisite for single
-          model serving (KServe) and you should review this configuration if you are
-          planning to use KServe. For other components, it enhances user experience;
-          e.g. it provides unified authentication giving a Single Sign On experience.
-        displayName: Service Mesh
-        path: serviceMesh
-      - description: When set to `Managed`, adds odh-trusted-ca-bundle Configmap to
-          all namespaces that includes cluster-wide Trusted CA Bundle in .data["ca-bundle.crt"].
-          Additionally, this fields allows admins to add custom CA bundles to the
-          configmap using the .CustomCABundle field.
-        displayName: Trusted CABundle
-        path: trustedCABundle
-      - description: Internal development useful field to test customizations. This
-          is not recommended to be used in production environment.
-        displayName: Dev Flags
-        path: devFlags
-      statusDescriptors:
-      - description: Conditions describes the state of the DSCInitializationStatus
-          resource
-        displayName: Conditions
-        path: conditions
       version: v1
+    - description: FeastOperator is the Schema for the FeastOperator API
+      displayName: Feast Operator
+      kind: FeastOperator
+      name: feastoperators.components.platform.opendatahub.io
+      version: v1alpha1
     - description: Kserve is the Schema for the kserves API
       displayName: Kserve
       kind: Kserve
@@ -254,6 +228,8 @@ spec:
   - ML
   - Machine Learning
   - Data Science
+  - Feast
+  - featurestore
   links:
   - name: Red Hat OpenShift AI
     url: https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2.16.0

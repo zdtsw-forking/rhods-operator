@@ -1,7 +1,9 @@
+//nolint:dupl
 package gc_test
 
 import (
 	"context"
+	"maps"
 	"strconv"
 	"strings"
 	"testing"
@@ -11,29 +13,40 @@ import (
 	"github.com/operator-framework/api/pkg/lib/version"
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/rs/xid"
+	"github.com/stretchr/testify/mock"
+	coordinationv1 "k8s.io/api/coordination/v1"
 	corev1 "k8s.io/api/core/v1"
 	rbacv1 "k8s.io/api/rbac/v1"
+	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	k8serr "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	ctrlCli "sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
+	"sigs.k8s.io/controller-runtime/pkg/log"
+	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/opendatahub-io/opendatahub-operator/v2/apis/common"
-	componentApi "github.com/opendatahub-io/opendatahub-operator/v2/apis/components/v1alpha1"
-	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
+	"github.com/opendatahub-io/opendatahub-operator/v2/api/common"
+	componentApi "github.com/opendatahub-io/opendatahub-operator/v2/api/components/v1alpha1"
+	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/dscinitialization/v1"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster/gvk"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/actions/gc"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/types"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/metadata/annotations"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/metadata/labels"
-	gcSvc "github.com/opendatahub-io/opendatahub-operator/v2/pkg/services/gc"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/utils/test/envt"
+	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/utils/test/mocks"
 
 	. "github.com/onsi/gomega"
 )
 
+//nolint:gochecknoinits
+func init() {
+	log.SetLogger(zap.New(zap.UseDevMode(true)))
+}
+
+//nolint:maintidx
 func TestGcAction(t *testing.T) {
 	g := NewWithT(t)
 
@@ -147,16 +160,8 @@ func TestGcAction(t *testing.T) {
 			gc.CyclesTotal.WithLabelValues("dashboard").Add(0)
 
 			g := NewWithT(t)
+			id := xid.New().String()
 			nsn := xid.New().String()
-
-			gci := gcSvc.New(
-				cli,
-				nsn,
-				// This is required as there are no kubernetes controller running
-				// with the envtest, hence we can't use the foreground deletion
-				// policy (default)
-				gcSvc.WithPropagationPolicy(metav1.DeletePropagationBackground),
-			)
 
 			ns := corev1.Namespace{
 				ObjectMeta: metav1.ObjectMeta{
@@ -165,8 +170,6 @@ func TestGcAction(t *testing.T) {
 			}
 
 			g.Expect(cli.Create(ctx, &ns)).
-				NotTo(HaveOccurred())
-			g.Expect(gci.Start(ctx)).
 				NotTo(HaveOccurred())
 
 			rr := types.ReconciliationRequest{
@@ -192,31 +195,105 @@ func TestGcAction(t *testing.T) {
 					},
 				},
 				Generated: tt.generated,
+				Controller: mocks.NewMockController(func(m *mocks.MockController) {
+					m.On("GetClient").Return(envTest.Client())
+					m.On("GetDynamicClient").Return(envTest.DynamicClient())
+					m.On("GetDiscoveryClient").Return(envTest.DiscoveryClient())
+					m.On("Owns", mock.Anything).Return(false)
+				}),
 			}
 
 			g.Expect(cli.Create(ctx, rr.Instance)).
 				NotTo(HaveOccurred())
 
-			defer func() {
+			t.Cleanup(func() {
 				g.Expect(cli.Delete(ctx, rr.Instance)).Should(Or(
 					Not(HaveOccurred()),
 					MatchError(k8serr.IsNotFound, "IsNotFound"),
 				))
-			}()
+			})
+
+			// should never get deleted
+			crd := apiextensionsv1.CustomResourceDefinition{
+				ObjectMeta: metav1.ObjectMeta{
+					Name: "foos." + id + ".opendatahub.io",
+					Labels: map[string]string{
+						labels.PlatformPartOf: labels.Platform,
+					},
+				},
+				Spec: apiextensionsv1.CustomResourceDefinitionSpec{
+					Group: id + ".opendatahub.io",
+					Names: apiextensionsv1.CustomResourceDefinitionNames{
+						Kind:     "Foo",
+						ListKind: "FooList",
+						Plural:   "foos",
+						Singular: "foo",
+					},
+					Scope: apiextensionsv1.NamespaceScoped,
+					Versions: []apiextensionsv1.CustomResourceDefinitionVersion{
+						{
+							Name:    "v1",
+							Served:  true,
+							Storage: true,
+							Schema: &apiextensionsv1.CustomResourceValidation{
+								OpenAPIV3Schema: &apiextensionsv1.JSONSchemaProps{
+									Type: "object",
+								},
+							},
+						},
+					},
+				},
+			}
+
+			t.Cleanup(func() {
+				g.Eventually(func() error {
+					return cli.Delete(ctx, &crd)
+				}).Should(Or(
+					Not(HaveOccurred()),
+					MatchError(k8serr.IsNotFound, "IsNotFound"),
+				))
+			})
+
+			g.Expect(cli.Create(ctx, &crd)).
+				NotTo(HaveOccurred())
+
+			commonAnnotations := map[string]string{
+				annotations.InstanceGeneration: strconv.FormatInt(rr.Instance.GetGeneration(), 10),
+				annotations.InstanceUID:        tt.uidFn(&rr),
+				annotations.PlatformVersion:    "0.1.0",
+				annotations.PlatformType:       string(cluster.OpenDataHub),
+			}
+
+			commonLabels := map[string]string{
+				labels.PlatformPartOf: strings.ToLower(componentApi.DashboardKind),
+			}
+
+			// should never get deleted
+			l := coordinationv1.Lease{
+				ObjectMeta: metav1.ObjectMeta{
+					Name:        id,
+					Namespace:   nsn,
+					Annotations: maps.Clone(commonAnnotations),
+					Labels:      maps.Clone(commonLabels),
+				},
+			}
+
+			t.Cleanup(func() {
+				g.Expect(cli.Delete(ctx, &l)).Should(Or(
+					Not(HaveOccurred()),
+					MatchError(k8serr.IsNotFound, "IsNotFound"),
+				))
+			})
+
+			g.Expect(cli.Create(ctx, &l)).
+				NotTo(HaveOccurred())
 
 			cm := corev1.ConfigMap{
 				ObjectMeta: metav1.ObjectMeta{
-					Name:      "gc-cm",
-					Namespace: nsn,
-					Annotations: map[string]string{
-						annotations.InstanceGeneration: strconv.FormatInt(rr.Instance.GetGeneration(), 10),
-						annotations.InstanceUID:        tt.uidFn(&rr),
-						annotations.PlatformVersion:    "0.1.0",
-						annotations.PlatformType:       string(cluster.OpenDataHub),
-					},
-					Labels: map[string]string{
-						labels.PlatformPartOf: strings.ToLower(componentApi.DashboardKind),
-					},
+					Name:        "gc-cm",
+					Namespace:   nsn,
+					Annotations: maps.Clone(commonAnnotations),
+					Labels:      maps.Clone(commonLabels),
 				},
 			}
 
@@ -227,12 +304,12 @@ func TestGcAction(t *testing.T) {
 				cm.Annotations[k] = v
 			}
 
-			defer func() {
+			t.Cleanup(func() {
 				g.Expect(cli.Delete(ctx, &cm)).Should(Or(
 					Not(HaveOccurred()),
 					MatchError(k8serr.IsNotFound, "IsNotFound"),
 				))
-			}()
+			})
 
 			g.Expect(controllerutil.SetOwnerReference(rr.Instance, &cm, cli.Scheme())).
 				NotTo(HaveOccurred())
@@ -241,13 +318,20 @@ func TestGcAction(t *testing.T) {
 				NotTo(HaveOccurred())
 
 			opts := make([]gc.ActionOpts, 0, len(tt.options)+1)
-			opts = append(opts, gc.WithGC(gci))
+			opts = append(opts, gc.WithDeletePropagationPolicy(metav1.DeletePropagationBackground))
+			opts = append(opts, gc.InNamespace(nsn))
 			opts = append(opts, tt.options...)
 
 			a := gc.NewAction(opts...)
 
 			err = a(ctx, &rr)
 			g.Expect(err).NotTo(HaveOccurred())
+
+			err = cli.Get(ctx, ctrlCli.ObjectKeyFromObject(&l), &coordinationv1.Lease{})
+			g.Expect(err).ToNot(HaveOccurred())
+
+			err = cli.Get(ctx, ctrlCli.ObjectKeyFromObject(&crd), &apiextensionsv1.CustomResourceDefinition{})
+			g.Expect(err).ToNot(HaveOccurred())
 
 			if tt.matcher != nil {
 				err = cli.Get(ctx, ctrlCli.ObjectKeyFromObject(&cm), &corev1.ConfigMap{})
@@ -307,15 +391,6 @@ func TestGcActionOwn(t *testing.T) {
 			g := NewWithT(t)
 			nsn := xid.New().String()
 
-			gci := gcSvc.New(
-				cli,
-				nsn,
-				// This is required as there are no kubernetes controller running
-				// with the envtest, hence we can't use the foreground deletion
-				// policy (default)
-				gcSvc.WithPropagationPolicy(metav1.DeletePropagationBackground),
-			)
-
 			ns := corev1.Namespace{
 				ObjectMeta: metav1.ObjectMeta{
 					Name: nsn,
@@ -323,8 +398,6 @@ func TestGcActionOwn(t *testing.T) {
 			}
 
 			g.Expect(cli.Create(ctx, &ns)).
-				NotTo(HaveOccurred())
-			g.Expect(gci.Start(ctx)).
 				NotTo(HaveOccurred())
 
 			rr := types.ReconciliationRequest{
@@ -350,17 +423,23 @@ func TestGcActionOwn(t *testing.T) {
 					},
 				},
 				Generated: true,
+				Controller: mocks.NewMockController(func(m *mocks.MockController) {
+					m.On("GetClient").Return(envTest.Client())
+					m.On("GetDynamicClient").Return(envTest.DynamicClient())
+					m.On("GetDiscoveryClient").Return(envTest.DiscoveryClient())
+					m.On("Owns", mock.Anything).Return(false)
+				}),
 			}
 
 			g.Expect(cli.Create(ctx, rr.Instance)).
 				NotTo(HaveOccurred())
 
-			defer func() {
+			t.Cleanup(func() {
 				g.Expect(cli.Delete(ctx, rr.Instance)).Should(Or(
 					Not(HaveOccurred()),
 					MatchError(k8serr.IsNotFound, "IsNotFound"),
 				))
-			}()
+			})
 
 			cm := corev1.ConfigMap{
 				ObjectMeta: metav1.ObjectMeta{
@@ -378,12 +457,12 @@ func TestGcActionOwn(t *testing.T) {
 				},
 			}
 
-			defer func() {
+			t.Cleanup(func() {
 				g.Expect(cli.Delete(ctx, &cm)).Should(Or(
 					Not(HaveOccurred()),
 					MatchError(k8serr.IsNotFound, "IsNotFound"),
 				))
-			}()
+			})
 
 			if tt.owned {
 				g.Expect(controllerutil.SetOwnerReference(rr.Instance, &cm, cli.Scheme())).
@@ -394,7 +473,8 @@ func TestGcActionOwn(t *testing.T) {
 				NotTo(HaveOccurred())
 
 			opts := make([]gc.ActionOpts, 0, len(tt.options)+1)
-			opts = append(opts, gc.WithGC(gci))
+			opts = append(opts, gc.WithDeletePropagationPolicy(metav1.DeletePropagationBackground))
+			opts = append(opts, gc.InNamespace(nsn))
 			opts = append(opts, tt.options...)
 
 			a := gc.NewAction(opts...)
@@ -424,15 +504,6 @@ func TestGcActionCluster(t *testing.T) {
 	cli := envTest.Client()
 	nsn := xid.New().String()
 
-	gci := gcSvc.New(
-		cli,
-		nsn,
-		// This is required as there are no kubernetes controller running
-		// with the envtest, hence we can't use the foreground deletion
-		// policy (default)
-		gcSvc.WithPropagationPolicy(metav1.DeletePropagationBackground),
-	)
-
 	ns := corev1.Namespace{
 		ObjectMeta: metav1.ObjectMeta{
 			Name: nsn,
@@ -440,8 +511,6 @@ func TestGcActionCluster(t *testing.T) {
 	}
 
 	g.Expect(cli.Create(ctx, &ns)).
-		NotTo(HaveOccurred())
-	g.Expect(gci.Start(ctx)).
 		NotTo(HaveOccurred())
 
 	rr := types.ReconciliationRequest{
@@ -467,17 +536,23 @@ func TestGcActionCluster(t *testing.T) {
 			},
 		},
 		Generated: true,
+		Controller: mocks.NewMockController(func(m *mocks.MockController) {
+			m.On("GetClient").Return(envTest.Client())
+			m.On("GetDynamicClient").Return(envTest.DynamicClient())
+			m.On("GetDiscoveryClient").Return(envTest.DiscoveryClient())
+			m.On("Owns", mock.Anything).Return(false)
+		}),
 	}
 
 	g.Expect(cli.Create(ctx, rr.Instance)).
 		NotTo(HaveOccurred())
 
-	defer func() {
+	t.Cleanup(func() {
 		g.Expect(cli.Delete(ctx, rr.Instance)).Should(Or(
 			Not(HaveOccurred()),
 			MatchError(k8serr.IsNotFound, "IsNotFound"),
 		))
-	}()
+	})
 
 	om := metav1.ObjectMeta{
 		Namespace: nsn,
@@ -531,7 +606,7 @@ func TestGcActionCluster(t *testing.T) {
 	g.Expect(cli.Create(ctx, &cr2)).
 		NotTo(HaveOccurred())
 
-	a := gc.NewAction(gc.WithGC(gci))
+	a := gc.NewAction(gc.WithDeletePropagationPolicy(metav1.DeletePropagationBackground), gc.InNamespace(nsn))
 
 	gc.DeletedTotal.Reset()
 	gc.DeletedTotal.WithLabelValues("dashboard").Add(0)
@@ -569,14 +644,6 @@ func TestGcActionOnce(t *testing.T) {
 	cli := envTest.Client()
 	nsn := xid.New().String()
 
-	gci := gcSvc.New(
-		cli,
-		nsn,
-		// Since test env does not support foreground deletion, we can
-		// use it to simulate a resource deleted, but not removed.
-		gcSvc.WithPropagationPolicy(metav1.DeletePropagationForeground),
-	)
-
 	ns := corev1.Namespace{
 		ObjectMeta: metav1.ObjectMeta{
 			Name: nsn,
@@ -584,8 +651,6 @@ func TestGcActionOnce(t *testing.T) {
 	}
 
 	g.Expect(cli.Create(ctx, &ns)).
-		NotTo(HaveOccurred())
-	g.Expect(gci.Start(ctx)).
 		NotTo(HaveOccurred())
 
 	rr := types.ReconciliationRequest{
@@ -611,17 +676,23 @@ func TestGcActionOnce(t *testing.T) {
 			},
 		},
 		Generated: true,
+		Controller: mocks.NewMockController(func(m *mocks.MockController) {
+			m.On("GetClient").Return(envTest.Client())
+			m.On("GetDynamicClient").Return(envTest.DynamicClient())
+			m.On("GetDiscoveryClient").Return(envTest.DiscoveryClient())
+			m.On("Owns", mock.Anything).Return(false)
+		}),
 	}
 
 	g.Expect(cli.Create(ctx, rr.Instance)).
 		NotTo(HaveOccurred())
 
-	defer func() {
+	t.Cleanup(func() {
 		g.Expect(cli.Delete(ctx, rr.Instance)).Should(Or(
 			Not(HaveOccurred()),
 			MatchError(k8serr.IsNotFound, "IsNotFound"),
 		))
-	}()
+	})
 
 	cm := corev1.ConfigMap{ObjectMeta: metav1.ObjectMeta{
 		Namespace: nsn,
@@ -643,7 +714,7 @@ func TestGcActionOnce(t *testing.T) {
 	g.Expect(cli.Create(ctx, &cm)).
 		NotTo(HaveOccurred())
 
-	a := gc.NewAction(gc.WithGC(gci))
+	a := gc.NewAction(gc.WithDeletePropagationPolicy(metav1.DeletePropagationBackground), gc.InNamespace(nsn))
 
 	gc.DeletedTotal.Reset()
 	gc.DeletedTotal.WithLabelValues("dashboard").Add(0)

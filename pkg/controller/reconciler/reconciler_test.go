@@ -14,6 +14,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
@@ -22,15 +23,14 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/envtest"
 
-	"github.com/opendatahub-io/opendatahub-operator/v2/apis/common"
-	componentApi "github.com/opendatahub-io/opendatahub-operator/v2/apis/components/v1alpha1"
-	dscv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/datasciencecluster/v1"
-	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
-	"github.com/opendatahub-io/opendatahub-operator/v2/controllers/status"
+	"github.com/opendatahub-io/opendatahub-operator/v2/api/common"
+	componentApi "github.com/opendatahub-io/opendatahub-operator/v2/api/components/v1alpha1"
+	dscv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/datasciencecluster/v1"
+	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/dscinitialization/v1"
+	"github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/status"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster/gvk"
 	odherrors "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/actions/errors"
-	odhClient "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/client"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/conditions"
 	odhtype "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/types"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/resources"
@@ -67,7 +67,7 @@ func createEnvTest(s *runtime.Scheme) (*envtest.Environment, error) {
 	return &envTest, nil
 }
 
-func createReconciler(cli *odhClient.Client) *Reconciler {
+func createReconciler(cli client.Client) *Reconciler {
 	return &Reconciler{
 		Client:   cli,
 		Scheme:   cli.Scheme(),
@@ -107,10 +107,7 @@ func TestConditions(t *testing.T) {
 	cfg, err := envTest.Start()
 	g.Expect(err).NotTo(HaveOccurred())
 
-	envTestClient, err := client.New(cfg, client.Options{Scheme: s})
-	g.Expect(err).NotTo(HaveOccurred())
-
-	cli, err := odhClient.NewFromConfig(cfg, envTestClient)
+	cli, err := client.New(cfg, client.Options{Scheme: s})
 	g.Expect(err).NotTo(HaveOccurred())
 
 	dsci := resources.GvkToUnstructured(gvk.DSCInitialization)
@@ -128,7 +125,9 @@ func TestConditions(t *testing.T) {
 		{
 			name: "ready",
 			err:  nil,
+
 			matcher: And(
+				jq.Match(`all(.status.conditions[]?.type; . != "foo")`),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeReady, metav1.ConditionTrue),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeProvisioningSucceeded, metav1.ConditionTrue),
 			),
@@ -137,6 +136,7 @@ func TestConditions(t *testing.T) {
 			name: "stop",
 			err:  odherrors.NewStopError("stop"),
 			matcher: And(
+				jq.Match(`all(.status.conditions[]?.type; . != "foo")`),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeReady, metav1.ConditionFalse),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeProvisioningSucceeded, metav1.ConditionFalse),
 			),
@@ -145,6 +145,7 @@ func TestConditions(t *testing.T) {
 			name: "failure",
 			err:  errors.New("failure"),
 			matcher: And(
+				jq.Match(`all(.status.conditions[]?.type; . != "foo")`),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeReady, metav1.ConditionFalse),
 				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, status.ConditionTypeProvisioningSucceeded, metav1.ConditionFalse),
 			),
@@ -159,6 +160,26 @@ func TestConditions(t *testing.T) {
 
 			err = cli.Create(ctx, dash)
 			g.Expect(err).NotTo(HaveOccurred())
+
+			st, err := runtime.DefaultUnstructuredConverter.ToUnstructured(&common.Status{
+				Conditions: []common.Condition{{
+					Type:               "foo",
+					Status:             metav1.ConditionFalse,
+					LastTransitionTime: metav1.NewTime(time.Now()),
+				}},
+			})
+
+			g.Expect(err).NotTo(HaveOccurred())
+
+			err = unstructured.SetNestedField(dash.Object, st, "status")
+			g.Expect(err).NotTo(HaveOccurred())
+
+			err = cli.Status().Update(ctx, dash)
+			g.Expect(err).NotTo(HaveOccurred())
+
+			g.Expect(dash).Should(
+				jq.Match(`.status.conditions[] | select(.type == "%s") | .status == "%s"`, "foo", metav1.ConditionFalse),
+			)
 
 			req := ctrl.Request{
 				NamespacedName: types.NamespacedName{
@@ -180,7 +201,9 @@ func TestConditions(t *testing.T) {
 
 			g.Expect(result.Requeue).Should(BeFalse())
 
-			di := dash.DeepCopy()
+			di := resources.GvkToUnstructured(gvk.Dashboard)
+			di.SetName(dash.GetName())
+
 			err = cli.Get(ctx, client.ObjectKeyFromObject(di), di)
 			g.Expect(err).ShouldNot(HaveOccurred())
 			g.Expect(di).Should(tt.matcher)

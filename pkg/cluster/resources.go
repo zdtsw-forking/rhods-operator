@@ -21,9 +21,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 
-	dscv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/datasciencecluster/v1"
-	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/apis/dscinitialization/v1"
-	client2 "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/client"
+	dscv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/datasciencecluster/v1"
+	dsciv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/dscinitialization/v1"
+	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster/gvk"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/resources"
 )
 
@@ -92,22 +92,48 @@ func GetSingleton[T client.Object](ctx context.Context, cli client.Client, obj T
 
 // GetDSC retrieves the DataScienceCluster (DSC) instance from the Kubernetes cluster.
 func GetDSC(ctx context.Context, cli client.Client) (*dscv1.DataScienceCluster, error) {
-	obj := dscv1.DataScienceCluster{}
-	if err := GetSingleton(ctx, cli, &obj); err != nil {
-		return nil, err
+	instances := dscv1.DataScienceClusterList{}
+	if err := cli.List(ctx, &instances); err != nil {
+		return nil, fmt.Errorf("failed to list resources of type %s: %w", gvk.DataScienceCluster, err)
 	}
 
-	return &obj, nil
+	switch len(instances.Items) {
+	case 1:
+		return &instances.Items[0], nil
+	case 0:
+		return nil, k8serr.NewNotFound(
+			schema.GroupResource{
+				Group:    gvk.DataScienceCluster.Group,
+				Resource: "datascienceclusters",
+			},
+			"",
+		)
+	default:
+		return nil, fmt.Errorf("failed to get a valid %s instance, expected to find 1 instance, found %d", gvk.DataScienceCluster, len(instances.Items))
+	}
 }
 
 // GetDSCI retrieves the DSCInitialization (DSCI) instance from the Kubernetes cluster.
 func GetDSCI(ctx context.Context, cli client.Client) (*dsciv1.DSCInitialization, error) {
-	obj := dsciv1.DSCInitialization{}
-	if err := GetSingleton(ctx, cli, &obj); err != nil {
-		return nil, err
+	instances := dsciv1.DSCInitializationList{}
+	if err := cli.List(ctx, &instances); err != nil {
+		return nil, fmt.Errorf("failed to list resources of type %s: %w", gvk.DSCInitialization, err)
 	}
 
-	return &obj, nil
+	switch len(instances.Items) {
+	case 1:
+		return &instances.Items[0], nil
+	case 0:
+		return nil, k8serr.NewNotFound(
+			schema.GroupResource{
+				Group:    gvk.DSCInitialization.Group,
+				Resource: "dscinitializations",
+			},
+			"",
+		)
+	default:
+		return nil, fmt.Errorf("failed to get a valid %s instance, expected to find 1 instance, found %d", gvk.DSCInitialization, len(instances.Items))
+	}
 }
 
 // UpdatePodSecurityRolebinding update default rolebinding which is created in applications namespace by manifests
@@ -159,30 +185,21 @@ func CreateOrUpdateConfigMap(ctx context.Context, c client.Client, desiredCfgMap
 		return errors.New("configmap name and namespace must be set")
 	}
 
-	existingCfgMap := &corev1.ConfigMap{}
-	err := c.Get(ctx, client.ObjectKeyFromObject(desiredCfgMap), existingCfgMap)
-	if k8serr.IsNotFound(err) {
-		return c.Create(ctx, desiredCfgMap)
-	} else if err != nil {
+	// Explicitly setting the TypeMeta is required to use resources.Apply()
+	// Otherwise will return error stating that the unstructured object has no kind
+	desiredCfgMap.TypeMeta = metav1.TypeMeta{
+		APIVersion: gvk.ConfigMap.Version,
+		Kind:       gvk.ConfigMap.Kind,
+	}
+
+	opts := []client.PatchOption{
+		client.ForceOwnership,
+		client.FieldOwner(resources.PlatformFieldOwner),
+	}
+	err := resources.Apply(ctx, c, desiredCfgMap, opts...)
+	if err != nil && !k8serr.IsAlreadyExists(err) {
 		return err
 	}
-
-	if applyErr := ApplyMetaOptions(existingCfgMap, metaOptions...); applyErr != nil {
-		return applyErr
-	}
-
-	if existingCfgMap.Data == nil {
-		existingCfgMap.Data = make(map[string]string)
-	}
-	for key, value := range desiredCfgMap.Data {
-		existingCfgMap.Data[key] = value
-	}
-
-	if updateErr := c.Update(ctx, existingCfgMap); updateErr != nil {
-		return updateErr
-	}
-
-	existingCfgMap.DeepCopyInto(desiredCfgMap)
 	return nil
 }
 
@@ -190,6 +207,10 @@ func CreateOrUpdateConfigMap(ctx context.Context, c client.Client, desiredCfgMap
 // If a namespace already exists, the operation has no effect on it.
 func CreateNamespace(ctx context.Context, cli client.Client, namespace string, metaOptions ...MetaOptions) (*corev1.Namespace, error) {
 	desiredNamespace := &corev1.Namespace{
+		TypeMeta: metav1.TypeMeta{
+			APIVersion: gvk.Namespace.Version,
+			Kind:       gvk.Namespace.Kind,
+		},
 		ObjectMeta: metav1.ObjectMeta{
 			Name: namespace,
 		},
@@ -199,17 +220,16 @@ func CreateNamespace(ctx context.Context, cli client.Client, namespace string, m
 		return nil, err
 	}
 
-	foundNamespace := &corev1.Namespace{}
-	if getErr := cli.Get(ctx, client.ObjectKeyFromObject(desiredNamespace), foundNamespace); client.IgnoreNotFound(getErr) != nil {
-		return nil, getErr
+	opts := []client.PatchOption{
+		client.ForceOwnership,
+		client.FieldOwner(resources.PlatformFieldOwner),
+	}
+	err := resources.Apply(ctx, cli, desiredNamespace, opts...)
+	if err != nil && !k8serr.IsAlreadyExists(err) {
+		return nil, err
 	}
 
-	createErr := cli.Create(ctx, desiredNamespace)
-	if k8serr.IsAlreadyExists(createErr) {
-		return foundNamespace, nil
-	}
-
-	return desiredNamespace, client.IgnoreAlreadyExists(createErr)
+	return desiredNamespace, nil
 }
 
 // ExecuteOnAllNamespaces executes the passed function for all namespaces in the cluster retrieved in batches.
@@ -284,7 +304,7 @@ func GetCRD(ctx context.Context, cli client.Client, name string) (apiextensionsv
 	return obj, nil
 }
 
-func HasCRD(ctx context.Context, cli *client2.Client, gvk schema.GroupVersionKind) (bool, error) {
+func HasCRD(ctx context.Context, cli client.Client, gvk schema.GroupVersionKind) (bool, error) {
 	return HasCRDWithVersion(ctx, cli, gvk.GroupKind(), gvk.Version)
 }
 
@@ -301,7 +321,7 @@ func HasCRD(ctx context.Context, cli *client2.Client, gvk schema.GroupVersionKin
 //   - (true, nil) if the CRD with the specified version exists and is not terminating.
 //   - (false, nil) if the CRD does not exist, does not store the requested version, or is terminating.
 //   - (false, error) if there was an error fetching the CRD.
-func HasCRDWithVersion(ctx context.Context, cli *client2.Client, gk schema.GroupKind, version string) (bool, error) {
+func HasCRDWithVersion(ctx context.Context, cli client.Client, gk schema.GroupKind, version string) (bool, error) {
 	m, err := cli.RESTMapper().RESTMapping(gk, version)
 	if err != nil {
 		if meta.IsNoMatchError(err) {
