@@ -50,7 +50,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 5b10d39c2e820083dfcd893aefcf5d57e6144743
+    git.commit: 452f75e1e716b090319692cae4d99f6840126277
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -121,4 +121,4 @@ additional_meta:
     git.commit: 8e81789e79dde42b4715e28b181429e2977cf76f
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: c0b1a317ff52171b76eaedd37565efb6f039543d
+    git.commit: fef9ba15f4ed26863454f36ff4242fe45eb86881
