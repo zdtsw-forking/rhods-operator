@@ -75,7 +75,7 @@ map:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: a99704a4a82bb8d78679b76d2e19b924a21f824f
+    git.commit: 1bf0fe9a934ac2b0546d9bb5f01794c54a9921bb
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
