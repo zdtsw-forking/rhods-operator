@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 22c90fa3b1030a9483650fa39e7fc1dbc0245fc9
+    git.commit: a026564a59bdd121b2123e6b799d08f556748a17
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
