@@ -15,22 +15,22 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 971ff2a4b1571fb66136c04662e9ca24b6ad4c15
+    git.commit: 557b444e04da3a45f31a358f8697f62420a53ff0
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 971ff2a4b1571fb66136c04662e9ca24b6ad4c15
+    git.commit: 557b444e04da3a45f31a358f8697f62420a53ff0
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: c0db5b348bc607b933dfba767dba1fd2a38f6426
+    git.commit: a988798a7e37804c342c685645bb53508947868d
   odh-codeflare-operator:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: ee7dff8ff709da647e4849e1a9668f359f91dfa5
+    git.commit: 7bac35f32bad772804320e02676e3c3090b1a55c
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -55,7 +55,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 8e941f2e07c228fa31579458b09ab5a0531f52ff
+    git.commit: 652d0494e1c96a2af64b5835875035936ba47b8f
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -115,7 +115,7 @@ additional_meta:
     git.commit: 0f5cb76d5f74cdcfd75b5ca4c05b853404b7055a
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 68040de13e32942f20947b6b1b461935f103e507
+    git.commit: 14bad7f4c3a51a32416b7de87cc67b35170a70e6
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 8e81789e79dde42b4715e28b181429e2977cf76f
