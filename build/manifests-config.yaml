@@ -82,7 +82,7 @@ additional_meta:
     git.commit: adb782c00e4cf940def652de05cb95f3521e0a76
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: e30c27b1cf4a76009b12408a1ec55874db2a7dfd
+    git.commit: f138a016d71271e64ec3ae4a1b76d56a82dce330
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 7e3d1552c2a2c25ac7cc2485a1fd37c3273029cb
@@ -91,7 +91,7 @@ additional_meta:
     git.commit: 9b46f1509a5cbfd1bed82db2913e1b040ec208db
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: a9aca855a2d9fe1053acf93346451b2e79bf8d55
+    git.commit: 7bd8de9aa49ca364b4a912965ce675f59e2e0b31
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: d2183850318c9de391c38afb21ee9bb64897a9cc
@@ -118,7 +118,7 @@ additional_meta:
     git.commit: c5ec5d210e63dd1fe418e6d812c1a4b513590419
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 8e81789e79dde42b4715e28b181429e2977cf76f
+    git.commit: 43a18959647e9f894802d7e6136fe73158d97f84
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: e87c9202d7c9916f80138472408e98d4cba47d79
