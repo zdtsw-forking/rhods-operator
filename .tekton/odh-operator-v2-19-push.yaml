@@ -13,7 +13,7 @@ metadata:
       && !"Dockerfiles/bundle.Dockerfile".pathChanged() && (!"build/**".pathChanged()
       || "build/operands-map.yaml".pathChanged() || ".tekton/odh-operator-v2-19-push.yaml".pathChanged()
       ) && !".github/workflows/**".pathChanged()
-  creationTimestamp:
+  creationTimestamp: null
   labels:
     appstudio.openshift.io/application: rhoai-v2-19
     appstudio.openshift.io/component: odh-operator-v2-19
