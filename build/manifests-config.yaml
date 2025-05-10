@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: b85c4e61eb20a1ace0e3c7ae69bf8e4fefa70930
+    git.commit: fbef1ceaf389a8bd76c0d3d73fff0b4b2c59043a
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -118,7 +118,7 @@ additional_meta:
     git.commit: e2f7526478347b52123e2cf0e73563db115d8359
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: ec828190b08cb92d2e68fef29e4c7a6997f090c4
+    git.commit: b4c61cd9b0ce4449b94a0ca3ea3f7db2e5332197
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 48f8d97bc34cef16093a168a8e596ff5c682849f
