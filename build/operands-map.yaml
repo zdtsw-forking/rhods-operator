@@ -40,9 +40,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_LAUNCHER_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-launcher-rhel9@sha256:50208118c1ad26ca3456c51510ade6c7637c461fad372c68e9780e901ce433e6"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_ARGOEXEC_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel9@sha256:13b81f5fd5f51616d1e03bed9f93e1632232e3ed89ee7eadbaf464f53a6e0fcb"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel9@sha256:c6871e1fdb6626c134ca939039d15e3373469e3700d68f6219ffd0af9177a591"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:61a5353a63813f4ccd8fe6a901f688701678e550b999b8a49ce314a2b74a61d7"
+  value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:cf6f0aaaf2cd50dcb08b4e741dc8a802172910c1408ec6e5ac69f7fc5bb431d8"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:186f10761a7c643d88d593774202e32044dba80816c375da37ce7bc2102aeb48"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
