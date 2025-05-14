@@ -74,13 +74,13 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 2e6dce0462e67e51430c513904f8731a0a5ebb05
+    git.commit: c15628a1222c9ab4dbd40eac3608294175508669
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 38c058ee1dec1ee79624ed0e7af84d83c4c0685d
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 536c90d3eba18247ae32bd1170552eea83012052
+    git.commit: 41b7b2b593a9151c29a95db07315d8d941e35217
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 51d490efd03642f3507f6b51137f4fa324e5590e
