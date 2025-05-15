@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: e4ba547929b42426513784762fbd071b2ab37b28
+    git.commit: e862aed250bba4e9fec7e94b96eb39cbf63a166a
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 764f9963b9985328f7e2584588349d174449ab94
+    git.commit: 370decbba7e267d481edc3f6c1511b4f8470dc1b
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: d0f72f102f795cafe59cedefaf4719503fc792fd
+    git.commit: c3059ec48b2073e48b9c89fc47b737c025295576
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -115,7 +115,7 @@ additional_meta:
     git.commit: 7355efc2376790e3a87412f5f07782a431455403
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 5b047e49d31435281673dcef2c052b6a43c0c82e
+    git.commit: f296e942cef248e5b5cfd6d9cfc19a56c14c781e
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: a08f4f6ef52e7ba9ad768d06678e4bbf5d5c90ae
