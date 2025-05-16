@@ -6,11 +6,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:1637faa6be230fe3e7d271715d56b9042714a4a79643cc9e5358dcebac6a9cd1"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:f99d206ec38ccddea6ad6c7a280c68b37b15e97fa704c01f73f8a88bb8058111"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:81664642e53c3a28bccf73e3e3837ee5cf1366779b74ab06661bdb7e82e22832"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel9@sha256:1659f4a477018f6fd338ec8de5ebc084dee0969fb437c0941e4b407731aca486"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:53ef2a56256a7b9f7ad10a5940d19c363fc41c9f9f1e23340c0a3f3ef3aa0054"
+  value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:be8c364a088eafffd0544681f971eb86c8a3ee416ac661e51988410cb3b40eae"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel9@sha256:2e5bea38ebef4af2c27e5eda2ba42f19d9107ea4155b83b54c97d5f13ae6e859"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
@@ -28,7 +28,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel9@sha256:14aeaca3acd4d802442617c0412d7b03db835e0c25dabbb2555dbf3abb77063e"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:4fe92768349ba02ff74747c6344d6454ceaecf5124e0ce531e61b3a8ce333daa"
+  value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:4318fe3a902091c17f22319fc47f4dc3dbb098956b6fa7050acbb7bfe1ac3a9c"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-api-server-v2-rhel9@sha256:da971f0c6d6e32885f08e0c08968384f9c866847659bab48fd75e8adcffc492c"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_PERSISTENCEAGENT_V2_IMAGE
