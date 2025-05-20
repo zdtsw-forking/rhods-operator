@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: aed89440518ddcc32e93a14d7d0abad690030aab
+    git.commit: cb0d61a17c1683a452a3e6df1c6e2c9dd67297d6
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: aed89440518ddcc32e93a14d7d0abad690030aab
+    git.commit: cb0d61a17c1683a452a3e6df1c6e2c9dd67297d6
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 3edac7789e79cd85cbeeed66b7c6e2fead263e6c
+    git.commit: e4b63b22e1ef0e647191643da6515659a1c5b6aa
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -55,12 +55,12 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 285d9d8f51d81b5cf0d1dd90c943b2e7b95f5982
+    git.commit: 234eaf2155efadf2cf66653223143a0231b36e19
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 964a74d66514d9052e42c8a5fad102c6ee148dc3
+    git.commit: cfe805a5d7d5424b07d5f8dc5aa3cf3e651105e1
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -115,7 +115,7 @@ additional_meta:
     git.commit: 517a14490bd582e57b8a8d16bad18b0402432a93
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 5a22f4a96579d82056be43cb1cac005a0219e1ac
+    git.commit: 5aa2238084659634ac9007dff09ea92a7ee9c2e3
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: c4adf5372a1a61dd76f5d2d899cbf109a1096ffa
