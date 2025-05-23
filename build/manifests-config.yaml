@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 9fd33d605756de27af5b0fd63e53029315ef7199
+    git.commit: 5e471bfc7b4a7c75e8ae41e350dd351bd7af4851
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 9579e398177bdfb70eb562ab350a2981bcd0fa84
+    git.commit: fcdf40f5eede1d47ec5c5938649582385677ea55
   odh-model-controller:
     src: config
     dest: modelcontroller
