@@ -32,8 +32,10 @@ import (
 	featuresv1 "github.com/opendatahub-io/opendatahub-operator/v2/api/features/v1"
 	infrav1 "github.com/opendatahub-io/opendatahub-operator/v2/api/infrastructure/v1"
 	serviceApi "github.com/opendatahub-io/opendatahub-operator/v2/api/services/v1alpha1"
+	"github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/status"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/cluster/gvk"
+	cond "github.com/opendatahub-io/opendatahub-operator/v2/pkg/controller/conditions"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/metadata/labels"
 	"github.com/opendatahub-io/opendatahub-operator/v2/pkg/resources"
 )
@@ -351,6 +353,10 @@ func CleanupExistingResource(ctx context.Context,
 	// only apply on RHOAI since ODH has a different way to create this CR by dashboard
 	if platform == cluster.SelfManagedRhoai || platform == cluster.ManagedRhoai {
 		if err := upgradeODCCR(ctx, cli, "odh-dashboard-config", d.Spec.ApplicationsNamespace, oldReleaseVersion); err != nil {
+			return err
+		}
+		// throw error if the workbench namespace is set to something else than "rhods-notebooks" in DSC
+		if err := workbenchNamespaceError(ctx, cli, oldReleaseVersion); err != nil {
 			return err
 		}
 	}
@@ -672,6 +678,30 @@ func cleanupNimIntegration(ctx context.Context, cli client.Client, oldRelease co
 	}
 
 	return errs.ErrorOrNil()
+}
+
+// special handling for rhoai 2.20.
+func workbenchNamespaceError(ctx context.Context, cli client.Client, oldRelease common.Release) error {
+	if oldRelease.Version.Minor == 20 {
+		dscInstances, err := cluster.GetDSC(ctx, cli)
+		switch {
+		case k8serr.IsNotFound(err): // nothing to do
+			return nil
+		case err != nil:
+			return err
+		default:
+			if dscInstances.Spec.Components.Workbenches.WorkbenchNamespace != "rhods-notebooks" {
+				cond.SetStatusCondition(dscInstances, common.Condition{
+					Type:     componentApi.WorkbenchesKind + status.ReadySuffix,
+					Status:   metav1.ConditionFalse,
+					Reason:   status.ErrorReason,
+					Message:  status.WorkbenchNamespaceErrorMessage,
+					Severity: common.ConditionSeverityError,
+				})
+			}
+		}
+	}
+	return nil
 }
 
 // When upgrading from version 2.16 to 2.17, the odh-model-controller
