@@ -74,7 +74,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 4a9b4f7e2189e7c5d47567693e5e35cd8996fcca
+    git.commit: b8109bcb7361056a2014289f5e3369883201d7ab
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 4ba86c0ff3496e41de0577bafdd6101f97376710
@@ -113,4 +113,4 @@ additional_meta:
     git.commit: 517c07ffb0902516d0b606682cbf99839e361c6e
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 66517de7064d4161b7f02ef3fb7f6af2933392af
+    git.commit: d76825b2c451fc35881f596a0cd3cebecbb2b964
