@@ -40,7 +40,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 8db948545d43cc78dc7deb4e268b6f26c0731c5b
+    git.commit: fa93ab8b70dd98ef237555a90a242ab57f0b1a4b
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 72ae08e200b46478c19ca45d3350a921b2027b71
+    git.commit: f269704ea0d2a1304dcd141c05cbd4e0610b6fa0
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
