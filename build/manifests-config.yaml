@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 3190c1add4a3f90fcfde914792a7662d77fedf51
+    git.commit: 2580d48a7d390850a560c8db7decc7a9b49b8924
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -118,7 +118,7 @@ additional_meta:
     git.commit: 02b31a7b89c42c908719d26d13672e8ef925296d
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: a15f1503dace0c51dedfb4406b0619d745408c5e
+    git.commit: 7539ebb5ae3d4cd038ec1a9c6ce1a2d082ab429f
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 0ffe799519faf83e27cc2a33fd1482c15edd0f23
