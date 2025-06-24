@@ -25,7 +25,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 407915f968ecaa65f84dbb5db97d724bebfca7c8
+    git.commit: 482579425fe198368f7ab14066f0f04817f4f461
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -35,12 +35,12 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 589af7264212f01f2f0dc9213991448063016fc4
+    git.commit: e88ac23790d8cab0c795444fa78e3761d531515a
   odh-kueue-controller:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 8316ff21942b7d91dd14f68e79e0c85ea82b9a69
+    git.commit: 0515f00f12615e45804a74beeb22a283f663a833
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -55,7 +55,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 8a5842e57078480a6eb8591164e3735706cf0a27
+    git.commit: bab6681575c76d9d99eaffaa16505d8bc997e430
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -85,13 +85,13 @@ additional_meta:
     git.commit: 15b77db53d522109572a5efd91ccd38117e61956
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 498280b72f0ef77873d147a78c85264476d24130
+    git.commit: 175ca8790b601b867657da22f89f5e38d310b215
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: cd2a32c30133b07b2380c2e2ddb53151cfe64fb3
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 4afa6e998e33dafce2538fd451d74030a67814ca
+    git.commit: e45b8a1cdec2659e3617c5cd95fcec83f228cebf
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 5ee34cfcf7770c314fb4350faf50e08f030b75e5
