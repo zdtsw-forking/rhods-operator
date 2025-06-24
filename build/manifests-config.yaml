@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 17670b39476368998e92495436fa6859f72088b3
+    git.commit: 8bb815499363fbcdc1c9a2d8a3bdc83d57110b95
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 17670b39476368998e92495436fa6859f72088b3
+    git.commit: 8bb815499363fbcdc1c9a2d8a3bdc83d57110b95
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -50,7 +50,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 79805cd39f475b119e9e44b7073e0850e6cd6469
+    git.commit: 34722f801f0099d58e6db94177034dd68f3cb32b
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -115,7 +115,7 @@ additional_meta:
     git.commit: 5adb83e5a78a0d1ccdbf11849773cc5b84500a06
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: fa1df97dbf34eeb5f33f745129eeb349973c7fa9
+    git.commit: 3989fff99702a5af34e634fd3835a7abd85be6e8
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 979ed10900297227c18841baf6b11fab2633a162
