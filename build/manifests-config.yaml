@@ -85,7 +85,7 @@ additional_meta:
     git.commit: 15b77db53d522109572a5efd91ccd38117e61956
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: c741ac6e1d153f99febf515a59e094fc53978931
+    git.commit: d595955981034ce82b0988dcf8aeebc0ce2954c9
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: cd2a32c30133b07b2380c2e2ddb53151cfe64fb3
