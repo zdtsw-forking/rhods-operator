@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 5d9510c700d63cca63abd3f4b817165710837c8d
+    git.commit: e7adbc54903c7ff734a5cf56d479173cd6585521
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -79,7 +79,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: cf5966d61c9d9b7ca2b01b903cb5cce8f216203e
+    git.commit: 203d08fd04cb86d8899ac982c325acbd352d9276
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 59a4bba90c8dcec954005f5789ba1cd52c8aeea3
