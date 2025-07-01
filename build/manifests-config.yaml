@@ -122,3 +122,6 @@ additional_meta:
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: cf610a89ba041d4c6022ed00c385d3037e631445
+  odh-llama-stack-k8s-operator:
+    git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
+    git.commit: 21310ee6119d9b9d47419ae1720601a215dca3d9
