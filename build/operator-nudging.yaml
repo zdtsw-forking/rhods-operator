@@ -58,4 +58,4 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: quay.io/rhoai/odh-feature-server-rhel9@sha256:75cdd073301dfd57aa8781e7be10e3064bf49ee817c7e814a10e88ac92a8ae43
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:2c4728c836475b9cfc2db6deadc812ade6e857b9e460b312474fdda37f0a0275
+  value: quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:2706f85482fd246b66253de376995fa86819a678e20761a212d11b088d058521
