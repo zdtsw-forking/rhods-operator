@@ -44,11 +44,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:24a7faa6be3a7e90d32269ec33e1eb3ddf917ec5ae9ad884ab9631eb8780563e"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:2e5d919d043b751ebee9afee230feca1d82517bee867d34b9d95b8da08b9d857"
+  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:f09b1f1b3c15d2fb6751cb9e624694d6900caf66b4e4e6a4f03eb59e4c492cfc"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:fcad504fd71f0540c2a376e9db383c6249792ad18e0d0f3c2a095040fd36103d"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:0c79509aa1cd9e741e126f772a2d9ec9a64c6e768f27a04aa4160ce1f02b25e0"
+  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:241eb33cdbefbe0421bdcd5e39a6a2926aba5cdb8c90a4409333898aae3413b7"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:2b550e47addd0f2b60346c4daa015ad134c108c3e56026cf0766a9fedfe4e2be"
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
@@ -58,6 +58,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:75cdd073301dfd57aa8781e7be10e3064bf49ee817c7e814a10e88ac92a8ae43"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:5445bf7524708fe3d86ae723c60b2489280d6abbeed38fbe030532eae2258284"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:2c4728c836475b9cfc2db6deadc812ade6e857b9e460b312474fdda37f0a0275"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:5445bf7524708fe3d86ae723c60b2489280d6abbeed38fbe030532eae2258284"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:2c4728c836475b9cfc2db6deadc812ade6e857b9e460b312474fdda37f0a0275"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:d2a39164654ffeaa813b1de0ac0e28ac02185661cb2429dce3ae59880b3c75f9
