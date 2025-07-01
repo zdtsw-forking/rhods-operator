@@ -76,6 +76,9 @@ map:
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 1dd3ba8897614f69fa2964cbc4ae6661080a40da
+  llama-stack-k8s-operator:
+    src: config
+    dest: llamastackoperator
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
