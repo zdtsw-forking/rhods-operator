@@ -1,4 +1,4 @@
-map:map:
+map:
   llama-stack-k8s-operator:
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
     git.commit: github.ref_name
