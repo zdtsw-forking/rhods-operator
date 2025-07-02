@@ -56,6 +56,6 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-feast-operator-rhel9@sha256:4a7a98b36a0b0a8db083fac9d9e5dd4da9fc45dce419771b600c5e7cbaa63d92
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: quay.io/rhoai/odh-feature-server-rhel9@sha256:75cdd073301dfd57aa8781e7be10e3064bf49ee817c7e814a10e88ac92a8ae43
+  value: quay.io/rhoai/odh-feature-server-rhel9@sha256:373bc39fd79996faff2670ef7926d97f72b2f85254c1ce0160337c8cc45a9124
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:c8a0d4777e5b022556b8e0735d32f8788059ab5b02c3b0d84b255492850d4e6f
