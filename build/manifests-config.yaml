@@ -15,12 +15,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 0c4e9f8e1ff32aeb3caba1251a7df2275ac72fd3
+    git.commit: ff1eafcc63e7f91b13c157747cc06075807f222e
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 0c4e9f8e1ff32aeb3caba1251a7df2275ac72fd3
+    git.commit: ff1eafcc63e7f91b13c157747cc06075807f222e
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -30,12 +30,12 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: a05fea7deb4b632519ec08bdf7180ffc57a24f33
+    git.commit: 43e4765084b27dadddf794b06ff8de0cba7535e7
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 9c30636815ecd5bd3cafbc301f94143ce0e4b7e5
+    git.commit: 1553ba4fddb6aa6306ae02969af9058d531291bd
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 8af1d33a88d9e35be2f9c50f32fed8c29d524ac9
+    git.commit: bd44b9b4e30516510d2fb4147aaafbe306cd44fa
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
