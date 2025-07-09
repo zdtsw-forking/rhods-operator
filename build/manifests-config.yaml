@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 9d57caacf2c72a2cbf3085aabfede62715854604
+    git.commit: 79b8bb9453be5e97bec08df28d99cc7c086f072b
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: ea9902d0fd2dbfc06b221144d605f3643b9988e8
+    git.commit: ae28dac360abd737182a898a8de8dce2384992c8
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -80,7 +80,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 849e4f8bccf4a8bc9843a21ff299d8a99cf53ac0
+    git.commit: 0a2eb4cd0ea10360b2e923e850d3d15082cd9884
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -93,7 +93,7 @@ additional_meta:
     git.commit: de9b01a3ebcb0111c86355f3af26993274e38c08
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 6d66edaea93d402cacfc9ff6d5fe9805c081d6c0
+    git.commit: 96c622bfca11bcca43692871f0b1aa1059ef788c
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 14d8822195b08a39195d0d1da2375fa410ae20ce

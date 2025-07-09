@@ -18,11 +18,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel9@sha256:ad138227de4d9e2c866d01b4225f57ba63decf92b0833b26eeddd05f8097249e"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:57539b7d855de21adcb98837d038f595031b065aedf063e0a1b388ac1c7c5383"
+  value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:fc5d1feb8f1cddc6d712ca6914c3e02b571ac2a06773e3cdd2ee69107aeb3371"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:7f15a9841e24799b2ad02b71a43421126998a4d58ac23945c2c4aca9d11c19fc"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:f54fe810d37c77d0191327dd61cfd26f38be08a93ca91b68f42473e1a620a4e6"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:51ffce74031fc09945cf9d0c6b9861e138d8416f17f002fdc45c9f579d6746d3"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:e6d01e38c1b16b3734d92f74cbf1497a8289bc07593dddc97398779ef230315d"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
@@ -48,7 +48,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:64aa1a9120597d1685768dab2ba60640dee6622d42ff68c03b2f40e5b16b74af"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:42092cb5e841ca589410ef2f9d69737e619f74eb7681fa96a5b5016d3dad47f2"
+  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:c2f7b2524cd4196bce2598b777381203d3b5b32a6e822edc1973a2c0a5c8002b"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:46dd9f4c5d92c67aefeea9e0b2df7e4f31e7eb1f15eed389dd991d3072570f4d"
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
@@ -58,8 +58,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:373bc39fd79996faff2670ef7926d97f72b2f85254c1ce0160337c8cc45a9124"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:6e95886415bf257140fe412f5b11b46c660998eeed23481b412517bea4f03142"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:a73fafecab19343402a1503e4c562c001502743783eb544ba6b17ef5e4e70b08"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:6e95886415bf257140fe412f5b11b46c660998eeed23481b412517bea4f03142"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:a73fafecab19343402a1503e4c562c001502743783eb544ba6b17ef5e4e70b08"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:d2a39164654ffeaa813b1de0ac0e28ac02185661cb2429dce3ae59880b3c75f9
