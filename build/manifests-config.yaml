@@ -20,12 +20,12 @@ map:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 4201dbce40d35fb637eb487d5a16d6e21b033784
+    git.commit: 3f501168d9af6def79639901fc1c28311d67e2f2
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: e013a098fe74e7f38321baff66ec4a0424e6d073
+    git.commit: 50b6b7a7c9516b9b218468e5ba5b7ec2c784914b
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -84,7 +84,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 8ba2d367d586199132125a6c61751f478552a7ce
+    git.commit: 9a3fff03057473003ac6a51e23db3b0a918ca4bc
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 15d4a6e6c676dc03b34d6931677a23d93f8a3fa5
