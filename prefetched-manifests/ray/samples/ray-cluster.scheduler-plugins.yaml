@@ -1,22 +1,11 @@
-apiVersion: scheduling.volcano.sh/v1beta1
-kind: Queue
-metadata:
-  name: kuberay-test-queue
-spec:
-  weight: 1
-  capability:
-    cpu: 4
-    memory: 6Gi
----
 apiVersion: ray.io/v1
 kind: RayCluster
 metadata:
-  name: test-cluster-0
+  name: test-podgroup-0
   labels:
-    ray.io/scheduler-name: volcano
-    volcano.sh/queue-name: kuberay-test-queue
+    ray.io/gang-scheduling-enabled: "true"
 spec:
-  rayVersion: '2.46.0'
+  rayVersion: "2.46.0"
   headGroupSpec:
     rayStartParams: {}
     template:
