@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 6e9e95d24d133b600e64a75b5a396742f5983dfc
+    git.commit: 2459b3055ebc1cff8deb374d7f720c22932bed48
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -96,7 +96,7 @@ additional_meta:
     git.commit: 1c59c6dc8838fb75aa3848879efd96dad626a386
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: fc8925519fa3e122be5441db18dba67bc119d383
+    git.commit: 3c68343afe1f675fb20e4189158252ef7eb675e6
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 11b601e5975c4944a202dd4216178b46d938c6cc
