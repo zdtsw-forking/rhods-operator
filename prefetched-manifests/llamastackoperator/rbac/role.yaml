@@ -8,19 +8,26 @@ rules:
   - ""
   resources:
   - configmaps
-  - deployments
-  - persistentvolumeclaims
-  - persistentvolumes
-  - pods
-  - pods/exec
-  - pods/log
   verbs:
-  - '*'
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - ""
   resources:
-  - serviceaccounts
-  - services/finalizers
+  - persistentvolumeclaims
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - services
   verbs:
   - create
   - delete
@@ -30,18 +37,17 @@ rules:
   - update
   - watch
 - apiGroups:
-  - ""
-  resources:
-  - services
-  verbs:
-  - '*'
-- apiGroups:
   - apps
   resources:
   - deployments
-  - deployments/finalizers
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
 - apiGroups:
   - llamastack.io
   resources:
@@ -73,4 +79,10 @@ rules:
   resources:
   - networkpolicies
   verbs:
-  - '*'
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
