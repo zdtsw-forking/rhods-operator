@@ -5,12 +5,9 @@ map:
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
-  kserve:
-    git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: github.ref_name
+  odh-kserve-controller:
     src: config
     dest: kserve
-    ref_type: branch
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
