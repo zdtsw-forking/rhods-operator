@@ -39,7 +39,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: e794d785618883f5ec3b2a150ba6c4e92092e535
+    git.commit: f9fbca825e1ee56e046900d73e8bc2fe7eb24b22
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -128,7 +128,7 @@ additional_meta:
     git.commit: 4551aecff6ee6b9a672c77d4cc9b4df770105115
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: 9357187c4d474d1af0ec707f19466bc38e8596b6
+    git.commit: c863ba5ebf08d82e992b4affeeea8462d0d23795
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
     git.commit: ec28b09157ae52d3def505ff73d67fa0f7a26317
