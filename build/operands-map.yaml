@@ -26,7 +26,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:bb55034bcef170f0da31c2c9b56b0f8f24c2f1f92c888c89b55ec3351e26b142"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kueue-controller-rhel9@sha256:292f3a0c3145d2a68bf2f96169386fa80baac30a1ca30459cb4bd39b41746800"
+  value: "quay.io/rhoai/odh-kueue-controller-rhel9@sha256:6676ec82b02c7651a9d36e080a67ef2b3ab39d92f823b3b3b20bdc33e1fb6fca"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:6bdbb507193c32ae8a5406c30e8c51b5d7e4ef38a23f68e7ad8c8f8637939171"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
@@ -58,8 +58,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:373bc39fd79996faff2670ef7926d97f72b2f85254c1ce0160337c8cc45a9124"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:cd6d36f6deb586f3ff44991de2b12dc961fd8fc8c53fcdb8ecbff65bc9ce468b"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:aedd308b15509cead37392a6b3faaf9bc61b5be3377f60fc4bceb31b82c9999d"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:cd6d36f6deb586f3ff44991de2b12dc961fd8fc8c53fcdb8ecbff65bc9ce468b"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:aedd308b15509cead37392a6b3faaf9bc61b5be3377f60fc4bceb31b82c9999d"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:d2a39164654ffeaa813b1de0ac0e28ac02185661cb2429dce3ae59880b3c75f9
