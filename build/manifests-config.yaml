@@ -131,7 +131,7 @@ additional_meta:
     git.commit: 9357187c4d474d1af0ec707f19466bc38e8596b6
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: 14e1aa5bc23998c2644f29538e087c89fe7cd333
+    git.commit: ec28b09157ae52d3def505ff73d67fa0f7a26317
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: d834f183c14260649bcc91cac78856752638463e
