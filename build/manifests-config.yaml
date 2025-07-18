@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 36fea3cdff66281aeac0ae0144c41f1ec74dcdf6
+    git.commit: 283bf206689b781710e3f2fad0dacb6a9527eaec
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
