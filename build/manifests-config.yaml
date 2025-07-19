@@ -24,7 +24,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: b896776ff15ad17345254bbcf342328851b8e528
+    git.commit: 3078465cdddd192c1c686069f1f2596540416516
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -39,7 +39,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 2328d715a80db65053a8df46d276cc29301915ba
+    git.commit: 25ae9b5dac7c4c246a9eb6152f5f28b6709fd285
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 283bf206689b781710e3f2fad0dacb6a9527eaec
+    git.commit: 9fc5bcd6428b62c0f600228fa00a4beb95d3c881
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
