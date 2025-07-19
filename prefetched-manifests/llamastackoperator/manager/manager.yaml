@@ -41,9 +41,10 @@ spec:
         env:
         - name: OPERATOR_VERSION
           value: "latest"
-        - name: LLAMA_STACK_VERSION
-          value: "latest"
+        - name: RELATED_IMAGE_RH_DISTRIBUTION
+          value: ""
         image: controller:latest
+        imagePullPolicy: Always
         name: manager
         securityContext:
           allowPrivilegeEscalation: false
@@ -67,9 +68,9 @@ spec:
         resources:
           limits:
             cpu: 500m
-            memory: 128Mi
+            memory: 1Gi
           requests:
             cpu: 10m
-            memory: 64Mi
+            memory: 256Mi
       serviceAccountName: controller-manager
       terminationGracePeriodSeconds: 10

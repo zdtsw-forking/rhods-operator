@@ -39,10 +39,10 @@ replacements:
   - source:
       kind: ConfigMap
       name: params
-      fieldPath: data.LLAMA_STACK_VERSION
+      fieldPath: data.RELATED_IMAGE_RH_DISTRIBUTION
     targets:
       - select:
           kind: Deployment
           name: controller-manager
         fieldPaths:
-          - spec.template.spec.containers.[name=manager].env.[name=LLAMA_STACK_VERSION].value
+          - spec.template.spec.containers.[name=manager].env.[name=RELATED_IMAGE_RH_DISTRIBUTION].value
