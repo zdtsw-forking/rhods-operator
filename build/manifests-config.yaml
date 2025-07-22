@@ -128,13 +128,13 @@ additional_meta:
     git.commit: a7ce312668c7fdb453c77585d685117a3120e845
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: c863ba5ebf08d82e992b4affeeea8462d0d23795
+    git.commit: 8718542888879fd9f369fb4851219a7e18b41203
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: ec28b09157ae52d3def505ff73d67fa0f7a26317
+    git.commit: 5c327e0489c4d7733b5db49ce83a82524eaadb73
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: a215a4588c63d7a66bf67602b220f7b6a8aebcad
+    git.commit: 2661c97d17d47fc4b3c97e933d57f91e4184fba4
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 2a9acb3507f2d9a0013ec17abb2cdc57c906cdf9
