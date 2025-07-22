@@ -125,7 +125,7 @@ additional_meta:
     git.commit: 31241b9123344110503a4d9eba3801eae6ca7d06
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: e53067f197318b503fc9f35da99d4c34feb508ab
+    git.commit: 48017dcb13017b7ee7259553864044373d349187
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
