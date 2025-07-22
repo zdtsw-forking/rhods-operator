@@ -44,7 +44,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: cbf9efd7801b15e18cc496132a1bb33c02b1fbed
+    git.commit: 8f9f1ec849fac678426ef24151f09f89d4ea9dec
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: df5ac1e9a8e2e26024a3d0e93abc0214a4140d8c
+    git.commit: 18b389ed4c0225c6d1e7df888aa44080e8e95779
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -122,7 +122,7 @@ additional_meta:
     git.commit: 2c3b0bb098f5488c00a04df2f066456278aa98a2
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 784e92f3618228a22ed88faff62c30cfda14cf1f
+    git.commit: 48e412409e0832a9ae531e6ccdb7cce29e98f25f
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 48017dcb13017b7ee7259553864044373d349187
