@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 9a357a92685fa25783ee4f49251b5a1aa5904017
+    git.commit: 718c0c03bc31b4ae28b3815e61ff0fa0c00d1173
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 9a357a92685fa25783ee4f49251b5a1aa5904017
+    git.commit: 718c0c03bc31b4ae28b3815e61ff0fa0c00d1173
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -74,7 +74,7 @@ map:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 8fed241bba28fedb9be7663ccdc951f946b8aca9
+    git.commit: a7ce312668c7fdb453c77585d685117a3120e845
   odh-llama-stack-k8s-operator:
     src: config
     dest: llamastackoperator
@@ -125,7 +125,7 @@ additional_meta:
     git.commit: 9e81f131fd62295b41a8413c3c9e941aba26f078
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 4551aecff6ee6b9a672c77d4cc9b4df770105115
+    git.commit: a7ce312668c7fdb453c77585d685117a3120e845
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: c863ba5ebf08d82e992b4affeeea8462d0d23795
@@ -134,7 +134,7 @@ additional_meta:
     git.commit: ec28b09157ae52d3def505ff73d67fa0f7a26317
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: d834f183c14260649bcc91cac78856752638463e
+    git.commit: a215a4588c63d7a66bf67602b220f7b6a8aebcad
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 2a9acb3507f2d9a0013ec17abb2cdc57c906cdf9
