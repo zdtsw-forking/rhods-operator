@@ -92,7 +92,7 @@ additional_meta:
     git.commit: 58a19067e9c89dc53682acf60469e36f9934d60e
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 1902edc9a697d5a95e8609ed2be9849254bfe081
+    git.commit: d8f5ea6beb1f0727f48d65f22c5529c85ff7656e
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 33ed181ca85ad2a13dcb46abcb3b213decaf7ebe
