@@ -68,7 +68,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
   value: quay.io/rhoai/odh-kserve-agent-rhel9@sha256:c2a11a2be1a4addf6f23ef180de264133f96c72ad5c24d1ccd42485572b7415d
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: quay.io/rhoai/odh-kserve-controller-rhel9@sha256:c661af384a0aab585be319e7f124a462c57be730b707a3c5426779ed0e106c22
+  value: quay.io/rhoai/odh-kserve-controller-rhel9@sha256:0ec85acda65606e36f7d2e9529e446eefa09041f19f59b151e698c81f651d40e
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
   value: quay.io/rhoai/odh-kserve-router-rhel9@sha256:c6077f29db495144e7981e7750247a191a3b5862217ff263c7a8cd62b1d886a8
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
