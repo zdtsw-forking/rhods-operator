@@ -44,7 +44,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 6190d45cc01b0924c5054763da69418627af09fd
+    git.commit: cbf9efd7801b15e18cc496132a1bb33c02b1fbed
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: db6a10f803852658ac0111aa9169cd73a1f92b64
+    git.commit: 0cbd2225870a11b0b4bf9824c52b00dcdfca7e30
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -140,7 +140,7 @@ additional_meta:
     git.commit: d92a602b913e655fc721a65c29be6bc0a1ea3937
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: d92a602b913e655fc721a65c29be6bc0a1ea3937
+    git.commit: 14c1db68716c5d70be391132ca3fa09e47c41318
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: d92a602b913e655fc721a65c29be6bc0a1ea3937
