@@ -127,3 +127,6 @@ additional_meta:
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: f24b78df4c5c1c4368c97eff7be73b11f164d4dc
+  odh-llama-stack-core:
+    git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
+    git.commit: 13f9676b7f27b68c79f68bd14d60b7ed90f6052e
