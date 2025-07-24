@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 01b0ef67137571ea8f63236bd5c7a87715f9b40c
+    git.commit: 44e5d5bee816939021f58a7bceddff686f7fe168
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 18b389ed4c0225c6d1e7df888aa44080e8e95779
+    git.commit: 3c4a25aec8b93328f263fa21ba11779a13e8ea2c
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
