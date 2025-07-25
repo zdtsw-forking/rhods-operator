@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 5221e5442078bf24bcdaeb7118ca3de9aa52274a
+    git.commit: fdfcaf77d3b38f92a2498e5c3f15dd55d19e7e33
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -131,10 +131,10 @@ additional_meta:
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: 966fedff398e817bdefdcb6b9d680139f786705d
+    git.commit: ee68a339301ca88743114a771e50d518eb3e3bf0
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: 2661c97d17d47fc4b3c97e933d57f91e4184fba4
+    git.commit: d8cf00a8e7f52c0963cfaae4e9fc267a0046717b
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
