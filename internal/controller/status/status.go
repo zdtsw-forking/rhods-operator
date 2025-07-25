@@ -103,6 +103,7 @@ const (
 	ConditionMonitoringStackAvailable        = "MonitoringStackAvailable"
 	ConditionTempoAvailable                  = "TempoAvailable"
 	ConditionOpenTelemetryCollectorAvailable = "OpenTelemetryCollectorCRDAvailable"
+	ConditionInstrumentationAvailable        = "InstrumentationAvailable"
 )
 
 const (
@@ -161,7 +162,12 @@ const (
 // For Kueue MultiKueue CRD.
 const (
 	MultiKueueCRDReason  = "MultiKueueCRDV1Alpha1Exist"
-	MultiKueueCRDMessage = "MultiKueue CRDs MultiKueueConfig v1alpha1 and MultiKueueCluster v1Alpha1 exist, please remove them to proceed"
+	MultiKueueCRDMessage = "Kueue CRDs MultiKueueConfig v1alpha1 and/or MultiKueueCluster v1alpha1 exist, please remove them to proceed"
+
+	KueueOperatorAlreadyInstalleReason   = "KueueOperatorAlreadyInstalled"
+	KueueOperatorAlreadyInstalledMessage = "Kueue operator already installed, uninstall it or change kueue component state to Unmanaged"
+	KueueOperatorNotInstalleReason       = "KueueOperatorNotInstalleReason"
+	KueueOperatorNotInstalledMessage     = "Kueue operator not installed, install it or change kueue component state to Managed"
 )
 
 // For TrustyAI require ISVC CRD.
@@ -180,6 +186,8 @@ const (
 	OpenTelemetryCollectorCRDNotFoundMessage  = "OpenTelemetryCollector CRD not found. Dependent operator missing."
 	OpenTelemetryCollectorCRDAvailableReason  = "OpenTelemetryCollector CRD Found"
 	OpenTelemetryCollectorCRDAvailableMessage = "OpenTelemetryCollector CRD found"
+	InstrumentationCRDNotFoundReason          = "Instrumentation CRD Not Found"
+	InstrumentationCRDNotFoundMessage         = "Instrumentation CRD not found. OpenTelemetry operator missing."
 
 	MetricsNotConfiguredReason  = "MetricsNotConfigured"
 	MetricsNotConfiguredMessage = "Metrics not configured in DSCI CR"

@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 
-	operatorv1 "github.com/openshift/api/operator/v1"
 	k8serr "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
@@ -71,11 +70,7 @@ func updatePrometheusConfigMap(ctx context.Context, rr *odhtypes.ReconciliationR
 
 	return cr.ForEach(func(ch cr.ComponentHandler) error {
 		ci := ch.NewCRObject(dsc)
-		ms := ch.GetManagementState(dsc) // check for modelcontroller with dependency is done in its GetManagementState()
-		switch ms {
-		case operatorv1.Removed: // remove
-			return updatePrometheusConfig(ctx, false, componentRules[ch.GetName()])
-		case operatorv1.Managed:
+		if ch.IsEnabled(dsc) {
 			ready, err := isComponentReady(ctx, rr.Client, ci)
 			if err != nil {
 				return fmt.Errorf("failed to get component status %w", err)
@@ -85,8 +80,8 @@ func updatePrometheusConfigMap(ctx context.Context, rr *odhtypes.ReconciliationR
 			}
 			// add
 			return updatePrometheusConfig(ctx, true, componentRules[ch.GetName()])
-		default:
-			return fmt.Errorf("unsupported management state %s", ms)
+		} else {
+			return updatePrometheusConfig(ctx, false, componentRules[ch.GetName()])
 		}
 	})
 }
@@ -125,6 +120,13 @@ func createMonitoringStack(ctx context.Context, rr *odhtypes.ReconciliationReque
 
 		return nil
 	}
+
+	// No monitoring stack configuration
+	rr.Conditions.MarkFalse(
+		status.ConditionMonitoringStackAvailable,
+		conditions.WithReason(status.MetricsNotConfiguredReason),
+		conditions.WithMessage(status.MetricsNotConfiguredMessage),
+	)
 
 	return nil
 }
@@ -169,9 +171,9 @@ func createOpenTelemetryCollector(ctx context.Context, rr *odhtypes.Reconciliati
 		}
 		rr.Templates = append(rr.Templates, template...)
 	} else {
-		// No metrics configuration or metrics not sufficiently configured
+		// No metrics configuration - skip OpenTelemetry collector deployment for metrics
 		rr.Conditions.MarkFalse(
-			status.ConditionMonitoringStackAvailable,
+			status.ConditionOpenTelemetryCollectorAvailable,
 			conditions.WithReason(status.MetricsNotConfiguredReason),
 			conditions.WithMessage(status.MetricsNotConfiguredMessage),
 		)
@@ -241,6 +243,52 @@ func deployTempo(ctx context.Context, rr *odhtypes.ReconciliationRequest) error 
 		}
 		rr.Templates = append(rr.Templates, template...)
 	}
+
+	return nil
+}
+
+// handleInstrumentationCR manages OpenTelemetry Instrumentation CRs using templates.
+func handleInstrumentationCR(ctx context.Context, rr *odhtypes.ReconciliationRequest) error {
+	monitoring, ok := rr.Instance.(*serviceApi.Monitoring)
+	if !ok {
+		return errors.New("instance is not of type *serviceApi.Monitoring")
+	}
+
+	// Only create instrumentation CR if traces are configured
+	if monitoring.Spec.Traces == nil {
+		// If traces are not configured, GC will clean up any existing instrumentation CRs
+		rr.Conditions.MarkFalse(
+			status.ConditionInstrumentationAvailable,
+			conditions.WithReason(status.TracesNotConfiguredReason),
+			conditions.WithMessage(status.TracesNotConfiguredMessage),
+		)
+		return nil
+	}
+
+	// Traces are configured, check if Instrumentation CRD exists before creating the template
+	instrumentationCRDExists, err := cluster.HasCRD(ctx, rr.Client, gvk.Instrumentation)
+	if err != nil {
+		return fmt.Errorf("failed to check if Instrumentation CRD exists: %w", err)
+	}
+	if !instrumentationCRDExists {
+		rr.Conditions.MarkFalse(
+			status.ConditionInstrumentationAvailable,
+			conditions.WithReason(status.InstrumentationCRDNotFoundReason),
+			conditions.WithMessage(status.InstrumentationCRDNotFoundMessage),
+		)
+		return nil
+	}
+
+	rr.Conditions.MarkTrue(status.ConditionInstrumentationAvailable)
+
+	// Add instrumentation template to be rendered
+	template := []odhtypes.TemplateInfo{
+		{
+			FS:   resourcesFS,
+			Path: InstrumentationTemplate,
+		},
+	}
+	rr.Templates = append(rr.Templates, template...)
 
 	return nil
 }
