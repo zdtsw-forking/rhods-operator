@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 3c4a25aec8b93328f263fa21ba11779a13e8ea2c
+    git.commit: 322c711baec53bfec57c1eb8b38efc4f89c9878c
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -119,7 +119,7 @@ additional_meta:
     git.commit: 3677490db5c709e3cea5987820e6d5b5c8e4e26d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 02da57243ed7d1e37624b519e6bfff0e39f8ca73
+    git.commit: a32cb0cf29bf356653e0e4063a906588509d203a
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 48e412409e0832a9ae531e6ccdb7cce29e98f25f
