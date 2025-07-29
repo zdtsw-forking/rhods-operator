@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 12ee765e7a94cb716f0eaa615b37df627ddc3c6c
+    git.commit: 4b594523e7de57226ad84a4c181ffd329e7f0e5f
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: a9f9569314570e6c8cbde2ff853dc3bd113a2119
+    git.commit: 92883a350df4fa610ae62c953c2e3d63148d28e8
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -119,7 +119,7 @@ additional_meta:
     git.commit: 3677490db5c709e3cea5987820e6d5b5c8e4e26d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 6c482cfdbbf080c2755a126d7adb496eb62b4415
+    git.commit: 390d179cf0ce21761096e9c20539197c42d2ed43
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 48e412409e0832a9ae531e6ccdb7cce29e98f25f
