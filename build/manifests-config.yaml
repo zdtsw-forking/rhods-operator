@@ -144,3 +144,18 @@ additional_meta:
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
+  odh-ta-lmes-driver:
+    git.url: https://github.com/red-hat-data-services/trustyai-service-operator
+    git.commit: 4267927256c9090eb204ad28a9ec24144c5e0921
+  odh-ta-lmes-job:
+    git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
+    git.commit: 923ccc904f19752920ae2007ae87056b71d163cf
+  odh-fms-guardrails-orchestrator:
+    git.url: https://github.com/red-hat-data-services/fms-guardrails-orchestrator
+    git.commit: 7badb6f44dc883b4d6efb285508a7f22eb7346df
+  odh-trustyai-vllm-orchestrator-gateway:
+    git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
+    git.commit: 924d0103d1799546c85e4d2678115f4677cf3348
+  odh-built-in-detector:
+    git.url: https://github.com/red-hat-data-services/guardrails-detectors
+    git.commit: 8a876090203c36a769687d7c9830dd8ec1f16391
