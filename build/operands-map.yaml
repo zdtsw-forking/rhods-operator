@@ -89,3 +89,5 @@ relatedImages:
   value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:cde0089473986f5a76adafe2184571d522fb8d6c267278fb039908abe1ed7793"
 - name: RELATED_IMAGE_ODH_BUILT_IN_DETECTOR_IMAGE
   value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:cde0089473986f5a76adafe2184571d522fb8d6c267278fb039908abe1ed7793"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:c60bd9d25e7f8ba92e9b95835233aca14c0fac68f28ddb3c4e2471c79a0846bd
