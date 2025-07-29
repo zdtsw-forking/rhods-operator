@@ -87,7 +87,7 @@ additional_meta:
     git.commit: af6334182be8667bac3394b1280b00dfd4ccc5c1
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: 968c6bf490ca01b54bedac478b19d6c67eccdd00
+    git.commit: d467c144ca368fbb30ed8b4068fe7f25f4877ebe
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 15049b59db3249b0043c853fefb7be225f594718
@@ -129,4 +129,4 @@ additional_meta:
     git.commit: f24b78df4c5c1c4368c97eff7be73b11f164d4dc
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 13f9676b7f27b68c79f68bd14d60b7ed90f6052e
+    git.commit: 95261176042afc094d389f9de942b7b624b4ece4
