@@ -24,52 +24,52 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 4b7e2ed027c8798a578edf11ef19c602d527001f
+    git.commit: c3e404455742ef27bb68d0e1b0a9ec9e0200cb5c
   odh-codeflare-operator:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 143e2005d2fa140829b2305ba5e77553cfad2c32
+    git.commit: facc5eb0ddb59fc90e857e3c67cd7cad2a9697d8
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 5b2f6c52cc9afbb4af095dba0fa067525e70623a
+    git.commit: fede25460dfc61d24449f744158f490061127c20
   odh-kueue-controller:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 7adb1d8614510cca48ca8786cde035d8a13bb925
+    git.commit: 95917ae6a406e0d36cc65762c2e2a0c66684718c
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 8f9f1ec849fac678426ef24151f09f89d4ea9dec
+    git.commit: 52c2d8360125c5e24ace77ee8e03fd7802907f0c
   odh-model-controller:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: f706d7836ea7c4a0604c73ccdd598655b8718df7
+    git.commit: 891bc0e22cddfcf72da08e345ec3dd926d097816
   odh-model-registry-operator:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: b82e75a01f152e44ccd8f06819db6900131c4554
+    git.commit: bbbab65f0047ec5df544a08f3018524b700b2b17
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: f99480b695e6ead278ecdcd7bddf3d6da73b7297
+    git.commit: 382665e6a9d447d1eec723832c7a15edb54fbae5
   odh-dashboard:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 36ce684adeb9e5d91c48b24f28306ee22de4f634
+    git.commit: 51f7136b9c422a5d4e7a15763bc104916068c146
   odh-training-operator:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 5ea4e79d3716768dd7ff343535d5e72f91129de9
+    git.commit: d219524ae23a0593d415996357b0839e7779fabe
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -79,38 +79,38 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 322c711baec53bfec57c1eb8b38efc4f89c9878c
+    git.commit: 29c17df54f151ebeff94cbea150e380b2cc150be
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 23b0a4a122de3a1df765428568c91eb99845949b
+    git.commit: 666c3267abdadd2e5243355ba1aaeed01baec0bf
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: a78150cc7ad41b9ccbece35e136734e9281d5956
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 50264c377f366c0bb9621970c5a4d82e304a2377
+    git.commit: 57b83cc00ec039830403e198b17b5c95ebe7bc88
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 3b4e712cf46d61af5fb84f14d1fe7b29d14f3df1
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 58a14e6c7c65d613441b9c3e963960e630e9e1f8
+    git.commit: 9b5e5b08ec757dcde07aab8c9e4ead3bc71cd986
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7350ab24430784db18f647f135518946361545ef
+    git.commit: acede1b538e675b4a28a455770214d01c9d30914
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7350ab24430784db18f647f135518946361545ef
+    git.commit: acede1b538e675b4a28a455770214d01c9d30914
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7350ab24430784db18f647f135518946361545ef
+    git.commit: acede1b538e675b4a28a455770214d01c9d30914
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7350ab24430784db18f647f135518946361545ef
+    git.commit: acede1b538e675b4a28a455770214d01c9d30914
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 7350ab24430784db18f647f135518946361545ef
+    git.commit: acede1b538e675b4a28a455770214d01c9d30914
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: 3677490db5c709e3cea5987820e6d5b5c8e4e26d
@@ -119,7 +119,7 @@ additional_meta:
     git.commit: 3677490db5c709e3cea5987820e6d5b5c8e4e26d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: a32cb0cf29bf356653e0e4063a906588509d203a
+    git.commit: 208830f06ab09fedecb9afdb1f2dc07ef5fc6d61
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 3b7ffc1a470928bfee9df33ff7924aa130e196bb
@@ -146,7 +146,7 @@ additional_meta:
     git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 4267927256c9090eb204ad28a9ec24144c5e0921
+    git.commit: 52c2d8360125c5e24ace77ee8e03fd7802907f0c
   odh-ta-lmes-job:
     git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
     git.commit: 923ccc904f19752920ae2007ae87056b71d163cf
