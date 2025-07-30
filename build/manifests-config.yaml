@@ -35,7 +35,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: eccbb1a9576eb0f3d51a8c6501bbd454839ba5a8
+    git.commit: 64a7859395a9e1db6ea45f3f61fc1435be5177e8
   odh-kueue-controller:
     src: config
     dest: kueue
