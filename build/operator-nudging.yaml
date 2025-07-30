@@ -64,7 +64,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
   value: quay.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:a8ad5d3f75e6a844500c9589ed8468f523d746238156df4fdb88bb15273da519
 - name: RELATED_IMAGE_ODH_MUST_GATHER_IMAGE
-  value: quay.io/rhoai/odh-must-gather-rhel9@sha256:1c7f6dbd3cb2be83d8c0452434cd4fd480e2b30df35c0c4ccbf16118f7089741
+  value: quay.io/rhoai/odh-must-gather-rhel9@sha256:62560c270a91df42ccb37a6205287592f8a2e265c03d573959000f5c2d14ce60
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
   value: quay.io/rhoai/odh-kserve-agent-rhel9@sha256:e662eef97ca51987554b6b2965f53acbf48e8603dc6a99327660911baa88c0e3
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
