@@ -9,7 +9,7 @@ map:
     src: config
     dest: kserve
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
+    git.commit: 3867cd8727b34f891dbc7b8c10dcc844b5d96785
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: aba987406c48daa1914a927991b78453901367f0
+    git.commit: 631e3dfc4628d20cbfc993ba8eba1ef5760639b4
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -64,12 +64,12 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 51f7136b9c422a5d4e7a15763bc104916068c146
+    git.commit: 14f98c888110517f1c3885135bad49d9516db37f
   odh-training-operator:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 690d90233c868d64573e2a0605bcc95bec10458b
+    git.commit: a1e02f402efd6a11e75ad7bf120e140d58c08115
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -119,7 +119,7 @@ additional_meta:
     git.commit: 3677490db5c709e3cea5987820e6d5b5c8e4e26d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: ca032aa4f12c67a35fdcc2aaac337a85e5cba12a
+    git.commit: d9ab0ad8e8c5b0fffa2597164c59653700387810
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 3b7ffc1a470928bfee9df33ff7924aa130e196bb
@@ -137,10 +137,10 @@ additional_meta:
     git.commit: e1bb8830dd6e1bae129a49837325d789973b2ea6
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
+    git.commit: 3867cd8727b34f891dbc7b8c10dcc844b5d96785
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: e7a90c98546f2774c1cbefd20225d3f28ad0e33f
+    git.commit: 3867cd8727b34f891dbc7b8c10dcc844b5d96785
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: bcbc94b6000b86f839117401371b7c61b5cb1632
