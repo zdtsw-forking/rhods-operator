@@ -86,8 +86,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_VLLM_ORCHESTRATOR_GATEWAY_IMAGE
   value: "quay.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:e81df688c24ed2ddb8d18a6c7bb10f0bc3c77a96e2150cd27ff9c889dfd4d444"
 - name: RELATED_IMAGE_ODH_BUILT_IN_DETECTOR_IMAGE
-  value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:cde0089473986f5a76adafe2184571d522fb8d6c267278fb039908abe1ed7793"
+  value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:c6b958d2ab14762560440aadda206d6772f7cb794c02e6ac609974b0feff51c4"
 - name: RELATED_IMAGE_ODH_BUILT_IN_DETECTOR_IMAGE
-  value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:cde0089473986f5a76adafe2184571d522fb8d6c267278fb039908abe1ed7793"
+  value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:c6b958d2ab14762560440aadda206d6772f7cb794c02e6ac609974b0feff51c4"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:c60bd9d25e7f8ba92e9b95835233aca14c0fac68f28ddb3c4e2471c79a0846bd
