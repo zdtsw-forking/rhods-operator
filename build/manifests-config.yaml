@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 14f98c888110517f1c3885135bad49d9516db37f
+    git.commit: 5e2c976b74575e189d88bf871484279a660dbe23
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -131,7 +131,7 @@ additional_meta:
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: ee68a339301ca88743114a771e50d518eb3e3bf0
+    git.commit: 4e6eac5b4fbc563d32ee16fdd7842951df5b17de
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: e1bb8830dd6e1bae129a49837325d789973b2ea6
@@ -155,7 +155,7 @@ additional_meta:
     git.commit: 7badb6f44dc883b4d6efb285508a7f22eb7346df
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
-    git.commit: 924d0103d1799546c85e4d2678115f4677cf3348
+    git.commit: 5d0f6e89a478bd11b108af8426f3d183091bc38f
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
     git.commit: 535f148baf1eb1139dde41c87916e16c1c839b8b
