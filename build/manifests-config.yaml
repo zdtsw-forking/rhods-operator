@@ -45,7 +45,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 342492f5464e0d65697587b5c5d82e1f6f3f34ec
+    git.commit: 7a423f15e73e36e85c8118ddc5540f1f9cc7cacb
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -70,7 +70,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 3c0a5664314e4a89b1ec13c530e61cf60414c357
+    git.commit: 217a4bd339eaef98bc5651f0913fff900fec9bea
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
