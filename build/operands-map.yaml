@@ -10,7 +10,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-serving-controller-rhel9@sha256:c99cb47bd272bee06770977b2f21e4c564cd962aef2a66aaea091850a3e747dd"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:afbd96c4b9931b5e6e566572365c4a8f42ceea856dacde4abb9ffee7be5f1784"
+  value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:8fa20e466ce62cbbaa80e5d416747baa5afe43bf3a5d605929f86be5d3529a8a"
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel9@sha256:8562dff6c58925052585818712d096e081f3a0a134c1e1d0014cd7a699d82116"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
@@ -18,13 +18,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel9@sha256:e8e5b16d945fcd77b1c8016354a22d25ad78d9ef02eee24b252366e1f0320e9c"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:605c25bf391b9ce78c0313eb28b377b9f4a28080f58eb327d5dddc6e54dc1f56"
+  value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:6e9e09952c9b597359ba8a25088d3a550e9ba74dfe945fd435ab928b57a36500"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:802b7102e392786ce368e124245513671165e15ceb6e68186d8be90096ecab1f"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:92abef81ffcfeb016f1defaf7073fa3bd482c51bcbb25809ac274fe77f1faea3"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:c38eaaf44da6c5898fef7602d832917e445665d4e3c827b53d55d49ef488f928"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:ce9991a4eebbc665d37ebf8bc4938c67b32ec83032fdd126fc4436d61bce254e"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel9@sha256:0322fba4f9f42f82a0c81ef47b0612e0f06e2d9f6bea2bfd2ae7f509bf38669f"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
