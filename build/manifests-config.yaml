@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 77e1db939be4fc9f0a671d1141a549b21ee135d8
+    git.commit: bd271a4df0d56e40d3cea2f1f1743cfde836228b
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -146,7 +146,7 @@ additional_meta:
     git.commit: bcbc94b6000b86f839117401371b7c61b5cb1632
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 52c2d8360125c5e24ace77ee8e03fd7802907f0c
+    git.commit: 64e7d58cb7f2004775d7ba63152ba19fabefa790
   odh-ta-lmes-job:
     git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
     git.commit: 923ccc904f19752920ae2007ae87056b71d163cf
