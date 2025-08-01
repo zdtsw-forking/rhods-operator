@@ -24,7 +24,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: c3e404455742ef27bb68d0e1b0a9ec9e0200cb5c
+    git.commit: 2f9e217ebaba0f069b58d6b7389988dca95add4d
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 631e3dfc4628d20cbfc993ba8eba1ef5760639b4
+    git.commit: a8ab47ae0212abe420bcb43c4f01991e56a9fd0a
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -86,7 +86,7 @@ additional_meta:
     git.commit: 666c3267abdadd2e5243355ba1aaeed01baec0bf
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: a78150cc7ad41b9ccbece35e136734e9281d5956
+    git.commit: da63cdbf91fe916632d1e51b0d1ba5e2a4f0dd54
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 44a5a98c667fe7fae2cab189ed1b03ae6fc4f3f3
