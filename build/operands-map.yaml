@@ -58,9 +58,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:bb7c352ccc10a8c60ef8d573368d0ada59e73cd131653d11bcebdf9f564acc10"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:7ae28a2e5604b024c1aa76fa74d7dc2da337288e535859b06f715eca15b3bea2"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:82df7504575e629321ea2bffb01e3a787d0677eaf69092edb8d39eff32dbcaa7"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:7ae28a2e5604b024c1aa76fa74d7dc2da337288e535859b06f715eca15b3bea2"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:82df7504575e629321ea2bffb01e3a787d0677eaf69092edb8d39eff32dbcaa7"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:43b60b1ee6f66fec38fe2ffbbe08dca8541ef162332e4bd8e422ecd24ee02646"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
