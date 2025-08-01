@@ -9,7 +9,7 @@ map:
     src: config
     dest: kserve
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: a58436f4158935966e53392f593cd912a7448182
+    git.commit: 98eb26debbd63852552fae730390ba0dbde0f5ef
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
@@ -122,7 +122,7 @@ additional_meta:
     git.commit: 250ccb23ad18a5a1b71e4a8e64e0f5949f9aa043
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: f2b5d2771988587e00f309314f68b5df33f4e043
+    git.commit: 8853336638c15df9fea835ab0a779f11ce96ad7d
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 48017dcb13017b7ee7259553864044373d349187
@@ -134,13 +134,13 @@ additional_meta:
     git.commit: 4e6eac5b4fbc563d32ee16fdd7842951df5b17de
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: e1bb8830dd6e1bae129a49837325d789973b2ea6
+    git.commit: d88d629d6960898ec3cfb0ea5477220704b75bc7
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: a58436f4158935966e53392f593cd912a7448182
+    git.commit: 98eb26debbd63852552fae730390ba0dbde0f5ef
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: a58436f4158935966e53392f593cd912a7448182
+    git.commit: 98eb26debbd63852552fae730390ba0dbde0f5ef
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: bcbc94b6000b86f839117401371b7c61b5cb1632
@@ -155,7 +155,7 @@ additional_meta:
     git.commit: 34a0e34fefd8825bda7be19cbfbfd76293c7dbb8
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
-    git.commit: 5d0f6e89a478bd11b108af8426f3d183091bc38f
+    git.commit: 88027e37c7254cef9e095a8e0b017ff1810b7d58
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
     git.commit: 535f148baf1eb1139dde41c87916e16c1c839b8b
