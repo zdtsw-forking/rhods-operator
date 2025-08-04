@@ -89,13 +89,13 @@ additional_meta:
     git.commit: 3d35fad7b7153488cf062ebb8d27754ec350fa9f
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 44a5a98c667fe7fae2cab189ed1b03ae6fc4f3f3
+    git.commit: f882d176c790d191d1760e0ec7be5eab11dd67e0
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 896b7f2de9e51ba8e5078d137220cff0a9175107
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: dd324ccce21dcceb7bcd8f1eeb955dc598492146
+    git.commit: 4fc60f96da871764905a32477f653c05ca4bca53
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 7f53478a8c219f838de2c44c52315451d3a2c382
