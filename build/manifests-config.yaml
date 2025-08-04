@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: b7a05c192eb769e84db720c0dcfdccbac0269fe9
+    git.commit: 5e897bc8e962ce384a39960617449522d91a97a6
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: af87bc9976aff0f0d9530d01ced1c18135a08a24
+    git.commit: 6029c5938005274a16c4e97eecc25100b5b821ce
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
