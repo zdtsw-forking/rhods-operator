@@ -30,7 +30,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 274a42380563c2653ee394629bee8bc125c4e8c1
+    git.commit: c7135d39fc031e3f06025de54e7d9964a40cffdb
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -80,7 +80,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 7a61a146da59080cd5debc8386077293fec4c1ff
+    git.commit: 9bf0cfe993d7dc541059b19c774698a6674aaed7
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
