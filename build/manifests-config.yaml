@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 2ec31bd11cd061b1968e49612162f64805861395
+    git.commit: cd08ea35aa1b37d7759b3ea068808eba29479040
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 2ec31bd11cd061b1968e49612162f64805861395
+    git.commit: 1c4208bf5de81b1ec5963cc56f816c41987b3f12
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 297ccb5607fa6203406773c9cbd018e0326309f2
+    git.commit: 351ed63f39e4fa47ad6f3d990a278082965cec83
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -149,7 +149,7 @@ additional_meta:
     git.commit: 32b28cfb01c4d93ed12a6ef2c73f03bd6d510ed3
   odh-ta-lmes-job:
     git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
-    git.commit: 923ccc904f19752920ae2007ae87056b71d163cf
+    git.commit: 0b3d0b1530098661a105b6bec0114455a88614ac
   odh-fms-guardrails-orchestrator:
     git.url: https://github.com/red-hat-data-services/fms-guardrails-orchestrator
     git.commit: 34a0e34fefd8825bda7be19cbfbfd76293c7dbb8
