@@ -39,7 +39,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: 0d368a9fdcc3e7447f6495db6289ab4809031d48
+    git.commit: 5bea2eafb61988c3460cc145f231a510341229f7
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 7ddb8041ff98a3b5d57c24b64fd1b9b0ac604fd2
+    git.commit: 784afc90f3519bc52ba20ce40f67333c77b0aad4
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -74,12 +74,12 @@ map:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 48017dcb13017b7ee7259553864044373d349187
+    git.commit: bb668cab5d7fcbd66a50a1cbe96b5bec9e5fdd7f
   odh-llama-stack-k8s-operator:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 1ec605f44555097d6e77c7c98335a0c8d6a77d4f
+    git.commit: d945f02a9b8c21f0010b75adeeff9b2af7fd2519
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 8c30308c53170d9dce4dc9888d67d8b2e2ecebcf
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 571d7105475146f265ac694d3d803a659fd54bd4
+    git.commit: dd50e609bde8fdf466fc7a658ded063bcea44e4b
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: e1a14528196aff194f2a83c5164aacd645fa34ce
@@ -122,7 +122,7 @@ additional_meta:
     git.commit: 44c97994de2db59d3ed7c11672c2d1482bda29ae
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 167174d24220e481ee96534ec4e85e440937345d
+    git.commit: 870a557214dbb6c17f6675d1b3b0bb323116ba20
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 48017dcb13017b7ee7259553864044373d349187
@@ -131,7 +131,7 @@ additional_meta:
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: 4e6eac5b4fbc563d32ee16fdd7842951df5b17de
+    git.commit: a08db7520796d0981e26a9b17ac2a871ede63f7e
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: d88d629d6960898ec3cfb0ea5477220704b75bc7
@@ -158,4 +158,4 @@ additional_meta:
     git.commit: df5c994446b2a3799923e4fc9a8ae1a99d9ec4f0
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: 535f148baf1eb1139dde41c87916e16c1c839b8b
+    git.commit: d8e0b7cb4b3c7a86e4567fbc4d3997b9bd15c983
