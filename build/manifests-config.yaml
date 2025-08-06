@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 99d37b020f2fa2ed31c367496b423c1feca73f3e
+    git.commit: 8a9475cf7aab540308d253154477d13de93bba98
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -79,14 +79,14 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: ea96fde6a08c4b8b4dc0bf681dc04573253f9be0
+    git.commit: 103dee30da5f39a0cad59fbcb272f4eb9d29c51a
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
     git.commit: e6b6f1e2d7a1a2b889e7ddb11fa923950d1d793c
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: f6936666726f0ddbc7ab37bdb0de3c04def006f5
+    git.commit: cac290b39f3c3b229b10e55170d7369bb1c1320e
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 9febff0946c104dfb874ded3550ebb72fcb79684
