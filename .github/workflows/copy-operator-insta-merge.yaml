@@ -13,7 +13,7 @@ on:
       - build/operator-nudging.yaml
 
 env:
-  GITHUB_ORG: red-hat-data-services
+  GITHUB_ORG: rhoai-rhtap
   GITHUB_RKA_ORG: rhoai-rhtap
   RESOLVE_CONFLICTS_FOR: build/operator-nudging.yaml
 
