@@ -27,7 +27,7 @@ permissions:
 jobs:
   insta-merge:
     #    we also have the author and title check to be on safer side since we are using pull_request_target event,
-    if: ${{ github.event.sender.login == 'konflux-internal-p02[bot]'  && ( startsWith(github.event.pull_request.title, 'Update ') || startsWith(github.event.pull_request.title, 'chore(deps)') ) }}
+    if: ${{ ( github.event.sender.login == 'konflux-internal-p02[bot]' || github.event.sender.login == 'rhoai-devops-app[bot]' )  && ( startsWith(github.event.pull_request.title, 'Update ') || startsWith(github.event.pull_request.title, 'chore(deps)') || startsWith(github.event.pull_request.title, 'Sync Agent:') ) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -66,10 +66,11 @@ jobs:
             TITLE=${TITLE/chore\(deps\): u/U}
           fi
           REGEX="^Update.*-$SUFFIX to [0-9a-z]{1,40}$"
+          SYNC_AGENT_REGEX="^Sync Agent: Update .* to [0-9a-z]{1,40}$"
 
           FEASIBLE=No
           #Check if PR title is as per the convention
-          if [[ "$TITLE" =~ $REGEX ]]
+          if [[ "$TITLE" =~ $REGEX ]] || [[ "$TITLE" =~ $SYNC_AGENT_REGEX ]]
           then
             FEASIBLE=Yes
             echo "It's a valid PR to merge!"
