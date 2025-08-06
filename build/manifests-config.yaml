@@ -14,17 +14,17 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 20577733adc69661cdf1fda2dcac34d5ea4eced5
+    git.commit: f00ee5a06edf4e6ac715224c20193a8f2165425f
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 20577733adc69661cdf1fda2dcac34d5ea4eced5
+    git.commit: 17f3c3acc470e04a61f7dc4f81f8b6c5e802f262
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: b86efbbc1f127ec5d5547bda01f712824390df67
+    git.commit: 4d72561e4de23101f90c4bc7d967690ee2168cd5
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 07f3f71d3c71df2819d7ffd34c2f52ed8c4368c0
+    git.commit: ca28e21f3ab36e6fa51aa0b704403373a928bdc0
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -89,10 +89,10 @@ additional_meta:
     git.commit: 2834fa49ad48d25aa9ec0ed0b0bcb2a859f99bfb
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 3055313bdeb18ab9fe5ef77568362b0ac77387e8
+    git.commit: 9febff0946c104dfb874ded3550ebb72fcb79684
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 2708fdd65ee8f4a456a3e0d9782b89de159c37b4
+    git.commit: adaa017b80dcd86d030c13f411d091630e5444bb
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 445d9fa8c18d4e3e3201b1dd3a2da727b20e5456
@@ -131,7 +131,7 @@ additional_meta:
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: b1013680d48e6d3228a1353e1472556f844651ad
+    git.commit: 0a392ec2878eb7ac0971778e3b4c381d8990847f
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: d88d629d6960898ec3cfb0ea5477220704b75bc7
