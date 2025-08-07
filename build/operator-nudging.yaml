@@ -82,4 +82,4 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_VLLM_ORCHESTRATOR_GATEWAY_IMAGE
   value: quay.io/rhoai/odh-trustyai-vllm-orchestrator-gateway-rhel9@sha256:a91ca14ef7162f3428e42710823cb9aedf5dcb2bf8aebe44302a28f5be8193eb
 - name: RELATED_IMAGE_ODH_BUILT_IN_DETECTOR_IMAGE
-  value: quay.io/rhoai/odh-built-in-detector-rhel9@sha256:c6b958d2ab14762560440aadda206d6772f7cb794c02e6ac609974b0feff51c4
+  value: quay.io/rhoai/odh-built-in-detector-rhel9@sha256:210a076c5d24b468122122ee12d3fbef0176936d81cb100b228107ebeda306d5
