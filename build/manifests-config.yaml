@@ -9,7 +9,7 @@ map:
     src: config
     dest: kserve
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 9df2cc4e7dcfe54f55b5480d0e28431dfb53a4c3
+    git.commit: a98c78781970d668ef03e59e085d7682a891281b
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 042c62eef474d334d65523184c74fa3f6fe4c811
+    git.commit: b08d9ea370f37005d5f52852b347c97db8878c58
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: cac290b39f3c3b229b10e55170d7369bb1c1320e
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 296ceefafc6a218ce78acf6a99c2231358fbd0eb
+    git.commit: 5ff42ceee7010d380ea95c12cae8a56fc016567d
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: adaa017b80dcd86d030c13f411d091630e5444bb
@@ -137,10 +137,10 @@ additional_meta:
     git.commit: 46fb6c68f9acde940d013609760bc53b7dca65a9
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 9df2cc4e7dcfe54f55b5480d0e28431dfb53a4c3
+    git.commit: a98c78781970d668ef03e59e085d7682a891281b
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 9df2cc4e7dcfe54f55b5480d0e28431dfb53a4c3
+    git.commit: a98c78781970d668ef03e59e085d7682a891281b
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: bcbc94b6000b86f839117401371b7c61b5cb1632
