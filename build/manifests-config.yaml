@@ -29,7 +29,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 1a1f01baee9b4088f8dc44390bf9c638e40e5cd3
+    git.commit: 2f8b0975bfd8bec882d08e05fda0c24fa489f537
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -158,7 +158,7 @@ additional_meta:
     git.commit: df5c994446b2a3799923e4fc9a8ae1a99d9ec4f0
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: dbf68cee5a8f1fe7cfaf0e48f91bb442d44571d8
+    git.commit: b2151ef89ee9fecfe9565fbf9a58ca1e11c54895
   odh-pipeline-runtime-datascience-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: d131dbe4370140a198979e09866a10a94d02e8d5
