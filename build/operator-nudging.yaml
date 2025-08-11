@@ -124,7 +124,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_ROCM_PY311_IMAGE
   value: quay.io/rhoai/odh-workbench-jupyter-minimal-rocm-py311-rhel9@sha256:4e8595477f366c93bd617246511d7d311be50a0f947055330a7b9e1ff6a7cd9e
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_ROCM_PY312_IMAGE
-  value: quay.io/rhoai/odh-workbench-jupyter-minimal-rocm-py312-rhel9@sha256:0e4ac31ada87ac19b4ab5f0853a8563a73cab5fde8cfec78ef7887412b7010ef
+  value: quay.io/rhoai/odh-workbench-jupyter-minimal-rocm-py312-rhel9@sha256:4883ac2476d37b42f515d3464d971b23c853ff5e3d1d232778f88f9d479c4660
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY311_IMAGE
   value: quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py311-rhel9@sha256:a042ba4525853733e16564414ff08daa5e9eae49a9613a9766ff6d9195840d4c
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY312_IMAGE
