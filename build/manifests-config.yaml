@@ -24,7 +24,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: adf98371210278ab96c1cd2f21242ccb25d1d40d
+    git.commit: 39880c2642686455fa7aec03ce73466a411c8c5b
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -134,7 +134,7 @@ additional_meta:
     git.commit: 122643d037e5e7f30539429e17ba96c28fffa9a2
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: b09e2343a43e99d77e5b3ba02d98055956b1ff25
+    git.commit: f72d98ceeb08e2191a4db72e3f35b20ffab82a90
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 07dacf15d231efb8846e00aeb04351e9aa33762f
@@ -155,7 +155,7 @@ additional_meta:
     git.commit: cc128514a4e28f5260a0dcb4aa5f64cc3af63fc1
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
-    git.commit: 3a152a76dce043b6e4eb8f9254b22305cba7b7da
+    git.commit: fe41cdfe1013f293972aa98fec2e5bab5965df39
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
     git.commit: b1915d2b40cd86a461cd8f1dfb9e1bced102f3ff
