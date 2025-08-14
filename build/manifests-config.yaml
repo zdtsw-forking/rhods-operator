@@ -83,7 +83,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 43b016ada0bf5d11fd73dc3774cc95255a6dde7d
+    git.commit: 26632314ee8f3c24bba3b7053d054f79e9b087e1
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 96cb731e1ca0f66160529ea5314d4c431ee5b899
@@ -170,7 +170,7 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 37c179978baf8a67900151aaf8ee489b12183f85
   odh-pipeline-runtime-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
