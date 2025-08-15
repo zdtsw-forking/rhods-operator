@@ -170,7 +170,7 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: e8b7177ca2b6226a29d3aab458db7776d8fb0554
+    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
   odh-pipeline-runtime-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
@@ -200,10 +200,10 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-workbench-jupyter-datascience-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
   odh-workbench-jupyter-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
   odh-workbench-jupyter-minimal-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
@@ -215,7 +215,7 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-workbench-jupyter-minimal-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
   odh-workbench-jupyter-minimal-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
@@ -224,7 +224,7 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-workbench-jupyter-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 0c8f976870cdecad0d15e20cb76fb1a636b94eca
+    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
   odh-workbench-jupyter-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: e8b7177ca2b6226a29d3aab458db7776d8fb0554
