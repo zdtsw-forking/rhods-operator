@@ -167,10 +167,10 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-pipeline-runtime-minimal-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 14f2d8b5a5ce6f9652651d91148e25631c58ac57
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
+    git.commit: 14f2d8b5a5ce6f9652651d91148e25631c58ac57
   odh-pipeline-runtime-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 4fce1e1c6230779ecda37f5746ddfbc90ded08b6
