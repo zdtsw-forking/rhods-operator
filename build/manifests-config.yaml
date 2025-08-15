@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 838cf5deba03b25f1d0e104fa623e9fb537b5738
+    git.commit: 2f91d920d9a373916a9b77414f5b7d66aaecebd9
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 838cf5deba03b25f1d0e104fa623e9fb537b5738
+    git.commit: 2f91d920d9a373916a9b77414f5b7d66aaecebd9
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -158,7 +158,7 @@ additional_meta:
     git.commit: fe41cdfe1013f293972aa98fec2e5bab5965df39
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: b1915d2b40cd86a461cd8f1dfb9e1bced102f3ff
+    git.commit: 185f1f7823db09dbe207a34e32d209a6ce5325b4
   odh-pipeline-runtime-datascience-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
@@ -170,7 +170,7 @@ additional_meta:
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 0c8f976870cdecad0d15e20cb76fb1a636b94eca
+    git.commit: e8b7177ca2b6226a29d3aab458db7776d8fb0554
   odh-pipeline-runtime-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
