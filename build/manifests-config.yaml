@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: f687dfbfcbf105fb42d0db83d7ef533501a177fd
+    git.commit: eea20f20b623360f4ed597e89c7ff648785ee192
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -69,12 +69,12 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 6f60ba70f48b9e236d01b8384f6419d5d7d7c991
+    git.commit: 7bb28fde03423ae462ce1246e84b583e48c224d0
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 590cdcd224d41d54db0affe8afce3e186cac2427
+    git.commit: 06f9109e16cd70bebeeaa310286cad3cd565c8d0
   odh-llama-stack-k8s-operator:
     src: config
     dest: llamastackoperator
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 96cb731e1ca0f66160529ea5314d4c431ee5b899
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: cea6d7fae55d735d78647b268b0cc1b07c0dc3bf
+    git.commit: 2c00b1fcbc9e020c4f8cc0cd5775ccd62595ba33
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: a1db316913ea48afa393471a50ab53316b7f1fce
@@ -119,19 +119,19 @@ additional_meta:
     git.commit: 46d48c0ea510e958f1bade61208c683d2bbed2b7
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: d1de316e471298a1740ee6c3c9718305f1eab616
+    git.commit: 0549a718bc595e3a0a7258d020041ac85e1cd7ea
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 765998eb4248dbfbef2c255af6b5471fcd98f3bc
+    git.commit: 420d971765ebe41d13a9f517e5c1e92cf39c6970
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: c8bda0a5d3135e7aa9bad58b157f45a6f77d6c69
+    git.commit: 06f9109e16cd70bebeeaa310286cad3cd565c8d0
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: 8c13a57be46ac997be8b68e5caa40885a1063403
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: a659eeb774ef5336b3b1ec707835be626f88d8b4
+    git.commit: 2f2336e2400fa5dfb3d5bfc433e55c622f6f21f9
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: f72d98ceeb08e2191a4db72e3f35b20ffab82a90
