@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: f027d6658697388de91e033bb680814ac5b10767
+    git.commit: 4240e27590399085e95fe1e8fe3e7e77926c851c
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -128,7 +128,7 @@ additional_meta:
     git.commit: 06f9109e16cd70bebeeaa310286cad3cd565c8d0
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: aafd28e2fb7310c1f16b340fc4030a788bde3aea
+    git.commit: a59adfb66359320e8f0e6298bc8a85b10e45e766
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
     git.commit: 2f2336e2400fa5dfb3d5bfc433e55c622f6f21f9
