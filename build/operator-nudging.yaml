@@ -106,7 +106,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_ROCM_PY311_IMAGE
   value: quay.io/rhoai/odh-pipeline-runtime-tensorflow-rocm-py311-rhel9@sha256:f3cc8cdc478d5fd16d59701102fb4520bddc2c4fc00c5f3dd7b7b78b20cd4596
 - name: RELATED_IMAGE_ODH_WORKBENCH_CODESERVER_DATASCIENCE_CPU_PY311_IMAGE
-  value: quay.io/rhoai/odh-workbench-codeserver-datascience-cpu-py311-rhel9@sha256:3f8879aeb617bcc546e592f028b25a4a619bccd22c4c14476b93624bad2cbb39
+  value: quay.io/rhoai/odh-workbench-codeserver-datascience-cpu-py311-rhel9@sha256:cb0e3f388b2a075b44bea963f47272d0bf70bb216aa29a5d82e53f85500a39ec
 - name: RELATED_IMAGE_ODH_WORKBENCH_CODESERVER_DATASCIENCE_CPU_PY312_IMAGE
   value: quay.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:e97b3c74e1751f41447b4811e54da98671201aebca56eaf5ee6017b270674155
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_DATASCIENCE_CPU_PY311_IMAGE
