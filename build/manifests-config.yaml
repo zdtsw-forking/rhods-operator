@@ -92,7 +92,7 @@ additional_meta:
     git.commit: 964b41c77ef218d2edecdf1c000ef65f434ed862
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: e76f8d73503efcae95fc5b6c0548a69bba7d753b
+    git.commit: 06ff272de3a10446529607d921248c43b0a2466b
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 07c0eb588c233d7678c0acdb5b675ef04dd7a42f
@@ -230,7 +230,7 @@ additional_meta:
     git.commit: 1aa6903b63218ab97ff0cfb83b19121d68466f20
   odh-workbench-jupyter-pytorch-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1aa6903b63218ab97ff0cfb83b19121d68466f20
+    git.commit: a332806921bed6d80f2b638119f4d0abfbf2b6e5
   odh-workbench-jupyter-pytorch-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: a332806921bed6d80f2b638119f4d0abfbf2b6e5
@@ -242,7 +242,7 @@ additional_meta:
     git.commit: 1aa6903b63218ab97ff0cfb83b19121d68466f20
   odh-workbench-jupyter-tensorflow-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1aa6903b63218ab97ff0cfb83b19121d68466f20
+    git.commit: a332806921bed6d80f2b638119f4d0abfbf2b6e5
   odh-workbench-jupyter-trustyai-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1aa6903b63218ab97ff0cfb83b19121d68466f20
