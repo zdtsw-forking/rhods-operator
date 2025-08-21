@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: f71d99c61d2a93be693e76e213c946bbe0dd6177
+    git.commit: 4d870eb2dd31e27db7eba25b9320d64696fa8946
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -128,10 +128,10 @@ additional_meta:
     git.commit: 06f9109e16cd70bebeeaa310286cad3cd565c8d0
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: 8b62d465e238839d67473547161cf871ee6d3d21
+    git.commit: d458d6aaeae09dcb4119888b6ee01087a333cd01
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: eae455fefe834a81ada3f60876f7af12d9eecf34
+    git.commit: 18aa4e571786bbdd38f090de4f8563c7e8335e8c
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: 1fa1d15c11cf3eb744966b5c90889fed52dbac0b
@@ -242,7 +242,7 @@ additional_meta:
     git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
   odh-workbench-jupyter-tensorflow-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: d14e594e43153f11974905aba44e03a749d9fbf6
   odh-workbench-jupyter-trustyai-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
