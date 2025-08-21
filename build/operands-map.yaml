@@ -142,14 +142,14 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py311-rhel9@sha256:cf9231879b252055cdf50a1b7eaa47a6f175da700bacae2b1be00851a13a6006"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:823c326becc58e11267fcfc2af8d9612b11624497d4bba85f325e0676bc88160"
+  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:7505537a52a934c755d85fb58c3aee71ae49eaf0fc5805aa2c64952b8dd69d43"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py311-rhel9@sha256:b941a88aaa4eaf5ba689114f2cf69ee016a8be00d7911712a041ef85ff67bc5d"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py311-rhel9@sha256:acfe5d6cb1262fc7f3710ff43c9e692327b1f1906549a64b9a9cefa98ec4f0f7"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:9b5a0bcb074cebb514360bd4ad39576a57cc0c2ca7d794ce6ad574a82e8978ef"
+  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:d91411cb03f4b7300fc075120d1e66f39cf7f3e43a88705e5e20a6736b60ffa1"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:9b5a0bcb074cebb514360bd4ad39576a57cc0c2ca7d794ce6ad574a82e8978ef"
+  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:d91411cb03f4b7300fc075120d1e66f39cf7f3e43a88705e5e20a6736b60ffa1"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:57f57a2d75af9a8b245819e8d7e2171bd1b67d0c704574d1d5d6d4ca7f938d9b
