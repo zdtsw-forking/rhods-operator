@@ -152,7 +152,7 @@ additional_meta:
     git.commit: 6aa0eedf89b8ba4d2cc5205c6144c3143994acda
   odh-fms-guardrails-orchestrator:
     git.url: https://github.com/red-hat-data-services/fms-guardrails-orchestrator
-    git.commit: cc128514a4e28f5260a0dcb4aa5f64cc3af63fc1
+    git.commit: d2a0c9cdd18ec65fc17d4152acf15df8fe9c6528
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
     git.commit: fe41cdfe1013f293972aa98fec2e5bab5965df39
@@ -206,10 +206,10 @@ additional_meta:
     git.commit: a332806921bed6d80f2b638119f4d0abfbf2b6e5
   odh-workbench-jupyter-minimal-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 16f7c8fb8628d8a78ebc7a9b03d02b2cab8ac32e
   odh-workbench-jupyter-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b9472e312fa8625206f8dab58062c93b09a34be3
+    git.commit: 16f7c8fb8628d8a78ebc7a9b03d02b2cab8ac32e
   odh-workbench-jupyter-minimal-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: a332806921bed6d80f2b638119f4d0abfbf2b6e5
