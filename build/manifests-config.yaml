@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 4d870eb2dd31e27db7eba25b9320d64696fa8946
+    git.commit: 319131cda6ef456e335f8298d51f9b5f83d74935
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -230,19 +230,19 @@ additional_meta:
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-pytorch-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-pytorch-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-tensorflow-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-tensorflow-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: d14e594e43153f11974905aba44e03a749d9fbf6
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-trustyai-cpu-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
