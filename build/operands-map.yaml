@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:416919a8d81a789ea18987b176efbf7058adc4f89cb5c15b5f28ebe9de86d199"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:8f7133e86e3ab519cec6f13a0bfb79131a8ed8f5ae5fc2971cc3d68959247635"
+  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:c8927ce22149ff96e40b1ac451a5f37b3ac29d48e0a9651f25496fb15459a016"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:8347e643964f93960ccf869aa60a40eea82b81e79745256057b5c2ccf2adebc3"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -94,7 +94,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_DATASCIENCE_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:9ab6a501842864e91fb1f1a6afbe4cd1612907b4bb79559ead088df186aaef02"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_MINIMAL_CPU_PY311_IMAGE
-  value: "quay.io/rhoai/odh-pipeline-runtime-minimal-cpu-py311-rhel9@sha256:b7187fb9bbddc0f90b31c3977069ec0745fba5230566180f231cb77a1e12c8c5"
+  value: "quay.io/rhoai/odh-pipeline-runtime-minimal-cpu-py311-rhel9@sha256:68bd8c3e751205dc811b473f00a25f3f2cf62a6ed5744aded2500a46d295d5af"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_MINIMAL_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:a6f3b07794076c4d89d592322bd386b14f01e2c7cd0eb79bfd23e4e013c7d92b"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY311_IMAGE
