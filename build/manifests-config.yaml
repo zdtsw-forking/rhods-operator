@@ -227,7 +227,7 @@ additional_meta:
     git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
   odh-workbench-jupyter-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-pytorch-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
@@ -248,7 +248,7 @@ additional_meta:
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 37699ca156aa1f1973a6b191161dc77f4ec86191

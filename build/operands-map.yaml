@@ -134,7 +134,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py311-rhel9@sha256:f8c70ac38c4f84e7fd6860114bb6d93725b9c24c54f1335d6f7d07e174d727f0"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:fc9cbb42ece7e62a675246fba39efebc52b54c6c2933ec41cbf33812da18dfc3"
+  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:cf98129f6608b4705916db51c426a66e8ef4457fbcf1ea804a57b4ff1f1fcd06"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_ROCM_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-rocm-py311-rhel9@sha256:dfde4f02cae8c5e8599b217382693e4cf0723c7b5287fc3a1fb0962d96e5c4c2"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_ROCM_PY312_IMAGE
@@ -148,9 +148,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY311_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py311-rhel9@sha256:5a55b714ce9d7f61208a1ead12b8f703ef947e217bda0156f7254c5a2d945d63"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:d91411cb03f4b7300fc075120d1e66f39cf7f3e43a88705e5e20a6736b60ffa1"
+  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:c0482a03d45fbe3a2acff4e9d583830d54324e939ba1bb19472af4f29d5e233f"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:d91411cb03f4b7300fc075120d1e66f39cf7f3e43a88705e5e20a6736b60ffa1"
+  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:c0482a03d45fbe3a2acff4e9d583830d54324e939ba1bb19472af4f29d5e233f"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:7bd5221c0ff734c756157e3baddf8f6bcfca8f937280a7d33792e76bc466dfa3"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
