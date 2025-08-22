@@ -152,8 +152,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:d91411cb03f4b7300fc075120d1e66f39cf7f3e43a88705e5e20a6736b60ffa1"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:9ac6d23511c6516e5062c0efb5a59c482d2ae807adad84c941d94b52eab98ed8"
+  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:7bd5221c0ff734c756157e3baddf8f6bcfca8f937280a7d33792e76bc466dfa3"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:9ac6d23511c6516e5062c0efb5a59c482d2ae807adad84c941d94b52eab98ed8"
+  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:7bd5221c0ff734c756157e3baddf8f6bcfca8f937280a7d33792e76bc466dfa3"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:337251214962fb5c4e718eeea3f5233b04097de754a12f3a153f2674580c4a17
