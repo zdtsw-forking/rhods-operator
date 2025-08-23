@@ -94,7 +94,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY311_IMAGE
   value: quay.io/rhoai/odh-pipeline-runtime-pytorch-cuda-py311-rhel9@sha256:da2f63e4473020fbecefa23924eba561d55782bfc70ba42c65ee51742a847d6d
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY312_IMAGE
-  value: quay.io/rhoai/odh-pipeline-runtime-pytorch-cuda-py312-rhel9@sha256:1642bd8d1aa9171223c4fc922633d252a2687fd948ed10faaaeb14885dfbd75f
+  value: quay.io/rhoai/odh-pipeline-runtime-pytorch-cuda-py312-rhel9@sha256:649c4ab70825db6126a185bee0fe311dbf4b4aa7cb598278ea082faa52afb613
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_ROCM_PY311_IMAGE
   value: quay.io/rhoai/odh-pipeline-runtime-pytorch-rocm-py311-rhel9@sha256:6fd59078b362fe065c0f18a3dd33b83911a18096d6461face33afb7533afa6d5
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_ROCM_PY312_IMAGE
