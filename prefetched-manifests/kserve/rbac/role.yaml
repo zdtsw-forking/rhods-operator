@@ -4,6 +4,10 @@ kind: ClusterRole
 metadata:
   name: kserve-manager-role
 rules:
+- nonResourceURLs:
+  - /metrics
+  verbs:
+  - get
 - apiGroups:
   - ""
   resources:
@@ -149,6 +153,19 @@ rules:
   - update
   - watch
 - apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - podmonitors
+  - servicemonitors
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
   - networking.istio.io
   resources:
   - destinationrules
@@ -246,6 +263,14 @@ rules:
   - routes/status
   verbs:
   - get
+- apiGroups:
+  - security.openshift.io
+  resourceNames:
+  - openshift-ai-llminferenceservice-scc
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use
 - apiGroups:
   - serving.knative.dev
   resources:
