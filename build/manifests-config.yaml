@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 49ffee80e68f10687392eaab4ba4dcdf70b52cd2
+    git.commit: 71fa2923cfad191464e5c4f6503aa71dd4ec0e8f
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -170,7 +170,7 @@ additional_meta:
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1b537db029feb46bc75039c42dee8e9aeab8e257
+    git.commit: 873434be1ec72c8ed68fa54997124d137e1f5823
   odh-pipeline-runtime-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: e7db7738a0a0fedaa04edb4a13f815a0de9ab1e8
@@ -251,4 +251,4 @@ additional_meta:
     git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 37699ca156aa1f1973a6b191161dc77f4ec86191
+    git.commit: 95261176042afc094d389f9de942b7b624b4ece4
