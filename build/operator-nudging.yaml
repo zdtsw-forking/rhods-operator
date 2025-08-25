@@ -66,7 +66,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MUST_GATHER_IMAGE
   value: quay.io/rhoai/odh-must-gather-rhel9@sha256:29b298f46e4dafbb00dd01c8a43cbbc28f2efd1245b9fb18c7edc483d0cf2b2b
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
-  value: quay.io/rhoai/odh-kserve-agent-rhel9@sha256:97bcb7e6f162032f7b3f2d8ad3ad32ea9d96cc62dec785226b83e40e72b37205
+  value: quay.io/rhoai/odh-kserve-agent-rhel9@sha256:6f3e456ffaeb36c5f22b2a50c0c5405b098bf8564abdc679f1048016571aeacf
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
   value: quay.io/rhoai/odh-kserve-controller-rhel9@sha256:047059a888e0c88a10acb1c09896edc79694f4c70003e67575cb6cd141fb9516
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
