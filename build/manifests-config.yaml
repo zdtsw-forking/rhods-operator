@@ -155,7 +155,7 @@ additional_meta:
     git.commit: d2a0c9cdd18ec65fc17d4152acf15df8fe9c6528
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
-    git.commit: fe41cdfe1013f293972aa98fec2e5bab5965df39
+    git.commit: 8c764fac5938afc4cfac82f0707f070398dbb73f
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
     git.commit: 185f1f7823db09dbe207a34e32d209a6ce5325b4
@@ -221,7 +221,7 @@ additional_meta:
     git.commit: 4a1103e0bd63a5d288b05377b061a09a92f35eea
   odh-workbench-jupyter-minimal-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: cd6d4d35cca8b63ee3cff84f3875f602c2531898
+    git.commit: 411356397dac6da17d41a72fcbfb1afbd2c3e94a
   odh-workbench-jupyter-pytorch-cuda-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: e7db7738a0a0fedaa04edb4a13f815a0de9ab1e8
