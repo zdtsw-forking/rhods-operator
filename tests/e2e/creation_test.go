@@ -9,6 +9,7 @@ import (
 	"sort"
 	"strings"
 	"testing"
+	"time"
 
 	gTypes "github.com/onsi/gomega/types"
 	operatorv1 "github.com/openshift/api/operator/v1"
@@ -65,8 +66,7 @@ func dscManagementTestSuite(t *testing.T) {
 		{"Validate creation of DSCInitialization instance", dscTestCtx.ValidateDSCICreation},
 		{"Validate creation of DataScienceCluster instance", dscTestCtx.ValidateDSCCreation},
 		{"Validate ServiceMeshSpec in DSCInitialization instance", dscTestCtx.ValidateServiceMeshSpecInDSCI},
-		//TODO: disabled until RHOAIENG-29225 is resolved
-		// {"Validate ServiceMeshControlPlane exists and is recreated upon deletion.", dscTestCtx.ValidateServiceMeshControlPlane},
+		{"Validate ServiceMeshControlPlane exists and is recreated upon deletion.", dscTestCtx.ValidateServiceMeshControlPlane},
 		{"Validate Knative resource", dscTestCtx.ValidateKnativeSpecInDSC},
 		{"Validate owned namespaces exist", dscTestCtx.ValidateOwnedNamespacesAllExist},
 		{"Validate default NetworkPolicy exist", dscTestCtx.ValidateDefaultNetworkPolicyExists},
@@ -159,7 +159,7 @@ func (tc *DSCTestCtx) ValidateDSCICreation(t *testing.T) {
 	t.Helper()
 
 	tc.EventuallyResourceCreatedOrUpdated(
-		WithObjectToCreate(CreateDSCI(tc.DSCInitializationNamespacedName.Name, tc.AppsNamespace)),
+		WithObjectToCreate(CreateDSCI(tc.DSCInitializationNamespacedName.Name, tc.AppsNamespace, tc.MonitoringNamespace)),
 		WithCondition(jq.Match(`.status.phase == "%s"`, status.ConditionTypeReady)),
 		WithCustomErrorMsg("Failed to create DSCInitialization resource %s", tc.DSCInitializationNamespacedName.Name),
 
@@ -197,7 +197,7 @@ func (tc *DSCTestCtx) ValidateServiceMeshSpecInDSCI(t *testing.T) {
 			MetricsCollection: serviceMeshMetricsCollection,
 		},
 		Auth: infrav1.AuthSpec{
-			Audiences: &[]string{"https://kubernetes.default.svc"},
+			Audiences: []string{"https://kubernetes.default.svc"},
 		},
 	}
 
@@ -223,25 +223,12 @@ func (tc *DSCTestCtx) ValidateServiceMeshControlPlane(t *testing.T) {
 
 	smcp := types.NamespacedName{Name: serviceMeshControlPlane, Namespace: serviceMeshNamespace}
 
-	// Ensure service mesh feature tracker is in phase ready
-	tc.EnsureResourceExists(
-		WithMinimalObject(gvk.FeatureTracker, types.NamespacedName{Name: "opendatahub-mesh-control-plane-creation"}),
-		WithCondition(jq.Match(`.status.phase == "Ready"`)))
-
 	// Check ServiceMeshControlPlane was created.
-	tc.EnsureResourceExists(
-		WithMinimalObject(gvk.ServiceMeshControlPlane, smcp),
-	)
-
 	// Delete it.
-	tc.DeleteResource(
-		WithMinimalObject(gvk.ServiceMeshControlPlane, smcp),
-		WithWaitForDeletion(true),
-	)
-
 	// Check eventually got recreated.
-	tc.EnsureResourceExistsConsistently(
+	tc.EnsureResourceDeletedThenRecreated(
 		WithMinimalObject(gvk.ServiceMeshControlPlane, smcp),
+		WithGracePeriod(1*time.Second),
 	)
 }
 
@@ -307,7 +294,7 @@ func (tc *DSCTestCtx) ValidateDefaultNetworkPolicyExists(t *testing.T) {
 func (tc *DSCTestCtx) ValidateDSCIDuplication(t *testing.T) {
 	t.Helper()
 
-	dup := CreateDSCI(dsciInstanceNameDuplicate, tc.AppsNamespace)
+	dup := CreateDSCI(dsciInstanceNameDuplicate, tc.AppsNamespace, tc.MonitoringNamespace)
 	tc.EnsureResourceIsUnique(dup)
 }
 

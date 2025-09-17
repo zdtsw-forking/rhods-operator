@@ -100,6 +100,7 @@ import (
 	_ "github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/services/certconfigmapgenerator"
 	_ "github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/services/monitoring"
 	_ "github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/services/secretgenerator"
+	_ "github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/services/servicemesh"
 	_ "github.com/opendatahub-io/opendatahub-operator/v2/internal/controller/services/setup"
 )
 
@@ -352,6 +353,7 @@ func main() { //nolint:funlen,maintidx,gocyclo
 					&corev1.Pod{},
 					&userv1.Group{},
 					&ofapiv1alpha1.CatalogSource{},
+					resources.GvkToUnstructured(gvk.Authorino),
 				},
 				// Set it to true so the cache-backed client reads unstructured objects
 				// or lists from the cache instead of a live lookup.

@@ -109,9 +109,6 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 		}
 	} else {
 		log.Info("Finalization DSCInitialization start deleting instance", "name", instance.Name, "finalizer", finalizerName)
-		if err := r.removeServiceMesh(ctx, instance); err != nil {
-			return reconcile.Result{}, err
-		}
 
 		err := retry.RetryOnConflict(retry.DefaultRetry, func() error {
 			newInstance := &dsciv1.DSCInitialization{}
@@ -264,10 +261,19 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 			}
 		}
 
-		// Apply Service Mesh configurations
-		if errServiceMesh := r.configureServiceMesh(ctx, instance); errServiceMesh != nil {
-			return reconcile.Result{}, errServiceMesh
+		// handle changes to ServiceMesh section of DSCI spec
+		if err := r.handleServiceMesh(ctx, instance); err != nil {
+			log.Error(err, "failed to handle change to ServiceMesh spec in DSCI")
+			return ctrl.Result{}, err
 		}
+
+		// Sync ServiceMesh conditions to DSCI status
+		if instance.Spec.ServiceMesh != nil && instance.Spec.ServiceMesh.ManagementState != operatorv1.Removed {
+			if err := r.syncServiceMeshConditions(ctx, instance); err != nil {
+				log.Error(err, "failed to sync ServiceMesh conditions to DSCI")
+			}
+		}
+
 		// Create Auth
 		if err = r.CreateAuth(ctx, platform); err != nil {
 			log.Info("failed to create Auth")
@@ -275,7 +281,7 @@ func (r *DSCInitializationReconciler) Reconcile(ctx context.Context, req ctrl.Re
 		}
 
 		// Finish reconciling
-		_, err = status.UpdateWithRetry[*dsciv1.DSCInitialization](ctx, r.Client, instance, func(saved *dsciv1.DSCInitialization) {
+		_, err = status.UpdateWithRetry(ctx, r.Client, instance, func(saved *dsciv1.DSCInitialization) {
 			status.SetCompleteCondition(&saved.Status.Conditions, status.ReconcileCompleted, status.ReconcileCompletedMessage)
 			saved.Status.Phase = status.PhaseReady
 		})
@@ -335,6 +341,13 @@ func (r *DSCInitializationReconciler) SetupWithManager(ctx context.Context, mgr 
 			builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, predicate.LabelChangedPredicate{}))).
 		Owns(&corev1.PersistentVolumeClaim{},
 			builder.WithPredicates(predicate.Or(predicate.GenerationChangedPredicate{}, predicate.LabelChangedPredicate{}))).
+		Owns(&serviceApi.ServiceMesh{},
+			builder.WithPredicates(
+				predicate.Or(
+					predicate.GenerationChangedPredicate{},
+					predicate.LabelChangedPredicate{},
+					rp.ServiceMeshStatusCondition,
+				))).
 		Watches(
 			&dscv1.DataScienceCluster{},
 			handler.EnqueueRequestsFromMapFunc(func(ctx context.Context, a client.Object) []reconcile.Request {
