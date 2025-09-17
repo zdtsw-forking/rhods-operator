@@ -86,7 +86,7 @@ additional_meta:
     git.commit: 98d89793a0649edd713f1b6ec0a0ead8ea7453f1
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: d51f61951f526da0b4bfe725c02793cb96e8480c
+    git.commit: 8ca69c31036a7484f4c7b864edb13d328c50a9fb
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: 9fb31216e61e514859901972908a3a2a29904794
