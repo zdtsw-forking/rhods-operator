@@ -14,7 +14,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MM_REST_PROXY_IMAGE
   value: "quay.io/rhoai/odh-mm-rest-proxy-rhel9@sha256:df04af9afc47570ee039c01c800cbf75b0b243d1c054c591d728cfae1ca0fe5d"
 - name: RELATED_IMAGE_ODH_MODELMESH_IMAGE
-  value: "quay.io/rhoai/odh-modelmesh-rhel9@sha256:1008a1ba76bd83c0671b5fd6f62ed2596c9d799bb55eb6b0e62ff4eff399ec9c"
+  value: "quay.io/rhoai/odh-modelmesh-rhel9@sha256:e8138221e5b4238d883da901217eba53bb1580abbf3593e71059c98779a132dd"
 - name: RELATED_IMAGE_ODH_MODELMESH_RUNTIME_ADAPTER_IMAGE
   value: "quay.io/rhoai/odh-modelmesh-runtime-adapter-rhel9@sha256:b93444d154855076c057bdb61925685344e86de54e928731cb03b468146dfbcb"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
@@ -174,8 +174,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:8980c1856701d5246df29676c507135f92aefc28bc6fa4b80b3360c83bc63c09"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:6a3009fc4d6087dde786edbfc64d6de759555557cc76e399386e306165fab9c8"
+  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:a05479f3ca4a139f65ff2214d806ada0464f5996caeb6642f18080a929feab27"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:6a3009fc4d6087dde786edbfc64d6de759555557cc76e399386e306165fab9c8"
+  value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:a05479f3ca4a139f65ff2214d806ada0464f5996caeb6642f18080a929feab27"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:3c8967724dc5ee95a3afac203b57de15f4c3f29991883983d434a1581a21311d
