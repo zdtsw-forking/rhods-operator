@@ -98,10 +98,14 @@ func (s *componentHandler) Init(platform common.Platform) error {
 		"odh-workbench-jupyter-tensorflow-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY312_IMAGE",
 		// Jupyter Workbench Images - TensorFlow ROCm
 		"odh-workbench-jupyter-tensorflow-rocm-py311-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY311_IMAGE",
+		"odh-workbench-jupyter-tensorflow-rocm-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY312_IMAGE",
 
 		// Jupyter Workbench Images - TrustyAI CPU
 		"odh-workbench-jupyter-trustyai-cpu-py311-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY311_IMAGE",
 		"odh-workbench-jupyter-trustyai-cpu-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE",
+
+		// Jupyter Workbench Images - PyTorch+llmcompressor CUDA
+		"odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE",
 
 		// Jupyter Workbench Images - PyTorch+llmcompressor CUDA
 		"odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE",
@@ -114,6 +118,7 @@ func (s *componentHandler) Init(platform common.Platform) error {
 		"odh-pipeline-runtime-tensorflow-cuda-py311-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_CUDA_PY311_IMAGE",
 		"odh-pipeline-runtime-tensorflow-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_CUDA_PY312_IMAGE",
 		"odh-pipeline-runtime-tensorflow-rocm-py311-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_ROCM_PY311_IMAGE",
+		"odh-pipeline-runtime-tensorflow-rocm-py312-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_ROCM_PY312_IMAGE",
 		// Pipeline Runtime Images - PyTorch CUDA
 		"odh-pipeline-runtime-pytorch-cuda-py311-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY311_IMAGE",
 		"odh-pipeline-runtime-pytorch-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY312_IMAGE",
