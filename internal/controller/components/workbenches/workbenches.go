@@ -106,10 +106,6 @@ func (s *componentHandler) Init(platform common.Platform) error {
 
 		// Jupyter Workbench Images - PyTorch+llmcompressor CUDA
 		"odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE",
-
-		// Jupyter Workbench Images - PyTorch+llmcompressor CUDA
-		"odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-ubi9-n": "RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE",
-
 		// Pipeline Runtime Images
 		"odh-pipeline-runtime-datascience-cpu-py311-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_DATASCIENCE_CPU_PY311_IMAGE",
 		"odh-pipeline-runtime-datascience-cpu-py312-ubi9-n": "RELATED_IMAGE_ODH_PIPELINE_RUNTIME_DATASCIENCE_CPU_PY312_IMAGE",
