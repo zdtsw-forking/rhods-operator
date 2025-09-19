@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 4632bf23d688ed2cf4c80e0e71b5e7b74b99f34b
+    git.commit: 7c2bdc92f735d74eb9565013a51f176a21ad6c36
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -284,7 +284,7 @@ additional_meta:
     git.commit: f52cce71a1db2cf6705bac797fc5e699bbc171f4
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 2cad1d53bb980cec685a23ea1db7c9b3d9ec52f4
+    git.commit: 4632bf23d688ed2cf4c80e0e71b5e7b74b99f34b
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 562535f0680d8868edb99979478099837ca9f259
