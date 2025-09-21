@@ -181,3 +181,5 @@ relatedImages:
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:21157c658e277c856a933dd20cbc894bacd39f89236e840a1f791a3d3b313071"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:21157c658e277c856a933dd20cbc894bacd39f89236e840a1f791a3d3b313071"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:ef40314093a3eddd81e702b72880e714d164850d558a4a9c08aa8c1cee731b06
