@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:312c7668933bce29a4ede18f2b4ec021a3f2f8977f64f380824eb9912e90fe2b"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:916e6f80b67b4d7a6ce1734ca67be8e0785fe5b2bd242f85e774a52097cdcc2c"
+  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:8d0a0129180bb6f75637a5a1ffc29559082a54bc99f4586e205d544031963985"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:f2a4fd7bad8235a671db7309303e9db5129cf5dff97ab65d2cdece75bdbcca4d"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -44,11 +44,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:464a6e3bb885bd097f86b69718e593580cd54342c8e627c8882bb611ea769f00"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:45c5827e695963432f09e846e683eef0be35f81f1715d2f4d1ad5a3a63ecb853"
+  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:d138a328055f5a6e33cbccbcebd49b6df08750697099cd508e5e25311c098c4b"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:6294d1f0d4f4f442f9d093d1be05ad119c69a46dc0a4225bb07470a3ff4b5c2e"
+  value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:f641aea82037764c0d87325100dad67880ee09c2de5881a11454606a5fa58594"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:3dd6b83165e130ae5b31ad4f9512b88bc3de8c25667fb391e751f8d017206ae8"
+  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:0cb8c741d068f4d2360abae416bee1d7d3099184e02af916f49f20825c06d307"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
   value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:6fc996b55cdca82a49dbe6189999be23316268cb09769c31d4282da27b1ce8c7"
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
