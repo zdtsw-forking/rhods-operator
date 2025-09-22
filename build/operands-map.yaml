@@ -70,9 +70,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:ccc323ec4a7dbffe88d7debb66397ec059204708df1ae5ca2113647c3c301100"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
-  value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:d388f5b1ddcb799454bccedef38b562fac6bd65dd1419b57d047d4cef37089e7"
+  value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:d2cf61915a2b9a5a20fc1eba34f2da132646b36167027b8b96c4091207a0648b"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
-  value: "quay.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:c996f99602b2474af360f0057e5c00dc000f9c284b1fe94a7e65653d7c290c43"
+  value: "quay.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:70f320541ade0a720bb5edcca68b45da69c497b536a2bf6bbe06fcfd87fb3fef"
 - name: RELATED_IMAGE_ODH_MUST_GATHER_IMAGE
   value: "quay.io/rhoai/odh-must-gather-rhel9@sha256:e599ad0160bb963637210850bbf7caf667fae782b68a36eb77d5853038cd74c4"
 - name: RELATED_IMAGE_ODH_TA_LMES_DRIVER_IMAGE
