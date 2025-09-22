@@ -44,13 +44,13 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:464a6e3bb885bd097f86b69718e593580cd54342c8e627c8882bb611ea769f00"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:480cc130b2ae20aa4ed37158e1bce608d6e7c0ff8b8f0aea446194eecf77d230"
+  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:5ef9fa688e71d78ecd7f0a9f42af1345680488965db5c2fa90cb75b0dbd7a4f7"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:f641aea82037764c0d87325100dad67880ee09c2de5881a11454606a5fa58594"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:0cb8c741d068f4d2360abae416bee1d7d3099184e02af916f49f20825c06d307"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_RUNTIME_GENERIC_IMAGE
-  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:992201ae73692d2cbe9e64b22051afb0b01b4c74e31d7dae3884d371297f9ddc"
+  value: "quay.io/rhoai/odh-ml-pipelines-runtime-generic-rhel9@sha256:5821fc7e9a5532579782cc1ff1ee2e306e4889a9a8bde67349bd5de61b6690d7"
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-feast-operator-rhel9@sha256:e27eb52397b0469b7e8d18c6987aee01ec57ac3350412dba0b7f8efc86728b72"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
@@ -158,7 +158,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_OPENVINO_MODEL_SERVER_IMAGE
   value: "quay.io/rhoai/odh-openvino-model-server-rhel9@sha256:8f2909d3915615856e6822ce2d10e138766b267a1ff500207d8cf81ef9f2b159"
 - name: RELATED_IMAGE_ODH_VLLM_CPU_IMAGE
-  value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:4c401b8f9079d1814c2ea87452d0f468637b555ff3ead379e106540f9e081565"
+  value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:2cc4edcc3c86e6416936e27b378eaa22c3efcd4ede6d07317ea59757870a6db1"
 - name: RELATED_IMAGE_ODH_VLLM_CUDA_IMAGE
   value: "quay.io/rhoai/odh-vllm-cuda-rhel9@sha256:aad825ce75e3723aea34295643e05322e02247618d0304ff873741be6bb0c287"
 - name: RELATED_IMAGE_ODH_VLLM_ROCM_IMAGE

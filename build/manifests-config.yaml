@@ -119,10 +119,10 @@ additional_meta:
     git.commit: 15bca81a1e22811546e2cbec0e2db7032bb67acd
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: ca77a50923e455be5c7232a78736f4ab921d781d
+    git.commit: b66e0345ec39e600e8a6867a969b73d3d44ccaf6
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: 67c691e784bf90d6cf2ef8e34f80b80dfcb019db
+    git.commit: 41710a4ce7bd9dc2eec7f22984139aa909f2bb9d
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 6f8c6c85f4d74d78245e4862781c118b7c2fa6c7
@@ -269,7 +269,7 @@ additional_meta:
     git.commit: 55cb266d1f92e5279ef345bb7233cac2160ec536
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
-    git.commit: 0a7c07c7833a792f233ec74a8ec68975554095c3
+    git.commit: 681641f6fbd80bac43b55c3b3764539baef3a70f
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
     git.commit: 23a0ac4334978f812c2ee4414364b9a4d7e291aa
