@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:312c7668933bce29a4ede18f2b4ec021a3f2f8977f64f380824eb9912e90fe2b"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:8d0a0129180bb6f75637a5a1ffc29559082a54bc99f4586e205d544031963985"
+  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:df33ca2615c1265f72954a1254b3358aed60bcc2c4e29d9c48504ee2724ddf30"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:f2a4fd7bad8235a671db7309303e9db5129cf5dff97ab65d2cdece75bdbcca4d"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -156,7 +156,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_GUARDRAILS_DETECTOR_HUGGINGFACE_RUNTIME_IMAGE
   value: "quay.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:252b0f3818b6bacce625fcb5bfd5a1b54b4bd7187c99d2ce3b21325013f538da"
 - name: RELATED_IMAGE_ODH_OPENVINO_MODEL_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-openvino-model-server-rhel9@sha256:18a4699b8d4cb97fafe0c0b971d4468f9e31b705a8fba61924ff630164b88a6d"
+  value: "quay.io/rhoai/odh-openvino-model-server-rhel9@sha256:8f2909d3915615856e6822ce2d10e138766b267a1ff500207d8cf81ef9f2b159"
 - name: RELATED_IMAGE_ODH_VLLM_CPU_IMAGE
   value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:4c401b8f9079d1814c2ea87452d0f468637b555ff3ead379e106540f9e081565"
 - name: RELATED_IMAGE_ODH_VLLM_CUDA_IMAGE
