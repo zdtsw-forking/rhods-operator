@@ -134,8 +134,15 @@ jobs:
                   cd ../
                   echo "current dir = $(pwd)"
                   
-                  mkdir -p ${{ github.workspace }}/rhods-operator/prefetched-manifests/$dest
-                  cp -r $component/$src/* ${{ github.workspace }}/rhods-operator/prefetched-manifests/$dest
+                  dest_dir_path=${{ github.workspace }}/rhods-operator/prefetched-manifests/$dest
+                  if [[ -n "$dest" ]] && [[ -d "${dest_dir_path}" ]]
+                  then
+                      # delete the existing dir content
+                      rm -rf ${dest_dir_path}
+                  fi
+
+                  mkdir -p ${dest_dir_path}
+                  cp -r $component/$src/* ${dest_dir_path}
               fi
           done < <(yq e '.map | keys' ${MANIFEST_CONFIG_PATH} )
           
