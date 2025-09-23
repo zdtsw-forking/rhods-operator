@@ -215,7 +215,7 @@ additional_meta:
     git.commit: d44432e291d615b608d1dae4ba58de7be6fe6df1
   odh-workbench-jupyter-minimal-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 4b790e5b40028543a38463eb0e5902107f556918
+    git.commit: 8c616de6d061784470e25764c2c5ded05e4a8571
   odh-workbench-jupyter-minimal-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: d44432e291d615b608d1dae4ba58de7be6fe6df1
