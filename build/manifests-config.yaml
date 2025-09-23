@@ -95,7 +95,7 @@ additional_meta:
     git.commit: b11ad73498d2cf3a2d0c9d98f4a2dbe2eda882a2
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: e62c1edaa583e1edc54edb605233fe3847b7cdd1
+    git.commit: 652120972a23580be68950955ceff6baa118b599
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 9e9627a9a253896d1c8136ac1a94b2a5a9fd74d4
@@ -176,7 +176,7 @@ additional_meta:
     git.commit: f35092edd57832fb8d1ccc1426f9a70f328b87f6
   odh-pipeline-runtime-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 33ec71b35890b2406f96a8bbb9a6cf02c18e05f3
+    git.commit: 8c616de6d061784470e25764c2c5ded05e4a8571
   odh-pipeline-runtime-pytorch-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 98e0bccf388a82e4d8eb0a81c0f00509be32e899
@@ -188,7 +188,7 @@ additional_meta:
     git.commit: f35092edd57832fb8d1ccc1426f9a70f328b87f6
   odh-pipeline-runtime-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: f2e2229b6facb2c0cc78b020126dc5ffbe3f25bb
+    git.commit: 8c616de6d061784470e25764c2c5ded05e4a8571
   odh-pipeline-runtime-tensorflow-rocm-py311:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 6f72a21ff06de7ec65b7baf92e24e8bb88de9767
