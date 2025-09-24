@@ -157,3 +157,5 @@ relatedImages:
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:6dbf172b3c9ed45e578d6c4a8e9bdb8ede46c858da0aaed8142bc970db122f57"
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:6dbf172b3c9ed45e578d6c4a8e9bdb8ede46c858da0aaed8142bc970db122f57"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:3855d9b06715c37e99b8a0a147c82ec43c99234290465eb3a4d4c5a49c9ba4f2
