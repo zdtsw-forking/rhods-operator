@@ -44,7 +44,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:462def650283eaaf041d21107cef8f799cdf876bfe00be892e66642c825ff639"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:212f89d158ad0b67925c75aff4c840fc3a0ef55b620465937341b103066e10c1"
+  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:dc893ed8f331e05ee4627a891ee4118347b174f40ae893d04d0be1966dd9ddea"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:955bbd7339e2106a8b1cc4d841f8d334c52a93c3f8d530bd25ac306d7ca25744"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
@@ -128,7 +128,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_CPU_IMAGE
   value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:2cc4edcc3c86e6416936e27b378eaa22c3efcd4ede6d07317ea59757870a6db1"
 - name: RELATED_IMAGE_ODH_VLLM_CUDA_IMAGE
-  value: "quay.io/rhoai/odh-vllm-cuda-rhel9@sha256:aad825ce75e3723aea34295643e05322e02247618d0304ff873741be6bb0c287"
+  value: "quay.io/rhoai/odh-vllm-cuda-rhel9@sha256:76efa44b20246e171474a31ee2776000d9a9f8d45b1c3acf412aede042a9d808"
 - name: RELATED_IMAGE_ODH_VLLM_ROCM_IMAGE
   value: "quay.io/rhoai/odh-vllm-rocm-rhel9@sha256:5f1545024d72d0f3cc9ecf58076f966a537428a4fd84aea50197b4b9996019ac"
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
@@ -136,9 +136,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
   value: "quay.io/rhoai/odh-vllm-gaudi-rhel9@sha256:a463696ffefd9e67cf51045f49626f211744b3dcd0013e5eea36bbebdb080513"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:fb9cb29c6b0a553d48dcd7ae2ca7a85ad8e0448f13369e064bf2922637f704bd"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:beca1b787bd4a01ccb51fb260252c79aa3567f14adddcd9eca052dd1a7a4548a"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:fb9cb29c6b0a553d48dcd7ae2ca7a85ad8e0448f13369e064bf2922637f704bd"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:beca1b787bd4a01ccb51fb260252c79aa3567f14adddcd9eca052dd1a7a4548a"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:7f4805839b955f3b48596a2402a53eff0f55ffee70ab814ec737f388047668a1"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE

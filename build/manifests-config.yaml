@@ -119,7 +119,7 @@ additional_meta:
     git.commit: 7c54166ec4329968f30d3dab862e2ea54a64317b
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 1a45bf5d4dca4f297f36ac2e67865607a844545f
+    git.commit: bf6fe2249a82b1ef0d8c35c3b6d44bfd11adc9a2
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 4a7cf6b20dd0d728a02a3d0f4fc4c9e63e9a435a
@@ -224,7 +224,7 @@ additional_meta:
     git.commit: 681641f6fbd80bac43b55c3b3764539baef3a70f
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
-    git.commit: 23a0ac4334978f812c2ee4414364b9a4d7e291aa
+    git.commit: 216146142219448f7f6f12d3f20e5dd16555f0e4
   odh-vllm-rocm:
     git.url: https://github.com/red-hat-data-services/vllm-rocm
     git.commit: 1e7c3fd7cafe2070ddaa41e1e6c7eab7960a543a
@@ -233,7 +233,7 @@ additional_meta:
     git.commit: e982798f202df2f395e773988b7b8f0991dea47c
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: f52cce71a1db2cf6705bac797fc5e699bbc171f4
+    git.commit: 242e00ec2cdf8f6fa6c6956b49499d584286e866
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 562535f0680d8868edb99979478099837ca9f259
