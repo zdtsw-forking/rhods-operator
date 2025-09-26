@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3bb953ceab1f40e1846333a76f436a98a0b1e2b4
+    git.commit: 113366998d984f6c20d462a69a81fb15414c907f
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3bb953ceab1f40e1846333a76f436a98a0b1e2b4
+    git.commit: 113366998d984f6c20d462a69a81fb15414c907f
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 01de21c39fbf603318030c77a9901f09ec673334
+    git.commit: 563e0624da41d07c058c6672428538c90f49c3c4
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -233,13 +233,13 @@ additional_meta:
     git.commit: e982798f202df2f395e773988b7b8f0991dea47c
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 8ecbc57fd035a68f70dba8a88f267ad19f7e8556
+    git.commit: b5cd2b6225203a9caa521282a1b3a57c53c32aa9
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 562535f0680d8868edb99979478099837ca9f259
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 9ee3134fc21db8c0c497c29558a79d4f02a460b7
+    git.commit: 9fd6e983665537b4ff8e18e1ea6ca777abfcf48c
   odh-kserve-localmodel:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 3f01a540d17d18a368793922f53ec0af46703ec5
