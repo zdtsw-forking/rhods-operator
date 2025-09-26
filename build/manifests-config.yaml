@@ -29,7 +29,7 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: 4b7f94de2d5944edbc71819b129e401bf4a27c9f
+    git.commit: d401c3c2910d5747594abbd96a54428ec45c02f6
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
@@ -233,7 +233,7 @@ additional_meta:
     git.commit: e982798f202df2f395e773988b7b8f0991dea47c
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 242e00ec2cdf8f6fa6c6956b49499d584286e866
+    git.commit: 8ecbc57fd035a68f70dba8a88f267ad19f7e8556
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 562535f0680d8868edb99979478099837ca9f259
