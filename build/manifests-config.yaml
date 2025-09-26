@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 9d9f68b1903faecfd930ccb88e45a61ccf84855d
+    git.commit: 01de21c39fbf603318030c77a9901f09ec673334
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -221,7 +221,7 @@ additional_meta:
     git.commit: 55cb266d1f92e5279ef345bb7233cac2160ec536
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
-    git.commit: 681641f6fbd80bac43b55c3b3764539baef3a70f
+    git.commit: 4ff08baa292b7b4928bcb249f9695fbf9ab011f7
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
     git.commit: 216146142219448f7f6f12d3f20e5dd16555f0e4
