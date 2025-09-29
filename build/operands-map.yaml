@@ -58,11 +58,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:18d7083615cb5169072322182e32095d106f9c97d91b1225cd367c872d5bd00a"
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
-  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:5ab4456b31adebbd61e0b1d2bf6b5004a6aca03fba3cffbb7b18fa3c123a9b4e"
+  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:e5c0444486e1f65ebf3f2f4b43a0add60c9ba79db99ddb8c29c9ea4de0a95415"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:0bfd2b7cf50684d4ffe61816789bc41a8e949fa0d17f11821337dcdc336a8a79"
+  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:3ef3178ade33cecc5e593660b5a6bd31e81ba76c30cdc6389b16398d6ea2aa2b"
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:8a00c69235dada33d86c1826759e19564c0a214db071a845fc72ab0b731f2b1a"
+  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:e28179ed346cbf769e3abffa494057f485b0a393ce332714aa9b1f8ffe46097e"
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:027eee4318ebf836a7fe7c969aa13a9c35ef8fcd60f54dc9125873c613115ee4"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
@@ -148,7 +148,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:48802309f5d6d634ade047836c2d2d8c0fa9fdf4d7a595569239f4bf88faccc1"
 - name: RELATED_IMAGE_ODH_KSERVE_LOCALMODEL_IMAGE
-  value: "quay.io/rhoai/odh-kserve-localmodel-rhel9@sha256:5f026727bb6e6a91fdd8c0e7d168f216f077076dbbedb72eec60a91caeaeeb04"
+  value: "quay.io/rhoai/odh-kserve-localmodel-rhel9@sha256:8a9f2b1aa6a38fb72043193632b9eece67693bb5a07e160d375cd79293d447f2"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-rhel9@sha256:403a371b88375a7cc278f6500ead9477a8cb30444bd137b77d91d734d1ad8feb"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE
