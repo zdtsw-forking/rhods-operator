@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 175d93b0686ad99909a16f5a30073512623ff75d
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 9fb31216e61e514859901972908a3a2a29904794
+    git.commit: 92ec657b6f171ad1fa8a6a409c9169e6f2f49291
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: b11ad73498d2cf3a2d0c9d98f4a2dbe2eda882a2
@@ -176,7 +176,7 @@ additional_meta:
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
   odh-workbench-codeserver-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 57fa00102b15b787184ef3a900915f6a216f57b4
+    git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
   odh-workbench-jupyter-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
