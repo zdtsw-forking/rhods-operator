@@ -246,12 +246,14 @@ func (tc *OperatorResilienceTestCtx) findLeaderPodFromLeases() string {
 			return leaderPod
 		}
 	}
+
 	return ""
 }
 
 // extractLeaderFromLease extracts leader pod name from a lease object.
 func (tc *OperatorResilienceTestCtx) extractLeaderFromLease(lease unstructured.Unstructured) string {
 	holderIdentity, _, _ := unstructured.NestedString(lease.Object, "spec", "holderIdentity")
+
 	controllerDeployment := tc.getControllerDeploymentName()
 	if holderIdentity != "" && strings.Contains(holderIdentity, controllerDeployment) {
 		// holderIdentity format is typically: "podname_uuid"
@@ -265,6 +267,7 @@ func (tc *OperatorResilienceTestCtx) extractLeaderFromLease(lease unstructured.U
 			}
 		}
 	}
+
 	return ""
 }
 
