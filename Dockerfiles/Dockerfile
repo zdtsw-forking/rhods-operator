@@ -27,6 +27,7 @@ COPY config/monitoring/ /opt/manifests/monitoring
 # Copy ods-configs removing any possibly pre-existing symlinks
 RUN rm -f /opt/manifests/osd-configs
 COPY config/osd-configs/ /opt/manifests/osd-configs
+
 ################################################################################
 FROM --platform=$BUILDPLATFORM registry.access.redhat.com/ubi9/go-toolset:$GOLANG_VERSION as builder
 ARG CGO_ENABLED=1
