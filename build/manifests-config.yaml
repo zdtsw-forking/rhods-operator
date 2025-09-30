@@ -200,7 +200,7 @@ additional_meta:
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 84a2b3350034291690662ffb946a1fc550a44669
+    git.commit: 0653b0d161f601232faf365e1e5478eb00b48110
   odh-pipeline-runtime-tensorflow-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
@@ -218,7 +218,7 @@ additional_meta:
     git.commit: 361bc8cfd5856bc250076b0af14bc90b824dfb1d
   odh-openvino-model-server:
     git.url: https://github.com/red-hat-data-services/openvino_model_server
-    git.commit: 55cb266d1f92e5279ef345bb7233cac2160ec536
+    git.commit: 6dd6ea3e12e85764a1622b8e0fd93a8dfce55ae6
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
     git.commit: 4ff08baa292b7b4928bcb249f9695fbf9ab011f7
