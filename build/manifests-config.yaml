@@ -125,7 +125,7 @@ additional_meta:
     git.commit: 4a7cf6b20dd0d728a02a3d0f4fc4c9e63e9a435a
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 8008802e1fba65d2e34e20fc124cd8d46345f5de
+    git.commit: ea23bb3a810de169453907cd2a942f9aff79cdd3
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: c1e99cb0a63a5e6c7d20984e1935824ffcc8f764
@@ -176,7 +176,7 @@ additional_meta:
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
   odh-workbench-codeserver-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2
+    git.commit: d8905975b39eaf2b113158fb0f347f38f58234c9
   odh-workbench-jupyter-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 1e3c41428399113e3e7bf79cb9b253f7ae3f83d2

@@ -54,9 +54,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-feast-operator-rhel9@sha256:7b30de9893ee6b29382781486623d5ddf8a528bdc144873afcdffa33cc8d424e"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:18d7083615cb5169072322182e32095d106f9c97d91b1225cd367c872d5bd00a"
+  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:67312d8ba4552e15876c5448de8159e945d0e14426be91d9b74761ea7944f0de"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:18d7083615cb5169072322182e32095d106f9c97d91b1225cd367c872d5bd00a"
+  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:67312d8ba4552e15876c5448de8159e945d0e14426be91d9b74761ea7944f0de"
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
   value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:2e3771126409a415d9c68cae68da3f244724f04f6fc476fc5b7f9ab61fa3cda4"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
@@ -94,7 +94,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-tensorflow-cuda-py312-rhel9@sha256:0c35761d9397de06fdcb940b1f1a1f11317db42c93382384f6da3644fb4d4283"
 - name: RELATED_IMAGE_ODH_WORKBENCH_CODESERVER_DATASCIENCE_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:94e2ea9b97e452d3047e68c18efc3c0f2084debb37f9121833a5a3cb8d6db13e"
+  value: "quay.io/rhoai/odh-workbench-codeserver-datascience-cpu-py312-rhel9@sha256:38a6a5e1f3e6c5c3a5b5e4324ba5d9b8f83aa20e338089dc4370628b079ddd7d"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_DATASCIENCE_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-datascience-cpu-py312-rhel9@sha256:9e240a322d48394c9a1e63a1744f101afda2cf65cacc0838dd24359febab2add"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_CPU_PY312_IMAGE
