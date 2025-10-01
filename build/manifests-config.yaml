@@ -29,12 +29,12 @@ map:
     src: config
     dest: codeflare
     git.url: https://github.com/red-hat-data-services/codeflare-operator
-    git.commit: d401c3c2910d5747594abbd96a54428ec45c02f6
+    git.commit: 066ead5d236e58e0bef1faac724546bf2c0c93bc
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: d1c44f029a974d444ee6356bd8c45882358b4406
+    git.commit: a2339dd1bb86e3692138f925e33ad7e4eff0b0b4
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 563e0624da41d07c058c6672428538c90f49c3c4
+    git.commit: 9ed8c8f35c34b187ea444c3d7052dee7d0f2f771
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 8cc8ddc6551d1056baa7a88ff49961c8e0fbf382
+    git.commit: 968e95d7ec9aa89c8d60acb4059b2ebdf28b938e
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 385ab628511a15a6a224960af86ad70296fa8d65
+    git.commit: 2df01b2ee35cda90a09d0afa8f7d9aae7ded27a2
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 175d93b0686ad99909a16f5a30073512623ff75d
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: 92ec657b6f171ad1fa8a6a409c9169e6f2f49291
+    git.commit: 20d224bb06aaa87ab5ee555e657282b7dd16d67f
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: b11ad73498d2cf3a2d0c9d98f4a2dbe2eda882a2
@@ -137,7 +137,7 @@ additional_meta:
     git.commit: c292dd5ffd293340314df1889ea0ced4c0d2fcb6
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: 7a0acfeec901ebf5054ad4cb55f582a5707e9b3c
+    git.commit: c2ede3ca707227f7b3ecc257df053217c7b10e4b
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
     git.commit: ea22c3a123fd6611e2c1e27f37533de4c342c009
