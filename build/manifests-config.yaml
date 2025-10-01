@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: d6ad60869cf9d2195e61d8f1971972756f1a08a8
+    git.commit: 6d8f02acc0261fe0f4c6942122c1e115e951b0b8
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -131,7 +131,7 @@ additional_meta:
     git.commit: c9897eca78e1f8c7a7f6e5b6dc40be24a3e52555
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: a1f65c11ebc7b185bece664a5114084bc529b776
+    git.commit: 03ac65d1b21f9209952a05a4c2ea421cf347b56e
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: 70a2cfe42189ddf35f563f38e4b90de1eb0706b2
@@ -239,7 +239,7 @@ additional_meta:
     git.commit: 8adcfabb1d6ec91a0f18c325b93a9b477190f24b
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: c00138aa00258b79011450296581bca3c4f10ad2
+    git.commit: 4379f3492b88b470c9c0a0253346477d1d68bf3b
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: dd608cded53d21888520d68364f48c541fc5bd19
