@@ -224,7 +224,7 @@ additional_meta:
     git.commit: 4ff08baa292b7b4928bcb249f9695fbf9ab011f7
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
-    git.commit: e0c7eb937473839589ced1a9ee915a29f44c8259
+    git.commit: 36fe255789199c847781306fb63676dba4c90d2a
   odh-vllm-rocm:
     git.url: https://github.com/red-hat-data-services/vllm-rocm
     git.commit: 1e7c3fd7cafe2070ddaa41e1e6c7eab7960a543a
