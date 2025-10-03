@@ -132,7 +132,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
   value: "quay.io/rhoai/odh-vllm-gaudi-rhel9@sha256:40e552687ecb12803db16edafb0cd93e39edd9269d1471a7ee1d011b43da1fa2"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:fd58da2ba27d4a582142f0e2e36570f457da6276d0e2275c98b98132277072cd"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:b4eb02ef0bc2d202b462a150ba88b67e557f553f824535489ceb83a0f187acd7"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:7a123fcce1476748d52f5af262ae3f13e0285978e907e4e4a1be81042afc4181"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
