@@ -119,7 +119,7 @@ additional_meta:
     git.commit: d38ec8c017b1aa922472f1cf1d9909d2f641e78d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 311a0a2a63c0141c5b40cec7ceba9fb16902725b
+    git.commit: 99b7c8e8cd7c032d3f91da106f95fbd68ec31ac7
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: f4a0b27ba38c7bea4ddb8e97bee3b5c9d9e3ce17
@@ -152,7 +152,7 @@ additional_meta:
     git.commit: 731670c51e26bd9735deb691795ac4336afa23c7
   odh-fms-guardrails-orchestrator:
     git.url: https://github.com/red-hat-data-services/fms-guardrails-orchestrator
-    git.commit: 1cb2727ca572582e4fa07c0749cf8d23be725c07
+    git.commit: d46efed625482e92a8ceac8ab742a1b8d35362f3
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
     git.commit: 27544ba1254453a09f8a30a670afafbc1830d3b1
@@ -230,7 +230,7 @@ additional_meta:
     git.commit: 69945347fd75ac5dc3a166df5d853ef238a84a73
   odh-vllm-gaudi:
     git.url: https://github.com/red-hat-data-services/vllm-gaudi
-    git.commit: b3a5fbf2eaacca49c9578156ab4c1cb86fc2dbb4
+    git.commit: 154de7eff26192ef21b154e9942ed508817dc836
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: c89cf1af08465cfbd8e0d3e94fa92c087ebcd910
