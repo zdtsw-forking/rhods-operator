@@ -86,7 +86,7 @@ additional_meta:
     git.commit: 706ada4f923b063ad7a733c84a3b6046e0596d55
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
-    git.commit: 88858ae240543a97501054d0a9e4973d1ade58bc
+    git.commit: 7e3f262c495d1d297cc4533072f52324a758c7a8
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
     git.commit: c96d2a5a4c3520531362ca0c24e54e9c8bad75a5
@@ -125,7 +125,7 @@ additional_meta:
     git.commit: cf71dff41f35674bd0b824ce3c2752cd4bef2208
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 7c7d1cb1591d9de8736bfd24b2034879ee39e0cc
+    git.commit: a4b8b417bb0b51824d001b8b5cea199a0b01a793
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 06b92fab87eacb165d52288b0205d1e2a637efe6
