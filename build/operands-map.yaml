@@ -58,11 +58,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:7745b0cdd604fe4abfe0df1ba319afc4ab42a867c6ff3075dc98a6cf869f91b5"
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
-  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:336f6c3466e1984f776aca374c35c69fdebc0ac6924512681c7b6bd2b69c628d"
+  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:7f0c9fb025ecaee651ca25ea955206541f7b47cc4577c3f432cfe486e603edc5"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:a0a03cb2b897ec55e6bb409f11a3bd6317b8acbafaaba7989b7d37aaa1eeb5d9"
+  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:ce71f5149277d1b7d49615887d4dac45c4ffdb87a0838797be8469851e4c1eae"
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:8c13b692da7417f035d27a73b2ce3550a011149649277501199a50e0af1351e3"
+  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:1d5250822d0d9248535d0ccc8d22b613a0a5e656d0b4a1fe9d417f24ca579914"
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:6fc1f568fe7d462983217fdb84b87d8f45b92ff1ac0f5e06832f6460f6a43482"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
@@ -130,7 +130,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_CUDA_IMAGE
   value: "quay.io/rhoai/odh-vllm-cuda-rhel9@sha256:fb84fbf103bf450ef5b060fc5f21a9cf16b166dba207a3c50aa91bccd919d604"
 - name: RELATED_IMAGE_ODH_VLLM_ROCM_IMAGE
-  value: "quay.io/rhoai/odh-vllm-rocm-rhel9@sha256:5f1545024d72d0f3cc9ecf58076f966a537428a4fd84aea50197b4b9996019ac"
+  value: "quay.io/rhoai/odh-vllm-rocm-rhel9@sha256:4b9a5ff387961fd1395a00d8758f989298562b9e27fdcfb4fb1288d654e02d33"
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
   value: "quay.io/rhoai/odh-vllm-gaudi-rhel9@sha256:1041bb23d3078ad4767e77cf1996959e4ab9214730bbac657741891b4fb0bba9"
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE

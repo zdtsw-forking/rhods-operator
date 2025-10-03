@@ -9,7 +9,7 @@ map:
     src: config
     dest: kserve
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 06b92fab87eacb165d52288b0205d1e2a637efe6
+    git.commit: 56cad99d13149eac6cf8c76f9cbb0b6aae9b4e3b
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
@@ -128,10 +128,10 @@ additional_meta:
     git.commit: a4b8b417bb0b51824d001b8b5cea199a0b01a793
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 06b92fab87eacb165d52288b0205d1e2a637efe6
+    git.commit: 56cad99d13149eac6cf8c76f9cbb0b6aae9b4e3b
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 06b92fab87eacb165d52288b0205d1e2a637efe6
+    git.commit: 56cad99d13149eac6cf8c76f9cbb0b6aae9b4e3b
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 06b92fab87eacb165d52288b0205d1e2a637efe6
@@ -227,7 +227,7 @@ additional_meta:
     git.commit: 36fe255789199c847781306fb63676dba4c90d2a
   odh-vllm-rocm:
     git.url: https://github.com/red-hat-data-services/vllm-rocm
-    git.commit: 1e7c3fd7cafe2070ddaa41e1e6c7eab7960a543a
+    git.commit: c33b4cf2491f6a17fa419a57525c07d690d574a5
   odh-vllm-gaudi:
     git.url: https://github.com/red-hat-data-services/vllm-gaudi
     git.commit: a4ab87035fba5f464dd690bb1d6a85ab11e6ce2f
