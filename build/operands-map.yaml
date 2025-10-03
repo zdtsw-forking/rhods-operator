@@ -147,8 +147,6 @@ relatedImages:
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:17b851393dee0cec01382be2bf4a2157ee683afd397f5270477ba41c0eb6da89"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:17b851393dee0cec01382be2bf4a2157ee683afd397f5270477ba41c0eb6da89"
-- name: RELATED_IMAGE_ODH_KSERVE_LOCALMODEL_IMAGE
-  value: "quay.io/rhoai/odh-kserve-localmodel-rhel9@sha256:2690b025e84f8adc27570499793144a6e0eec31f07e8a3d43428d3fffd23e220"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312-rhel9@sha256:3a4f6de4ad8ca2232020e8475558d9e8327f415e121720ce03571d94f372a13f"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE
