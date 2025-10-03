@@ -152,7 +152,7 @@ additional_meta:
     git.commit: aaab0f59cd1a20467d1e241990cb97238733ebf2
   odh-fms-guardrails-orchestrator:
     git.url: https://github.com/red-hat-data-services/fms-guardrails-orchestrator
-    git.commit: be33a0d6349ec2446744f051b3ef2041d151a555
+    git.commit: 3da7d78ac38e2855cf9f05042bca5f80d16ee376
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
     git.commit: e7e2a63e2be3ad570070fc5173d602527feaa72f
