@@ -240,9 +240,6 @@ additional_meta:
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
     git.commit: f46578ca1e193a272ff4099c4e9fa4072ce39b7a
-  odh-kserve-localmodel:
-    git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: c1e99cb0a63a5e6c7d20984e1935824ffcc8f764
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
