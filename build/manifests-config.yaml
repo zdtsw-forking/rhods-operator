@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 9317ae181d42b4b36cb4734f9452682b0e27063a
+    git.commit: ad88c842a591f520d93fea7007cedd7c40368427
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -155,7 +155,7 @@ additional_meta:
     git.commit: d46efed625482e92a8ceac8ab742a1b8d35362f3
   odh-trustyai-vllm-orchestrator-gateway:
     git.url: https://github.com/red-hat-data-services/vllm-orchestrator-gateway
-    git.commit: 27544ba1254453a09f8a30a670afafbc1830d3b1
+    git.commit: 1b82debde9e64327fd44a8d50e241449f50833ed
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
     git.commit: 82acb8cab8aeb6d7eb7aaa95f44f6ff80922e9a1
