@@ -200,7 +200,7 @@ additional_meta:
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
+    git.commit: 044602e35d06e35de28ddac99a9300cedcee901d
   odh-pipeline-runtime-tensorflow-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
@@ -236,7 +236,7 @@ additional_meta:
     git.commit: 29dce0b32a8f5582c002cbcd9543d1cd44bd06fd
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 562535f0680d8868edb99979478099837ca9f259
+    git.commit: 3fa361f3fbf15464d724261b488055aca14459ef
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
     git.commit: f46578ca1e193a272ff4099c4e9fa4072ce39b7a
