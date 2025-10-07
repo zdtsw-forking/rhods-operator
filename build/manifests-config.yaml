@@ -14,7 +14,7 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 3c0b6b29761105c1ae8b4d38c775acc781920a54
+    git.commit: c0f89eb898ae263f721573bae71bd7820f9ca2b8
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
@@ -249,3 +249,9 @@ additional_meta:
   odh-model-metadata-collection:
     git.url: https://github.com/red-hat-data-services/model-metadata-collection
     git.commit: 4f5ad5a9050aba118030824d29706bb2a3d5f8c6
+  odh-mod-arch-gen-ai:
+    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.commit: a8f441238d57278f4ada2c63262ddeb960e735c8
+  odh-kube-auth-proxy:
+    git.url: https://github.com/red-hat-data-services/kube-auth-proxy
+    git.commit: 217d658344410c8493d4ca0223007249a911c9d0

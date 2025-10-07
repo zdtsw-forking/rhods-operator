@@ -1,6 +1,6 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:b8cc185e57e058eb3b6d608bd54f5b4f25dfdd3bd7e19a1433933b9df58fec17"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:4e0bce271631eb40b02453e673ebb6bf2ab6dc48dd390ad353b036dbae842aee"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:6e5aaf70f8a66c5477d15a7125a1cef73cc066ae8a8658e07fcf26c3b4c4103a"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
@@ -145,5 +145,9 @@ relatedImages:
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:a8dc0636d9378b5eb24eba6b17b79d29f21b5465f06118d15cc59c6eb88580d6"
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:a8dc0636d9378b5eb24eba6b17b79d29f21b5465f06118d15cc59c6eb88580d6"
-- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
-  value: quay.io/rhoai/odh-rhel9-operator@sha256:776e7f03db7595d474d24ceb9c1d604aa3926332785e0d11fdea64cedf99fc9c
+- name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
+  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:2afd7e1631d86cd0653f84e0d0dee61176b96b2ad145173d18b9366c1a670d7f"
+- name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:ea737d0397c37a050039b1de5ece8b7d5117d9bd88dea5ecfefccd8549a89b0a"
+- name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:ea737d0397c37a050039b1de5ece8b7d5117d9bd88dea5ecfefccd8549a89b0a"
