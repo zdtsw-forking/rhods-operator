@@ -136,9 +136,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
   value: "quay.io/rhoai/odh-vllm-gaudi-rhel9@sha256:1041bb23d3078ad4767e77cf1996959e4ab9214730bbac657741891b4fb0bba9"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:80a6a9b6a7af08c2a0c32ebbd08ae845d4561588f6c506570c5b2ce88e9ea42f"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:4b660a4d808eee28bd84dd3e8445e3ad0eb5fdbb01d80e38091cd883581cb4c1"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:80a6a9b6a7af08c2a0c32ebbd08ae845d4561588f6c506570c5b2ce88e9ea42f"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:4b660a4d808eee28bd84dd3e8445e3ad0eb5fdbb01d80e38091cd883581cb4c1"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:7f4805839b955f3b48596a2402a53eff0f55ffee70ab814ec737f388047668a1"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
