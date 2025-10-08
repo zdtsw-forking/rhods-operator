@@ -146,7 +146,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:50bc70a580acb5dbc2dc03a475472f46894937ca413d37f81e39292493284a9d"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
-  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:3c370f0096ff38b116d4432d34a1ab1111a99513eee5ccd30b3b9686a390560e"
+  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:2f03a4bb61191ea6776dff91f811fd809efdd104224fef59bf95f53ae9c82116"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:ea737d0397c37a050039b1de5ece8b7d5117d9bd88dea5ecfefccd8549a89b0a"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
