@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: c0f89eb898ae263f721573bae71bd7820f9ca2b8
+    git.commit: 4a3149a137d0b6a101053c189181c70996ee1047
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: c0f89eb898ae263f721573bae71bd7820f9ca2b8
+    git.commit: 4a3149a137d0b6a101053c189181c70996ee1047
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -224,7 +224,7 @@ additional_meta:
     git.commit: 9dc5e5eee794a99c9c96b156913c368ac2a717d0
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
-    git.commit: c123196ac603530ea8a52840946b3f06a2308702
+    git.commit: a38b1a98156ee80ea533fe374efdd0e7507b7f5a
   odh-vllm-rocm:
     git.url: https://github.com/red-hat-data-services/vllm-rocm
     git.commit: 69945347fd75ac5dc3a166df5d853ef238a84a73
