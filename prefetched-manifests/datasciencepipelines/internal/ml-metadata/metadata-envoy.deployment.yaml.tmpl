@@ -76,27 +76,27 @@ spec:
               mountPath: "/etc/ssl/certs/"
             {{ end }}
         {{ if .MLMD.Envoy.DeployRoute }}
-        - name: oauth-proxy
+        - name: kube-rbac-proxy
           args:
-            - --https-address=:8443
-            - --provider=openshift
-            - --openshift-service-account=ds-pipeline-metadata-envoy-{{.Name}}
-            - --upstream=http://localhost:9090
-            - --tls-cert=/etc/tls/private/tls.crt
-            - --tls-key=/etc/tls/private/tls.key
-            - --cookie-secret=SECRET
-            - '--openshift-delegate-urls={"/": {"group":"route.openshift.io","resource":"routes","verb":"get","name":"ds-pipeline-metadata-envoy-{{.Name}}","namespace":"{{.Namespace}}"}}'
-            - '--openshift-sar={"namespace":"{{.Namespace}}","resource":"routes","resourceName":"ds-pipeline-metadata-envoy-{{.Name}}","verb":"get","resourceAPIGroup":"route.openshift.io"}'
-            - --skip-auth-regex='(^/metrics|^/apis/v1beta1/healthz)'
-          image: {{.OAuthProxy}}
+            - --secure-listen-address=0.0.0.0:8443
+            - --proxy-endpoints-port=8444
+            - --upstream=http://127.0.0.1:9090
+            - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+            - --tls-cert-file=/etc/tls/private/tls.crt
+            - --tls-private-key-file=/etc/tls/private/tls.key
+            - --ignore-paths=/healthz,/apis/v1beta1/healthz,/metrics
+          image: {{.KubeRBACProxy}}
           ports:
             - containerPort: 8443
-              name: oauth2-proxy
+              name: proxy
+              protocol: TCP
+            - containerPort: 8444
+              name: proxy-metrics
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /oauth/healthz
-              port: oauth2-proxy
+              path: /healthz
+              port: proxy-metrics
               scheme: HTTPS
             initialDelaySeconds: 30
             timeoutSeconds: 1
@@ -105,8 +105,8 @@ spec:
             failureThreshold: 3
           readinessProbe:
             httpGet:
-              path: /oauth/healthz
-              port: oauth2-proxy
+              path: /healthz
+              port: proxy-metrics
               scheme: HTTPS
             initialDelaySeconds: 5
             timeoutSeconds: 1
@@ -123,6 +123,12 @@ spec:
           volumeMounts:
             - mountPath: /etc/tls/private
               name: proxy-tls
+            - mountPath: /etc/kube-rbac-proxy
+              name: proxy-config
+            {{ if and .CustomCABundle .PodToPodTLS }}
+            - mountPath: {{ .CustomCABundleRootMountPath }}
+              name: ca-bundle
+            {{ end }}
         {{ end }}
       serviceAccountName: ds-pipeline-metadata-envoy-{{.Name}}
       volumes:
@@ -135,3 +141,13 @@ spec:
         - name: proxy-tls-upstream
           configMap:
             name: dsp-trusted-ca-{{.Name}}
+        {{ if .MLMD.Envoy.DeployRoute }}
+        - name: proxy-config
+          configMap:
+            name: kube-rbac-proxy-metadata-config-{{.Name}}
+        {{ end }}
+        {{ if and .CustomCABundle .PodToPodTLS }}
+        - name: ca-bundle
+          configMap:
+            name: {{ .CustomCABundle.ConfigMapName }}
+        {{ end }}

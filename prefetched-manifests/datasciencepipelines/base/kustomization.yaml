@@ -32,13 +32,13 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.IMAGES_APISERVER
-  - name: IMAGES_OAUTHPROXY
+  - name: kube-rbac-proxy
     objref:
       kind: ConfigMap
       name: dspo-parameters
       apiVersion: v1
     fieldref:
-      fieldpath: data.IMAGES_OAUTHPROXY
+      fieldpath: data.kube-rbac-proxy
   - name: IMAGES_PERSISTENCEAGENT
     objref:
       kind: ConfigMap
@@ -102,27 +102,6 @@ vars:
       apiVersion: v1
     fieldref:
       fieldpath: data.IMAGES_ARGO_WORKFLOWCONTROLLER
-  - name: IMAGES_PIPELINESRUNTIMEGENERIC
-    objref:
-      kind: ConfigMap
-      name: dspo-parameters
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.IMAGES_PIPELINESRUNTIMEGENERIC
-  - name: IMAGES_TOOLBOX
-    objref:
-      kind: ConfigMap
-      name: dspo-parameters
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.IMAGES_TOOLBOX
-  - name: IMAGES_RHELAI
-    objref:
-      kind: ConfigMap
-      name: dspo-parameters
-      apiVersion: v1
-    fieldref:
-      fieldpath: data.IMAGES_RHELAI
 
   # DSPO level configs
   - name: ZAP_LOG_LEVEL

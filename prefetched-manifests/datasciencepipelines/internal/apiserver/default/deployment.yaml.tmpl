@@ -22,14 +22,8 @@ spec:
         component: data-science-pipelines
         dspa: {{.Name}}
     spec:
-      initContainers:
-        - name: init-pipelines
-          image: {{.APIServer.RuntimeGenericImage}}
-          workingDir: /opt/app-root/src/pipelines/distributed-ilab
-          command: [ '/bin/sh', '-c']
-          args:
-            - "make pipeline && mv pipeline.yaml ${BUILD_FOLDER}/instructlab.yaml"
-          env: &apiserverEnvs
+      containers:
+        - env:
             {{ if .IncludeOwnerReference }}
             - name: OWNER_UID
               value: "{{.UID}}"
@@ -148,46 +142,12 @@ spec:
               value: "{{.DBConnection.Host}}"
             - name: DBCONFIG_MYSQLCONFIG_PORT
               value: "{{.DBConnection.Port}}"
-            - name: BUILD_FOLDER
-              value: /opt/app-root/src/build
-            - name: PYTHON_IMAGE
-              value: {{.APIServer.RuntimeGenericImage}}
-            - name: RUNTIME_GENERIC_IMAGE
-              value: {{.APIServer.RuntimeGenericImage}}
-            - name: TOOLBOX_IMAGE
-              value: {{.APIServer.ToolboxImage}}
-            - name: RHELAI_IMAGE
-              value: {{.APIServer.RHELAIImage}}
             {{ if .FIPSEnabled }}
             - name: V2_LAUNCHER_COMMAND
               value: "launcher-v2-fips"
             {{ end }}
             - name: CACHEENABLED
               value: "{{.APIServer.CacheEnabled}}"
-          {{ if .APIServer.InitResources }}
-          resources:
-            requests:
-              {{ if .APIServer.InitResources.Requests.CPU }}
-              cpu: {{.APIServer.InitResources.Requests.CPU}}
-              {{ end }}
-              {{ if .APIServer.InitResources.Requests.Memory }}
-              memory: {{.APIServer.InitResources.Requests.Memory}}
-              {{ end }}
-            {{ end }}
-            {{ if .APIServer.InitResources.Limits }}
-            limits:
-              {{ if .APIServer.InitResources.Limits.CPU }}
-              cpu: {{.APIServer.InitResources.Limits.CPU}}
-              {{ end }}
-              {{ if .APIServer.InitResources.Limits.Memory }}
-              memory: {{.APIServer.InitResources.Limits.Memory}}
-              {{ end }}
-          {{ end }}
-          volumeMounts:
-            - mountPath: /opt/app-root/src/build
-              name: managed-pipelines
-      containers:
-        - env: *apiserverEnvs
           image: {{.APIServer.Image}}
           # imagePullPolicy: default - https://kubernetes.io/docs/concepts/containers/images/#imagepullpolicy-defaulting
           name: ds-pipeline-api-server
@@ -252,8 +212,6 @@ spec:
             - name: server-config
               mountPath: /config/config.json
               subPath: {{ .APIServer.CustomServerConfig.Key }}
-            - mountPath: /config/managed-pipelines
-              name: managed-pipelines
           {{ if .PodToPodTLS }}
             - mountPath: /etc/tls/private
               name: proxy-tls
@@ -268,33 +226,36 @@ spec:
               name: ca-bundle
             {{ end }}
         {{ if .APIServer.EnableRoute }}
-        - name: oauth-proxy
+        - name: kube-rbac-proxy
           args:
-            - --https-address=:8443
-            - --provider=openshift
-            - --openshift-service-account={{.APIServerDefaultResourceName}}
+            - --secure-listen-address=0.0.0.0:8443
+            - --proxy-endpoints-port=8444
             {{ if .PodToPodTLS }}
             # because we use certs signed by openshift, these certs are not valid for
             # localhost, thus we have to use the service name
             - --upstream=https://{{.APIServerServiceDNSName}}:8888
-            - --upstream-ca=/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
+            {{ if .CustomCABundle }}
+            - --upstream-ca-file={{ .PiplinesCABundleMountPath }}
+            {{ else }}
+            - --upstream-ca-file=/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
+            {{ end }}
             {{ else }}
             - --upstream=http://localhost:8888
             {{ end }}
-            - --tls-cert=/etc/tls/private/tls.crt
-            - --tls-key=/etc/tls/private/tls.key
-            - --cookie-secret=SECRET
-            - '--openshift-delegate-urls={"/": {"group":"route.openshift.io","resource":"routes","verb":"get","name":"{{.APIServerDefaultResourceName}}","namespace":"{{.Namespace}}"}}'
-            - '--openshift-sar={"namespace":"{{.Namespace}}","resource":"routes","resourceName":"{{.APIServerDefaultResourceName}}","verb":"get","resourceAPIGroup":"route.openshift.io"}'
-            - --skip-auth-regex='(^/metrics|^/apis/v1beta1/healthz)'
-          image: {{.OAuthProxy}}
+            - --tls-cert-file=/etc/tls/private/tls.crt
+            - --tls-private-key-file=/etc/tls/private/tls.key
+            - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+            - --ignore-paths=/healthz,/apis/v1beta1/healthz,/metrics
+          image: {{.KubeRBACProxy}}
           ports:
             - containerPort: 8443
-              name: oauth
+              name: proxy
+            - containerPort: 8444
+              name: proxy-metrics
           livenessProbe:
             httpGet:
-              path: /oauth/healthz
-              port: oauth
+              path: /healthz
+              port: proxy-metrics
               scheme: HTTPS
             initialDelaySeconds: 30
             timeoutSeconds: 1
@@ -303,8 +264,8 @@ spec:
             failureThreshold: 3
           readinessProbe:
             httpGet:
-              path: /oauth/healthz
-              port: oauth
+              path: /healthz
+              port: proxy-metrics
               scheme: HTTPS
             initialDelaySeconds: 5
             timeoutSeconds: 1
@@ -321,18 +282,24 @@ spec:
           volumeMounts:
             - mountPath: /etc/tls/private
               name: proxy-tls
+            - mountPath: /etc/kube-rbac-proxy
+              name: proxy-config
+            {{ if .CustomCABundle }}
+            - mountPath: {{ .CustomCABundleRootMountPath  }}
+              name: ca-bundle
+            {{ end }}
         {{ end }}
       serviceAccountName: {{.APIServerDefaultResourceName}}
       volumes:
         - name: proxy-tls
           secret:
             secretName: ds-pipelines-proxy-tls-{{.Name}}
+        - name: proxy-config
+          configMap:
+            name: kube-rbac-proxy-config-{{.APIServerDefaultResourceName}}
         - name: server-config
           configMap:
             name: {{ .APIServer.CustomServerConfig.Name }}
-        - name: managed-pipelines
-          emptyDir:
-            sizeLimit: 10Mi
         {{ if .CustomCABundle }}
         - name: ca-bundle
           configMap:
