@@ -84,9 +84,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_BUILT_IN_DETECTOR_IMAGE
   value: "quay.io/rhoai/odh-built-in-detector-rhel9@sha256:ae2aae991f94f927203d160584224d20ad8a78dac2677255e483d5b125c5275a"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_DATASCIENCE_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:d45fc7849d10276c796c80d7812c885ed1627e6dbab967165f74c6f3aad9c9ce"
+  value: "quay.io/rhoai/odh-pipeline-runtime-datascience-cpu-py312-rhel9@sha256:2e5938e6a8421ee669c7a9707f93be99a9ce458bfdf2935494b03cf70de209d6"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_MINIMAL_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:fd2d3e93630eeb043264a95833be0536c73aad9549e9bcf3236247c15ae2bcf6"
+  value: "quay.io/rhoai/odh-pipeline-runtime-minimal-cpu-py312-rhel9@sha256:c16a19fedbfea4ba4548dc73f4c242efcd7c5490d24f5d6661cd53493f784d05"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-pytorch-cuda-py312-rhel9@sha256:d0f68ba504bdf0ac70c88d213d9d49d6221ec0ea9b5828d48030f28842c6d116"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_ROCM_PY312_IMAGE
@@ -112,7 +112,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:513e23194272590427ae0fb3ab45de0751b3ebcc01b08e8310dfc4898f53287d"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:a5fd91150c389fd9382849188feb5c2d43e3acf6cee53d49cba9f469eff75b41"
+  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:f0d5ac3bfc4b4e6ccc5f802f3dc80015e0c7526710441732b35f93d27efd455c"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:f40064c4d3ac8119f321b514682543bd1751da47159f32d4685eeaaca6752048"
 - name: RELATED_IMAGE_ODH_CAIKIT_NLP_IMAGE
