@@ -122,7 +122,7 @@ additional_meta:
     git.commit: 58383b0bf907c8b4eaad4c074ca1ae3aed9e189d
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
-    git.commit: f4a0b27ba38c7bea4ddb8e97bee3b5c9d9e3ce17
+    git.commit: 87094c5798275acd243ec0ad8a126fae120874ee
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: ef3dd884b88212cb5ff67c0fa04415cb0319747d
