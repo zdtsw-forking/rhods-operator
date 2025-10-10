@@ -125,7 +125,7 @@ additional_meta:
     git.commit: 87094c5798275acd243ec0ad8a126fae120874ee
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: ef3dd884b88212cb5ff67c0fa04415cb0319747d
+    git.commit: 895b7a8a96b8f40e9075092137885ed7a09df971
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: c9897eca78e1f8c7a7f6e5b6dc40be24a3e52555
@@ -236,7 +236,7 @@ additional_meta:
     git.commit: b6b792652951caecf54d2ec9b9a7954e4bc65d08
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 8adcfabb1d6ec91a0f18c325b93a9b477190f24b
+    git.commit: 5dac82436d25e666308e0a7fe3fd5dfebc73101a
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 4379f3492b88b470c9c0a0253346477d1d68bf3b
