@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: e6b21de4f5a8cde319947446d89f642f10b9e6ee
+    git.commit: ce20638bc99b1c8c780c9d7f9e18b1a3ed9de000
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -125,7 +125,7 @@ additional_meta:
     git.commit: 87094c5798275acd243ec0ad8a126fae120874ee
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 895b7a8a96b8f40e9075092137885ed7a09df971
+    git.commit: 705c46d20817dd599415c9874b8f18acbcb59a37
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: c9897eca78e1f8c7a7f6e5b6dc40be24a3e52555
@@ -251,7 +251,7 @@ additional_meta:
     git.commit: 0778fac99702401d82779da47444b972c9360a9b
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 51cc561bd08e4f9e3cc7fd9f70b0ca9a446232f1
+    git.commit: ce20638bc99b1c8c780c9d7f9e18b1a3ed9de000
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: 217d658344410c8493d4ca0223007249a911c9d0
