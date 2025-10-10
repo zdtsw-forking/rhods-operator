@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 52dd935c4e84b10a59d5d933f0aef465f3d5d472
+    git.commit: 3a7b1c32f566bba15319645babca0ff4f9fd6528
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -251,7 +251,7 @@ additional_meta:
     git.commit: 0778fac99702401d82779da47444b972c9360a9b
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 52dd935c4e84b10a59d5d933f0aef465f3d5d472
+    git.commit: 3a7b1c32f566bba15319645babca0ff4f9fd6528
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: 217d658344410c8493d4ca0223007249a911c9d0
