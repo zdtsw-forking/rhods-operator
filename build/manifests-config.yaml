@@ -119,7 +119,7 @@ additional_meta:
     git.commit: d38ec8c017b1aa922472f1cf1d9909d2f641e78d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 216a63817b548667feee46c428dc0620b539159f
+    git.commit: 629cc03600fa4cdd771d76021b1a32164e93ca56
   odh-ml-pipelines-runtime-generic:
     git.url: https://github.com/red-hat-data-services/ilab-on-ocp
     git.commit: 87094c5798275acd243ec0ad8a126fae120874ee
@@ -158,7 +158,7 @@ additional_meta:
     git.commit: 1b82debde9e64327fd44a8d50e241449f50833ed
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: 49c3210898d2cf5f4fdbfa249ea78946aad46137
+    git.commit: 5aa9d32be58166ad129e38c4dfa07125bcd6a571
   odh-pipeline-runtime-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 394bdf148a40ac76db04d665f353989bd4fef9ce
@@ -251,7 +251,7 @@ additional_meta:
     git.commit: 0778fac99702401d82779da47444b972c9360a9b
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 3a7b1c32f566bba15319645babca0ff4f9fd6528
+    git.commit: f2406cd83e3f492f7a8ac286fd5fac90763c2f0f
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
-    git.commit: 217d658344410c8493d4ca0223007249a911c9d0
+    git.commit: 8cd46bff5eddb1770d12be459b6eb526f03ec4f2
