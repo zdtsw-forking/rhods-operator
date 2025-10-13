@@ -95,7 +95,7 @@ additional_meta:
     git.commit: 29f416936e6d4b27b3194b85741f4b465ee86a58
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: 6ae5ee068977be2e6e46046828b5d4d9c9c40517
+    git.commit: 269992333c007b89d1bf16ce40d4071ac4e93992
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: 719efe3f3c33c1baaa3bd118df8833238675493f
@@ -255,3 +255,6 @@ additional_meta:
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: 8cd46bff5eddb1770d12be459b6eb526f03ec4f2
+  odh-maas-api:
+    git.url: https://github.com/red-hat-data-services/maas-billing
+    git.commit: 3d277d47efb28fd09b083ee00ba2917e071fd815
