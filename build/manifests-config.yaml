@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 4a3149a137d0b6a101053c189181c70996ee1047
+    git.commit: a7b66478c5b3dc1097757a4517541f96e77ad337
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 4a3149a137d0b6a101053c189181c70996ee1047
+    git.commit: a7b66478c5b3dc1097757a4517541f96e77ad337
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 74ced672948de11295eb8deb8892dc114815ca85
+    git.commit: 226cafdaadbe2b83bb022b6f852a19e7ae46c8e1
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: e5011b5a875a254878d1c8dacf4141c1117232d7
+    git.commit: 6f887df86626d57588847cab97c77cb352cf2b7f
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 0a5b4bd65bd051723c87c4fe3dc6b76a1af20bf7
+    git.commit: 1db62bbdfa810d3af7dc3f854952bf07440361cd
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -79,7 +79,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 4f29babbb3d66043444856810c570467c290e4c6
+    git.commit: 0928e06ec904118f339bc60276aab9d98433e632
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
@@ -131,7 +131,7 @@ additional_meta:
     git.commit: c9897eca78e1f8c7a7f6e5b6dc40be24a3e52555
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
-    git.commit: 03ac65d1b21f9209952a05a4c2ea421cf347b56e
+    git.commit: 126a4311b941dbb31c1d8b6d8465654330e26b6b
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
     git.commit: 07ba2dc0d8f71fa42107a1224474259a653ec2f1
@@ -236,7 +236,7 @@ additional_meta:
     git.commit: b6b792652951caecf54d2ec9b9a7954e4bc65d08
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 5dac82436d25e666308e0a7fe3fd5dfebc73101a
+    git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 4379f3492b88b470c9c0a0253346477d1d68bf3b
@@ -247,8 +247,8 @@ additional_meta:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 7419b52190d85cf3e5f582f6e8c83edef55514df
   odh-model-metadata-collection:
-    git.url: https://github.com/red-hat-data-services/model-metadata-collection
-    git.commit: 0778fac99702401d82779da47444b972c9360a9b
+    git.url: https://github.com/red-hat-data-services/models-perf-benchmark-data
+    git.commit: f6f98b28a6f6999b190abea770a78613ccbc13e7
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
     git.commit: d079da1446d1d2724710c639b537eef17357e999
@@ -258,3 +258,9 @@ additional_meta:
   odh-maas-api:
     git.url: https://github.com/red-hat-data-services/maas-billing
     git.commit: 3d277d47efb28fd09b083ee00ba2917e071fd815
+  odh-model-performance-data:
+    git.url: https://github.com/red-hat-data-services/models-perf-benchmark-data
+    git.commit: 341fab6b102c4fc5cc931277a329a9a02fbf161e
+  odh-trustyai-ragas-lls-provider-dsp:
+    git.url: https://github.com/red-hat-data-services/llama-stack-provider-ragas
+    git.commit: e146d3e5b6d97b141c11ac1e41aa386ac68606b6
