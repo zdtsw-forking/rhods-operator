@@ -128,7 +128,7 @@ additional_meta:
     git.commit: 705c46d20817dd599415c9874b8f18acbcb59a37
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
-    git.commit: c9897eca78e1f8c7a7f6e5b6dc40be24a3e52555
+    git.commit: 1460bf50a7edb3f6d50ffda0b81e9da86a5faf1c
   odh-llm-d-routing-sidecar:
     git.url: https://github.com/red-hat-data-services/llm-d-routing-sidecar
     git.commit: 126a4311b941dbb31c1d8b6d8465654330e26b6b
