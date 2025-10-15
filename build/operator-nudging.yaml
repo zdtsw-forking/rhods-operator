@@ -116,7 +116,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
   value: quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:e075f2252d0e767f610e48487758d70a657b478b9d10dd679c4922dc6aa448cc
 - name: RELATED_IMAGE_ODH_CAIKIT_NLP_IMAGE
-  value: quay.io/rhoai/odh-caikit-nlp-rhel9@sha256:9908445b0ac220a7075ccbc4321b7292d5067b5be115ff0360828bac347262a4
+  value: quay.io/rhoai/odh-caikit-nlp-rhel9@sha256:5fc93735092c692f8f57f9ecf102a3a14988e7c670f0440be65c70f741072925
 - name: RELATED_IMAGE_ODH_CAIKIT_TGIS_SERVING_IMAGE
   value: quay.io/rhoai/odh-caikit-tgis-serving-rhel9@sha256:bf1bde16391319e95e75ed3e696ff8a0a4e19e29380773b5e24fb6dea6cb5b9e
 - name: RELATED_IMAGE_ODH_GUARDRAILS_DETECTOR_HUGGINGFACE_RUNTIME_IMAGE
