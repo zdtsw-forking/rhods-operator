@@ -58,7 +58,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:1414a824e3dfe31c4fa3dbd066d028fc1a972549d15ef8bbb58a282115034dd9"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:9330e3139836663a0eb579e7be3b969a63512724cb478202f45b5b6cee2faadb"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:3eb795d524e8e3beab49de80521422302e71c2222a88a275769f8248cd54d2be"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
   value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:6efa3c8631463741b9626d7e4bd8d9e788c441146eb603ea565cebfb8bde7f7b"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
@@ -116,9 +116,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:f40064c4d3ac8119f321b514682543bd1751da47159f32d4685eeaaca6752048"
 - name: RELATED_IMAGE_ODH_CAIKIT_NLP_IMAGE
-  value: "quay.io/rhoai/odh-caikit-nlp-rhel9@sha256:8a423477bfbc0722cc440181d8ff832bc6863025cb804e21962551cb2e1aad74"
+  value: "quay.io/rhoai/odh-caikit-nlp-rhel9@sha256:5fc93735092c692f8f57f9ecf102a3a14988e7c670f0440be65c70f741072925"
 - name: RELATED_IMAGE_ODH_CAIKIT_TGIS_SERVING_IMAGE
-  value: "quay.io/rhoai/odh-caikit-tgis-serving-rhel9@sha256:69a212df9ba166cceecd337ef171f7329a31fdb0651661c15a31c0bce557961e"
+  value: "quay.io/rhoai/odh-caikit-tgis-serving-rhel9@sha256:d717f69051fa4111c1dd7cf5a3eff7620f4be3fa1528ac070590b521c684c837"
 - name: RELATED_IMAGE_ODH_GUARDRAILS_DETECTOR_HUGGINGFACE_RUNTIME_IMAGE
   value: "quay.io/rhoai/odh-guardrails-detector-huggingface-runtime-rhel9@sha256:6ceb28f55a1e34c7191223a9c82d6032f8a47d58c93688c77246067946b1e78c"
 - name: RELATED_IMAGE_ODH_OPENVINO_MODEL_SERVER_IMAGE
