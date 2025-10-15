@@ -136,9 +136,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_VLLM_GAUDI_IMAGE
   value: "quay.io/rhoai/odh-vllm-gaudi-rhel9@sha256:1041bb23d3078ad4767e77cf1996959e4ab9214730bbac657741891b4fb0bba9"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:6e23b9745fc589783d5f672e96b4f25709a1e52827935802ce1aaeacb663bc63"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:2bf503619ab4bbd60c79d550d99f44cec877dcd7623c9a5d7a6985d21a666348"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_JOB_ASYNC_UPLOAD_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:6e23b9745fc589783d5f672e96b4f25709a1e52827935802ce1aaeacb663bc63"
+  value: "quay.io/rhoai/odh-model-registry-job-async-upload-rhel9@sha256:2bf503619ab4bbd60c79d550d99f44cec877dcd7623c9a5d7a6985d21a666348"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-core-rhel9@sha256:86f8d82f589b4044ce9ac30cb62b4611951d2c383e669c8e2dc5bc74e69e6c86"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_CORE_IMAGE
