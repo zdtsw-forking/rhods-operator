@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: a7b66478c5b3dc1097757a4517541f96e77ad337
+    git.commit: c88de56710610b8f17b8db1220c56420a84b8327
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: a7b66478c5b3dc1097757a4517541f96e77ad337
+    git.commit: c88de56710610b8f17b8db1220c56420a84b8327
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -49,7 +49,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: 82399884e617d894e48639e4b24154a7815e7dcb
+    git.commit: d707c3fab945960b571640383b689b18e0e7a9fd
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -69,7 +69,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: 1db62bbdfa810d3af7dc3f854952bf07440361cd
+    git.commit: 533920e2531960a4a1a996b6669835aafe037c81
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
@@ -83,7 +83,7 @@ map:
 additional_meta:
   odh-mm-rest-proxy:
     git.url: https://github.com/red-hat-data-services/rest-proxy
-    git.commit: 5efda15964a9e10c58704f730d6e4782b26d0954
+    git.commit: b0a9f4a9266c4f0da905906ea652cea499d38be8
   odh-modelmesh:
     git.url: https://github.com/red-hat-data-services/modelmesh
     git.commit: 6edcc701cbf716f34c813c723bbfe5dc860c15c0
@@ -197,7 +197,7 @@ additional_meta:
     git.commit: ecd9a47e169d778475536d3a6ab9bb6ea9784e48
   odh-workbench-jupyter-pytorch-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 394bdf148a40ac76db04d665f353989bd4fef9ce
+    git.commit: f463eb7c53f5deeaff14efd22a055e40538adad6
   odh-workbench-jupyter-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: f463eb7c53f5deeaff14efd22a055e40538adad6
