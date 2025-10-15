@@ -58,11 +58,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:7745b0cdd604fe4abfe0df1ba319afc4ab42a867c6ff3075dc98a6cf869f91b5"
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
-  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:628d7b903f022df6f87be60d6b64c55ec410fa137aafb43738844565ae9bf8db"
+  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:31fe90648674bc5e1d2b2d38b01b9cc349168de96f875afad7f2d788591aa017"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:36d54a11f92727c5c41d127e689d52601abc30499570d1484a17548424cd9087"
+  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:a461b07bee3013516b4635e837ab98ef36bc211b2945f36ec3c1951537ad2545"
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:4070058512ac17557a9cf5f7e9745b46980324a04f0d31d66ba77657607c33a6"
+  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:3a455d8ef5d969e931539aeff662c382614270e6c19f987882b6b7848bf47846"
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:6fc1f568fe7d462983217fdb84b87d8f45b92ff1ac0f5e06832f6460f6a43482"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
