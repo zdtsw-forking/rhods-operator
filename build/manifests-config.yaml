@@ -39,7 +39,7 @@ map:
     src: config
     dest: kueue
     git.url: https://github.com/red-hat-data-services/kueue
-    git.commit: f82553ddc912669cae4838b61665a0dc93113bc5
+    git.commit: 3a373a9a00a4da079c4c934f8f60f408b77b9942
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -143,7 +143,7 @@ additional_meta:
     git.commit: 901933c0044e6593e797f5da89ff780f55b439a4
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 6c01dea7dd1c71c92b2f189d708662467bfaa3da
+    git.commit: 901933c0044e6593e797f5da89ff780f55b439a4
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
     git.commit: ca4d9dd2d4cdfe4fac10d26b148d0f6cf3c935c2
