@@ -134,7 +134,7 @@ additional_meta:
     git.commit: 126a4311b941dbb31c1d8b6d8465654330e26b6b
   odh-must-gather:
     git.url: https://github.com/red-hat-data-services/must-gather
-    git.commit: 07ba2dc0d8f71fa42107a1224474259a653ec2f1
+    git.commit: 69275b6d63ade4f1e64f47932e7857bb95674f1d
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 901933c0044e6593e797f5da89ff780f55b439a4
@@ -239,7 +239,7 @@ additional_meta:
     git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 4379f3492b88b470c9c0a0253346477d1d68bf3b
+    git.commit: a2d1e3c760d43f9c6b89954298652a60fd2f71c2
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 7419b52190d85cf3e5f582f6e8c83edef55514df
