@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:4e24b456b6f9049c609e40f1a4cb5da3e325405aad75dc9f0207fe4e1137d5bb"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:d33608be7fc6de91bd09f891744c1b6af956bb7328bdda5ca8d23f90409d2a03"
+  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:380a21b655ca04d5e5e534b1f00d608ce5ca6b7600e26f2e16433a54ee35ffa9"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:7414b29dd99409970a82fbac91a5f976bcb83282db6eb324482af7013bc002a3"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -142,11 +142,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_LLMCOMPRESSOR_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-pytorch-llmcompressor-cuda-py312-rhel9@sha256:1552b758539ee09050b1923cf214d6d88543d51d7ca230d6880818ecf287c10b"
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
-  value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:6d0c97d9caa3b753c248f67572ea9437fe691f081d0679526100c645448c7fbe"
+  value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:47ea329412294c6298ff57c5e397c8f02e224a3169dd40cac0b59ec974587271"
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
-  value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:6d0c97d9caa3b753c248f67572ea9437fe691f081d0679526100c645448c7fbe"
+  value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:47ea329412294c6298ff57c5e397c8f02e224a3169dd40cac0b59ec974587271"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
-  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:7e46a61289e13a6926380b71b5ea18ce987d677a06754a6b89ebc4daaa417882"
+  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:8f19e8cce393b471439bd9e84e91767e10be89b97b84e2fb988c57358813736d"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
