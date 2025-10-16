@@ -125,7 +125,7 @@ additional_meta:
     git.commit: a395a98f80e1dd8a37ecdeb3ae993a7da9e58cae
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 705c46d20817dd599415c9874b8f18acbcb59a37
+    git.commit: cbca27c1c0bb92f568db8661f53e46e755526b5f
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: 1460bf50a7edb3f6d50ffda0b81e9da86a5faf1c
@@ -260,7 +260,7 @@ additional_meta:
     git.commit: 3d277d47efb28fd09b083ee00ba2917e071fd815
   odh-model-performance-data:
     git.url: https://github.com/red-hat-data-services/models-perf-benchmark-data
-    git.commit: 341fab6b102c4fc5cc931277a329a9a02fbf161e
+    git.commit: 7d3623d73bdb5cbd698765f63f633c84e5e68783
   odh-trustyai-ragas-lls-provider-dsp:
     git.url: https://github.com/red-hat-data-services/llama-stack-provider-ragas
     git.commit: 9b4b6c548d9c775ea77284ebeaf4138030ed7f7a
