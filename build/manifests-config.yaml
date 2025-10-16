@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 8e9301727918cf96df628ac090493fc89913baf8
+    git.commit: 65363ed88a2b141fcde3efc960851a53e62cb3b3
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -251,7 +251,7 @@ additional_meta:
     git.commit: 093348fceb2c9e2b7c0e0f04690528394acb7500
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: e954d960bd042160a91a23a4252492d77af4e3c9
+    git.commit: bd3c55e8e9478002c5b740344b60f4e8f1be6b46
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: 3df91e06e398f9f8aa22c01e99f3e4f3322153bf
