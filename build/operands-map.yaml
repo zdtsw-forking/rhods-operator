@@ -2,7 +2,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:4e24b456b6f9049c609e40f1a4cb5da3e325405aad75dc9f0207fe4e1137d5bb"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
-  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:c5c33d572afcdbb9a1c0f44fe2a8670187a93947f31b09479d9c53cae552fcb1"
+  value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:d33608be7fc6de91bd09f891744c1b6af956bb7328bdda5ca8d23f90409d2a03"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:7414b29dd99409970a82fbac91a5f976bcb83282db6eb324482af7013bc002a3"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
@@ -20,7 +20,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:46cf8d343b29bfdc335d725ece59afe807c52d072171a8b04e214876dce09e98"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:bd6a1742243c1825709be82b3d34737743d82b2f2e35220fe3265d3dfcd89904"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:94c1e4a8f1808c41c8fb3505512f856aba35985d9bc44db89646a5046b713603"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:4da70c895ed7838ac5d6f0a1cc4eb71576029045c2316acc09da8eb52e66b7a1"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
@@ -74,7 +74,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:ee69640f8023f604e330512455b541ba57dc3044a295198affd69fde65d67ebd"
 - name: RELATED_IMAGE_ODH_TA_LMES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:c2ec8e53eb998ef95f8306225d104d73597b756fa0c80124ef2972808b466a83"
+  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:6b19c59c692e6277429dbc77d259748239528b846bc720da256ddef0e753b862"
 - name: RELATED_IMAGE_ODH_TA_LMES_JOB_IMAGE
   value: "quay.io/rhoai/odh-ta-lmes-job-rhel9@sha256:4000a91132d67503a4691e76a7079f9140e3c8091fb1a59ad235446f96cb1a34"
 - name: RELATED_IMAGE_ODH_FMS_GUARDRAILS_ORCHESTRATOR_IMAGE
