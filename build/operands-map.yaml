@@ -44,7 +44,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_ARGO_WORKFLOWCONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel9@sha256:4afc7a50800be57c57170b6ec2345fe0a9fab1eb4ae179025f6fae230bc05894"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:9f7d764c9f3229925b278fb77ecdf535d6d5ac54de2cc553a3da6e15c8e53207"
+  value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:5fdfdd9d7a2d30543121aaada854ec7cc382e1807be2a83c5d839d605f78118a"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:f882fac006ca77548cb14403adde51a1043556f19016fe14dd5a18ce35588686"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
@@ -181,3 +181,5 @@ relatedImages:
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
 - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY_IMAGE
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:f9f275dbd8067e06c939bde8e8875b504ccffb1aaea9cd2832f790abfa35f6ee
