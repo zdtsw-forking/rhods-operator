@@ -89,7 +89,7 @@ additional_meta:
     git.commit: 8326b719d41f8df2b97b2c49d27ecfb1d8ae461f
   odh-modelmesh-runtime-adapter:
     git.url: https://github.com/red-hat-data-services/modelmesh-runtime-adapter
-    git.commit: fd7ae7b52d742ed65ab3b674aa7a00c4b392d508
+    git.commit: 514f41bb0ae69eb8841aeeb419460736349564bb
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
     git.commit: 29f416936e6d4b27b3194b85741f4b465ee86a58
@@ -233,7 +233,7 @@ additional_meta:
     git.commit: 154de7eff26192ef21b154e9942ed508817dc836
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: b613acfea42e92319086fcab095696ddefc5a16f
+    git.commit: 85e16f93443b0577a1c4069daae5f38aa84a70aa
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
     git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
