@@ -125,7 +125,7 @@ additional_meta:
     git.commit: a395a98f80e1dd8a37ecdeb3ae993a7da9e58cae
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: cbca27c1c0bb92f568db8661f53e46e755526b5f
+    git.commit: 8960c86c44000d20360adf516726fb42ff0333cc
   odh-llm-d-inference-scheduler:
     git.url: https://github.com/red-hat-data-services/llm-d-inference-scheduler
     git.commit: 1460bf50a7edb3f6d50ffda0b81e9da86a5faf1c
@@ -158,7 +158,7 @@ additional_meta:
     git.commit: 1b82debde9e64327fd44a8d50e241449f50833ed
   odh-built-in-detector:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: 5aa9d32be58166ad129e38c4dfa07125bcd6a571
+    git.commit: 482e05e4b0e9a7d9feb59a322bb027c1a5075179
   odh-pipeline-runtime-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: b24e5d8b35b7b827475d7aea44747a094213ddf1
