@@ -54,7 +54,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 65363ed88a2b141fcde3efc960851a53e62cb3b3
+    git.commit: d42ef7b9478e39cdd284cf13a6118476d3d07ce7
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
@@ -239,7 +239,7 @@ additional_meta:
     git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: a2d1e3c760d43f9c6b89954298652a60fd2f71c2
+    git.commit: 05172ee557ae43d65ca9dd7f15224e19f22fbdf2
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 7419b52190d85cf3e5f582f6e8c83edef55514df
