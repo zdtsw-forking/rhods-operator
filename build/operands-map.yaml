@@ -20,7 +20,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:46cf8d343b29bfdc335d725ece59afe807c52d072171a8b04e214876dce09e98"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:94c1e4a8f1808c41c8fb3505512f856aba35985d9bc44db89646a5046b713603"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:891dcd2de3acaab0fd883df89f6a59093219723733f9e3bbde5e34591cd157e7"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:4da70c895ed7838ac5d6f0a1cc4eb71576029045c2316acc09da8eb52e66b7a1"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
@@ -66,15 +66,15 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MUST_GATHER_IMAGE
   value: "quay.io/rhoai/odh-must-gather-rhel9@sha256:cd123ba312b70cba2f1ea4073475ba469ee93daef9e31cdd46d2a848dd184224"
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
-  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:a9462bb4e7a1abef8cc03a2749b1304edffedc72ad75916dcc736ec4a001c392"
+  value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:f627e43c19c138d2087b429282e9c5d58ce041ede4ec22cc26698c88388ee922"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:bc0f42a81ce1739e58a9dab3cf5833c45b3466b8e13e560a59359a47c02d8a12"
+  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:0ca534034211033b896b5fd8109d26bbbd29f55823cf178a553fce2a9af3e7d5"
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:5c3c54c90690611df733dca1cfd650d071562c9ac6eff736d5132445a8d7a7d2"
+  value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:fb86698b41d37a9c4994067c1aa7749a716897223dad86ae849e72b28fa02e1a"
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:ee69640f8023f604e330512455b541ba57dc3044a295198affd69fde65d67ebd"
 - name: RELATED_IMAGE_ODH_TA_LMES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:6b19c59c692e6277429dbc77d259748239528b846bc720da256ddef0e753b862"
+  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:d1685aa40f057c1ddf617176801aa1fb1be1472c608230d0b1964bbafbd4524c"
 - name: RELATED_IMAGE_ODH_TA_LMES_JOB_IMAGE
   value: "quay.io/rhoai/odh-ta-lmes-job-rhel9@sha256:4000a91132d67503a4691e76a7079f9140e3c8091fb1a59ad235446f96cb1a34"
 - name: RELATED_IMAGE_ODH_FMS_GUARDRAILS_ORCHESTRATOR_IMAGE
