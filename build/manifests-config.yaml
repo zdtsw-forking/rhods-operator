@@ -74,7 +74,7 @@ map:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 7c7d1cb1591d9de8736bfd24b2034879ee39e0cc
+    git.commit: 114251be3777f0c76ada997beb75352bfb6446d9
   odh-llama-stack-k8s-operator:
     src: config
     dest: llamastackoperator
@@ -197,7 +197,7 @@ additional_meta:
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
   odh-workbench-jupyter-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
+    git.commit: 2fdc9e2d45318aadb90c4bd8f877e2f3f000e47b
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: e472987ef35f6be0ff5c9a208430cbc8e7a7eb7f
