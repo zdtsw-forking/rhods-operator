@@ -173,7 +173,7 @@ additional_meta:
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
   odh-pipeline-runtime-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
+    git.commit: 2fdc9e2d45318aadb90c4bd8f877e2f3f000e47b
   odh-workbench-codeserver-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 67203b718d75b8f4e9028b10ac3b123caf1f34dc
@@ -245,7 +245,7 @@ additional_meta:
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
   odh-pipeline-runtime-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
+    git.commit: 2fdc9e2d45318aadb90c4bd8f877e2f3f000e47b
   odh-model-metadata-collection:
     git.url: https://github.com/red-hat-data-services/model-metadata-collection
     git.commit: 9dff0268c08d1897673280915e700d5a4fff6113
