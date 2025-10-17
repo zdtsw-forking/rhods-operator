@@ -167,7 +167,7 @@ additional_meta:
     git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-pipeline-runtime-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
+    git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-pipeline-runtime-pytorch-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
@@ -191,7 +191,7 @@ additional_meta:
     git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-workbench-jupyter-minimal-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 394bdf148a40ac76db04d665f353989bd4fef9ce
+    git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-workbench-jupyter-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: af901a01303648d2101144c36fa319151fca675f
@@ -200,13 +200,13 @@ additional_meta:
     git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
   odh-workbench-jupyter-tensorflow-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
+    git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-workbench-jupyter-tensorflow-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
+    git.commit: af901a01303648d2101144c36fa319151fca675f
   odh-caikit-nlp:
     git.url: https://github.com/red-hat-data-services/caikit-nlp
     git.commit: 415e887545bbeecf1d80cf9409ec1a5e3abab600
@@ -281,4 +281,4 @@ additional_meta:
     git.commit: ec767344ffa942ce7eef987bc316678d61f4ad77
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
+    git.commit: 33ecce689130de6cac832b6770a17176e06b0346
