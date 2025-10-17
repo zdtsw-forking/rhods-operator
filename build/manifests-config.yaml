@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 04ff5554f5f2ffde48f05fa0fa3d995242d4c191
+    git.commit: 3101eb1caccc6a81e54642cfcb8bb544241de658
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -44,7 +44,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 5c038b0d9c735b7edd8f7807c5432d4ccbe13a37
+    git.commit: 0ede08b75e508832c02bafa792f67bfcbc98a0d3
   odh-model-controller:
     src: config
     dest: modelcontroller
@@ -146,7 +146,7 @@ additional_meta:
     git.commit: 901933c0044e6593e797f5da89ff780f55b439a4
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 5c038b0d9c735b7edd8f7807c5432d4ccbe13a37
+    git.commit: 0ede08b75e508832c02bafa792f67bfcbc98a0d3
   odh-ta-lmes-job:
     git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
     git.commit: 0237500687dc75976e896b5b8d3bb26649e4be4a

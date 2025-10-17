@@ -20,11 +20,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-rhel9@sha256:46cf8d343b29bfdc335d725ece59afe807c52d072171a8b04e214876dce09e98"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:891dcd2de3acaab0fd883df89f6a59093219723733f9e3bbde5e34591cd157e7"
+  value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:646ccd55a682722e6b630f64399cf9253b1dec2f83434d92380f46f4b4379116"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:4da70c895ed7838ac5d6f0a1cc4eb71576029045c2316acc09da8eb52e66b7a1"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:aebb214a0edb95699dba0104f7aa0fb052eff4be37c225610fb9235a794196b5"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:076ff2e11aeafb8e4686e06e4fe5a4caa81c07cfec6a999b80927a8138e1e7eb"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kueue-controller-rhel9@sha256:ddad12d950acdce975c068a87a487c9128d4949bc759b4d244dac42858dc3382"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
@@ -74,7 +74,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:ee69640f8023f604e330512455b541ba57dc3044a295198affd69fde65d67ebd"
 - name: RELATED_IMAGE_ODH_TA_LMES_DRIVER_IMAGE
-  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:d1685aa40f057c1ddf617176801aa1fb1be1472c608230d0b1964bbafbd4524c"
+  value: "quay.io/rhoai/odh-ta-lmes-driver-rhel9@sha256:b1b9ce9e6d0c7650770750ffaabf72d6ae51e91fa323e33c540c0c4e96437e40"
 - name: RELATED_IMAGE_ODH_TA_LMES_JOB_IMAGE
   value: "quay.io/rhoai/odh-ta-lmes-job-rhel9@sha256:4000a91132d67503a4691e76a7079f9140e3c8091fb1a59ad235446f96cb1a34"
 - name: RELATED_IMAGE_ODH_FMS_GUARDRAILS_ORCHESTRATOR_IMAGE
