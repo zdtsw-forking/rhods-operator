@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 3101eb1caccc6a81e54642cfcb8bb544241de658
+    git.commit: b32824eb3bba0f857e5e2da5dcf8e06fb971f1c0
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -221,7 +221,7 @@ additional_meta:
     git.commit: 27e45f7cbceeb10be8126615c7a10f56f4f724f9
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
-    git.commit: a0146a06059f9e004f7d505ebaf2251200107751
+    git.commit: 3e9a4671ce59b3158c0cf4645cd51bacaddd6031
   odh-vllm-cuda:
     git.url: https://github.com/red-hat-data-services/vllm
     git.commit: a38b1a98156ee80ea533fe374efdd0e7507b7f5a
