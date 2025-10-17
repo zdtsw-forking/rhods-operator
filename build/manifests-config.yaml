@@ -24,7 +24,7 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 55880dd86de65c9d024ebfc8abceac05b996ab87
+    git.commit: 8d806c42992cd64292091fc9145b296ca484637e
   odh-codeflare-operator:
     src: config
     dest: codeflare
@@ -248,10 +248,10 @@ additional_meta:
     git.commit: 1f9d99084ab55d83902b14676aafd5e433c91454
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 9ed029b5a4b9b4f06efba2fdeae9513f2a3f1e58
+    git.commit: e42d0ab71d01f18df4d41d33f2d8e9e0bbe2dd60
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
-    git.commit: fe420bcb53add3a9089b6d26495ddbb66dd603a1
+    git.commit: cc5263f2dccae4e51de93c69a7bb070dc674b2b5
   odh-maas-api:
     git.url: https://github.com/red-hat-data-services/maas-billing
     git.commit: 3d277d47efb28fd09b083ee00ba2917e071fd815
