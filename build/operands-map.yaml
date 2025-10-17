@@ -92,7 +92,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_PYTORCH_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-pytorch-rocm-py312-rhel9@sha256:a7ded6f5a04a19ce3345cedf5f4ee2f59975c2dce313068bd0b4466da6f382f7"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_CUDA_PY312_IMAGE
-  value: "quay.io/rhoai/odh-pipeline-runtime-tensorflow-cuda-py312-rhel9@sha256:d18924580b1d356d69b616d872e44b6e845773ff77d93e9184e365d32a8c6007"
+  value: "quay.io/rhoai/odh-pipeline-runtime-tensorflow-cuda-py312-rhel9@sha256:cc013ce06a6d7b8a1174f426aeb5eee9db11c11d3d654e79b9d2d7d784356ded"
 - name: RELATED_IMAGE_ODH_PIPELINE_RUNTIME_TENSORFLOW_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-pipeline-runtime-tensorflow-rocm-py312-rhel9@sha256:f37e2f711769458483eb7c8a171f790ccb8b0df91777efc39f3caab11b8b5d33"
 - name: RELATED_IMAGE_ODH_WORKBENCH_CODESERVER_DATASCIENCE_CPU_PY312_IMAGE
@@ -106,7 +106,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-minimal-rocm-py312-rhel9@sha256:04e4586f2f721284e23e8e9752d69e2fbba0862998ecdbb0700e4e90e34fb26d"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:6bb039755aac1a963fa5375216d748ae9ce04a627f735715e7e260e54304a54a"
+  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:4dfd2bae48cc1fdf18b66055cb8c4827beafc2028c7bf3dfc028d0624a95b90b"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-rocm-py312-rhel9@sha256:4cb7405582a70eda16fb7960545f024a45d79aede26795eb39dc6def45b34cee"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY312_IMAGE
@@ -114,7 +114,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:8d2dde5258618f80a443ae7686729cb8b88caa297a07b34b55f8915c6c26e90c"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:2e3f6825893d1c57a3f7a90d5e5d835035bc5ef6b602df0acd40f18f9a928d0e"
+  value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:12721327b27eda396d6422154252d88a50f36a6b4b047afaa028bccf7ed5329c"
 - name: RELATED_IMAGE_ODH_CAIKIT_NLP_IMAGE
   value: "quay.io/rhoai/odh-caikit-nlp-rhel9@sha256:5fc93735092c692f8f57f9ecf102a3a14988e7c670f0440be65c70f741072925"
 - name: RELATED_IMAGE_ODH_CAIKIT_TGIS_SERVING_IMAGE
