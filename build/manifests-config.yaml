@@ -161,7 +161,7 @@ additional_meta:
     git.commit: 482e05e4b0e9a7d9feb59a322bb027c1a5075179
   odh-pipeline-runtime-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: b24e5d8b35b7b827475d7aea44747a094213ddf1
+    git.commit: faab95c85cfccafc59cc743fec48c8de054e8836
   odh-pipeline-runtime-minimal-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 394bdf148a40ac76db04d665f353989bd4fef9ce
@@ -234,9 +234,6 @@ additional_meta:
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 85e16f93443b0577a1c4069daae5f38aa84a70aa
-  odh-mod-arch-model-registry:
-    git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
     git.commit: 05172ee557ae43d65ca9dd7f15224e19f22fbdf2
@@ -251,7 +248,7 @@ additional_meta:
     git.commit: 1f9d99084ab55d83902b14676aafd5e433c91454
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 9df04cbdf8edc4dc75e453df1e6814faaa83285a
+    git.commit: 22e63144d5f8aa78a3bfb431ab699284dd9d0b36
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: 3df91e06e398f9f8aa22c01e99f3e4f3322153bf
@@ -282,3 +279,6 @@ additional_meta:
   odh-training-rocm64-torch28-py312:
     git.url: https://github.com/red-hat-data-services/distributed-workloads
     git.commit: ec767344ffa942ce7eef987bc316678d61f4ad77
+  odh-mod-arch-model-registry:
+    git.url: https://github.com/red-hat-data-services/odh-dashboard
+    git.commit: aeedc20071470946e92bcabbb3f619c669d31be5
