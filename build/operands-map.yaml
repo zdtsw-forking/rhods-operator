@@ -108,11 +108,11 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-cuda-py312-rhel9@sha256:9349126d6f9d0f05d07f22a8fea351ed4f08dfb2feaab5ae8a5eebe49560ec2a"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_ROCM_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-rocm-py312-rhel9@sha256:8954525ff822e5c7f79f1a529395d238ffac2cfbf76335dc3fc6e88a03efbedd"
+  value: "quay.io/rhoai/odh-workbench-jupyter-pytorch-rocm-py312-rhel9@sha256:14c7ecb70f714705fb6a9378827be7e5c238c10adf11b3daf0ac1056a2c1712e"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_CUDA_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-cuda-py312-rhel9@sha256:1c8f50364bb00a41ac0dc9c3214ab98fde59391ff9286f93919b840391a7c0cd"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TENSORFLOW_ROCM_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:94c984ae0d8c0dcfc92c50321049db95d0cefaabd7147b6985e6a90f1195eeb2"
+  value: "quay.io/rhoai/odh-workbench-jupyter-tensorflow-rocm-py312-rhel9@sha256:9651747d9b472558e7851d3c6264d463d884f7e4e01ca31ab2b8635fc68c8db6"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_TRUSTYAI_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-trustyai-cpu-py312-rhel9@sha256:b10b3cc87aa45908d9f31f0458b0fab3d9e879371148f9dbdbc2a1cac7ed50b7"
 - name: RELATED_IMAGE_ODH_CAIKIT_NLP_IMAGE
@@ -124,7 +124,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_OPENVINO_MODEL_SERVER_IMAGE
   value: "quay.io/rhoai/odh-openvino-model-server-rhel9@sha256:726bdac8c5791695a5b0a43654fd482ffb7eda2fb384dcca42a73cce923a411f"
 - name: RELATED_IMAGE_ODH_VLLM_CPU_IMAGE
-  value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:08b6024aed53fde386d81d5aaced20c0d5a4976c91ee59643a2bf370f16f9191"
+  value: "quay.io/rhoai/odh-vllm-cpu-rhel9@sha256:c005a41469d32b1756d0f3d6498c4fd7b478d3b25df53a19926358a24e9247f5"
 - name: RELATED_IMAGE_ODH_VLLM_CUDA_IMAGE
   value: "quay.io/rhoai/odh-vllm-cuda-rhel9@sha256:39c8e42d4c4a1d327f68f3cc1985d5fa75bb96f95be0aaba9c07b2ac74540925"
 - name: RELATED_IMAGE_ODH_VLLM_ROCM_IMAGE
@@ -146,9 +146,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
   value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:0151e5e28310fd9c723dc8dac566643176669af128e7d3fe8e4cc652ce8cba0e"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:fa895d38aa817ea1571dafc2fa6b9b22c47421a3b8defbb9986f171d6cf847b9"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:fa895d38aa817ea1571dafc2fa6b9b22c47421a3b8defbb9986f171d6cf847b9"
 - name: RELATED_IMAGE_ODH_MAAS-API_IMAGE
   value: "quay.io/rhoai/odh-maas-api-rhel9@sha256:30b770e9bcb3f9ddb56d2e46c83ced95ec0bbc2e2ec16aafb47d1619b9daf46b"
 - name: RELATED_IMAGE_ODH_MAAS-API_IMAGE
@@ -176,8 +176,8 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MOD_ARCH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-mod-arch-model-registry-rhel9@sha256:847ddd691abb49dc9e4677c672aef259914cb5884c913780f067bd1ceff13967"
 - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:fa895d38aa817ea1571dafc2fa6b9b22c47421a3b8defbb9986f171d6cf847b9"
 - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY_IMAGE
-  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:e5412506fe2b80137cc5abb4708f0cd300aaa50da008189a0c87794bd6b59a55"
+  value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:fa895d38aa817ea1571dafc2fa6b9b22c47421a3b8defbb9986f171d6cf847b9"
 - name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
   value: quay.io/rhoai/odh-rhel9-operator@sha256:f9f275dbd8067e06c939bde8e8875b504ccffb1aaea9cd2832f790abfa35f6ee
