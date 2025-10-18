@@ -137,7 +137,7 @@ additional_meta:
     git.commit: 69275b6d63ade4f1e64f47932e7857bb95674f1d
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 10c5501f79e4a3f0cd7ffa3241a6ad135797c460
+    git.commit: 41dad12a6c121da6e0a58216183ea9a5cb856a39
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: 41dad12a6c121da6e0a58216183ea9a5cb856a39
@@ -248,7 +248,7 @@ additional_meta:
     git.commit: b18169b8b9f40730a6c515c34f4b1a75f8b908c7
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: e42d0ab71d01f18df4d41d33f2d8e9e0bbe2dd60
+    git.commit: 0d4a0daec13bfee4441b5ecbdb0a37cfc54f4de6
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: cc5263f2dccae4e51de93c69a7bb070dc674b2b5
