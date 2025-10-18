@@ -93,18 +93,19 @@ webhooks:
     service:
       name: webhook-service
       namespace: system
-      path: /validate-serving-knative-dev-v1-service
+      path: /validate-serving-kserve-io-v1alpha1-llminferenceservice
   failurePolicy: Fail
-  name: validating.ksvc.odh-model-controller.opendatahub.io
+  name: validating.llmisvc.odh-model-controller.opendatahub.io
   rules:
   - apiGroups:
-    - serving.knative.dev
+    - serving.kserve.io
     apiVersions:
-    - v1
+    - v1alpha1
     operations:
     - CREATE
+    - UPDATE
     resources:
-    - services
+    - llminferenceservices
   sideEffects: None
 - admissionReviewVersions:
   - v1

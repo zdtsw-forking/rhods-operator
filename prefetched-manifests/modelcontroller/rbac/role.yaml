@@ -41,16 +41,12 @@ rules:
   - create
   - patch
 - apiGroups:
-  - authorino.kuadrant.io
+  - config.openshift.io
   resources:
-  - authconfigs
+  - authentications
   verbs:
-  - create
-  - delete
   - get
   - list
-  - patch
-  - update
   - watch
 - apiGroups:
   - datasciencecluster.opendatahub.io
@@ -78,6 +74,31 @@ rules:
   - list
   - watch
 - apiGroups:
+  - gateway.networking.k8s.io
+  resources:
+  - gateways
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gateway.networking.k8s.io
+  resources:
+  - gateways/finalizers
+  verbs:
+  - patch
+  - update
+- apiGroups:
+  - gateway.networking.k8s.io
+  resources:
+  - httproutes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
   - keda.sh
   resources:
   - triggerauthentications
@@ -90,26 +111,9 @@ rules:
   - update
   - watch
 - apiGroups:
-  - maistra.io
+  - kuadrant.io
   resources:
-  - servicemeshcontrolplanes
-  verbs:
-  - get
-  - list
-  - use
-  - watch
-- apiGroups:
-  - maistra.io
-  resources:
-  - servicemeshmemberrolls
-  verbs:
-  - get
-  - list
-  - watch
-- apiGroups:
-  - maistra.io
-  resources:
-  - servicemeshmembers
+  - authpolicies
   verbs:
   - create
   - delete
@@ -118,6 +122,14 @@ rules:
   - patch
   - update
   - watch
+- apiGroups:
+  - kuadrant.io
+  resources:
+  - authpolicies/status
+  verbs:
+  - get
+  - patch
+  - update
 - apiGroups:
   - metrics.k8s.io
   resources:
@@ -143,18 +155,7 @@ rules:
 - apiGroups:
   - networking.istio.io
   resources:
-  - gateways
-  verbs:
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - networking.istio.io
-  resources:
-  - virtualservices
-  - virtualservices/finalizers
+  - envoyfilters
   verbs:
   - create
   - delete
@@ -233,28 +234,10 @@ rules:
   verbs:
   - create
 - apiGroups:
-  - security.istio.io
-  resources:
-  - authorizationpolicies
-  verbs:
-  - get
-  - list
-- apiGroups:
-  - security.istio.io
-  resources:
-  - peerauthentications
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
   - serving.kserve.io
   resources:
   - inferencegraphs
+  - llminferenceserviceconfigs
   verbs:
   - get
   - list
@@ -291,23 +274,37 @@ rules:
 - apiGroups:
   - serving.kserve.io
   resources:
+  - llminferenceservices
+  verbs:
+  - get
+  - list
+  - patch
+  - post
+  - update
+  - watch
+- apiGroups:
+  - serving.kserve.io
+  resources:
+  - llminferenceservices/finalizers
+  verbs:
+  - patch
+  - update
+- apiGroups:
+  - serving.kserve.io
+  resources:
+  - llminferenceservices/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - serving.kserve.io
+  resources:
   - servingruntimes
   verbs:
   - create
   - get
   - list
-  - update
-  - watch
-- apiGroups:
-  - telemetry.istio.io
-  resources:
-  - telemetries
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
   - update
   - watch
 - apiGroups:
