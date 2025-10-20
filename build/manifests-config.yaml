@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: github.ref_name
+    git.commit: fff17b1b271fdc2cf92af478f12701d7bc40f3be
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -236,7 +236,7 @@ additional_meta:
     git.commit: 85e16f93443b0577a1c4069daae5f38aa84a70aa
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 05172ee557ae43d65ca9dd7f15224e19f22fbdf2
+    git.commit: c8a9981e07fe6cd2cea3737701eaa78f344c09f8
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
