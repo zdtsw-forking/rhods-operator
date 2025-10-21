@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: fff17b1b271fdc2cf92af478f12701d7bc40f3be
+    git.commit: cbc218c1a5d56fd64b99015058ed31cf2df70c39
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -92,7 +92,7 @@ additional_meta:
     git.commit: 514f41bb0ae69eb8841aeeb419460736349564bb
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
-    git.commit: 29f416936e6d4b27b3194b85741f4b465ee86a58
+    git.commit: bee7f6ce1365cceab6852659251f36a73a191c27
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
     git.commit: 0e348aa36209beefd0814f83f8301bfaedbaeea7
