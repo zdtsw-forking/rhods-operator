@@ -34,7 +34,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: b32824eb3bba0f857e5e2da5dcf8e06fb971f1c0
+    git.commit: 1718e3c9f04e5c871690c8c6af5f7cf143aedcf0
   odh-kueue-controller:
     src: config
     dest: kueue
@@ -251,7 +251,7 @@ additional_meta:
     git.commit: 0d4a0daec13bfee4441b5ecbdb0a37cfc54f4de6
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
-    git.commit: cc5263f2dccae4e51de93c69a7bb070dc674b2b5
+    git.commit: c41ee36fb84e80f823c8091c49f715c75a0996c9
   odh-maas-api:
     git.url: https://github.com/red-hat-data-services/maas-billing
     git.commit: 3d277d47efb28fd09b083ee00ba2917e071fd815
