@@ -143,7 +143,7 @@ additional_meta:
     git.commit: fe13e7e460d414904f786437b87b80478db4ffd0
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 901933c0044e6593e797f5da89ff780f55b439a4
+    git.commit: fe13e7e460d414904f786437b87b80478db4ffd0
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
     git.commit: 0ede08b75e508832c02bafa792f67bfcbc98a0d3
