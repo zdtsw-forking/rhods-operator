@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 6610cf1e6869caea23191922ca4846c480cb1235
+    git.commit: abc5cd1f7493883792fb39aa1df38e9c84b42d49
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -179,7 +179,7 @@ additional_meta:
     git.commit: 9052dbd317d6929a4569055002367b6be3918f1a
   odh-workbench-codeserver-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 9ab9367a384de0e1f579147f69ddefc26ed7f84d
+    git.commit: abc5cd1f7493883792fb39aa1df38e9c84b42d49
   odh-workbench-jupyter-datascience-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
@@ -248,7 +248,7 @@ additional_meta:
     git.commit: b18169b8b9f40730a6c515c34f4b1a75f8b908c7
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 2fbd84a44a6d26dc2aa8207a4c21f8fb6ef3f8f2
+    git.commit: 9f67803f7d28e7285f92449f5e71e14fba8bdbbe
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: c41ee36fb84e80f823c8091c49f715c75a0996c9
