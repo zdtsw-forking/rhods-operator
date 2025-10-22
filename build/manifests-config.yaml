@@ -197,7 +197,7 @@ additional_meta:
     git.commit: 85e16f93443b0577a1c4069daae5f38aa84a70aa
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: c8a9981e07fe6cd2cea3737701eaa78f344c09f8
+    git.commit: b73d9e1887a857293d05043134464cfcfe9bff0a
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
@@ -221,7 +221,7 @@ additional_meta:
     git.commit: 7d3623d73bdb5cbd698765f63f633c84e5e68783
   odh-trustyai-ragas-lls-provider-dsp:
     git.url: https://github.com/red-hat-data-services/llama-stack-provider-ragas
-    git.commit: 9b4b6c548d9c775ea77284ebeaf4138030ed7f7a
+    git.commit: ca926410a10e269172e39d859a9ef5d01927f4df
   odh-training-cuda121-torch24-py311:
     git.url: https://github.com/red-hat-data-services/distributed-workloads
     git.commit: 6504c1c45d3936de5854646369c2ad6f44159d10
