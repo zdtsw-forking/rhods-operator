@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 826ca70257b5796358aa2da422f9afd20fca34a7
+    git.commit: 9acffefa364325cd5f4f3f360c181b8d2f9c449f
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -176,7 +176,7 @@ additional_meta:
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
   odh-workbench-jupyter-tensorflow-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: cbc218c1a5d56fd64b99015058ed31cf2df70c39
+    git.commit: 9acffefa364325cd5f4f3f360c181b8d2f9c449f
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
@@ -206,7 +206,7 @@ additional_meta:
     git.commit: 7419b52190d85cf3e5f582f6e8c83edef55514df
   odh-model-metadata-collection:
     git.url: https://github.com/red-hat-data-services/model-metadata-collection
-    git.commit: b18169b8b9f40730a6c515c34f4b1a75f8b908c7
+    git.commit: ffe6b9b2118a9df276c3694f62b96903629750de
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
     git.commit: 2514029e388378b1e3f5b1ba7187f7e63864bf62
