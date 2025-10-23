@@ -209,7 +209,7 @@ additional_meta:
     git.commit: b18169b8b9f40730a6c515c34f4b1a75f8b908c7
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 9f67803f7d28e7285f92449f5e71e14fba8bdbbe
+    git.commit: 2514029e388378b1e3f5b1ba7187f7e63864bf62
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: c41ee36fb84e80f823c8091c49f715c75a0996c9
