@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 9acffefa364325cd5f4f3f360c181b8d2f9c449f
+    git.commit: 8d65f4481eed9c0679d77387dcb2164df49fbfa2
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -176,7 +176,7 @@ additional_meta:
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
   odh-workbench-jupyter-tensorflow-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 9acffefa364325cd5f4f3f360c181b8d2f9c449f
+    git.commit: 8d65f4481eed9c0679d77387dcb2164df49fbfa2
   odh-workbench-jupyter-trustyai-cpu-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
