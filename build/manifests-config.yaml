@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: ecaff4810390fd9b24956e82aefa5a1aa2ee1e85
+    git.commit: 8d055fbc6afc54da6ff074c069e6f8547a74f6a4
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -34,7 +34,7 @@ map:
     src: config
     dest: trustyai
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 8220a9cb85671e8144ea3ae86d3d4f6af8dbf03e
+    git.commit: 4f026a856e0892bdc7b3b73a30047d0fd98a76d4
   odh-model-controller:
     src: config
     dest: modelcontroller
