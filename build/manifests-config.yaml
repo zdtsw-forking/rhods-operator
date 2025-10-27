@@ -119,7 +119,7 @@ additional_meta:
     git.commit: fe13e7e460d414904f786437b87b80478db4ffd0
   odh-ta-lmes-driver:
     git.url: https://github.com/red-hat-data-services/trustyai-service-operator
-    git.commit: 8220a9cb85671e8144ea3ae86d3d4f6af8dbf03e
+    git.commit: 5a6b0cc593254b3de0ee4ca09a68fce1b7131655
   odh-ta-lmes-job:
     git.url: https://github.com/red-hat-data-services/lm-evaluation-harness
     git.commit: 0237500687dc75976e896b5b8d3bb26649e4be4a
@@ -209,7 +209,7 @@ additional_meta:
     git.commit: ffe6b9b2118a9df276c3694f62b96903629750de
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 2514029e388378b1e3f5b1ba7187f7e63864bf62
+    git.commit: faca2f708ad7837cff29ee13f1f64a771bb6ffe6
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: c41ee36fb84e80f823c8091c49f715c75a0996c9
