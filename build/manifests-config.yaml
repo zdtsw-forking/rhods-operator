@@ -182,7 +182,7 @@ additional_meta:
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
   odh-guardrails-detector-huggingface-runtime:
     git.url: https://github.com/red-hat-data-services/guardrails-detectors
-    git.commit: 482e05e4b0e9a7d9feb59a322bb027c1a5075179
+    git.commit: 832b8866a2ab783c8afc112b950151ec07a5c7b0
   odh-openvino-model-server:
     git.url: https://github.com/red-hat-data-services/openvino_model_server
     git.commit: 27e45f7cbceeb10be8126615c7a10f56f4f724f9
