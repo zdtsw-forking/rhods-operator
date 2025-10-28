@@ -40,9 +40,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-feast-operator-rhel9@sha256:6bf37b3786398e1d9b7004d5b08e0b4c58a5dcf453c02a9fb260bdfe9c32161e"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:739116783f595eba73fcffc06f07da3a1abb7323ee3af65bab362b6030a638f6"
+  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:9a6f0917e40d82684148d25c96e2a5b4a8a24dd3202734dfd7450f55d9e8b9c0"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
-  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:739116783f595eba73fcffc06f07da3a1abb7323ee3af65bab362b6030a638f6"
+  value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:9a6f0917e40d82684148d25c96e2a5b4a8a24dd3202734dfd7450f55d9e8b9c0"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:75e90cd4dd6654da3f19b27f3cc380714e63e93e37c44d9e6016322317f60123"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
