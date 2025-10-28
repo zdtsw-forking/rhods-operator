@@ -59,7 +59,7 @@ map:
     src: infra/feast-operator/config
     dest: feastoperator
     git.url: https://github.com/red-hat-data-services/feast
-    git.commit: 8960c86c44000d20360adf516726fb42ff0333cc
+    git.commit: 25db63183e170b208396eb69b11a2509e620c7a6
   odh-llama-stack-k8s-operator:
     src: config
     dest: llamastackoperator
