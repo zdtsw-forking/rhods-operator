@@ -46,7 +46,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KSERVE_AGENT_IMAGE
   value: "quay.io/rhoai/odh-kserve-agent-rhel9@sha256:31fe90648674bc5e1d2b2d38b01b9cc349168de96f875afad7f2d788591aa017"
 - name: RELATED_IMAGE_ODH_KSERVE_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:a461b07bee3013516b4635e837ab98ef36bc211b2945f36ec3c1951537ad2545"
+  value: "quay.io/rhoai/odh-kserve-controller-rhel9@sha256:aa666f76d869cf02f8635ac98d3a884df0ce6848ea16dcebac73cb83de8b19bc"
 - name: RELATED_IMAGE_ODH_KSERVE_ROUTER_IMAGE
   value: "quay.io/rhoai/odh-kserve-router-rhel9@sha256:8ad41e4c3d0d26904ad9efffd7f0cfc48c7d14494d7dbc31fed6e957af6b8623"
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
