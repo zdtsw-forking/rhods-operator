@@ -188,7 +188,7 @@ additional_meta:
     git.commit: 27e45f7cbceeb10be8126615c7a10f56f4f724f9
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
-    git.commit: 3e9a4671ce59b3158c0cf4645cd51bacaddd6031
+    git.commit: 0be87024ccefb0c7d9bdadd7039195e20cbd6e53
   odh-vllm-gaudi:
     git.url: https://github.com/red-hat-data-services/vllm-gaudi
     git.commit: 154de7eff26192ef21b154e9942ed508817dc836
@@ -197,7 +197,7 @@ additional_meta:
     git.commit: 9fa35dcb1f0c98a7ff8b3484c9a56ed4a6516513
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 29ddd601ee6725f1a220c927ec57facf795396e7
+    git.commit: 625e0f81bb5fa68104481d9a8d2fede4f8621264
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
