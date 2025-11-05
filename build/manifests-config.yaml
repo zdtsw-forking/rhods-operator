@@ -64,7 +64,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: a46e5298eb86cae91d144e1e8fd0ad364221acb9
+    git.commit: b5da65d56c4c00fa755bd4db5c484791ef623a97
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -239,7 +239,7 @@ additional_meta:
     git.commit: 8ecacd224e1309f074b97c8ced83d09655fb5ae1
   odh-mod-arch-model-registry:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: a46e5298eb86cae91d144e1e8fd0ad364221acb9
+    git.commit: b5da65d56c4c00fa755bd4db5c484791ef623a97
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 76347a43ccf5135b609a715c3063a03ffedef3e8
