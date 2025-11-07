@@ -29,7 +29,7 @@ map:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: 289b29f402b40a3df3241481ea55a324bdc98901
+    git.commit: d9c5551eb4bfc8dd77d8a14321119d8e8073b23c
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -197,7 +197,7 @@ additional_meta:
     git.commit: 9fa35dcb1f0c98a7ff8b3484c9a56ed4a6516513
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: d9c4305dfbe2de56bc199b0be1e0169ab010f1c0
+    git.commit: 625e0f81bb5fa68104481d9a8d2fede4f8621264
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
