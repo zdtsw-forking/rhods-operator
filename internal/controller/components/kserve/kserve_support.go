@@ -32,7 +32,6 @@ var (
 		"kserve-llm-d":                     "RELATED_IMAGE_RHAIIS_VLLM_CUDA_IMAGE",
 		"kserve-llm-d-inference-scheduler": "RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE",
 		"kserve-llm-d-routing-sidecar":     "RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE",
-		"oauth-proxy":                      "RELATED_IMAGE_OSE_OAUTH_PROXY_IMAGE",
 		"kube-rbac-proxy":                  "RELATED_IMAGE_OSE_KUBE_RBAC_PROXY_IMAGE",
 	}
 )
@@ -46,24 +45,10 @@ func kserveManifestInfo(sourcePath string) odhtypes.ManifestInfo {
 }
 
 func updateInferenceCM(inferenceServiceConfigMap *corev1.ConfigMap, isHeadless bool) error {
-	deployData, err := getDeployConfig(inferenceServiceConfigMap)
-	if err != nil {
-		return err
-	}
-
-	// deploy
-	// RawDeployment mode is the only supported mode
-	deployData.DefaultDeploymentMode = "RawDeployment"
-	deployDataBytes, err := json.MarshalIndent(deployData, "", " ")
-	if err != nil {
-		return fmt.Errorf("could not set values in configmap %s. %w", kserveConfigMapName, err)
-	}
-	inferenceServiceConfigMap.Data[DeployConfigName] = string(deployDataBytes)
-
 	// ingress
 	// RawDeployment mode is the only supported mode, so always disable ingress creation
 	var ingressData map[string]interface{}
-	if err = json.Unmarshal([]byte(inferenceServiceConfigMap.Data[IngressConfigKeyName]), &ingressData); err != nil {
+	if err := json.Unmarshal([]byte(inferenceServiceConfigMap.Data[IngressConfigKeyName]), &ingressData); err != nil {
 		return fmt.Errorf("error retrieving value for key '%s' from configmap %s. %w", IngressConfigKeyName, kserveConfigMapName, err)
 	}
 	ingressData["disableIngressCreation"] = true
