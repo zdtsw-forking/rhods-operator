@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: e97687bbcdd7a8796a4591b6d2b39cbb6d0398be
+    git.commit: 5d0ada3049a4f222fd500ea56dec6126c3be72b9
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: ec53fc97743a2e88d43222ff313ffaa2d161b233
+    git.commit: 5d0ada3049a4f222fd500ea56dec6126c3be72b9
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -49,7 +49,7 @@ map:
     src: manifests
     dest: dashboard
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 271197f1990b484cead5398d7e7df9ef7ba99702
+    git.commit: 86c5fb4636c48b633dcf3757b0d7429b59bbf0ae
   odh-training-operator:
     src: manifests
     dest: trainingoperator
@@ -188,7 +188,7 @@ additional_meta:
     git.commit: 27e45f7cbceeb10be8126615c7a10f56f4f724f9
   odh-vllm-cpu:
     git.url: https://github.com/red-hat-data-services/vllm-cpu
-    git.commit: 0be87024ccefb0c7d9bdadd7039195e20cbd6e53
+    git.commit: f3b12b6e08632c1b5e277825e047c11eface5a15
   odh-vllm-gaudi:
     git.url: https://github.com/red-hat-data-services/vllm-gaudi
     git.commit: 154de7eff26192ef21b154e9942ed508817dc836
@@ -197,7 +197,7 @@ additional_meta:
     git.commit: 9fa35dcb1f0c98a7ff8b3484c9a56ed4a6516513
   odh-llama-stack-core:
     git.url: https://gitlab.com/redhat/rhel-ai/llama-stack/containers
-    git.commit: 625e0f81bb5fa68104481d9a8d2fede4f8621264
+    git.commit: d9c4305dfbe2de56bc199b0be1e0169ab010f1c0
   odh-workbench-jupyter-pytorch-llmcompressor-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 79cddf0133cd201d2401e07c639ed22b84f684be
@@ -209,7 +209,7 @@ additional_meta:
     git.commit: 44268f30bc4e0792086096897cca98d4f4494162
   odh-mod-arch-gen-ai:
     git.url: https://github.com/red-hat-data-services/odh-dashboard
-    git.commit: 271197f1990b484cead5398d7e7df9ef7ba99702
+    git.commit: 86c5fb4636c48b633dcf3757b0d7429b59bbf0ae
   odh-kube-auth-proxy:
     git.url: https://github.com/red-hat-data-services/kube-auth-proxy
     git.commit: fa53d76603d9a6f6450b1bdf873666e7a3b4db85
