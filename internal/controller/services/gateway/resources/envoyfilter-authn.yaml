@@ -28,7 +28,7 @@ spec:
             server_uri:
               uri: https://kube-auth-proxy.openshift-ingress.svc.cluster.local:8443/oauth2/auth
               cluster: kube-auth-proxy
-              timeout: 0.5s
+              timeout: %s
             authorization_request:
               allowed_headers:
                 patterns:
@@ -63,6 +63,37 @@ spec:
               if access_token then
                 request_handle:headers():add("x-forwarded-access-token", access_token)
                 request_handle:headers():replace("authorization", "Bearer " .. access_token)
+                
+                -- Strip OAuth2 proxy cookies only when forwarding to upstream services
+                -- Cookie name is injected at runtime from OAuth2ProxyCookieName constant (gateway_support.go:75)
+                -- Pattern matches cookies starting with the cookie name, handling variations like:
+                --   - _oauth2_proxy (main cookie)
+                --   - _oauth2_proxy_1, _oauth2_proxy_2 (split cookies if cookie size exceeds limits)
+                local cookie_header = request_handle:headers():get("cookie")
+                if cookie_header then
+                  local filtered_cookies = {}
+                  local cookie_pattern = "^{{.CookieName}}"
+                  
+                  -- Parse and filter cookies in a single pass
+                  for cookie in cookie_header:gmatch("([^;]+)") do
+                    -- Trim whitespace and extract cookie name
+                    local trimmed = cookie:match("^%%s*(.-)%%s*$")
+                    if trimmed ~= "" then
+                      local cookie_name = trimmed:match("^([^=]+)")
+                      -- Only keep cookies that don't match the OAuth2 proxy cookie pattern
+                      if cookie_name and not cookie_name:match(cookie_pattern) then
+                        table.insert(filtered_cookies, trimmed)
+                      end
+                    end
+                  end
+                  
+                  -- Update or remove Cookie header based on filtered results
+                  if #filtered_cookies > 0 then
+                    request_handle:headers():replace("cookie", table.concat(filtered_cookies, "; "))
+                  else
+                    request_handle:headers():remove("cookie")
+                  end
+                end
               end
             end
   - applyTo: CLUSTER
@@ -73,7 +104,7 @@ spec:
       value:
         name: kube-auth-proxy
         type: STRICT_DNS
-        connect_timeout: 0.5s
+        connect_timeout: %s
         transport_socket:
           name: envoy.transport_sockets.tls
           typed_config:
