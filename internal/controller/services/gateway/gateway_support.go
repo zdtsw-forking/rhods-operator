@@ -70,6 +70,9 @@ const (
 	EnvClientSecret = "OAUTH2_PROXY_CLIENT_SECRET" //nolint:gosec // This is an environment variable name, not a secret
 	EnvCookieSecret = "OAUTH2_PROXY_COOKIE_SECRET" //nolint:gosec // This is an environment variable name, not a secret
 
+	// OAuth2 proxy cookie name - used in both proxy args and EnvoyFilter Lua filter.
+	OAuth2ProxyCookieName = "_oauth2_proxy"
+
 	AuthModeIntegratedOAuth AuthMode = "IntegratedOAuth"
 	AuthModeOIDC            AuthMode = "OIDC"
 	AuthModeNone            AuthMode = "None"
