@@ -165,3 +165,5 @@ relatedImages:
   value: "quay.io/rhoai/odh-training-rocm62-torch25-py311-rhel9@sha256:72128508aaa105b2ffece5ec076fb0bf49371e570e8d503f6490f081f63ee6a9"
 - name: RELATED_IMAGE_ODH_TRAINING_ROCM62_TORCH25_PY311_IMAGE
   value: "quay.io/rhoai/odh-training-rocm62-torch25-py311-rhel9@sha256:72128508aaa105b2ffece5ec076fb0bf49371e570e8d503f6490f081f63ee6a9"
+- name: RELATED_IMAGE_ODH_OPERATOR_IMAGE
+  value: quay.io/rhoai/odh-rhel9-operator@sha256:4db426a2e1640b1da7ede4b08241853a9631da562240c6072fbe1895eeac560c
