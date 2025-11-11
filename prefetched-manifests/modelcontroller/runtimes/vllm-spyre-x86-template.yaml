@@ -28,13 +28,14 @@ objects:
         opendatahub.io/dashboard: 'true'
     spec:
       annotations:
+        opendatahub.io/kserve-runtime: 'vllm'
         prometheus.io/path: /metrics
         prometheus.io/port: '8080'
       containers:
         - image: $(vllm-spyre-x86-image)
           name: kserve-container
           args:
-            - /mnt/models
+            - '--model=/mnt/models'
             - '--port=8000'
             - '--served-model-name={{.Name}}'
           env:

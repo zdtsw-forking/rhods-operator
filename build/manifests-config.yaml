@@ -9,17 +9,17 @@ map:
     src: config
     dest: kserve
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 4dd5e9aef9dcc5570b818e304b12bcdd45d89b8c
+    git.commit: a78173a6e95a1f44f588df5cea6eaa8c0168c991
   odh-kf-notebook-controller:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: dbd04ef64b8ab8f27c06970d8a31f8be2feb32a3
+    git.commit: 70d6e33b9a3fbe2b5c36164a3434176d4bb1fe45
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: dbd04ef64b8ab8f27c06970d8a31f8be2feb32a3
+    git.commit: 70d6e33b9a3fbe2b5c36164a3434176d4bb1fe45
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -39,7 +39,7 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: da134ffccdd4517951c05c2b8a70bd33c452b15e
+    git.commit: e594891df01054923fb787f113a7a41ed48dc10f
   odh-model-registry-operator:
     src: config
     dest: modelregistry
@@ -110,10 +110,10 @@ additional_meta:
     git.commit: 8934d1eed699d8b73b7fa5249dc380756be1a10f
   odh-kserve-agent:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 4dd5e9aef9dcc5570b818e304b12bcdd45d89b8c
+    git.commit: a78173a6e95a1f44f588df5cea6eaa8c0168c991
   odh-kserve-router:
     git.url: https://github.com/red-hat-data-services/kserve
-    git.commit: 4dd5e9aef9dcc5570b818e304b12bcdd45d89b8c
+    git.commit: a78173a6e95a1f44f588df5cea6eaa8c0168c991
   odh-kserve-storage-initializer:
     git.url: https://github.com/red-hat-data-services/kserve
     git.commit: f39700bf6825984795932edbc4d9e04d6cc463b1
