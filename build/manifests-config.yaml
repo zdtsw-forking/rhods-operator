@@ -249,3 +249,15 @@ additional_meta:
   odh-model-metadata-collection:
     git.url: https://github.com/red-hat-data-services/model-metadata-collection
     git.commit: 9dff0268c08d1897673280915e700d5a4fff6113
+  odh-training-cuda121-torch24-py311:
+    git.url: https://github.com/red-hat-data-services/distributed-workloads
+    git.commit: 2b62fc52dd0a202dea43ef55f53d2ce9c5556b0f
+  odh-training-cuda124-torch25-py311:
+    git.url: https://github.com/red-hat-data-services/distributed-workloads
+    git.commit: 2b62fc52dd0a202dea43ef55f53d2ce9c5556b0f
+  odh-training-rocm62-torch24-py311:
+    git.url: https://github.com/red-hat-data-services/distributed-workloads
+    git.commit: 2b62fc52dd0a202dea43ef55f53d2ce9c5556b0f
+  odh-training-rocm62-torch25-py311:
+    git.url: https://github.com/red-hat-data-services/distributed-workloads
+    git.commit: 2b62fc52dd0a202dea43ef55f53d2ce9c5556b0f
