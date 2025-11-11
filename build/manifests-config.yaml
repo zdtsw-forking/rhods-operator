@@ -14,12 +14,12 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 70d6e33b9a3fbe2b5c36164a3434176d4bb1fe45
+    git.commit: fa82bbe8a1b99b27691f6c3f9898dd4466055c0d
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: 70d6e33b9a3fbe2b5c36164a3434176d4bb1fe45
+    git.commit: fa82bbe8a1b99b27691f6c3f9898dd4466055c0d
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
@@ -64,7 +64,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: e419b8521dce3f87fe18484bb237b10e49ea17f9
+    git.commit: 297b5d5b2e86a62b5a629bb20a7e4dcb7972b12a
 additional_meta:
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
