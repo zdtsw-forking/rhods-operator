@@ -70,7 +70,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
   value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:bf2c675ed5eb7b91240915fb3da356fd4e15c1aa1b8ea9bac373861aa2d642bb"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
-  value: "quay.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:e6d59b2afd5f8c244f3fcf83eda069779dcb1facf44e21c39b196ff68659ca56"
+  value: "quay.io/rhoai/odh-llm-d-routing-sidecar-rhel9@sha256:6d860b5655da37470e7bc3aa76f4efd971ad969e070750ab0dee1162b4789b2d"
 - name: RELATED_IMAGE_ODH_MUST_GATHER_IMAGE
   value: "quay.io/rhoai/odh-must-gather-rhel9@sha256:8166956c9a1043f4813d394558aa7bf2a7eeea052b0a8b97bc6f6bc977851891"
 - name: RELATED_IMAGE_ODH_TA_LMES_DRIVER_IMAGE
