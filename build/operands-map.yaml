@@ -88,7 +88,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_CPU_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-minimal-cpu-py312-rhel9@sha256:b09e0d9314c7c9d684ea208b73a8358238e3de3b97522267ca12bd2b337d78b4"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_CUDA_PY312_IMAGE
-  value: "quay.io/rhoai/odh-workbench-jupyter-minimal-cuda-py312-rhel9@sha256:a96e20d80e8822021ab0011c774f3977b531da5e726114db35a389ba6747493e"
+  value: "quay.io/rhoai/odh-workbench-jupyter-minimal-cuda-py312-rhel9@sha256:5c5e00b1ab60b1dcf90b383fd1509813679a5c1258fdd41bb4b65bbffc0000f2"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_MINIMAL_ROCM_PY312_IMAGE
   value: "quay.io/rhoai/odh-workbench-jupyter-minimal-rocm-py312-rhel9@sha256:7fb1d6bdab42a95333b8cb6f38a4e3ea602ee1ba09bdcbc953d7eacfec75db1f"
 - name: RELATED_IMAGE_ODH_WORKBENCH_JUPYTER_PYTORCH_CUDA_PY312_IMAGE
@@ -122,7 +122,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:64b0bd3040fb7865779a21215a3831e1f75a96a132b31e0ed3a33d006eadccd0"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
-  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:84b6404cc85e40bd08d100f4b7bd2c083397caf71ff4bcceccf53bc14a72af87"
+  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:f28f5da49dc824faac0665e96f3518b8b781e1adfe39ddfb3677c624fab00b4d"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:a528c85ba07a473250d72119de75b65b5d1cc6f0ce5d61abcfe89b3bb20d2839"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
