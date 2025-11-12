@@ -64,7 +64,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: 41b576c55ac85827d255138ffd63c9bf4a9eaea8
+    git.commit: affec248f11326d852b6375f158e60124a9e8468
 additional_meta:
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
