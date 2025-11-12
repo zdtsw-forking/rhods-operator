@@ -24,12 +24,12 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 41bd8fd17697bab53d35978b17d5f6974d17206c
+    git.commit: a5e07cbe14fc34d31876fcd0cc5ed4c50061fe84
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: cf26a013b61ca910d4927352cd47deab1f58d8a6
+    git.commit: a85f658daf7208944085b18fa055ff19562ec525
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -44,7 +44,7 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: f5217500efd0dac5f47528fcd02de0315844d991
+    git.commit: 272f033a78aacebcb1118a7372fc800ea911a070
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -54,7 +54,7 @@ map:
     src: manifests
     dest: trainingoperator
     git.url: https://github.com/red-hat-data-services/training-operator
-    git.commit: ee3591a7fbce370bbd3cac2108d810c97772d1c3
+    git.commit: ad0da4c407f6818f4e8b26ef5874627e6745bd6c
   odh-feast-operator:
     src: infra/feast-operator/config
     dest: feastoperator
