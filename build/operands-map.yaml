@@ -22,7 +22,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:a5b3c1eae5e9055513d901541cec161a0aaf5d9a7f9827fa4f3ecc9a4667badb"
 - name: RELATED_IMAGE_ODH_CODEFLARE_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:f42207398f0fe0aa67cf70af83ed0c6640e9785a1dad266a17e0bf376d05af97"
+  value: "quay.io/rhoai/odh-codeflare-operator-rhel9@sha256:364055f916269bfbc937a29db01231d9300dbbee15286ff9772175935f7e15a4"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:9d1c29651ab44257e2ecd394cb899e9feacf7d8c0c70474a274f5375083fb715"
 - name: RELATED_IMAGE_ODH_KUEUE_CONTROLLER_IMAGE
@@ -66,7 +66,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_KSERVE_STORAGE_INITIALIZER_IMAGE
   value: "quay.io/rhoai/odh-kserve-storage-initializer-rhel9@sha256:6fc1f568fe7d462983217fdb84b87d8f45b92ff1ac0f5e06832f6460f6a43482"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:a58add14e34f633322c29c1a23ffa13ec21c1a4f8f100da6bcedc70cad161b79"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:a5c02887141f04826163f4c598c054906e1c772ef23fbab2ff7050f100d52833"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
   value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:bf2c675ed5eb7b91240915fb3da356fd4e15c1aa1b8ea9bac373861aa2d642bb"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
