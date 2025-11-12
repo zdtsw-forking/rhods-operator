@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 3fabc10e80065dc1b91bd7b80785a3215d4dee55
+    git.commit: 7add4346bdc152d06b85cb314e6cf742a45f1efc
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -14,22 +14,22 @@ map:
     src: components/notebook-controller/config
     dest: workbenches/kf-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: ffe083a95508641b59a1e0ab60c837f402ccc999
+    git.commit: 664bb16d7976514b1f16b1e446d8bf333a9dcc62
   odh-notebook-controller:
     src: components/odh-notebook-controller/config
     dest: workbenches/odh-notebook-controller
     git.url: https://github.com/red-hat-data-services/kubeflow
-    git.commit: ffe083a95508641b59a1e0ab60c837f402ccc999
+    git.commit: 664bb16d7976514b1f16b1e446d8bf333a9dcc62
   odh-data-science-pipelines-operator-controller:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: a5e07cbe14fc34d31876fcd0cc5ed4c50061fe84
+    git.commit: 6af3e1da7cf5bb94b1747c0c9de854178c005861
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: a85f658daf7208944085b18fa055ff19562ec525
+    git.commit: f0819dbcbec2eeb73ed6dd08f44c227481c73860
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -71,7 +71,7 @@ additional_meta:
     git.commit: 235aab01c578d4380c0e2b806fa6ef68833ca5d9
   odh-mlmd-grpc-server:
     git.url: https://github.com/red-hat-data-services/ml-metadata
-    git.commit: daeb4cdcc2f98ff472bc24b9342cd4a06e960715
+    git.commit: f086c6a638864d60559f110c8fdef4b518da93de
   odh-ml-pipelines-api-server-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
     git.commit: b11a30c293b57a76fb521571ec5051fe25e42b3a
