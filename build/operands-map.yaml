@@ -1,10 +1,10 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:1c3aaae679e38bdf2eeccf2b3b409e5d5247ed8e059ba19cccf22ebe365d4813"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:6c83b170e929ae7992d374635a781eaa1faf376d6a305c41f161680a7c958b07"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:9d3f9614523e2623afc393e445b81ee1342c8b4505262e0f3697b8202fbdaf33"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:6a0ee1253f1e070e7de5ac50471d8bc6a540e70e9eff671aed491e0f601acddb"
+  value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:91d72689cbc4a892b0cef0eabb346af3866ce857170dca46c9a16c980eba09c4"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:3b51dd0c07befae11cf69c38b5ede5ed4bf6b654fe59b68b19917e13165cf22d"
 - name: RELATED_IMAGE_ODH_MODELMESH_CONTROLLER_IMAGE
