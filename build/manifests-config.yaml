@@ -39,12 +39,12 @@ map:
     src: config
     dest: modelcontroller
     git.url: https://github.com/red-hat-data-services/odh-model-controller
-    git.commit: a6c1692c0ddfec86c3789a621a4cd330865565b2
+    git.commit: 6e19f96c2c0994ae01e9e97d989c3dd9a62e1b5c
   odh-model-registry-operator:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: e5d114fd4d9f98751743997963501dcdc37fd048
+    git.commit: 69f9e71424fbe303e1c008723682f8674bf87c87
   odh-dashboard:
     src: manifests
     dest: dashboard
@@ -77,16 +77,16 @@ additional_meta:
     git.commit: 933ec255fd57246dc7d00367d8804f63de8f4665
   odh-ml-pipelines-persistenceagent-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 3cc93d607f8c17788d8200b452c54fd356c2b70a
+    git.commit: 09e284859bc6f3fa3cfdbf187d04893bf0bd4971
   odh-ml-pipelines-scheduledworkflow-v2:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 3cc93d607f8c17788d8200b452c54fd356c2b70a
+    git.commit: b240384e0be00e3d2059b3a0b805820b900fcbff
   odh-ml-pipelines-driver:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 3cc93d607f8c17788d8200b452c54fd356c2b70a
+    git.commit: b240384e0be00e3d2059b3a0b805820b900fcbff
   odh-ml-pipelines-launcher:
     git.url: https://github.com/red-hat-data-services/data-science-pipelines
-    git.commit: 3cc93d607f8c17788d8200b452c54fd356c2b70a
+    git.commit: 72a7490b94c156c7838685a822c62973dbacb27b
   odh-data-science-pipelines-argo-argoexec:
     git.url: https://github.com/red-hat-data-services/argo-workflows
     git.commit: d38ec8c017b1aa922472f1cf1d9909d2f641e78d
@@ -95,7 +95,7 @@ additional_meta:
     git.commit: d38ec8c017b1aa922472f1cf1d9909d2f641e78d
   odh-model-registry:
     git.url: https://github.com/red-hat-data-services/model-registry
-    git.commit: 7cd4f584a82a179cc0cac60653b904bc6856af66
+    git.commit: 8264a83ed88d0d2bce0b2a2b0c322ae379a34686
   odh-feature-server:
     git.url: https://github.com/red-hat-data-services/feast
     git.commit: 25db63183e170b208396eb69b11a2509e620c7a6
