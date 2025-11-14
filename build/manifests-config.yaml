@@ -191,7 +191,7 @@ additional_meta:
     git.commit: f3b12b6e08632c1b5e277825e047c11eface5a15
   odh-vllm-gaudi:
     git.url: https://github.com/red-hat-data-services/vllm-gaudi
-    git.commit: 154de7eff26192ef21b154e9942ed508817dc836
+    git.commit: 0ae57631782cc48bc2a4133e9a8f9dea614a8fa7
   odh-model-registry-job-async-upload:
     git.url: https://github.com/red-hat-data-services/model-registry
     git.commit: 9fa35dcb1f0c98a7ff8b3484c9a56ed4a6516513
