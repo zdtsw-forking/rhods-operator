@@ -6,7 +6,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:be859f3491d4a173a88759ddf2d817dd639ad73c2b57c10bd5958b26cd8b01cd"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:e9a1e2ff5179e94e1c9afae0938aef9ae60b6b9efa3e11b967f764d380c1cec3"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:d938b25e94e57466e67b8e86e5ef22af139bce68db1f679b38266cea3598eaf3"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:4d7c630c2205b38f09de29ef6efcc96c0b45dedde1be3f445c54a15fc0329967"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
@@ -14,7 +14,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:e7f5a40381503bfaf10fe47d53cbd2275233090c7d3d96b3d415969a834871b5"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:e904e69bff49b84893ae7881cb166994c37f4610ce378a19f55fffb944ed569e"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:6ee18a62bbe3fe1218bea4c9a7397f6dbaa1281c98e9a8e06f7beb2019290c3a"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:38f3343bf10fea2c2893967b2a43f42686459a61e0a6139d3cb9cd41bed4b0c5"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
@@ -44,7 +44,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:d9e648f21647bc1b27fa15f1d60e2fdca9a41bf49625c83bbd69ac31bdba0771"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:94952bad65f46f00bdb4bcf56fbe849f01351ae71c0d51be99f00862f0d702f1"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:5e301b6213c89ef6b6f4972c4d5e10528c01a83a133ef8a79a8186800cdc1f9e"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
   value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:20146a87ec928d5c2b321134e8cce6e922c5ad9e67bf3736889bfd95cba70f82"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE

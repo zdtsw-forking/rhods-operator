@@ -24,12 +24,12 @@ map:
     src: config
     dest: datasciencepipelines
     git.url: https://github.com/red-hat-data-services/data-science-pipelines-operator
-    git.commit: 7cb4a7f4ecfb33647f4f09231e31bdba100745e3
+    git.commit: edc90eed57259755d2683da72d64e21a36127a3c
   odh-kuberay-operator-controller:
     src: ray-operator/config
     dest: ray
     git.url: https://github.com/red-hat-data-services/kuberay
-    git.commit: bbb32f4a7c69663c0e7225a526c226cc7e408546
+    git.commit: 4b8a9310f37fa26bf3cf477873e392bc39192964
   odh-trustyai-service-operator:
     src: config
     dest: trustyai
@@ -64,7 +64,7 @@ map:
     src: config
     dest: llamastackoperator
     git.url: https://github.com/red-hat-data-services/llama-stack-k8s-operator
-    git.commit: c9ad73dd20c3a0807de8ac00b532a74aa6ddbbc7
+    git.commit: eb217191eff3c67871135fc52efef4e7fa954bf7
 additional_meta:
   odh-trustyai-service:
     git.url: https://github.com/red-hat-data-services/trustyai-explainability
