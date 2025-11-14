@@ -1,7 +1,7 @@
 map:
   notebooks:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 1f0f758c8e9cb857b45f685a8a85ac32eecadf26
+    git.commit: 9e8e5ceffae11d75c8ba2c6ab7246bee4cd90139
     src: manifests
     dest: workbenches/notebooks
     ref_type: branch
@@ -140,7 +140,7 @@ additional_meta:
     git.commit: 27e0c548adae286ca55e200f557f2067433a06b3
   odh-pipeline-runtime-pytorch-cuda-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
-    git.commit: 3fabc10e80065dc1b91bd7b80785a3215d4dee55
+    git.commit: 9e8e5ceffae11d75c8ba2c6ab7246bee4cd90139
   odh-pipeline-runtime-pytorch-rocm-py312:
     git.url: https://github.com/red-hat-data-services/notebooks
     git.commit: 3fabc10e80065dc1b91bd7b80785a3215d4dee55
