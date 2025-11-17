@@ -54,12 +54,12 @@ map:
     src: config
     dest: modelregistry
     git.url: https://github.com/red-hat-data-services/model-registry-operator
-    git.commit: 4b0e51ee82834e0992c0f1e4b6a8fed2351a7183
+    git.commit: 7a7889ebf6dcc3a11f75861a364a21f7be0cdb9b
   odh-modelmesh-serving-controller:
     src: config
     dest: modelmeshserving
     git.url: https://github.com/red-hat-data-services/modelmesh-serving
-    git.commit: 3ae604f4fce3738bbd338dd6f7a9c68017ae24d2
+    git.commit: 52e36df3cafea935e7186d1836a063f5074d94a0
   odh-dashboard:
     src: manifests
     dest: dashboard
