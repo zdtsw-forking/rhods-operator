@@ -14,7 +14,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-trustyai-service-operator-rhel9@sha256:28d96327f23cd168cbaca6fc30738b8d654b850cc65937fcbacd04b648e5ac66"
 - name: RELATED_IMAGE_ODH_KUBERAY_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:50cd262cba49471d72bed22c1d8cbd5a74b4dda6757ded250bff5ea62cedae52"
+  value: "quay.io/rhoai/odh-kuberay-operator-controller-rhel9@sha256:7c655878924f5be35414b1423f149ea03a861b14e7eeb17ef13c59e29614362a"
 - name: RELATED_IMAGE_ODH_MLMD_GRPC_SERVER_IMAGE
   value: "quay.io/rhoai/odh-mlmd-grpc-server-rhel9@sha256:020751f0be0ed725686d25da9250e12922041202cf62b53d145d500ad37b8c13"
 - name: RELATED_IMAGE_ODH_ML_PIPELINES_API_SERVER_V2_IMAGE
