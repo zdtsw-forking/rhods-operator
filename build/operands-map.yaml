@@ -1,12 +1,12 @@
 relatedImages:
 - name: RELATED_IMAGE_ODH_KF_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:8c8111c4f2772bd8a0dd6408ad9a0db279ad739e9730dc631d96040b64f39936"
+  value: "quay.io/rhoai/odh-kf-notebook-controller-rhel9@sha256:1b28bac3087fe181384848164868fd6afc2cecd31ea899b950ee8eeef9d0fe3d"
 - name: RELATED_IMAGE_ODH_DASHBOARD_IMAGE
   value: "quay.io/rhoai/odh-dashboard-rhel9@sha256:05201fed9d0cb8af3f79ff954613bd5e746f0181d03c941f82e2ef7411d2e488"
 - name: RELATED_IMAGE_ODH_NOTEBOOK_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:be859f3491d4a173a88759ddf2d817dd639ad73c2b57c10bd5958b26cd8b01cd"
+  value: "quay.io/rhoai/odh-notebook-controller-rhel9@sha256:fa1e51348916dcf941743059b81a7d94849b6a3ec8461ad77ec6cb072befca16"
 - name: RELATED_IMAGE_ODH_DATA_SCIENCE_PIPELINES_OPERATOR_CONTROLLER_IMAGE
-  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:d938b25e94e57466e67b8e86e5ef22af139bce68db1f679b38266cea3598eaf3"
+  value: "quay.io/rhoai/odh-data-science-pipelines-operator-controller-rhel9@sha256:3d0a3ae1649214a04d17a45f757b573b4b3e3bb375518ca21cc89cebf9b00b16"
 - name: RELATED_IMAGE_ODH_MODEL_CONTROLLER_IMAGE
   value: "quay.io/rhoai/odh-model-controller-rhel9@sha256:4d7c630c2205b38f09de29ef6efcc96c0b45dedde1be3f445c54a15fc0329967"
 - name: RELATED_IMAGE_ODH_TRUSTYAI_SERVICE_IMAGE
@@ -44,7 +44,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
   value: "quay.io/rhoai/odh-feature-server-rhel9@sha256:d9e648f21647bc1b27fa15f1d60e2fdca9a41bf49625c83bbd69ac31bdba0771"
 - name: RELATED_IMAGE_ODH_LLAMA_STACK_K8S_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:5e301b6213c89ef6b6f4972c4d5e10528c01a83a133ef8a79a8186800cdc1f9e"
+  value: "quay.io/rhoai/odh-llama-stack-k8s-operator-rhel9@sha256:5843661f601f345d29ed70245c2086fbaed53f47aa5987d45f591e12d244be49"
 - name: RELATED_IMAGE_ODH_LLM_D_INFERENCE_SCHEDULER_IMAGE
   value: "quay.io/rhoai/odh-llm-d-inference-scheduler-rhel9@sha256:20146a87ec928d5c2b321134e8cce6e922c5ad9e67bf3736889bfd95cba70f82"
 - name: RELATED_IMAGE_ODH_LLM_D_ROUTING_SIDECAR_IMAGE
