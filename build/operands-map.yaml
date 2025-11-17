@@ -34,9 +34,9 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_IMAGE
   value: "quay.io/rhoai/odh-model-registry-rhel9@sha256:7da6a73c8882ea9546a448528235e2681ccab4630b050ee626c22bf466c8f930"
 - name: RELATED_IMAGE_ODH_MODEL_REGISTRY_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:dc66fecd19de74ab4b7397b37f0257faddf52c28b5454dd01ef363729456aba6"
+  value: "quay.io/rhoai/odh-model-registry-operator-rhel9@sha256:326640e365499c2d747c60c1d8166330a4124730d0bbd19cefb0cfead8d007b5"
 - name: RELATED_IMAGE_ODH_TRAINING_OPERATOR_IMAGE
-  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:3b58822d6cfa5bba6f577a476dcb70bd0e827519598f2429897d7966cdf91f16"
+  value: "quay.io/rhoai/odh-training-operator-rhel9@sha256:ffe6fce6c9d32d02ac8ac4c823b10a5951ca441b2ff1fbe1c4a99c89a7e71761"
 - name: RELATED_IMAGE_ODH_FEAST_OPERATOR_IMAGE
   value: "quay.io/rhoai/odh-feast-operator-rhel9@sha256:6d8183a208ad01a74c49c48f7489e3350a7630754e1d94d1e580478fc3acf008"
 - name: RELATED_IMAGE_ODH_FEATURE_SERVER_IMAGE
@@ -122,7 +122,7 @@ relatedImages:
 - name: RELATED_IMAGE_ODH_MODEL_METADATA_COLLECTION_IMAGE
   value: "quay.io/rhoai/odh-model-metadata-collection-rhel9@sha256:64b0bd3040fb7865779a21215a3831e1f75a96a132b31e0ed3a33d006eadccd0"
 - name: RELATED_IMAGE_ODH_MOD_ARCH_GEN_AI_IMAGE
-  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:f28f5da49dc824faac0665e96f3518b8b781e1adfe39ddfb3677c624fab00b4d"
+  value: "quay.io/rhoai/odh-mod-arch-gen-ai-rhel9@sha256:029cb2e62844ceb62cf6d8121d90f8a86d99ae18eebfa3bd0ecc460cf381a7f3"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
   value: "quay.io/rhoai/odh-kube-auth-proxy-rhel9@sha256:a528c85ba07a473250d72119de75b65b5d1cc6f0ce5d61abcfe89b3bb20d2839"
 - name: RELATED_IMAGE_ODH_KUBE_AUTH_PROXY_IMAGE
