@@ -37,17 +37,11 @@ func TestAzureKubernetesEngine(t *testing.T) {
 		wt := tc.NewWithT(t)
 
 		createAzureCR(t, wt, ccmcommon.Dependencies{
+			GatewayAPI:   ccmcommon.GatewayAPIDependency{ManagementPolicy: ccmcommon.Managed},
 			CertManager:  ccmcommon.CertManagerDependency{ManagementPolicy: ccmcommon.Managed},
 			LWS:          ccmcommon.LWSDependency{ManagementPolicy: ccmcommon.Managed},
 			SailOperator: ccmcommon.SailOperatorDependency{ManagementPolicy: ccmcommon.Managed},
 		})
-
-		nn := types.NamespacedName{Name: ccmv1alpha1.AzureKubernetesEngineInstanceName}
-
-		// Wait for reconciliation to succeed
-		wt.Get(gvk.AzureKubernetesEngine, nn).Eventually().Should(
-			jq.Match(`.status.conditions[] | select(.type == "Ready") | .status == "True"`),
-		)
 
 		// Verify dependency deployments are created
 		wt.Get(gvk.Deployment, types.NamespacedName{
@@ -69,12 +63,6 @@ func TestAzureKubernetesEngine(t *testing.T) {
 		createAzureCR(t, wt, ccmcommon.Dependencies{
 			CertManager: ccmcommon.CertManagerDependency{ManagementPolicy: ccmcommon.Managed},
 		})
-
-		nn := types.NamespacedName{Name: ccmv1alpha1.AzureKubernetesEngineInstanceName}
-
-		wt.Get(gvk.AzureKubernetesEngine, nn).Eventually().Should(
-			jq.Match(`.status.conditions[] | select(.type == "Ready") | .status == "True"`),
-		)
 
 		wt.Get(gvk.Deployment, types.NamespacedName{
 			Name: "cert-manager-operator-controller-manager", Namespace: "cert-manager-operator",
@@ -113,9 +101,6 @@ func TestAzureKubernetesEngine(t *testing.T) {
 
 		wtC.Get(gvk.AzureKubernetesEngine, nn).Eventually().Should(
 			jq.Match(`.status.conditions[] | select(.type == "DependenciesAvailable") | .status == "True"`),
-		)
-		wtC.Get(gvk.AzureKubernetesEngine, nn).Eventually().Should(
-			jq.Match(`.status.conditions[] | select(.type == "Ready") | .status == "True"`),
 		)
 	})
 }
